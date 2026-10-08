@@ -1,0 +1,576 @@
+﻿:host {
+    display: block;
+    /* La hoja siempre parece papel, sea cual sea el tema de la app */
+    --p-bg: #fffdf6;
+    --p-ink: #1f1f22;
+    --p-muted: #6f6c66;
+    --p-line: #8f8b83;
+    --p-rule: #e9e4d8;
+    --p-red: #d3242b;
+    --p-blue: #1f3f9a;
+}
+
+.desk {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(8px + var(--safe-t)) 12px calc(96px + var(--safe-b));
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.top-title {
+    flex: 1;
+    font-weight: 600;
+}
+.clock {
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* ---- Papel ---- */
+.paper {
+    position: relative;
+    color: var(--p-ink);
+    background: var(--p-bg);
+    border-radius: 4px;
+    padding: 22px 18px 28px;
+    box-shadow:
+        0 1px 0 rgb(0 0 0 / 0.04),
+        0 16px 40px rgb(0 0 0 / 0.22);
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+.jp,
+.hand {
+    font-family: var(--font-hand);
+}
+
+.head {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.titles {
+    flex: 1;
+    text-align: center;
+    padding-top: 4px;
+}
+.titles h1 {
+    word-break: keep-all;
+    font-size: clamp(1.05rem, 4.4vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+}
+.sub {
+    font-size: 0.82rem;
+    color: var(--p-ink);
+    margin: 2px 0 0;
+}
+.scorebox {
+    position: relative;
+    width: 84px;
+    height: 70px;
+    flex: none;
+    border: 1.5px solid var(--p-ink);
+    display: grid;
+    place-items: center;
+}
+.score {
+    color: var(--p-red);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    transform: rotate(-6deg);
+}
+.of {
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    font-size: 0.7rem;
+    color: var(--p-muted);
+}
+.stars {
+    position: absolute;
+    right: -30px;
+    top: 6px;
+    color: var(--p-red);
+    font-size: 1.1rem;
+    line-height: 1;
+    writing-mode: vertical-rl;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 16px;
+    margin: 16px 0 6px;
+    font-size: 0.88rem;
+}
+.meta .line {
+    display: inline-block;
+    min-width: 9em;
+    border-bottom: 1px solid var(--p-ink);
+    color: var(--p-blue);
+    padding: 0 6px;
+}
+.meta .hand {
+    color: var(--p-blue);
+}
+
+/* ---- Secciones ---- */
+.sec {
+    margin-top: 22px;
+}
+.sec h2 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 6px;
+}
+.scheme {
+    font-weight: 500;
+}
+.subtotal {
+    color: var(--p-red);
+    font-size: 1.3rem;
+    font-weight: 600;
+    flex: none;
+}
+.help {
+    margin: -2px 0 6px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--p-muted);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 6px;
+}
+.list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 4px;
+    padding: 2px 0;
+}
+.n {
+    min-width: 1.9em;
+    font-weight: 500;
+}
+.q {
+    min-width: 5.5em;
+}
+.q.num {
+    min-width: 4.2em;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+/* Grupo "( respuesta )" que ocupa el resto de la línea */
+.ans {
+    flex: 1 1 8em;
+    min-width: 8em;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+.ans app-exam-slot {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+}
+.ans app-exam-slot ::ng-deep .blank {
+    width: 100%;
+    min-width: 0;
+}
+.vocab {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px 24px;
+}
+@media (min-width: 640px) {
+    .vocab {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+    }
+}
+.sentences li {
+    flex-wrap: nowrap;
+}
+.sentence {
+    flex: 1;
+    line-height: 2.1;
+}
+.arrow {
+    color: var(--p-muted);
+    font-size: 0.85rem;
+}
+
+/* Diálogos */
+.dialog {
+    align-items: flex-start !important;
+}
+.lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.line {
+    line-height: 2;
+}
+.who {
+    font-family: var(--font);
+    margin-right: 4px;
+}
+.model {
+    font-size: 0.85rem;
+    color: var(--p-red);
+}
+
+/* Ordenar frases */
+.order {
+    flex-direction: column;
+    align-items: stretch !important;
+    flex-wrap: nowrap !important;
+    padding: 6px 0 !important;
+}
+.order-q {
+    display: flex;
+    align-items: baseline;
+}
+.tokens {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 0;
+}
+.tok {
+    font: inherit;
+    font-family: var(--font-hand);
+    color: var(--p-ink);
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed transparent;
+    padding: 0 3px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tok:not(:disabled):hover {
+    background: rgb(31 63 154 / 0.08);
+}
+.tok.used {
+    color: var(--p-line);
+    text-decoration: line-through;
+    cursor: default;
+}
+.slash {
+    color: var(--p-muted);
+}
+.order-a {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding-left: 1.9em;
+}
+.built {
+    flex: 1;
+    min-height: 2em;
+    border-bottom: 1.5px solid var(--p-line);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px;
+}
+.placed {
+    font: inherit;
+    font-family: var(--font-hand);
+    color: var(--p-blue);
+    background: transparent;
+    border: none;
+    padding: 0 2px;
+    cursor: pointer;
+}
+.placeholder {
+    font-family: var(--font);
+    font-size: 0.78rem;
+    color: var(--p-line);
+}
+.mark {
+    color: var(--p-red);
+    font-weight: 700;
+    transform: rotate(-8deg);
+}
+.fix {
+    padding-left: 3.2em;
+    color: var(--p-red);
+}
+.graded .built .placed {
+    cursor: default;
+}
+
+.name-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+    padding-left: 6px;
+}
+.hint-red {
+    color: var(--p-red);
+}
+
+.override {
+    font: inherit;
+    font-size: 0.72rem;
+    line-height: 1;
+    padding: 4px 8px;
+    margin-left: 6px;
+    border-radius: 999px;
+    border: 1px solid var(--p-red);
+    color: var(--p-red);
+    background: transparent;
+    cursor: pointer;
+    align-self: center;
+}
+
+/* ---- Tabla de kana ---- */
+.kana-grid {
+    display: grid;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    border: 1.5px solid var(--p-ink);
+    margin: 4px 0;
+}
+.kcol {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+.kcol + .kcol {
+    border-left: 1px solid var(--p-ink);
+}
+.kcell {
+    position: relative;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+.kcell + .kcell {
+    border-top: 1px solid var(--p-rule);
+}
+.kcell.x {
+    color: var(--p-line);
+    font-size: 0.9rem;
+}
+.kcell ::ng-deep .blank {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border-bottom-color: transparent;
+    background: rgb(31 63 154 / 0.05);
+}
+.kcell ::ng-deep .graded {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    line-height: 1.05;
+}
+.kcell ::ng-deep .given {
+    border: none;
+    font-size: 0.8rem;
+    padding: 0;
+}
+.kcell ::ng-deep .ok .given {
+    font-size: 1.1rem;
+}
+.kcell ::ng-deep .fix {
+    font-size: 0.95rem;
+}
+.kcell ::ng-deep .mark {
+    position: absolute;
+    font-size: 0.7rem;
+    transform: translate(10px, -10px);
+}
+.kcell ::ng-deep .note {
+    display: none;
+}
+
+/* ---- Barra inferior ---- */
+/* (no se llama ".bar": esa es la clase global de la barra de progreso, de 8px de alto y con overflow hidden) */
+.submit-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 12px calc(12px + var(--safe-b));
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+}
+.submit-bar .btn {
+    flex: 1;
+    min-height: 52px;
+}
+.grow {
+    flex: 1;
+}
+/* Selector あ / ア: el mismo aspecto que las pestañas segmentadas de la app */
+.kbd {
+    flex: none;
+    padding: 4px;
+}
+.kbd button {
+    flex: none;
+    min-width: 64px;
+    min-height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    line-height: 1.1;
+    padding: 4px 8px;
+}
+.kbd button .jp {
+    font-size: 1.2rem;
+}
+.kbd button small {
+    font-size: 0.62rem;
+    font-weight: 500;
+}
+
+/* ---- Resumen ---- */
+.summary {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.summary .t {
+    font-size: 1rem;
+}
+.big {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.big .muted {
+    font-size: 1.1rem;
+}
+.extra {
+    font-size: 0.9rem;
+    color: var(--ok);
+    margin-left: 8px;
+}
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+.srow {
+    padding: 6px 0;
+    border-top: 1px solid var(--line);
+}
+
+/* ---- Tablas de kana: elegir la forma ---- */
+.pick {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--p-blue);
+    background: rgb(31 63 154 / 0.06);
+    cursor: pointer;
+}
+.pick.on {
+    background: rgb(31 63 154 / 0.18);
+    box-shadow: inset 0 0 0 2px var(--p-blue);
+}
+.bank {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(66px + var(--safe-b));
+    z-index: 21;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 12px 12px;
+    background: var(--surface);
+    border-top: 2px solid var(--accent);
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -12px 30px rgb(0 0 0 / 0.25);
+    animation: slide-up 0.18s ease;
+}
+.bank-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--ink-2);
+}
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    gap: 6px;
+    margin-top: 6px;
+}
+.tile {
+    height: 48px;
+    border-radius: 10px;
+    border: 1.5px solid var(--line);
+    border-bottom-width: 3px;
+    background: var(--surface-2);
+    color: var(--ink);
+    font-size: 1.55rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.tile:active {
+    transform: translateY(2px);
+}
+.tile.sel {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.clear {
+    margin-top: 8px;
+}
+
+.desk.picking {
+    padding-bottom: calc(380px + var(--safe-b));
+}
+
+
+.submit-bar .btn {
+    white-space: nowrap;
+}
+@media (max-width: 420px) {
+    .wide {
+        display: none;
+    }
+}
+

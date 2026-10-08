@@ -1,0 +1,110 @@
+/* ---- Cabecera ---- */
+.head {
+    margin: 12px 0 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+.head p {
+    margin-top: 4px;
+}
+
+/* ---- Tarjetas de silabario ---- */
+.script {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+}
+.top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--ink);
+}
+.gl {
+    width: 60px;
+    height: 60px;
+    flex: none;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    font-size: 2.2rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.gl[data-s='katakana'] {
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.block {
+    display: block;
+}
+.prog {
+    margin-top: 8px;
+    display: flex;
+}
+
+/* ---- Filas guardadas ---- */
+.last {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--line);
+}
+.go {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    background: var(--accent);
+    color: var(--accent-ink, #fff);
+    white-space: nowrap;
+}
+
+/* ---- Enlaces al laboratorio y a números y tiempo ---- */
+.link {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+.lt {
+    font-weight: 600;
+}
+.ic {
+    width: 42px;
+    height: 42px;
+    flex: none;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+.ic[data-c='gold'] {
+    background: var(--gold-soft);
+    color: var(--gold);
+}
+
+/* ---- Consejos ---- */
+.tips {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.93rem;
+}
+.tip b {
+    color: var(--accent);
+}

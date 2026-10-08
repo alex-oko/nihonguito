@@ -1,0 +1,645 @@
+{
+ "id": 24,
+ "title": "Un paquete de mamá",
+ "titleJp": "母が 送って くれました",
+ "summary": "La mamá de Lucía le manda un paquete desde México y ella comparte los dulces con Yui. El fin de semana, Carlos y Lucía ayudan a Kenta con su mudanza.",
+ "vocab": [
+  {
+   "id": "L24-001",
+   "kana": "くれます",
+   "es": "darme (a mí)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-002",
+   "kana": "つれて いきます",
+   "kanji": "連れて 行きます",
+   "es": "llevar (a alguien)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-003",
+   "kana": "つれて きます",
+   "kanji": "連れて 来ます",
+   "es": "traer (a alguien)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-004",
+   "kana": "おくります",
+   "kanji": "送ります",
+   "es": "acompañar (a alguien: を)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-005",
+   "kana": "しょうかいします",
+   "kanji": "紹介します",
+   "es": "presentar (a alguien)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-006",
+   "kana": "あんないします",
+   "kanji": "案内します",
+   "es": "guiar, enseñar un lugar",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-007",
+   "kana": "せつめいします",
+   "kanji": "説明します",
+   "es": "explicar",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-008",
+   "kana": "いれます",
+   "es": "preparar (café: を)",
+   "type": "verb",
+   "lesson": 24
+  },
+  {
+   "id": "L24-009",
+   "kana": "おじいさん／おじいちゃん",
+   "es": "abuelo, señor mayor",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-010",
+   "kana": "おばあさん／おばあちゃん",
+   "es": "abuela, señora mayor",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-011",
+   "kana": "じゅんび",
+   "kanji": "準備",
+   "es": "preparación (～します: preparar)",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-012",
+   "kana": "いみ",
+   "kanji": "意味",
+   "es": "significado",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-013",
+   "kana": "[お]かし",
+   "kanji": "[お]菓子",
+   "es": "dulces, golosinas",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-014",
+   "kana": "ぜんぶ",
+   "kanji": "全部",
+   "es": "todo",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-015",
+   "kana": "じぶんで",
+   "kanji": "自分で",
+   "es": "uno mismo, por sí solo",
+   "type": "adv",
+   "lesson": 24
+  },
+  {
+   "id": "L24-016",
+   "kana": "ほかに",
+   "es": "además, aparte",
+   "type": "adv",
+   "lesson": 24
+  },
+  {
+   "id": "L24-017",
+   "kana": "ワゴンしゃ",
+   "kanji": "ワゴン車",
+   "es": "furgoneta",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-018",
+   "kana": "[お]べんとう",
+   "kanji": "[お]弁当",
+   "es": "comida en caja (bento)",
+   "type": "noun",
+   "lesson": 24
+  },
+  {
+   "id": "L24-019",
+   "kana": "ははの ひ",
+   "kanji": "母の 日",
+   "es": "Día de la Madre",
+   "type": "noun",
+   "lesson": 24
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "中村さんは わたしに お菓子を くれました。",
+   "es": "Yui me dio unos dulces."
+  },
+  {
+   "jp": "わたしは きのしたさんに 本を 貸して あげました。",
+   "es": "Le presté un libro a Kenta."
+  },
+  {
+   "jp": "わたしは 中村さんに いい 店を 紹介して もらいました。",
+   "es": "Yui me recomendó una buena tienda."
+  },
+  {
+   "jp": "母が セーターを 送って くれました。",
+   "es": "Mi mamá me mandó un suéter."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "その かばん、すてきですね。",
+   "qes": "Qué bonita tu bolsa.",
+   "ajp": "ありがとう。誕生日に 姉が くれました。",
+   "aes": "Gracias. Me la regaló mi hermana en mi cumpleaños."
+  },
+  {
+   "qjp": "日曜日 何を しましたか。",
+   "qes": "¿Qué hiciste el domingo?",
+   "ajp": "アンナさんが かまくらを 案内して くれました。",
+   "aes": "Anna me llevó a conocer Kamakura.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "qjp": "この 漢字の 意味が わかりますか。",
+   "qes": "¿Sabes qué significa este kanji?",
+   "ajp": "いいえ。あとで 中村さんに 教えて もらいます。",
+   "aes": "No. Luego le pregunto a Yui.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "qjp": "母の 日に 何を しますか。",
+   "qes": "¿Qué vas a hacer el Día de las Madres?",
+   "ajp": "母に 電話して、メキシコの 歌を 歌って あげます。",
+   "aes": "Voy a llamar a mi mamá y a cantarle una canción mexicana."
+  },
+  {
+   "qjp": "パーティーの 準備は 自分で しましたか。",
+   "qes": "¿Preparaste la fiesta tú sola?",
+   "ajp": "いいえ、カルロスさんに 手伝って もらいました。",
+   "aes": "No, Carlos me ayudó."
+  },
+  {
+   "qjp": "だれが 駅まで 迎えに 来ますか。",
+   "qes": "¿Quién va a ir por ti a la estación?",
+   "ajp": "アンナさんが 来て くれます。",
+   "aes": "Anna va a ir por mí."
+  },
+  {
+   "qjp": "おいしい コーヒーですね。",
+   "qes": "Qué rico café.",
+   "ajp": "ええ、たなかさんが いれて くれました。",
+   "aes": "Sí, me lo preparó el Sr. Tanaka.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "qjp": "引っ越しの とき、だれが 手伝って くれましたか。",
+   "qes": "¿Quién te ayudó con la mudanza?",
+   "ajp": "カルロスさんと ルシアさんが 手伝って くれました。",
+   "aes": "Me ayudaron Carlos y Lucía."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "くれます — 'alguien me da'",
+   "explain": "あげます es 'dar' cuando el regalo va de mí (o de otros) hacia otra persona. Pero si quien recibe soy yo o alguien de mi familia, NO se usa あげます: se usa くれます. Piensa: あげます = dar hacia fuera, くれます = dar hacia mí. Error típico: なかむらさんは わたしに カードを あげました ✗ → くれました ✓.",
+   "examples": [
+    {
+     "jp": "もりさんは わたしに ゴルフの 本を くれました。",
+     "es": "El Sr. Mori me dio un libro de golf."
+    },
+    {
+     "jp": "アンナさんは 妹に 写真を くれました。",
+     "es": "Anna le dio unas fotos a mi hermana menor."
+    }
+   ]
+  },
+  {
+   "title": "Vて あげます — hacer un favor a otro",
+   "explain": "Con la forma て + あげます dices que haces algo por amabilidad hacia otra persona. Cuidado: si lo dices a alguien mayor o superior suena a 'te hago el favor', algo arrogante. Para ofrecer ayuda de forma educada usa mejor Vましょうか (lección 14): 手伝いましょうか。",
+   "examples": [
+    {
+     "jp": "わたしは 友達に 写真を 撮って あげました。",
+     "es": "Le tomé unas fotos a mi amiga."
+    },
+    {
+     "jp": "カルロスさんは 子どもに 料理を 教えて あげました。",
+     "es": "Carlos les enseñó a cocinar a unos niños."
+    }
+   ]
+  },
+  {
+   "title": "Vて もらいます — alguien hace algo por mí",
+   "explain": "Aquí el sujeto es quien RECIBE el favor: 'yo recibo de X la acción de…'. La persona que hace el favor lleva に. Transmite agradecimiento. En español suele traducirse simplemente 'X me hizo…' o 'le pedí a X que…'.",
+   "examples": [
+    {
+     "jp": "わたしは 中村さんに 東京を 案内して もらいました。",
+     "es": "Yui me llevó a conocer Tokio."
+    },
+    {
+     "jp": "アンナさんに 写真を 撮って もらいました。",
+     "es": "Anna me tomó unas fotos."
+    }
+   ]
+  },
+  {
+   "title": "Vて くれます — alguien hace algo por mí (por iniciativa propia)",
+   "explain": "También expresa gratitud, pero ahora el sujeto es quien HACE el favor, y se nota que lo hizo por su cuenta. 'わたしに' casi siempre se omite porque ya se entiende. Compara: ははに おくって もらいました (recibí de mi madre el envío) y ははが おくって くれました (mi madre me lo envió).",
+   "examples": [
+    {
+     "jp": "母が メキシコの お菓子を 送って くれました。",
+     "es": "Mi mamá me mandó dulces mexicanos."
+    },
+    {
+     "jp": "カルロスさんが 駅まで 送って くれました。",
+     "es": "Carlos me acompañó hasta la estación."
+    }
+   ]
+  },
+  {
+   "title": "Persona が V — información nueva",
+   "explain": "Cuando alguien comenta algo y tú añades un dato que el otro no sabía (quién lo hizo, quién lo dio), esa persona se marca con が. Por ejemplo: '¡Qué corbata bonita!' — 'Sí, me la regaló Yui': なかむらさんが くれました.",
+   "examples": [
+    {
+     "jp": "おいしい ケーキですね。…ええ、カルロスさんが 作りました。",
+     "es": "Qué rico pastel. — Sí, lo hizo Carlos."
+    }
+   ]
+  },
+  {
+   "title": "Interrogativo が V — '¿quién hace…?'",
+   "explain": "Si la palabra interrogativa (だれ, 何, どれ) es el sujeto de la frase, siempre lleva が, nunca は. La respuesta también usa が. Error típico: だれは 来ますか ✗ → だれが 来ますか ✓.",
+   "examples": [
+    {
+     "jp": "だれが 手伝いに 来ますか。…カルロスさんと ルシアさんが 来ます。",
+     "es": "¿Quién viene a ayudar? — Vienen Carlos y Lucía."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "母が 送って くれました。",
+   "es": "Me lo mandó mi mamá."
+  },
+  {
+   "jp": "ほかに 何が 入って いましたか。",
+   "es": "¿Qué más venía?"
+  },
+  {
+   "jp": "この 箱は どこに 置く？",
+   "es": "¿Dónde pongo esta caja?"
+  },
+  {
+   "jp": "ワゴン車は だれが 貸して くれたの？",
+   "es": "¿Quién te prestó la camioneta?"
+  },
+  {
+   "jp": "全部 自分で 作ったよ。",
+   "es": "Lo hice todo yo solo."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L24-c1",
+   "lesson": 24,
+   "title": "Un paquete de México",
+   "situation": "En la oficina, Lucía le ofrece a Yui unos dulces que le llegaron de México.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "なかむらさん、これ、どうぞ。メキシコの お菓子です。",
+     "es": "Yui, toma, son dulces mexicanos."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "わあ、ありがとう ございます。",
+     "es": "¡Ay, muchas gracias!"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "母が 送って くれました。きのう 大きい 箱が 来ました。",
+     "es": "Me los mandó mi mamá. Ayer me llegó una caja grande."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "やさしい お母さんですね。ほかに 何が 入って いましたか。",
+     "es": "Qué linda tu mamá. ¿Qué más venía?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "チョコレートや 辛い ソースなど、いろいろ ありました。",
+     "es": "Chocolate, salsa picante y muchas cosas más."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "おばあちゃんが 作った セーターも 入って いました。",
+     "es": "También venía un suéter que hizo mi abuelita."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "すてきですね。ルシアさんも お母さんに 何か 送って あげますか。",
+     "es": "Qué bonito. ¿Tú también le vas a mandar algo a tu mamá?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい。母の 日に 日本の お菓子を 送って あげたいです。",
+     "es": "Sí. Para el Día de las Madres le quiero mandar dulces japoneses."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "じゃ、わたしが おいしい お菓子の 店を 紹介しますよ。",
+     "es": "Entonces yo te recomiendo una tienda de dulces muy buena."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ほんとうですか。ありがとう ございます。",
+     "es": "¿De verdad? ¡Muchas gracias!"
+    }
+   ]
+  },
+  {
+   "id": "L24-c2",
+   "lesson": 24,
+   "title": "La mudanza de Kenta",
+   "situation": "El sábado, Carlos y Lucía van al departamento de Kenta para ayudarlo con la mudanza.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "カルロスさん、ルシアさん、きょうは ほんとうに ありがとう ございます。",
+     "es": "Carlos, Lucía, de verdad muchas gracias por hoy."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいよ。この 箱は どこに 置く？",
+     "es": "No hay de qué. ¿Dónde pongo esta caja?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "あ、それは 本ですから、重いですよ。",
+     "es": "Ah, esa tiene libros, pesa mucho."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "大丈夫。僕が 車まで 持って 行くよ。",
+     "es": "No pasa nada. Yo la llevo hasta el coche."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ところで、ワゴン車は だれが 貸して くれたの？",
+     "es": "Por cierto, ¿quién te prestó la camioneta?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "たなかさんが 貸して くれました。",
+     "es": "Me la prestó el Sr. Tanaka."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "やさしいね。じゃ、わたしは キッチンの 物を 箱に 入れて あげるね。",
+     "es": "Qué amable. Entonces yo te guardo las cosas de la cocina en cajas."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "ありがとう。お昼は 僕が お弁当を 買って 来ます。",
+     "es": "Gracias. A mediodía yo traigo unos bentos."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いや、お弁当は もう 僕が 作って 来たよ。全部 自分で 作ったよ。",
+     "es": "No, ya traje bentos que hice yo. Todo lo hice yo solo."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "すごい！ 今度 カルロスさんに 料理を 教えて もらいたいです。",
+     "es": "¡Qué increíble! Un día quiero que me enseñes a cocinar."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Costumbres de regalos (ぞうとうの しゅうかん 贈答の習慣)",
+   "items": [
+    {
+     "kana": "おとしだま",
+     "kanji": "お年玉",
+     "es": "dinero de Año Nuevo para niños"
+    },
+    {
+     "kana": "にゅうがくいわい",
+     "kanji": "入学祝い",
+     "es": "regalo por entrar a la escuela"
+    },
+    {
+     "kana": "そつぎょういわい",
+     "kanji": "卒業祝い",
+     "es": "regalo de graduación"
+    },
+    {
+     "kana": "けっこんいわい",
+     "kanji": "結婚祝い",
+     "es": "regalo de boda"
+    },
+    {
+     "kana": "しゅっさんいわい",
+     "kanji": "出産祝い",
+     "es": "regalo por un nacimiento"
+    },
+    {
+     "kana": "おちゅうげん",
+     "kanji": "お中元",
+     "es": "regalo de verano (julio/agosto)"
+    },
+    {
+     "kana": "おせいぼ",
+     "kanji": "お歳暮",
+     "es": "regalo de fin de año (diciembre)"
+    },
+    {
+     "kana": "おこうでん",
+     "kanji": "お香典",
+     "es": "dinero de condolencia"
+    },
+    {
+     "kana": "おみまい",
+     "kanji": "お見舞い",
+     "es": "regalo a un enfermo"
+    },
+    {
+     "kana": "のしぶくろ",
+     "kanji": "熨斗袋",
+     "es": "sobre especial para regalar dinero"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Cuando alguien se muda en Japón, es costumbre visitar a los vecinos nuevos con un pequeño regalo, como toallas o dulces, para presentarse y saludar.",
+  "Las paqueterías japonesas permiten elegir día y hora de entrega. Si no estás en casa, te dejan un aviso en el buzón para pedir que te lo vuelvan a traer."
+ ],
+ "extras": [
+  {
+   "jp": "京都で 友達が お寺を 案内して くれました。",
+   "es": "En Kioto, una amiga me llevó a conocer templos.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "ホテルの 人に タクシーを 呼んで もらいました。",
+   "es": "Le pedí a la gente del hotel que me llamara un taxi.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "カルロスさんが おいしい パエリアを 作って くれました。",
+   "es": "Carlos me hizo una paella deliciosa.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "毎朝 わたしが 家族に コーヒーを いれて あげます。",
+   "es": "Todas las mañanas le preparo café a mi familia.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "もりさんが 新しい 仕事を 説明して くれました。",
+   "es": "El Sr. Mori me explicó el trabajo nuevo.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "中村さんに 会議の 資料を 見せて もらいました。",
+   "es": "Yui me enseñó los documentos de la junta.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "先生が 漢字の 意味を 説明して くれました。",
+   "es": "La profesora me explicó el significado del kanji.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "カルロスさんに ノートを 貸して あげました。",
+   "es": "Le presté mi cuaderno a Carlos.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "きのしたさんが おもしろい アニメを 教えて くれました。",
+   "es": "Kenta me recomendó un anime muy divertido.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "だれが この アニメの 絵を かきましたか。",
+   "es": "¿Quién dibujó este anime?",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "兄が 古い ゲームを くれました。",
+   "es": "Mi hermano mayor me dio sus videojuegos viejos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "友達に 新しい ゲームを 貸して もらいました。",
+   "es": "Un amigo me prestó un juego nuevo.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "父が サッカーを 教えて くれました。",
+   "es": "Mi papá me enseñó a jugar fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "だれが 試合に 勝ちましたか。",
+   "es": "¿Quién ganó el partido?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "中村さんが ピアノを 弾いて くれました。",
+   "es": "Yui tocó el piano para mí.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "友達の 誕生日に 歌を 歌って あげました。",
+   "es": "Le canté una canción a mi amiga en su cumpleaños.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

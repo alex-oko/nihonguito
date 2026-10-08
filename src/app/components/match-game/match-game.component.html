@@ -1,0 +1,52 @@
+<div class="wrap">
+    <!-- Cabecera: salir y progreso -->
+    <header class="head">
+        <button class="icon-btn" (click)="back()" aria-label="Salir"><app-icon name="x" /></button>
+        <div class="bar grow"><i [style.width.%]="progressPercent()"></i></div>
+    </header>
+
+    @if (!isFinished()) {
+        <app-game-timer class="timer" mode="stopwatch" [anchor]="startedAt()" [running]="true" [compact]="true" />
+    }
+
+    @if (!isFinished()) {
+        <!-- Ronda: dos columnas de fichas -->
+        <p class="label">{{ title() }} · ronda {{ round() + 1 }}/{{ roundCount() }}</p>
+        <p class="small muted">Toca un elemento de cada columna para unirlos.</p>
+        <div class="cols">
+            @for (column of [leftCards(), rightCards()]; track $index) {
+                <div class="col">
+                    @for (card of column; track card.pairId + card.side) {
+                        <button
+                            class="m"
+                            [class]="'m ' + card.style"
+                            [class.sel]="isSelected(card)"
+                            [class.done]="matchedIds().has(card.pairId)"
+                            [class.err]="errorFlashKey() === card.pairId + card.side"
+                            [disabled]="matchedIds().has(card.pairId)"
+                            (click)="tapCard(card)"
+                        >
+                            <app-jp [text]="card.text" />
+                        </button>
+                    }
+                </div>
+            }
+        </div>
+    } @else {
+        <!-- Pantalla final -->
+        <div class="end">
+            <div class="big-glyph jp">{{ mistakes() === 0 ? '完璧' : 'よし' }}</div>
+            <h1 class="hero-title">{{ mistakes() === 0 ? '¡Sin errores!' : '¡Terminado!' }}</h1>
+            <div class="grid-3 stats">
+                <div class="card st"><b>{{ total() }}</b><span class="small muted">parejas</span></div>
+                <div class="card st"><b>{{ mistakes() }}</b><span class="small muted">errores</span></div>
+                <div class="card st"><b>{{ clockText() }}</b><span class="small muted">tiempo</span></div>
+            </div>
+            <p class="muted">+{{ xpGained() }} XP</p>
+            <div class="stack actions">
+                <button class="btn accent block" (click)="again.emit()"><app-icon name="refresh" />Otra vez</button>
+                <button class="btn ghost block" (click)="back()">Terminar</button>
+            </div>
+        </div>
+    }
+</div>

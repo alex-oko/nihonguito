@@ -1,0 +1,74 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <div class="seal">時</div>
+        <div>
+            <h1 class="hero-title">Números y tiempo</h1>
+            <p class="muted">数・曜日・月・日付・時間</p>
+        </div>
+    </header>
+
+    <!-- Pestañas de tema -->
+    <div class="tabs">
+        @for (topicItem of topics; track topicItem.id) {
+            <button [class.on]="topicId() === topicItem.id" (click)="choose(topicItem.id)"><span class="jp">{{ topicItem.glyph }}</span> {{ topicItem.name }}</button>
+        }
+    </div>
+
+    @if (topic(); as currentTopic) {
+        <!-- Explicación del tema y progreso -->
+        <section class="mission">
+            <b>{{ currentTopic.name }}</b>
+            <span>{{ currentTopic.intro }}</span>
+            <span class="progress">{{ masteredCount() }}/{{ currentTopic.entries.length }} repasados</span>
+        </section>
+
+        @if (!quiz()) {
+            <!-- Lista de estudio -->
+            <div class="entries">
+                @for (entry of currentTopic.entries; track entry.jp) {
+                    <article class="card entry" [class.seen]="isSeen(entry)">
+                        <button class="learn" (click)="toggleSeen(entry)" [attr.aria-label]="isSeen(entry) ? 'Marcar pendiente' : 'Marcar aprendido'">{{ isSeen(entry) ? '✓' : '○' }}</button>
+                        <div class="jp glyph">{{ entry.jp }}</div>
+                        <div class="grow">
+                            <div class="jp reading">{{ entry.reading }}</div>
+                            <b>{{ entry.es }}</b>
+                            @if (entry.note) {
+                                <small>{{ entry.note }}</small>
+                            }
+                        </div>
+                        <app-speak [text]="entry.reading" [slow]="true" />
+                    </article>
+                }
+            </div>
+            <button class="btn accent block practice" (click)="startQuiz()">Practicar {{ currentTopic.name.toLowerCase() }}</button>
+        } @else {
+            @if (current(); as question) {
+                <!-- Pregunta del quiz -->
+                <section class="card quiz-card">
+                    <span class="small muted">PREGUNTA {{ quizIndex() + 1 }} / {{ quizItems().length }}</span>
+                    <div class="jp quiz-glyph">{{ question.jp }}</div>
+                    <div class="jp muted">{{ question.reading }}</div>
+                    <div class="answers">
+                        @for (choice of choices(); track choice) {
+                            <button [class.correct]="feedback() && choice === question.es" [class.wrong]="feedback() === choice && choice !== question.es" [disabled]="!!feedback()" (click)="answer(choice)">{{ choice }}</button>
+                        }
+                    </div>
+                    @if (feedback()) {
+                        <p class="result">{{ feedback() === question.es ? '正解 · ¡Correcto!' : 'La respuesta es: ' + question.es }}</p>
+                        <button class="btn accent block" (click)="next()">{{ quizIndex() + 1 === quizItems().length ? 'Ver resultado' : 'Siguiente' }}</button>
+                    }
+                </section>
+            } @else {
+                <!-- Resultado del quiz -->
+                <section class="card quiz-card">
+                    <div class="score">{{ score() }}/{{ quizItems().length }}</div>
+                    <h2>Sesión completada</h2>
+                    <p class="muted">Cada vuelta fortalece las expresiones de tiempo.</p>
+                    <button class="btn accent block" (click)="startQuiz()">Otra vez</button>
+                    <button class="btn ghost block" (click)="quiz.set(false)">Volver a estudiar</button>
+                </section>
+            }
+        }
+    }
+</div>

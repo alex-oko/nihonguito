@@ -1,0 +1,762 @@
+{
+ "id": 22,
+ "title": "El departamento ideal",
+ "titleJp": "キッチンが 広い アパートが いいです",
+ "summary": "Carlos busca departamento con una agente inmobiliaria y encuentra uno con cocina grande. En el cumpleaños de Yui, Lucía no reconoce al señor de lentes y gorra.",
+ "vocab": [
+  {
+   "id": "L22-001",
+   "kana": "きます",
+   "kanji": "着ます",
+   "es": "ponerse [una camisa]",
+   "type": "verb",
+   "lesson": 22
+  },
+  {
+   "id": "L22-002",
+   "kana": "はきます",
+   "es": "ponerse [zapatos, pantalón]",
+   "type": "verb",
+   "lesson": 22
+  },
+  {
+   "id": "L22-003",
+   "kana": "かぶります",
+   "es": "ponerse [un sombrero]",
+   "type": "verb",
+   "lesson": 22
+  },
+  {
+   "id": "L22-004",
+   "kana": "かけます",
+   "es": "ponerse [gafas]",
+   "type": "verb",
+   "lesson": 22
+  },
+  {
+   "id": "L22-005",
+   "kana": "うまれます",
+   "kanji": "生まれます",
+   "es": "nacer",
+   "type": "verb",
+   "lesson": 22
+  },
+  {
+   "id": "L22-006",
+   "kana": "コート",
+   "es": "abrigo",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-007",
+   "kana": "スーツ",
+   "es": "traje",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-008",
+   "kana": "セーター",
+   "es": "jersey, suéter",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-009",
+   "kana": "ぼうし",
+   "kanji": "帽子",
+   "es": "sombrero, gorra",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-010",
+   "kana": "めがね",
+   "kanji": "眼鏡",
+   "es": "gafas",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-011",
+   "kana": "よく",
+   "es": "a menudo",
+   "type": "adv",
+   "lesson": 22
+  },
+  {
+   "id": "L22-012",
+   "kana": "おめでとう ございます。",
+   "es": "¡Felicidades!",
+   "type": "expr",
+   "lesson": 22
+  },
+  {
+   "id": "L22-013",
+   "kana": "こちら",
+   "es": "esto (cortés)",
+   "type": "pron",
+   "lesson": 22
+  },
+  {
+   "id": "L22-014",
+   "kana": "やちん",
+   "kanji": "家賃",
+   "es": "alquiler (dinero)",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-015",
+   "kana": "うーん。",
+   "es": "Mmm… (pensando)",
+   "type": "expr",
+   "lesson": 22
+  },
+  {
+   "id": "L22-016",
+   "kana": "ダイニングキチン",
+   "es": "cocina-comedor",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-017",
+   "kana": "わしつ",
+   "kanji": "和室",
+   "es": "habitación japonesa",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-018",
+   "kana": "おしいれ",
+   "kanji": "押し入れ",
+   "es": "armario empotrado japonés",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-019",
+   "kana": "ふとん",
+   "kanji": "布団",
+   "es": "futón",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-020",
+   "kana": "アパート",
+   "es": "piso, apartamento",
+   "type": "noun",
+   "lesson": 22
+  },
+  {
+   "id": "L22-021",
+   "kana": "パリ",
+   "es": "París",
+   "type": "name",
+   "lesson": 22
+  },
+  {
+   "id": "L22-022",
+   "kana": "ばんりの ちょうじょう",
+   "kanji": "万里の 長城",
+   "es": "la Gran Muralla",
+   "type": "name",
+   "lesson": 22
+  },
+  {
+   "id": "L22-023",
+   "kana": "きちじょうじ",
+   "kanji": "吉祥寺",
+   "es": "Kichijōji (barrio de Tokio)",
+   "type": "name",
+   "lesson": 22
+  },
+  {
+   "id": "L22-024",
+   "kana": "なかの",
+   "kanji": "中野",
+   "es": "Nakano (barrio de Tokio)",
+   "type": "name",
+   "lesson": 22
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "これは 母が 作った 料理です。",
+   "es": "Esta es una comida que hizo mi mamá."
+  },
+  {
+   "jp": "めがねを かけて いる 人は もりさんです。",
+   "es": "La persona de lentes es el Sr. Mori."
+  },
+  {
+   "jp": "きのう 買った ケーキを まだ 食べて いません。",
+   "es": "Todavía no me como el pastel que compré ayer."
+  },
+  {
+   "jp": "きょうは 友達に 会う 約束が あります。",
+   "es": "Hoy quedé de verme con un amigo."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "これは だれが 撮った 写真ですか。",
+   "qes": "¿Quién tomó esta foto?",
+   "ajp": "アンナさんが 撮った 写真です。",
+   "aes": "La tomó Anna."
+  },
+  {
+   "qjp": "帽子を かぶって いる 人は だれですか。",
+   "qes": "¿Quién es la persona de la gorra?",
+   "ajp": "きのしたさんの 友達です。",
+   "aes": "Es un amigo de Kenta."
+  },
+  {
+   "qjp": "どんな 部屋が いいですか。",
+   "qes": "¿Qué tipo de cuarto prefieres?",
+   "ajp": "窓が 大きい 部屋が いいです。",
+   "aes": "Uno con ventanas grandes."
+  },
+  {
+   "qjp": "ルシアさんが 生まれた 所は どこですか。",
+   "qes": "¿Dónde naciste, Lucía?",
+   "ajp": "メキシコシティです。",
+   "aes": "En la Ciudad de México."
+  },
+  {
+   "qjp": "先週 行った レストランは どうでしたか。",
+   "qes": "¿Qué tal el restaurante al que fueron la semana pasada?",
+   "ajp": "とても 安くて、おいしかったです。",
+   "aes": "Muy barato y rico.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "qjp": "今晩 いっしょに 晩ごはんを 食べませんか。",
+   "qes": "¿Cenamos juntos hoy?",
+   "ajp": "すみません。今晩は 中村さんと 映画を 見る 約束が あります。",
+   "aes": "Lo siento. Hoy quedé de ir al cine con Yui."
+  },
+  {
+   "qjp": "日本で いちばん 行きたい 所は どこですか。",
+   "qes": "¿A qué lugar de Japón es al que más quieres ir?",
+   "ajp": "北海道です。",
+   "aes": "A Hokkaido.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "qjp": "カルロスさんが 働いて いる レストランは どこですか。",
+   "qes": "¿Dónde está el restaurante en el que trabaja Carlos?",
+   "ajp": "駅の 近くです。",
+   "aes": "Cerca de la estación."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Todo lo que describe va ANTES del sustantivo",
+   "explain": "En japonés, cualquier cosa que describa a un sustantivo se pone delante de él: una palabra (あたらしい うち), un nombre con の (カルロスさんの うち) o una frase entera. En español decimos 'la casa que compré'; en japonés el orden es al revés: 'compré-casa' (かった うち). No hace falta ninguna palabra como 'que'.",
+   "examples": [
+    {
+     "jp": "きのう 買った 帽子",
+     "es": "la gorra que compré ayer"
+    },
+    {
+     "jp": "新しい スーツ",
+     "es": "un traje nuevo"
+    }
+   ]
+  },
+  {
+   "title": "Frase + sustantivo (oraciones de relativo)",
+   "explain": "La frase que describe va en forma simple (diccionario, ない, た, なかった). Con adjetivos-な se usa な, y con sustantivos se usa の en vez de だ. Piensa que la frase entera funciona como un adjetivo largo. Error típico: poner です o ます dentro de la frase; ahí siempre va la forma simple.",
+   "examples": [
+    {
+     "jp": "コーヒーを 飲まない 人",
+     "es": "una persona que no toma café"
+    },
+    {
+     "jp": "静かで、きれいな 部屋",
+     "es": "un cuarto tranquilo y bonito"
+    }
+   ]
+  },
+  {
+   "title": "Las partículas desaparecen al describir",
+   "explain": "Cualquier elemento de una frase (el objeto, el lugar, la persona) puede salir y convertirse en el sustantivo descrito. Cuando sale, su partícula (を, で, に) se pierde. 'Trabajo EN el hospital' se vuelve 'el hospital donde trabajo': はたらいて いる びょういん, sin で.",
+   "examples": [
+    {
+     "jp": "わたしが 毎朝 乗る 電車",
+     "es": "el tren que tomo todas las mañanas"
+    },
+    {
+     "jp": "カルロスさんが 働いて いる レストラン",
+     "es": "el restaurante donde trabaja Carlos"
+    }
+   ]
+  },
+  {
+   "title": "El bloque 'frase + sustantivo' se usa como un sustantivo normal",
+   "explain": "Una vez formado, el bloque (por ejemplo カルロスさんが すんで いた うち) se comporta como cualquier sustantivo: puede llevar は, を, が, に, へ o ir antes de です. Así puedes decir 'compré la casa donde vivía Carlos' o 'me gusta la casa donde vivía Carlos'.",
+   "examples": [
+    {
+     "jp": "これは アンナさんが 撮った 写真です。",
+     "es": "Esta es una foto que tomó Anna."
+    },
+    {
+     "jp": "わたしは 母が 作る 料理が 好きです。",
+     "es": "Me gusta la comida que hace mi mamá."
+    }
+   ]
+  },
+  {
+   "title": "Dentro de la frase descriptiva el sujeto lleva が",
+   "explain": "Dentro de la frase que describe al sustantivo, el sujeto se marca con が, no con は. は queda reservado para el tema de la frase grande. Error típico: decir カルロスさんは 作った ケーキ; lo correcto es カルロスさんが 作った ケーキ.",
+   "examples": [
+    {
+     "jp": "これは カルロスさんが 作った ケーキです。",
+     "es": "Este es un pastel que hizo Carlos."
+    },
+    {
+     "jp": "中村さんが 生まれた 所を 知って いますか。",
+     "es": "¿Sabes dónde nació Yui?"
+    }
+   ]
+  },
+  {
+   "title": "V diccionario + じかん / やくそく / ようじ",
+   "explain": "Para decir 'tiempo para hacer algo', 'cita para hacer algo' o 'un asunto que hacer', pones el verbo en forma diccionario delante de じかん, やくそく o ようじ. Es como decir en español 'tiempo de comer' o 'cita de ir al cine'.",
+   "examples": [
+    {
+     "jp": "忙しくて、テレビを 見る 時間が ありません。",
+     "es": "Estoy tan ocupada que no tengo tiempo de ver la tele."
+    },
+    {
+     "jp": "土曜日は 友達と 映画を 見る 約束が あります。",
+     "es": "El sábado quedé de ir al cine con unos amigos."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "どんな アパートが いいですか。",
+   "es": "¿Qué tipo de departamento busca?"
+  },
+  {
+   "jp": "うーん。ちょっと 高いですね。",
+   "es": "Mmm… Está un poco caro."
+  },
+  {
+   "jp": "きょう 見る ことが できますか。",
+   "es": "¿Lo puedo ver hoy?"
+  },
+  {
+   "jp": "あそこで めがねを かけて いる 人は だれですか。",
+   "es": "¿Quién es esa persona de lentes de allá?"
+  },
+  {
+   "jp": "お誕生日 おめでとう ございます。",
+   "es": "¡Feliz cumpleaños!"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L22-c1",
+   "lesson": 22,
+   "title": "Buscando departamento",
+   "situation": "Carlos va a una inmobiliaria porque quiere mudarse a un departamento con buena cocina.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ふどうさんや",
+     "jp": "いらっしゃいませ。どんな アパートが いいですか。",
+     "es": "Bienvenido. ¿Qué tipo de departamento busca?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "駅から 近くて、キッチンが 広い アパートが いいです。わたしは コックですから。",
+     "es": "Uno cerca de la estación y con cocina grande. Es que soy cocinero."
+    },
+    {
+     "who": "A",
+     "name": "ふどうさんや",
+     "jp": "こちらは いかがですか。吉祥寺駅から 歩いて 5分です。",
+     "es": "¿Qué le parece este? Está a cinco minutos caminando de la estación de Kichijōji."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "家賃は いくらですか。",
+     "es": "¿Cuánto es la renta?"
+    },
+    {
+     "who": "A",
+     "name": "ふどうさんや",
+     "jp": "9万円です。和室と ダイニングキチンが あります。",
+     "es": "Noventa mil yenes. Tiene un cuarto de estilo japonés y cocina-comedor."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "うーん。ちょっと 高いですね。",
+     "es": "Mmm… Está un poco caro."
+    },
+    {
+     "who": "A",
+     "name": "ふどうさんや",
+     "jp": "じゃ、中野の アパートは どうですか。7万円で、キッチンも 広いですよ。",
+     "es": "Entonces, ¿qué tal este de Nakano? Son setenta mil yenes y la cocina también es grande."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいですね。布団を 入れる 押し入れも ありますか。",
+     "es": "Me gusta. ¿Tiene también un clóset para guardar el futón?"
+    },
+    {
+     "who": "A",
+     "name": "ふどうさんや",
+     "jp": "ええ、和室に 大きい 押し入れが あります。",
+     "es": "Sí, en el cuarto japonés hay un clóset grande."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "じゃ、きょう 見る ことが できますか。",
+     "es": "Entonces, ¿lo puedo ver hoy?"
+    }
+   ]
+  },
+  {
+   "id": "L22-c2",
+   "lesson": 22,
+   "title": "¿Quién es el de lentes?",
+   "situation": "En la fiesta de cumpleaños de Yui, Lucía ve a un señor con ropa casual y no sabe quién es.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "なかむらさん、お誕生日 おめでとう ございます。",
+     "es": "Yui, ¡feliz cumpleaños!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ありがとう ございます。どうぞ、たくさん 食べて くださいね。",
+     "es": "Gracias. Come mucho, ¿eh?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい。あのう、あそこで めがねを かけて いる 人は だれですか。",
+     "es": "Sí. Oye, ¿quién es esa persona de lentes de allá?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "どの 人ですか。",
+     "es": "¿Cuál?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "黒い セーターを 着て、帽子を かぶって いる 人です。",
+     "es": "El que trae suéter negro y gorra."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ああ、もりさんですよ。",
+     "es": "Ah, es el Sr. Mori."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "えっ、もりさん？ 会社では いつも スーツを 着て いますから、わかりませんでした。",
+     "es": "¿Qué? ¿El Sr. Mori? Como en la oficina siempre trae traje, no lo reconocí."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "これは もりさんが 作った ケーキですよ。",
+     "es": "Y este pastel lo hizo el Sr. Mori."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ほんとうですか。すごいですね。",
+     "es": "¿De verdad? ¡Qué impresionante!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ええ。会社の もりさんと 全然 違いますね。",
+     "es": "Sí. Es muy diferente al Sr. Mori de la oficina."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Ropa (いふく 衣服)",
+   "items": [
+    {
+     "kana": "スーツ",
+     "kanji": "",
+     "es": "traje"
+    },
+    {
+     "kana": "ワンピース",
+     "kanji": "",
+     "es": "vestido"
+    },
+    {
+     "kana": "うわぎ",
+     "kanji": "上着",
+     "es": "chaqueta"
+    },
+    {
+     "kana": "ズボン",
+     "kanji": "",
+     "es": "pantalón"
+    },
+    {
+     "kana": "パンツ",
+     "kanji": "",
+     "es": "pantalón"
+    },
+    {
+     "kana": "ジーンズ",
+     "kanji": "",
+     "es": "vaqueros"
+    },
+    {
+     "kana": "スカート",
+     "kanji": "",
+     "es": "falda"
+    },
+    {
+     "kana": "ブラウス",
+     "kanji": "",
+     "es": "blusa"
+    },
+    {
+     "kana": "ワイシャツ",
+     "kanji": "",
+     "es": "camisa"
+    },
+    {
+     "kana": "セーター",
+     "kanji": "",
+     "es": "jersey, suéter"
+    },
+    {
+     "kana": "マフラー",
+     "kanji": "",
+     "es": "bufanda"
+    },
+    {
+     "kana": "てぶくろ",
+     "kanji": "手袋",
+     "es": "guantes"
+    },
+    {
+     "kana": "したぎ",
+     "kanji": "下着",
+     "es": "ropa interior"
+    },
+    {
+     "kana": "くつした",
+     "kanji": "",
+     "es": "calcetines"
+    },
+    {
+     "kana": "パンスト",
+     "kanji": "",
+     "es": "medias"
+    },
+    {
+     "kana": "きもの",
+     "kanji": "着物",
+     "es": "kimono"
+    },
+    {
+     "kana": "おび",
+     "kanji": "帯",
+     "es": "faja del kimono"
+    },
+    {
+     "kana": "オーバーコート",
+     "kanji": "",
+     "es": "abrigo"
+    },
+    {
+     "kana": "レインコート",
+     "kanji": "",
+     "es": "impermeable"
+    },
+    {
+     "kana": "ネクタイ",
+     "kanji": "",
+     "es": "corbata"
+    },
+    {
+     "kana": "ベルト",
+     "kanji": "",
+     "es": "cinturón"
+    },
+    {
+     "kana": "ハイヒール",
+     "kanji": "",
+     "es": "zapatos de tacón"
+    },
+    {
+     "kana": "ブーツ",
+     "kanji": "",
+     "es": "botas"
+    },
+    {
+     "kana": "うんどうぐつ",
+     "kanji": "運動靴",
+     "es": "zapatillas de deporte"
+    },
+    {
+     "kana": "ぞうり",
+     "kanji": "",
+     "es": "sandalias japonesas"
+    },
+    {
+     "kana": "たび",
+     "kanji": "",
+     "es": "calcetines japoneses"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Al rentar un departamento en Japón, además de la renta (やちん) se suele pagar un depósito (しききん) y, en muchos casos, un «dinero de agradecimiento» al dueño (れいきん) que no se devuelve.",
+  "Los anuncios de departamentos usan códigos como 1K o 2LDK: el número indica cuántas habitaciones hay, y L, D y K significan sala, comedor y cocina."
+ ],
+ "extras": [
+  {
+   "jp": "パリは わたしが いちばん 行きたい 町です。",
+   "es": "París es la ciudad a la que más quiero ir.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "これは 京都で 撮った 写真です。",
+   "es": "Esta es una foto que tomé en Kioto.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "これは 母が 作った メキシコの 料理です。",
+   "es": "Esta es comida mexicana que hizo mi mamá.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "わたしが よく 行く ラーメン屋は 駅の 前に あります。",
+   "es": "El local de ramen al que voy seguido está frente a la estación.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "めがねを かけて いる 人が わたしの 課長です。",
+   "es": "La persona de lentes es mi jefe de sección.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "きょうは 会議の 資料を 作る 時間が ありません。",
+   "es": "Hoy no tengo tiempo de preparar los documentos para la junta.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "日本語を 教えて いる 先生は 大阪の 人です。",
+   "es": "La profesora que nos enseña japonés es de Osaka.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "きのう 習った 漢字を もう 忘れました。",
+   "es": "Ya se me olvidaron los kanji que aprendí ayer.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "これは わたしが 好きな アニメの ポスターです。",
+   "es": "Este es un póster de un anime que me gusta.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "最近 アニメを 見る 時間が ありません。",
+   "es": "Últimamente no tengo tiempo de ver anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "きのう 買った ゲームは とても おもしろいです。",
+   "es": "El juego que compré ayer está muy divertido.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "いっしょに ゲームを する 友達が たくさん います。",
+   "es": "Tengo muchos amigos con quienes jugar videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "日曜日は サッカーを する 約束が あります。",
+   "es": "El domingo quedé de jugar fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "あの 青い シャツを 着て いる 人が キャプテンです。",
+   "es": "El de la camiseta azul es el capitán.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "中村さんが 弾く ピアノは とても きれいです。",
+   "es": "El piano que toca Yui suena precioso.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "これは 父が よく 聞いた 歌です。",
+   "es": "Esta es una canción que mi papá escuchaba mucho.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

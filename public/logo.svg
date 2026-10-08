@@ -1,0 +1,31 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Nihonguito</title>
+  <!-- Full-bleed background: phones apply their own rounded mask. Artwork stays in the central 80% (maskable safe zone). -->
+  <rect width="1024" height="1024" fill="#FFF1DA"/>
+  <g transform="translate(0 -14)">
+    <!-- soft floor shadow -->
+    <ellipse cx="512" cy="818" rx="258" ry="26" fill="#F1D9B4"/>
+    <!-- rice ball -->
+    <path id="rice" d="M512 214 C562 214 604 258 654 338 L792 588 C852 700 804 792 692 792 L332 792 C220 792 172 700 232 588 L370 338 C420 258 462 214 512 214 Z" fill="#FFFFFF"/>
+    <!-- a few rice grains -->
+    <g fill="#F3ECE0">
+      <ellipse cx="452" cy="330" rx="14" ry="7" transform="rotate(-30 452 330)"/>
+      <ellipse cx="596" cy="372" rx="14" ry="7" transform="rotate(25 596 372)"/>
+      <ellipse cx="330" cy="640" rx="14" ry="7" transform="rotate(-50 330 640)"/>
+      <ellipse cx="700" cy="630" rx="14" ry="7" transform="rotate(40 700 630)"/>
+    </g>
+    <!-- nori band with に -->
+    <rect x="372" y="588" width="280" height="204" fill="#2C2C2A"/>
+    <text x="512" y="758" text-anchor="middle" font-family="'Yu Gothic UI','Yu Gothic','Hiragino Maru Gothic ProN','Noto Sans JP','Meiryo',sans-serif" font-weight="700" font-size="176" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="9" stroke-linejoin="round">に</text>
+    <!-- outline on top -->
+    <path d="M512 214 C562 214 604 258 654 338 L792 588 C852 700 804 792 692 792 L332 792 C220 792 172 700 232 588 L370 338 C420 258 462 214 512 214 Z" fill="none" stroke="#2C2C2A" stroke-width="22" stroke-linejoin="round"/>
+    <!-- face -->
+    <ellipse cx="398" cy="522" rx="36" ry="21" fill="#F4A3A3"/>
+    <ellipse cx="626" cy="522" rx="36" ry="21" fill="#F4A3A3"/>
+    <circle cx="436" cy="476" r="26" fill="#2C2C2A"/>
+    <circle cx="588" cy="476" r="26" fill="#2C2C2A"/>
+    <circle cx="428" cy="467" r="8" fill="#FFFFFF"/>
+    <circle cx="580" cy="467" r="8" fill="#FFFFFF"/>
+    <path d="M478 522 Q512 556 546 522" fill="none" stroke="#2C2C2A" stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>

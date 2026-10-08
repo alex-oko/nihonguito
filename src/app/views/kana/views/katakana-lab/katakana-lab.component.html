@@ -1,0 +1,77 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/kana" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Laboratorio de katakana</h1>
+    </header>
+
+    <!-- Introducción -->
+    <section class="intro card">
+        <div class="glyphs hand">カタカナ</div>
+        <p>
+            El katakana cuesta porque tiene trazos más rectos y muchos símbolos se parecen entre sí. La clave es
+            <b>fijarte en la dirección de los trazos</b> y <b>leer palabras reales</b> desde el primer día.
+        </p>
+    </section>
+
+    <!-- Plan de práctica -->
+    <h2 class="section-title">Plan de práctica</h2>
+    <div class="stack">
+        @for (step of steps; track step.title; let stepIndex = $index) {
+            <a class="card step" [routerLink]="step.link" [queryParams]="step.query ?? {}">
+                <span class="n">{{ stepIndex + 1 }}</span>
+                <div class="grow">
+                    <div class="t">{{ step.title }}</div>
+                    <div class="small muted">{{ step.desc }}</div>
+                </div>
+                <app-icon name="chevron" />
+            </a>
+        }
+    </div>
+
+    <!-- Parejas que se confunden -->
+    <h2 class="section-title">Parejas que se confunden</h2>
+    <div class="stack">
+        @for (group of lookalikes; track $index) {
+            <div class="card look">
+                <div class="row chars">
+                    @for (char of group.chars; track char) {
+                        <button class="lc hand" (click)="say(char)">{{ char }}</button>
+                    }
+                </div>
+                <p class="small">{{ group.tip }}</p>
+            </div>
+        }
+    </div>
+
+    <!-- Reglas -->
+    <h2 class="section-title">Reglas del katakana</h2>
+    <div class="stack">
+        @for (rule of rules; track rule.title) {
+            <div class="card rule">
+                <div class="t">{{ rule.title }}</div>
+                <p class="small body">{{ rule.body }}</p>
+                @for (example of rule.examples; track example[0]) {
+                    <div class="row ex">
+                        <span class="jp exw">{{ example[0] }}</span>
+                        <span class="small muted grow">{{ example[1] }}</span>
+                        <app-speak [text]="example[0]" />
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- Tu nombre en katakana -->
+    <h2 class="section-title">Tu nombre en katakana</h2>
+    <div class="card name">
+        <input class="field" placeholder="Escribe tu nombre…" [value]="name()" (input)="name.set($any($event.target).value)" />
+        @if (kata()) {
+            <div class="row result">
+                <span class="jp big">{{ kata() }}</span>
+                <app-speak [text]="kata()" [big]="true" />
+            </div>
+            <p class="small muted">Es una aproximación: en Japón pueden escribirlo un poco distinto.</p>
+        }
+    </div>
+</div>

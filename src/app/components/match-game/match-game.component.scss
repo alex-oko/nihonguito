@@ -1,0 +1,96 @@
+/* ---- Estructura y cabecera ---- */
+.wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: calc(8px + var(--safe-t)) 16px calc(24px + var(--safe-b));
+    min-height: 100dvh;
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 52px;
+}
+.grow {
+    flex: 1;
+}
+.timer {
+    margin: 6px 0 4px;
+}
+.label {
+    font-weight: 600;
+    margin-top: 12px;
+}
+/* ---- Columnas y fichas ---- */
+.cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.m {
+    min-height: 64px;
+    padding: 8px 10px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    border-bottom-width: 3px;
+    background: var(--surface);
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    transition: transform 0.1s, background 0.15s, border-color 0.15s, opacity 0.3s;
+}
+.m.jp {
+    font-family: var(--font-jp);
+    font-size: 1.15rem;
+}
+.m.jp-big {
+    font-family: var(--font-hand);
+    font-size: 2rem;
+}
+.m.sel {
+    border-color: var(--indigo);
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+.m.done {
+    border-color: transparent;
+    background: var(--ok-soft);
+    color: var(--ok);
+    opacity: 0.35;
+    transform: scale(0.96);
+}
+.m.err {
+    border-color: var(--bad);
+    background: var(--bad-soft);
+    animation: shake 0.3s ease;
+}
+/* ---- Pantalla final ---- */
+.end {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 32px;
+}
+.big-glyph {
+    font-size: 3.5rem;
+    color: var(--accent);
+}
+.st {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 6px;
+}
+.st b {
+    font-size: 1.3rem;
+}
+.actions {
+    margin-top: 12px;
+}

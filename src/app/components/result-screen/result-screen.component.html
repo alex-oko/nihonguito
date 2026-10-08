@@ -1,0 +1,99 @@
+<div class="page full res">
+    <!-- Cabecera: Musubi, estrellas y titular -->
+    <div class="hero">
+        <app-musubi-say class="cheer" [size]="76" [mood]="percent() >= 70 ? 'happy' : percent() >= 40 ? 'idle' : 'oops'">{{ cheerMessage() }}</app-musubi-say>
+        <div class="stars">
+            @for (starNumber of [1, 2, 3]; track starNumber) {
+                <span class="star" [class.on]="stars() >= starNumber" [style.animation-delay.ms]="starNumber * 150">
+                    <app-icon name="star" [size]="40" [fill]="stars() >= starNumber" [stroke]="1.5" />
+                </span>
+            }
+        </div>
+        <h1 class="hero-title">{{ headline() }}</h1>
+        <p class="muted">{{ result().title }}</p>
+    </div>
+
+    <!-- Cifras: aciertos, XP y tiempo -->
+    <div class="grid-3 stats">
+        <div class="card stat">
+            <b>{{ percent() }}%</b>
+            <span class="small muted">aciertos</span>
+        </div>
+        <div class="card stat">
+            <b>+{{ result().xp }}</b>
+            <span class="small muted">XP</span>
+        </div>
+        <div class="card stat">
+            <b>{{ durationText() }}</b>
+            <span class="small muted">tiempo</span>
+        </div>
+    </div>
+
+    <!-- Granos de arroz para Musubi -->
+    @if (result().grains) {
+        <div class="reward">
+            <span class="ri"><app-icon name="rice" [size]="26" /></span>
+            <span class="grow">
+                <b>+{{ result().grains }} granos de arroz</b>
+                <span class="small muted">5 por cada acierto y 5 por terminar. Ahora tienes {{ petSVC.state().grains }}.</span>
+            </span>
+        </div>
+        <a class="btn block feed" routerLink="/musubi"><app-icon name="rice" [size]="18" />Darle de comer a Musubi</a>
+    }
+
+    <!-- Desglose por habilidad -->
+    @if (skills().length > 1) {
+        <h2 class="section-title">Por habilidad</h2>
+        <div class="card skills">
+            @for (skill of skills(); track skill.skill) {
+                <div class="sk">
+                    <span class="sk-l small">{{ skillLabel(skill.skill) }}</span>
+                    <div class="bar grow" [class.ok]="skill.pct >= 80" [class.low]="skill.pct < 60" [class.mid]="skill.pct >= 60 && skill.pct < 80"><i [style.width.%]="skill.pct"></i></div>
+                    <span class="sk-p small">{{ skill.correct }}/{{ skill.total }}</span>
+                </div>
+            }
+        </div>
+    }
+    @if (weakestSkill(); as weakest) {
+        <a class="card weak" [routerLink]="['/lecciones', lessonId(), 'practica', weakest.skill]" replaceUrl>
+            <app-icon name="target" [size]="20" />
+            <span class="grow">
+                <b>Refuerza: {{ skillLabel(weakest.skill) }}</b>
+                <span class="small muted block">Fue lo más difícil ({{ weakest.pct }}%). Una ronda solo de esto.</span>
+            </span>
+            <app-icon name="chevron" />
+        </a>
+    }
+
+    <!-- Errores para repasar -->
+    @if (mistakes().length) {
+        <h2 class="section-title">Para repasar ({{ mistakes().length }})</h2>
+        <div class="card list">
+            @for (mistake of mistakes(); track mistake.question.id) {
+                <div class="list-item">
+                    <div class="grow">
+                        <div class="small muted">{{ mistake.question.label }}</div>
+                        <div class="jp q"><app-jp [text]="promptOf(mistake.question)" /></div>
+                        <div class="small">
+                            <span class="ok-t">✓ <app-jp [text]="answerOf(mistake.question)" /></span>
+                            @if (mistake.given && mistake.given !== '—') {
+                                <span class="bad-t"> · tu respuesta: {{ mistake.given }}</span>
+                            }
+                        </div>
+                    </div>
+                    @if (mistake.question.audio) {
+                        <app-speak [text]="mistake.question.audio" />
+                    }
+                </div>
+            }
+        </div>
+    } @else {
+        <p class="center perfect">¡Sin errores! 完璧 (kanpeki)</p>
+    }
+
+    <!-- Acciones -->
+    <div class="stack actions">
+        <button class="btn accent block" (click)="again.emit()"><app-icon name="refresh" />Otra vez</button>
+        <button class="btn ghost block" (click)="exit.emit()">Terminar</button>
+    </div>
+</div>

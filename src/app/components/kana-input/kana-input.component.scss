@@ -1,0 +1,26 @@
+/* ---- Campo ---- */
+:host {
+    display: block;
+}
+.field {
+    width: 100%;
+    font: inherit;
+    font-size: 1.25rem;
+    padding: 14px 16px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    outline: none;
+    text-align: center;
+    transition: border-color 0.15s;
+}
+.field:focus {
+    border-color: var(--ink);
+}
+
+/* ---- Modo kana: fuente japonesa más grande ---- */
+.jp {
+    font-family: var(--font-jp);
+    font-size: 1.5rem;
+}

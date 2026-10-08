@@ -1,0 +1,16 @@
+/* ---- Utilidades de texto: fuente japonesa, letra a mano, gris, tamaño pequeño, centrado ---- */
+.jp {
+    font-family: var(--font-jp);
+}
+.hand {
+    font-family: var(--font-hand);
+}
+.muted {
+    color: var(--muted);
+}
+.small {
+    font-size: 0.85rem;
+}
+.center {
+    text-align: center;
+}

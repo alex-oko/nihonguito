@@ -1,0 +1,143 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/kana" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>{{ title() }}</h1>
+        @if (script() === 'katakana') {
+            <a class="btn soft sm" routerLink="/kana/lab"><app-icon name="flask" [size]="15" />Laboratorio</a>
+        }
+    </header>
+
+    <!-- Pista de Musubi -->
+    @if (hint(); as hintText) {
+        <app-musubi-say class="say" [size]="44">{{ hintText }}</app-musubi-say>
+    }
+
+    <!-- Pestañas de grupo -->
+    <div class="tabs">
+        @for (groupId of groups(); track groupId) {
+            <button [class.on]="group() === groupId" (click)="group.set(groupId)">
+                {{ groupLabels[groupId] }}
+                @if (groupCount()[groupId]) {
+                    <small class="gc">{{ groupCount()[groupId] }}</small>
+                }
+            </button>
+        }
+    </div>
+
+    <!-- Selección rápida de filas -->
+    <div class="quick" role="group" aria-label="Elegir filas rápido">
+        <button (click)="selectGroup(!groupAllSelected())"><app-icon [name]="groupAllSelected() ? 'x' : 'check'" [size]="14" />{{ groupAllSelected() ? 'Quitar todas' : 'Todas' }}</button>
+        <button (click)="pickWeak()" [disabled]="!weakRows().length"><app-icon name="target" [size]="14" />Mis débiles</button>
+        <button (click)="pickUpTo()"><app-icon name="flame" [size]="14" />Hasta donde voy</button>
+        <button (click)="clear()" [disabled]="!selected().length"><app-icon name="x" [size]="14" />Ninguna</button>
+    </div>
+    <p class="small muted helper">Toca un símbolo para escucharlo. Toca la letra de la izquierda para elegir la fila.</p>
+
+    <!-- Tabla -->
+    <div class="chart">
+        @for (row of rows(); track row.id) {
+            <div class="krow" [class.sel]="selected().includes(row.id)" [style.--cols]="cols()">
+                <button class="rowsel" [class.on]="selected().includes(row.id)" (click)="toggleRow(row.id)" [attr.aria-pressed]="selected().includes(row.id)" [attr.aria-label]="'Fila ' + row.label">
+                    @if (selected().includes(row.id)) {
+                        <app-icon name="check" [size]="14" [stroke]="3" />
+                    } @else {
+                        <span>{{ row.label }}</span>
+                    }
+                </button>
+                @for (cell of row.cells; track $index) {
+                    @if (cell) {
+                        <button class="cell" (click)="open(cell)" [attr.data-box]="box(cell.char)">
+                            <span class="ch hand">{{ cell.char }}</span>
+                            <span class="ro">{{ cell.romaji[0] }}</span>
+                        </button>
+                    } @else {
+                        <span class="cell empty-cell"></span>
+                    }
+                }
+            </div>
+        }
+    </div>
+
+    <!-- Leyenda -->
+    <div class="legend small muted">
+        <span><i class="dot b0"></i>nuevo</span>
+        <span><i class="dot b2"></i>aprendiendo</span>
+        <span><i class="dot b4"></i>dominado</span>
+    </div>
+
+    <!-- Barra de práctica: siempre a mano, sin tener que bajar hasta el final de la tabla -->
+    <div class="dock">
+        <div class="dock-h">
+            <span class="grow">
+                <b>{{ selectedCount() ? selectedCount() + ' símbolos elegidos' : 'Elige una fila' }}</b>
+                <small>{{ selectedHeads() || 'Toca la letra de la izquierda' }}</small>
+            </span>
+            <button class="go" [disabled]="!selectedCount()" (click)="go('mixed')"><app-icon name="shuffle" [size]="16" />Quiz mixto</button>
+        </div>
+        <div class="dmodes">
+            @for (mode of modes; track mode.id) {
+                <button [disabled]="!selectedCount()" (click)="go(mode.id)"><app-icon [name]="mode.icon" [size]="18" />{{ mode.label }}</button>
+            }
+            <a [routerLink]="['/kana', script(), 'memorama']" [queryParams]="{ rows: rowsParam() }" [class.off]="!selectedCount()"><app-icon name="grid" [size]="18" />Memorama</a>
+            <a [routerLink]="['/kana', script(), 'trazar']" [queryParams]="{ rows: rowsParam() }" [class.off]="!selectedCount()"><app-icon name="brush" [size]="18" />Trazar</a>
+            <a routerLink="/juego/contrarreloj" [queryParams]="{ kana: script(), rows: rowsParam() }" [class.off]="!selectedCount()"><app-icon name="bolt" [size]="18" />Contrarreloj</a>
+            <button (click)="go('lookalikes')"><app-icon name="copy" [size]="18" />Parecidos</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ficha de un símbolo -->
+@if (detail(); as kana) {
+    <div class="sheet-backdrop" (click)="detail.set(null)">
+        <div class="sheet" (click)="$event.stopPropagation()">
+            <div class="grab"></div>
+            <div class="det-head">
+                <div class="det-char hand">{{ kana.char }}</div>
+                <div class="grow">
+                    <div class="det-rom">{{ kana.romaji.join(' / ') }}</div>
+                    <div class="muted small">
+                        {{ kana.script === 'katakana' ? 'En hiragana' : 'En katakana' }}: <span class="jp">{{ twin(kana) }}</span>
+                    </div>
+                </div>
+                <app-speak [text]="kana.char" [big]="true" />
+            </div>
+
+            <!-- Truco de memoria -->
+            @if (tip(kana); as tipText) {
+                <div class="det-block tipbox">
+                    <app-icon name="bulb" [size]="18" />
+                    <span>{{ tipText }}</span>
+                </div>
+            }
+
+            <!-- Símbolos parecidos -->
+            @for (lookalike of lookalikes(kana); track $index) {
+                <div class="det-block warn">
+                    <div class="row lk hand">
+                        @for (char of lookalike.chars; track char) {
+                            <span [class.me]="char === kana.char">{{ char }}</span>
+                        }
+                    </div>
+                    <p class="small">{{ lookalike.tip }}</p>
+                </div>
+            }
+
+            <!-- Palabras de ejemplo (solo katakana) -->
+            @if (examples(kana).length) {
+                <div class="section-title">Palabras con {{ kana.char }}</div>
+                <div class="stack">
+                    @for (example of examples(kana); track example[0]) {
+                        <div class="row ex">
+                            <span class="jp exw">{{ example[0] }}</span>
+                            <span class="muted grow">{{ example[1] }}</span>
+                            <app-speak [text]="example[0]" />
+                        </div>
+                    }
+                </div>
+            }
+
+            <button class="btn block ghost close" (click)="detail.set(null)">Cerrar</button>
+        </div>
+    </div>
+}

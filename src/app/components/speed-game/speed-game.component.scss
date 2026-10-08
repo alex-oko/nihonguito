@@ -1,0 +1,115 @@
+/* ---- Estructura y cabecera ---- */
+.wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: calc(8px + var(--safe-t)) 16px calc(24px + var(--safe-b));
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 58px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid color-mix(in srgb, var(--signal) 55%, transparent);
+}
+.timer {
+    margin: 12px 0 8px;
+}
+.base-title {
+    flex: 1;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+.grow {
+    flex: 1;
+}
+/* ---- Pantallas de inicio y final ---- */
+.center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding-top: 40px;
+}
+.glyph {
+    font-size: 3.5rem;
+    color: var(--accent);
+}
+/* ---- Partida: marcador, enunciado y opciones ---- */
+.score {
+    margin: 10px 0;
+    gap: 8px;
+}
+.prompt {
+    text-align: center;
+    padding: 28px 12px;
+    border-radius: var(--r-lg);
+    transition: background 0.15s;
+    margin-bottom: 16px;
+}
+.flash-ok {
+    background: var(--ok-soft);
+}
+.flash-bad {
+    background: var(--bad-soft);
+    animation: shake 0.3s ease;
+}
+.p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.p.jp {
+    font-weight: 500;
+}
+.p.big {
+    font-family: var(--font-hand);
+    font-size: 5rem;
+    line-height: 1.1;
+}
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.c {
+    min-height: 72px;
+    padding: 10px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    border-bottom-width: 3px;
+    background: var(--surface);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1.25;
+}
+.c:active {
+    transform: translateY(2px);
+}
+.c.jp {
+    font-family: var(--font-jp);
+    font-size: 1.2rem;
+}
+.c.big {
+    font-family: var(--font-hand);
+    font-size: 2.4rem;
+}
+/* ---- Cifras finales ---- */
+.st {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 6px;
+}
+.st b {
+    font-size: 1.3rem;
+}
+.stats {
+    width: 100%;
+}

@@ -1,0 +1,182 @@
+<svg
+    viewBox="190 150 644 676"
+    [attr.width]="size()"
+    [attr.height]="size()"
+    [attr.data-mood]="shownMood()"
+    role="img"
+    [attr.aria-label]="'Musubi'"
+    (click)="onTap()"
+>
+    <!-- Sombra en el suelo (en la etapa bentō la caja ya hace de base) -->
+    @if (currentStage() < 3) {
+        <ellipse cx="512" cy="804" rx="250" ry="22" class="shadow" />
+    }
+    <g [attr.transform]="bodyTransform()">
+        <!-- Caja bentō (última etapa): el fondo y las guarniciones detrás de Musubi -->
+        @if (currentStage() === 3) {
+            <rect x="150" y="600" width="724" height="210" rx="28" fill="#b8382b" />
+            <rect x="174" y="622" width="676" height="170" rx="16" fill="#7a2119" />
+            <rect x="182" y="690" width="84" height="74" rx="12" fill="#ffd45a" stroke="#2c2c2a" stroke-width="8" />
+            <path d="M200 712 h48 M200 740 h48" stroke="#e8a92c" stroke-width="8" />
+            <path d="M768 760 v-40 a38 38 0 0 1 76 0 v40 z" fill="#e8584a" stroke="#2c2c2a" stroke-width="8" />
+            <circle cx="792" cy="716" r="6" fill="#2c2c2a" />
+            <circle cx="820" cy="716" r="6" fill="#2c2c2a" />
+        }
+
+        <!-- Cuerpo: arroz, granos, ajonjolí (etapa 1) y alga con に (etapa 2 en adelante) -->
+        <path class="rice" d="M512 214 C562 214 604 258 654 338 L792 588 C852 700 804 792 692 792 L332 792 C220 792 172 700 232 588 L370 338 C420 258 462 214 512 214 Z" />
+        <g class="grain">
+            <ellipse cx="452" cy="330" rx="14" ry="7" transform="rotate(-30 452 330)" />
+            <ellipse cx="596" cy="372" rx="14" ry="7" transform="rotate(25 596 372)" />
+            <ellipse cx="330" cy="640" rx="14" ry="7" transform="rotate(-50 330 640)" />
+            <ellipse cx="700" cy="630" rx="14" ry="7" transform="rotate(40 700 630)" />
+            @if (currentStage() < 2) {
+                <ellipse cx="430" cy="690" rx="14" ry="7" transform="rotate(20 430 690)" />
+                <ellipse cx="600" cy="700" rx="14" ry="7" transform="rotate(-20 600 700)" />
+                <ellipse cx="512" cy="630" rx="14" ry="7" transform="rotate(80 512 630)" />
+            }
+        </g>
+        @if (currentStage() === 1) {
+            <g class="sesame">
+                <ellipse cx="480" cy="296" rx="9" ry="5" transform="rotate(30 480 296)" />
+                <ellipse cx="548" cy="282" rx="9" ry="5" transform="rotate(-20 548 282)" />
+                <ellipse cx="380" cy="700" rx="9" ry="5" transform="rotate(60 380 700)" />
+                <ellipse cx="470" cy="740" rx="9" ry="5" transform="rotate(-40 470 740)" />
+                <ellipse cx="560" cy="660" rx="9" ry="5" transform="rotate(10 560 660)" />
+                <ellipse cx="660" cy="720" rx="9" ry="5" transform="rotate(-70 660 720)" />
+                <ellipse cx="300" cy="600" rx="9" ry="5" transform="rotate(20 300 600)" />
+                <ellipse cx="730" cy="590" rx="9" ry="5" transform="rotate(-30 730 590)" />
+            </g>
+        }
+        @if (currentStage() >= 2) {
+            <rect x="372" y="588" width="280" height="204" class="nori" />
+            <text x="512" y="758" text-anchor="middle" class="ni">に</text>
+        }
+        <!-- Contorno y mejillas -->
+        <path class="outline" d="M512 214 C562 214 604 258 654 338 L792 588 C852 700 804 792 692 792 L332 792 C220 792 172 700 232 588 L370 338 C420 258 462 214 512 214 Z" />
+
+        <ellipse cx="398" cy="522" rx="36" ry="21" class="cheek" />
+        <ellipse cx="626" cy="522" rx="36" ry="21" class="cheek" />
+
+        <!-- Ojos: cada estado de ánimo enseña los suyos (ver .f en el scss) -->
+        <g class="f open">
+            <circle cx="436" cy="476" r="26" class="ink" />
+            <circle cx="588" cy="476" r="26" class="ink" />
+            <circle cx="428" cy="467" r="8" class="white" />
+            <circle cx="580" cy="467" r="8" class="white" />
+        </g>
+        <g class="f arcs">
+            <path class="ln" d="M408 484 Q436 448 464 484" />
+            <path class="ln" d="M560 484 Q588 448 616 484" />
+        </g>
+        <g class="f closed">
+            <path class="ln" d="M410 474 Q436 492 462 474" />
+            <path class="ln" d="M562 474 Q588 492 614 474" />
+        </g>
+        <g class="f half">
+            <path class="ln" d="M410 474 L462 474" />
+            <path class="ln" d="M562 474 L614 474" />
+            <circle cx="436" cy="486" r="12" class="ink" />
+            <circle cx="588" cy="486" r="12" class="ink" />
+        </g>
+        <g class="f hearts">
+            <path d="M436 504 C398 480 394 448 416 441 C428 437 436 446 436 452 C436 446 444 437 456 441 C478 448 474 480 436 504 Z" />
+            <path d="M588 504 C550 480 546 448 568 441 C580 437 588 446 588 452 C588 446 596 437 608 441 C630 448 626 480 588 504 Z" />
+        </g>
+        <g class="f squint">
+            <path class="ln" d="M414 456 L458 476 L414 496" />
+            <path class="ln" d="M610 456 L566 476 L610 496" />
+        </g>
+        <g class="f brows">
+            <path class="ln" d="M404 430 L456 446" />
+            <path class="ln" d="M620 430 L568 446" />
+        </g>
+
+        <!-- Bocas -->
+        <path class="f ln smile" d="M478 522 Q512 556 546 522" />
+        <path class="f ln grin" d="M470 518 Q512 572 554 518" />
+        <ellipse class="f mo chew" cx="512" cy="540" rx="28" ry="22" />
+        <ellipse class="f mo o" cx="512" cy="536" rx="20" ry="24" />
+        <path class="f ln sad" d="M482 548 Q512 518 542 548" />
+        <path class="f ln calm" d="M496 536 Q512 546 528 536" />
+        <path class="f mo laughm" d="M464 514 Q512 600 560 514 Z" />
+
+        <!-- Ropa -->
+        @if (isWearing('bufanda')) {
+            <g>
+                <path d="M300 600 Q512 650 724 600 L734 640 Q512 700 290 640 Z" fill="#4f9a6e" />
+                <path d="M640 640 l20 90 l40 -10 l-24 -86z" fill="#4f9a6e" />
+            </g>
+        }
+        @if (isWearing('pajarita')) {
+            <g stroke="#2c2c2a" stroke-width="8" stroke-linejoin="round">
+                <path d="M512 604 L448 570 L448 638 Z M512 604 L576 570 L576 638 Z" fill="#5a8be8" />
+                <circle cx="512" cy="604" r="17" fill="#3f6fc4" />
+            </g>
+        }
+        @if (isWearing('lentes')) {
+            <g stroke="#2c2c2a" stroke-width="12" fill="rgb(255 255 255 / 0.22)">
+                <circle cx="436" cy="476" r="46" />
+                <circle cx="588" cy="476" r="46" />
+                <path d="M482 470 Q512 454 542 470" fill="none" />
+            </g>
+        }
+        @if (isWearing('hachimaki')) {
+            <g>
+                <path d="M372 330 Q512 290 652 330 L668 372 Q512 332 356 372 Z" fill="#fff" stroke="#2c2c2a" stroke-width="10" />
+                <circle cx="512" cy="336" r="20" fill="#ea5455" />
+                <path d="M652 340 l70 -30 M660 356 l74 0" stroke="#fff" stroke-width="18" stroke-linecap="round" />
+            </g>
+        }
+        @if (isWearing('hoja')) {
+            <g>
+                <path d="M512 218 Q504 190 516 158" stroke="#4f7a3a" stroke-width="12" fill="none" stroke-linecap="round" />
+                <path d="M514 170 C540 136 586 138 604 150 C584 180 546 190 514 170 Z" fill="#6fbf5a" stroke="#2c2c2a" stroke-width="8" />
+                <path d="M508 188 C488 166 456 166 444 176 C458 198 488 202 508 188 Z" fill="#8fd16e" stroke="#2c2c2a" stroke-width="8" />
+            </g>
+        }
+        @if (isWearing('lazo')) {
+            <g stroke="#2c2c2a" stroke-width="8" stroke-linejoin="round">
+                <path d="M614 296 L560 256 L564 338 Z M614 296 L670 260 L664 340 Z" fill="#ea5455" />
+                <circle cx="614" cy="297" r="17" fill="#c43c3d" />
+            </g>
+        }
+        @if (isWearing('sombrero')) {
+            <g stroke="#2c2c2a" stroke-width="10" stroke-linejoin="round">
+                <ellipse cx="512" cy="306" rx="232" ry="44" fill="#f0cf7a" />
+                <path d="M398 300 Q402 192 512 188 Q622 192 626 300 Z" fill="#e8c26a" />
+                <path d="M400 272 Q512 258 624 272 L626 300 Q512 286 398 300 Z" fill="#ea5455" stroke-width="0" />
+            </g>
+        }
+        @if (isWearing('gorro')) {
+            <g>
+                <path d="M380 230 L512 180 L644 230 L512 280 Z" fill="#2c2c2a" />
+                <rect x="452" y="232" width="120" height="40" fill="#2c2c2a" />
+                <path d="M644 230 L652 300" stroke="#f2b84b" stroke-width="10" />
+                <circle cx="652" cy="306" r="12" fill="#f2b84b" />
+            </g>
+        }
+        @if (isWearing('corona')) {
+            <g stroke="#2c2c2a" stroke-width="10" stroke-linejoin="round">
+                <path d="M420 270 L414 186 L466 228 L512 164 L558 228 L610 186 L604 270 Z" fill="#f2b84b" />
+                <circle cx="512" cy="240" r="15" fill="#ea5455" stroke-width="6" />
+                <circle cx="456" cy="250" r="10" fill="#5a8be8" stroke-width="6" />
+                <circle cx="568" cy="250" r="10" fill="#5a8be8" stroke-width="6" />
+            </g>
+        }
+
+        <!-- Frente de la caja bentō, delante de Musubi -->
+        @if (currentStage() === 3) {
+            <rect x="150" y="768" width="724" height="58" rx="18" fill="#c94434" stroke="#2c2c2a" stroke-width="10" />
+            <path d="M190 790 H834" stroke="#f2b84b" stroke-width="8" stroke-dasharray="24 18" />
+        }
+
+        <!-- Efectos: gota de sudor, chispas y zetas de sueño -->
+        <path class="f drop" d="M690 360 q26 40 0 58 q-26-18 0-58z" />
+        <g class="f sparks">
+            <path d="M760 250 l12 24 26 4 -19 18 5 26 -24-13 -24 13 5-26 -19-18 26-4z" />
+            <path d="M262 300 l9 18 20 3 -14 14 3 20 -18-10 -18 10 3-20 -14-14 20-3z" />
+        </g>
+        <g class="f zz"><text x="700" y="300">z</text><text x="760" y="230">z</text></g>
+    </g>
+</svg>

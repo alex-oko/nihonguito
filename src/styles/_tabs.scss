@@ -1,0 +1,30 @@
+/* ---- Pestañas segmentadas (.tabs) dentro de una vista ---- */
+.tabs {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: var(--surface-2);
+    border-radius: var(--r-md);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+.tabs button {
+    flex: 1 0 auto;
+    border: none;
+    background: transparent;
+    padding: 9px 12px;
+    border-radius: var(--r-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+}
+.tabs button.on {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+}

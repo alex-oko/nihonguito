@@ -1,0 +1,138 @@
+/* ---- Cabecera ---- */
+.res {
+    padding-top: calc(32px + var(--safe-t));
+}
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+/* ---- Granos de arroz ---- */
+.reward {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: var(--r-md);
+    background: var(--gold-soft);
+    border: 2px solid var(--gold);
+}
+.reward b {
+    display: block;
+    font-size: 1rem;
+}
+.ri {
+    width: 46px;
+    height: 46px;
+    flex: none;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--surface);
+    color: var(--gold);
+}
+.feed {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: var(--gold);
+    color: #1d1405;
+}
+/* ---- Musubi y estrellas ---- */
+.cheer {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.star {
+    color: var(--line);
+}
+.star.on {
+    color: var(--gold);
+    animation: pop 0.45s ease both;
+}
+/* ---- Cifras ---- */
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 8px;
+}
+.stat b {
+    font-size: 1.35rem;
+}
+/* ---- Lista de errores ---- */
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.q {
+    font-size: 1.05rem;
+}
+.ok-t {
+    color: var(--ok);
+}
+.bad-t {
+    color: var(--bad);
+}
+.perfect {
+    margin: 28px 0 8px;
+    color: var(--ok);
+    font-weight: 600;
+}
+/* ---- Acciones ---- */
+.actions {
+    margin-top: 28px;
+}
+/* ---- Desglose por habilidad y refuerzo ---- */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+}
+.sk {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sk-l {
+    width: 84px;
+    flex: none;
+}
+.sk-p {
+    width: 38px;
+    text-align: right;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+.bar.low > i {
+    background: var(--bad);
+}
+.bar.mid > i {
+    background: var(--gold);
+}
+.weak {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 14px;
+    color: inherit;
+    text-decoration: none;
+    border-left: 4px solid var(--bad);
+}
+/* ---- Utilidades ---- */
+.block {
+    display: block;
+}

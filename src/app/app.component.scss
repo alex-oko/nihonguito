@@ -1,0 +1,52 @@
+
+/* ---- Barra de pestañas fija abajo, respeta el área segura del iPhone ---- */
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-around;
+    height: calc(var(--nav-h) + var(--safe-b));
+    padding-bottom: var(--safe-b);
+    background: color-mix(in srgb, var(--panel) 94%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 2px solid var(--signal);
+    box-shadow: 0 -10px 30px rgb(0 0 0 / 0.12);
+}
+.tab {
+    flex: 1;
+    min-width: 0;
+    max-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: color-mix(in srgb, var(--panel-ink) 56%, transparent);
+    transition: color 0.15s;
+}
+/* Fondo redondeado del icono (.g) y texto de la pestaña (.l) */
+.g {
+    width: 42px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    transition: background 0.15s;
+}
+.l {
+    font-size: 0.66rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+/* ---- Pestaña activa (routerLinkActive="on") ---- */
+.tab.on {
+    color: var(--panel-ink);
+}
+.tab.on .g {
+    background: var(--signal);
+    color: var(--signal-ink);
+}

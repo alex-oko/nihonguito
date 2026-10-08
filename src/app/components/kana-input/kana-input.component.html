@@ -1,0 +1,15 @@
+<!-- Campo con conversión romaji → kana (la engancha wanakana desde el .ts) -->
+<input
+    #field
+    class="field"
+    [class.jp]="mode() === 'kana' || mode() === 'katakana'"
+    [placeholder]="placeholder()"
+    [disabled]="disabled()"
+    autocomplete="off"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    enterkeyhint="done"
+    (input)="sync()"
+    (keydown.enter)="enter.emit()"
+/>

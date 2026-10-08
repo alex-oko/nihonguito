@@ -1,0 +1,884 @@
+{
+ "id": 12,
+ "title": "¿Qué tal Kioto?",
+ "titleJp": "京都は どうでしたか",
+ "summary": "Lucía vuelve de un fin de semana en Kioto con Anna y le cuenta a Kenta cómo le fue. Después, en el café de Tanaka, las dos comparan el café y el té y hablan de su estación del año favorita.",
+ "vocab": [
+  {
+   "id": "L12-001",
+   "kana": "かんたん[な]",
+   "kanji": "簡単[な]",
+   "es": "fácil, sencillo",
+   "type": "na-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-002",
+   "kana": "ちかい",
+   "kanji": "近い",
+   "es": "cercano",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-003",
+   "kana": "とおい",
+   "kanji": "遠い",
+   "es": "lejano",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-004",
+   "kana": "はやい",
+   "kanji": "速い、早い",
+   "es": "rápido; temprano",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-005",
+   "kana": "おそい",
+   "kanji": "遅い",
+   "es": "lento; tarde",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-006",
+   "kana": "おおい [ひとが ～]",
+   "kanji": "多い [人が ～]",
+   "es": "mucho [hay mucha gente]",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-007",
+   "kana": "すくない [ひとが ～]",
+   "kanji": "少ない [人が ～]",
+   "es": "poco [hay poca gente]",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-008",
+   "kana": "あたたかい",
+   "kanji": "暖かい、温かい",
+   "es": "templado, tibio",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-009",
+   "kana": "すずしい",
+   "kanji": "涼しい",
+   "es": "fresco (clima)",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-010",
+   "kana": "あまい",
+   "kanji": "甘い",
+   "es": "dulce",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-011",
+   "kana": "からい",
+   "kanji": "辛い",
+   "es": "picante",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-012",
+   "kana": "おもい",
+   "kanji": "重い",
+   "es": "pesado",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-013",
+   "kana": "かるい",
+   "kanji": "軽い",
+   "es": "ligero",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-014",
+   "kana": "いい [コーヒーが ～]",
+   "es": "preferir [café]",
+   "type": "i-adj",
+   "lesson": 12
+  },
+  {
+   "id": "L12-015",
+   "kana": "きせつ",
+   "kanji": "季節",
+   "es": "estación del año",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-016",
+   "kana": "はる",
+   "kanji": "春",
+   "es": "primavera",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-017",
+   "kana": "なつ",
+   "kanji": "夏",
+   "es": "verano",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-018",
+   "kana": "あき",
+   "kanji": "秋",
+   "es": "otoño",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-019",
+   "kana": "ふゆ",
+   "kanji": "冬",
+   "es": "invierno",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-020",
+   "kana": "てんき",
+   "kanji": "天気",
+   "es": "tiempo (clima)",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-021",
+   "kana": "あめ",
+   "kanji": "雨",
+   "es": "lluvia",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-022",
+   "kana": "ゆき",
+   "kanji": "雪",
+   "es": "nieve",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-023",
+   "kana": "くもり",
+   "kanji": "曇り",
+   "es": "nublado",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-024",
+   "kana": "ホテル",
+   "es": "hotel",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-025",
+   "kana": "くうこう",
+   "kanji": "空港",
+   "es": "aeropuerto",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-026",
+   "kana": "うみ",
+   "kanji": "海",
+   "es": "mar",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-027",
+   "kana": "せかい",
+   "kanji": "世界",
+   "es": "mundo",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-028",
+   "kana": "パーティー",
+   "es": "fiesta",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-029",
+   "kana": "[お]まつり",
+   "kanji": "[お]祭り",
+   "es": "festival",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-030",
+   "kana": "しけん",
+   "kanji": "試験",
+   "es": "examen",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-031",
+   "kana": "すきやき",
+   "kanji": "すき焼き",
+   "es": "sukiyaki",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-032",
+   "kana": "さしみ",
+   "kanji": "刺身",
+   "es": "sashimi (pescado crudo)",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-033",
+   "kana": "[お]すし",
+   "es": "sushi",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-034",
+   "kana": "てんぷら",
+   "es": "tempura",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-035",
+   "kana": "いけばな",
+   "kanji": "生け花",
+   "es": "arreglo floral (ikebana)",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-036",
+   "kana": "もみじ",
+   "kanji": "紅葉",
+   "es": "arce; hojas rojas de otoño",
+   "type": "noun",
+   "lesson": 12
+  },
+  {
+   "id": "L12-037",
+   "kana": "どちら",
+   "es": "cuál (de dos)",
+   "type": "pron",
+   "lesson": 12
+  },
+  {
+   "id": "L12-038",
+   "kana": "どちらも",
+   "es": "los dos",
+   "type": "pron",
+   "lesson": 12
+  },
+  {
+   "id": "L12-039",
+   "kana": "ずっと",
+   "es": "mucho más",
+   "type": "adv",
+   "lesson": 12
+  },
+  {
+   "id": "L12-040",
+   "kana": "はじめて",
+   "kanji": "初めて",
+   "es": "por primera vez",
+   "type": "adv",
+   "lesson": 12
+  },
+  {
+   "id": "L12-041",
+   "kana": "ただいま。",
+   "es": "¡Ya estoy aquí! (al volver)",
+   "type": "expr",
+   "lesson": 12
+  },
+  {
+   "id": "L12-042",
+   "kana": "おかえりなさい。",
+   "kanji": "お帰りなさい。",
+   "es": "¡Bienvenido de vuelta!",
+   "type": "expr",
+   "lesson": 12
+  },
+  {
+   "id": "L12-043",
+   "kana": "すごいですね。",
+   "es": "¡Qué increíble!",
+   "type": "expr",
+   "lesson": 12
+  },
+  {
+   "id": "L12-044",
+   "kana": "でも",
+   "es": "pero",
+   "type": "other",
+   "lesson": 12
+  },
+  {
+   "id": "L12-045",
+   "kana": "つかれました。",
+   "kanji": "疲れました。",
+   "es": "Estoy cansado.",
+   "type": "expr",
+   "lesson": 12
+  },
+  {
+   "id": "L12-046",
+   "kana": "ぎおんまつり",
+   "kanji": "祇園祭",
+   "es": "Festival de Gion (Kioto)",
+   "type": "name",
+   "lesson": 12
+  },
+  {
+   "id": "L12-047",
+   "kana": "ホンコン",
+   "es": "Hong Kong",
+   "type": "name",
+   "lesson": 12
+  },
+  {
+   "id": "L12-048",
+   "kana": "シンガポール",
+   "es": "Singapur",
+   "type": "name",
+   "lesson": 12
+  },
+  {
+   "id": "L12-049",
+   "kana": "きょうと",
+   "es": "Kioto",
+   "type": "name",
+   "lesson": 12,
+   "kanji": "京都"
+  },
+  {
+   "id": "L12-050",
+   "kana": "ほっかいどう",
+   "es": "Hokkaido",
+   "type": "name",
+   "lesson": 12,
+   "kanji": "北海道"
+  },
+  {
+   "id": "L12-051",
+   "kana": "おきなわ",
+   "es": "Okinawa",
+   "type": "name",
+   "lesson": 12,
+   "kanji": "沖縄"
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "きのうは 雨でした。",
+   "es": "Ayer llovió."
+  },
+  {
+   "jp": "京都は とても 楽しかったです。",
+   "es": "Kioto fue muy divertido."
+  },
+  {
+   "jp": "京都は 東京より 静かです。",
+   "es": "Kioto es más tranquilo que Tokio."
+  },
+  {
+   "jp": "1年で 秋が いちばん 好きです。",
+   "es": "De todo el año, el otoño es lo que más me gusta."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "京都は 寒かったですか。",
+   "qes": "¿Hacía frío en Kioto?",
+   "ajp": "いいえ、あまり 寒くなかったです。涼しかったです。",
+   "aes": "No, no mucho. Estaba fresco."
+  },
+  {
+   "qjp": "旅行は 楽しかったですか。",
+   "qes": "¿Te divertiste en el viaje?",
+   "ajp": "はい、とても 楽しかったです。",
+   "aes": "Sí, muchísimo."
+  },
+  {
+   "qjp": "天気は よかったですか。",
+   "qes": "¿Hizo buen tiempo?",
+   "ajp": "いいえ、あまり よくなかったです。雨でした。",
+   "aes": "No muy bueno. Llovió."
+  },
+  {
+   "qjp": "カルロスさんの 誕生日パーティーは どうでしたか。",
+   "qes": "¿Qué tal la fiesta de cumpleaños de Carlos?",
+   "ajp": "とても にぎやかでした。",
+   "aes": "Estuvo muy animada."
+  },
+  {
+   "qjp": "東京は メキシコシティより 人が 多いですか。",
+   "qes": "¿Tokio tiene más gente que la Ciudad de México?",
+   "ajp": "ええ、ずっと 多いです。",
+   "aes": "Sí, mucha más."
+  },
+  {
+   "qjp": "電車と バスと どちらが 安いですか。",
+   "qes": "¿Qué es más barato, el tren o el autobús?",
+   "ajp": "バスの ほうが 安いです。",
+   "aes": "El autobús es más barato."
+  },
+  {
+   "qjp": "海と 山と どちらが いいですか。",
+   "qes": "¿Qué prefieres, el mar o la montaña?",
+   "ajp": "山の ほうが いいです。",
+   "aes": "Prefiero la montaña."
+  },
+  {
+   "qjp": "日本の 料理で 何が いちばん 好きですか。",
+   "qes": "¿Qué comida japonesa te gusta más?",
+   "ajp": "すき焼きが いちばん 好きです。",
+   "aes": "Lo que más me gusta es el sukiyaki."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Pasado de sustantivos y adjetivos な: でした",
+   "explain": "Con sustantivos y adjetivos な el pasado se forma cambiando です por でした (あめでした 'llovió / fue día de lluvia'). En negativo, じゃ ありません pasa a じゃ ありませんでした. Es fácil: solo cambia el final, la palabra no se toca.",
+   "examples": [
+    {
+     "jp": "きのうは 雪でした。",
+     "es": "Ayer nevó."
+    },
+    {
+     "jp": "試験は 簡単じゃ ありませんでした。",
+     "es": "El examen no fue fácil."
+    }
+   ]
+  },
+  {
+   "title": "Pasado de adjetivos い: ～かったです",
+   "explain": "Con adjetivos い el cambio se hace en el propio adjetivo: quita la い final y pon かったです (あつい → あつかったです). En negativo: くない → くなかったです. Error típico muy común: decir あついでした; con adjetivos い nunca se usa でした. Y recuerda: いい → よかったです / よくなかったです.",
+   "examples": [
+    {
+     "jp": "京都は 暑かったです。",
+     "es": "En Kioto hizo calor."
+    },
+    {
+     "jp": "きのうの 映画は あまり おもしろくなかったです。",
+     "es": "La película de ayer no fue muy interesante."
+    }
+   ]
+  },
+  {
+   "title": "N1 は N2 より adj です — comparar",
+   "explain": "より significa 'que' en una comparación: N1 は N2 より おおきいです = 'N1 es más grande que N2'. En japonés no hace falta una palabra para 'más'; el adjetivo va solo. Fíjate en el orden: lo que se compara va con は, y la referencia con より.",
+   "examples": [
+    {
+     "jp": "北海道は 沖縄より ずっと 寒いです。",
+     "es": "Hokkaido es mucho más frío que Okinawa."
+    },
+    {
+     "jp": "新幹線は バスより 速いです。",
+     "es": "El shinkansen es más rápido que el autobús."
+    }
+   ]
+  },
+  {
+   "title": "N1 と N2 と どちらが adj ですか — elegir entre dos",
+   "explain": "Para preguntar cuál de dos cosas es más… se dice: A と B と どちらが + adjetivo + ですか. Se usa どちら siempre que sean dos opciones, sean cosas, personas o lugares. Se responde con A の ほうが + adjetivo ('A es más…'), o どちらも ('los dos') si no hay diferencia.",
+   "examples": [
+    {
+     "jp": "コーヒーと 紅茶と どちらが 好きですか。…紅茶の ほうが 好きです。",
+     "es": "¿Qué te gusta más, el café o el té? …Me gusta más el té."
+    },
+    {
+     "jp": "夏と 冬と どちらが いいですか。…どちらも いいです。",
+     "es": "¿Qué prefieres, el verano o el invierno? …Los dos me gustan."
+    }
+   ]
+  },
+  {
+   "title": "～で 何/どこ/だれ/いつが いちばん… — el más… de un grupo",
+   "explain": "Sirve para preguntar cuál es 'el más…' dentro de un grupo. Primero dices el grupo con で o の 中で ('entre la comida japonesa', 'en tu familia', 'en el año'). Luego pones la palabra interrogativa según lo que buscas (何 = cosa, どこ = lugar, だれ = persona, いつ = momento) + が + いちばん + adjetivo. いちばん equivale a 'el más'. Ojo: cuando la palabra interrogativa es el sujeto, lleva が, nunca は (だれは ✗ → だれが ✓); la respuesta también usa が.",
+   "examples": [
+    {
+     "jp": "1年で いつが いちばん 好きですか。…秋が いちばん 好きです。",
+     "es": "¿Qué época del año te gusta más? …El otoño."
+    },
+    {
+     "jp": "日本で どこが いちばん 好きですか。…京都が いちばん 好きです。",
+     "es": "¿Qué lugar de Japón te gusta más? …Kioto."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "ただいま。",
+   "es": "¡Ya volví!"
+  },
+  {
+   "jp": "お帰りなさい。",
+   "es": "¡Bienvenida de vuelta!"
+  },
+  {
+   "jp": "京都は どうでしたか。",
+   "es": "¿Qué tal Kioto?"
+  },
+  {
+   "jp": "すごいですね。",
+   "es": "¡Qué increíble!"
+  },
+  {
+   "jp": "少し 疲れました。",
+   "es": "Estoy un poco cansada."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L12-c1",
+   "lesson": 12,
+   "title": "De vuelta de Kioto",
+   "tags": [
+    "viajes"
+   ],
+   "situation": "Lucía regresa de un fin de semana en Kioto con Anna y se encuentra a Kenta en la entrada del edificio.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "きのしたさん、ただいま。",
+     "es": "¡Kenta, ya volví!"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "あ、ルシアさん、お帰りなさい。京都は どうでしたか。",
+     "es": "Ah, Lucía, ¡bienvenida! ¿Qué tal Kioto?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "とても 楽しかったです。アンナさんと 金閣寺へ 行きました。",
+     "es": "Muy divertido. Fui al Kinkakuji con Anna."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "そうですか。天気は よかったですか。",
+     "es": "¡Qué bien! ¿Hizo buen tiempo?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "土曜日は 雨でしたが、日曜日は いい 天気でした。",
+     "es": "El sábado llovió, pero el domingo hizo buen tiempo."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "京都は 寒かったですか。",
+     "es": "¿Hacía frío en Kioto?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、東京より 寒かったです。でも、紅葉が とても きれいでした。",
+     "es": "Sí, más que en Tokio. Pero las hojas rojas de otoño estaban preciosas."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "すごいですね。人は 多かったですか。",
+     "es": "¡Qué increíble! ¿Había mucha gente?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ええ、とても 多かったです。少し 疲れました。これ、京都の お土産です。",
+     "es": "Sí, muchísima. Estoy un poco cansada. Toma, un recuerdito de Kioto."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "わあ、ありがとう ございます。",
+     "es": "¡Uy, muchas gracias!"
+    }
+   ]
+  },
+  {
+   "id": "L12-c2",
+   "lesson": 12,
+   "title": "¿Café o té?",
+   "tags": [
+    "comida"
+   ],
+   "situation": "En el café de Tanaka, Lucía y Anna piden algo de tomar y hablan de su estación del año favorita.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "いらっしゃいませ。コーヒーと 紅茶と どちらが いいですか。",
+     "es": "Bienvenidas. ¿Qué prefieren, café o té?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "わたしは 紅茶が いいです。",
+     "es": "Yo prefiero té."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わたしは コーヒーが いいです。この 店の コーヒーは 東京で いちばん おいしいですから。",
+     "es": "Yo, café. El café de aquí es el más rico de Tokio."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "ありがとう ございます。京都は どうでしたか。",
+     "es": "Muchas gracias. ¿Qué tal Kioto?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "とても よかったです。紅葉が きれいでした。",
+     "es": "Muy bien. Las hojas de otoño estaban hermosas."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "秋の 京都は いいですね。アンナさんは 1年で いつが いちばん 好きですか。",
+     "es": "Kioto en otoño es precioso. Anna, ¿qué época del año te gusta más?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "わたしは 冬が いちばん 好きです。雪の 山が 好きですから。",
+     "es": "A mí me gusta más el invierno, porque me encantan las montañas nevadas."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わたしは 冬は ちょっと……。メキシコより ずっと 寒いですから。",
+     "es": "El invierno a mí, la verdad… Hace mucho más frío que en México."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "じゃ、ルシアさんは 夏と 秋と どちらが 好きですか。",
+     "es": "Entonces, Lucía, ¿qué te gusta más, el verano o el otoño?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "秋の ほうが 好きです。夏の 東京は 暑いですから。",
+     "es": "Me gusta más el otoño. Tokio en verano es muy caluroso."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Festivales y lugares famosos",
+   "items": [
+    {
+     "kana": "ろくおんじ（きんかくじ）",
+     "kanji": "鹿苑寺（金閣寺）",
+     "es": "Templo del Pabellón Dorado (Kioto)"
+    },
+    {
+     "kana": "ぎおんまつり",
+     "kanji": "祇園祭",
+     "es": "Festival de Gion (Kioto)"
+    },
+    {
+     "kana": "ひめじじょう",
+     "kanji": "姫路城",
+     "es": "Castillo de Himeji"
+    },
+    {
+     "kana": "げんばくドーム",
+     "kanji": "原爆ドーム",
+     "es": "Cúpula de la Bomba Atómica (Hiroshima)"
+    },
+    {
+     "kana": "ふじさん",
+     "kanji": "富士山",
+     "es": "Monte Fuji"
+    },
+    {
+     "kana": "とうしょうぐう",
+     "kanji": "東照宮",
+     "es": "Santuario Toshogu (Nikko)"
+    },
+    {
+     "kana": "こうきょ",
+     "kanji": "皇居",
+     "es": "Palacio Imperial (Tokio)"
+    },
+    {
+     "kana": "かんだまつり",
+     "kanji": "神田祭",
+     "es": "Festival de Kanda (Tokio)"
+    },
+    {
+     "kana": "とうだいじ・だいぶつ",
+     "kanji": "東大寺・大仏",
+     "es": "Templo Todaiji y Gran Buda (Nara)"
+    },
+    {
+     "kana": "てんじんまつり",
+     "kanji": "天神祭",
+     "es": "Festival Tenjin (Osaka)"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Al llegar a casa se dice ただいま (\"ya volví\") y quien está dentro responde お帰りなさい (\"bienvenido/a de vuelta\"). Es un saludo tan cotidiano que mucha gente lo dice aunque no haya nadie en casa.",
+  "Después de un viaje es costumbre llevar お土産 a los compañeros y vecinos: normalmente dulces típicos de la región, en cajas con piezas envueltas una por una para poder repartirlas. En otoño, ver el 紅葉 (las hojas rojas de los arces) en Kioto es casi un ritual."
+ ],
+ "extras": [
+  {
+   "jp": "京都は 東京より 静かでした。",
+   "es": "Kioto estaba más tranquilo que Tokio.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "飛行機と 新幹線と どちらが 速いですか。",
+   "es": "¿Qué es más rápido, el avión o el shinkansen?",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "この カレーは とても 辛かったです。",
+   "es": "Este curry estaba muy picante.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "日本の 料理で すしが いちばん 好きです。",
+   "es": "De la comida japonesa, lo que más me gusta es el sushi.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "きのうは 仕事が とても 忙しかったです。",
+   "es": "Ayer tuve muchísimo trabajo.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "今週は 先週より 暇です。",
+   "es": "Esta semana estoy más libre que la pasada.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "きのうの 試験は 簡単でした。",
+   "es": "El examen de ayer fue fácil.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "ひらがなは 漢字より ずっと 易しいです。",
+   "es": "El hiragana es mucho más fácil que los kanji.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "きのうの アニメは とても おもしろかったです。",
+   "es": "El anime de ayer estuvo muy bueno.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "アニメと 映画と どちらが 好きですか。",
+   "es": "¿Qué te gusta más, el anime o las películas?",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "新しい ゲームは あまり おもしろくなかったです。",
+   "es": "El videojuego nuevo no estuvo muy divertido.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "この ゲームは 前の ゲームより 難しいです。",
+   "es": "Este videojuego es más difícil que el anterior.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "サッカーと 野球と どちらが 好きですか。",
+   "es": "¿Qué te gusta más, el fútbol o el béisbol?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "きのうの テニスは 楽しかったです。",
+   "es": "El tenis de ayer estuvo divertido.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "きのうの コンサートは すごかったです。",
+   "es": "El concierto de ayer estuvo increíble.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "ジャズと クラシックと どちらが 好きですか。",
+   "es": "¿Qué te gusta más, el jazz o la música clásica?",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

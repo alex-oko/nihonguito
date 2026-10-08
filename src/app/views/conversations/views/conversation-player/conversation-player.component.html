@@ -1,0 +1,195 @@
+@if (conversation(); as currentConversation) {
+    <div class="wrap">
+        <!-- Cabecera -->
+        <header class="head">
+            <button class="icon-btn" (click)="location.back()" aria-label="Salir"><app-icon name="x" /></button>
+            <div class="grow title">
+                <div class="t">{{ currentConversation.title }}</div>
+                <div class="small muted">Lección {{ currentConversation.lesson }}</div>
+            </div>
+        </header>
+
+        <!-- Qué textos se ven -->
+        <div class="toggles chips">
+            <button class="chip" [class.on]="showJp()" (click)="showJp.set(!showJp())">日本語</button>
+            <button class="chip" [class.on]="showRomaji()" (click)="showRomaji.set(!showRomaji())">Romaji</button>
+            <button class="chip" [class.on]="showEs()" (click)="showEs.set(!showEs())">Español</button>
+            @if (mode() === 'role') {
+                <button class="chip" [class.on]="hideMine()" (click)="hideMine.set(!hideMine())">Ocultar mis frases</button>
+            }
+        </div>
+
+        <!-- Presentación de la situación y los personajes -->
+        @if (mode() === 'intro') {
+            <section class="card intro">
+                @if (currentConversation.situation) {
+                    <p>{{ currentConversation.situation }}</p>
+                }
+                <div class="row people">
+                    <span class="who a"><app-jp [text]="speakerName('A')" /></span>
+                    <span class="muted small">y</span>
+                    <span class="who b"><app-jp [text]="speakerName('B')" /></span>
+                </div>
+                <p class="small muted">
+                    1) Escucha la conversación completa. 2) Luego haz el papel de un personaje: la app dice sus frases y tú respondes hablando o escribiendo.
+                </p>
+            </section>
+        }
+
+        <!-- Chat con las líneas -->
+        <div class="chat" #scroller>
+            @for (line of visibleLines(); track $index; let lineIndex = $index) {
+                <div
+                    class="msg"
+                    [attr.data-i]="lineIndex"
+                    [class.right]="line.who === 'B'"
+                    [class.playing]="playing() === lineIndex"
+                    [class.mine]="mode() === 'role' && line.who === role()"
+                    (click)="tapLine(lineIndex)"
+                >
+                    <div class="nm small"><app-jp [text]="line.name || line.who" /></div>
+                    <div class="bubble">
+                        @if (mode() === 'role' && line.who === role() && hideMine() && !results()[lineIndex]) {
+                            <div class="es-big">{{ line.es }}</div>
+                            <div class="small muted">Tu turno: dilo en japonés</div>
+                        } @else {
+                            @if (showJp()) {
+                                <div class="jp line"><app-jp [text]="line.jp" /></div>
+                            }
+                            @if (showRomaji()) {
+                                <div class="small rom">{{ toRomaji(line.jp) }}</div>
+                            }
+                            @if (showEs()) {
+                                <div class="small es">{{ line.es }}</div>
+                            }
+                            @if (results()[lineIndex]; as lineResult) {
+                                <div class="score" [class.good]="lineResult.score >= 0.75" [class.mid]="lineResult.score >= 0.5 && lineResult.score < 0.75">
+                                    {{ lineResult.method === 'saltada' ? 'Saltada' : scoreLabel(lineResult.score) + ' · ' + Math.round(lineResult.score * 100) + '%' }}
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Panel de abajo: cambia con la fase -->
+        <footer class="panel">
+            @switch (mode()) {
+                <!-- Intro: escuchar o elegir personaje -->
+                @case ('intro') {
+                    <div class="stack">
+                        <button class="btn block" (click)="playAll()"><app-icon name="play" [size]="18" />Escuchar conversación</button>
+                        <div class="grid-2">
+                            <button class="btn accent" (click)="startRole('B')">Ser {{ speakerName('B') }}</button>
+                            <button class="btn soft" (click)="startRole('A')">Ser {{ speakerName('A') }}</button>
+                        </div>
+                    </div>
+                }
+                <!-- Escuchando la conversación completa -->
+                @case ('listen') {
+                    <div class="stack">
+                        <div class="grid-2">
+                            @if (speechSVC.speaking()) {
+                                <button class="btn ghost" (click)="stop()"><app-icon name="stop" [size]="16" />Detener</button>
+                            } @else {
+                                <button class="btn ghost" (click)="playAll()"><app-icon name="refresh" [size]="16" />Repetir</button>
+                            }
+                            <button class="btn accent" (click)="startRole('B')">Practicar</button>
+                        </div>
+                        <p class="small muted center">Toca cualquier frase para escucharla otra vez.</p>
+                    </div>
+                }
+                <!-- Juego de rol: turno del usuario, resultado o la app hablando -->
+                @case ('role') {
+                    @if (userTurn(); as turnLine) {
+                        <div class="turn">
+                            <div class="row">
+                                <div class="grow">
+                                    <div class="small muted">Di en japonés:</div>
+                                    <div class="es-q">{{ turnLine.es }}</div>
+                                </div>
+                                <button class="btn soft sm" (click)="showHint.set(!showHint())">{{ showHint() ? 'Ocultar' : 'Pista' }}</button>
+                            </div>
+                            @if (showHint()) {
+                                <div class="hintbox jp">
+                                    <app-jp [text]="turnLine.jp" />
+                                    <button class="icon-btn" (click)="listenModel()" aria-label="Escuchar modelo"><app-icon name="volume" [size]="18" /></button>
+                                </div>
+                            }
+
+                            @if (feedback(); as currentFeedback) {
+                                <div class="fb" [class.good]="currentFeedback.score >= 0.75" [class.mid]="currentFeedback.score >= 0.5 && currentFeedback.score < 0.75">
+                                    <b>{{ scoreLabel(currentFeedback.score) }} · {{ Math.round(currentFeedback.score * 100) }}%</b>
+                                    @if (currentFeedback.heard) {
+                                        <div class="small">{{ currentFeedback.method === 'voz' ? 'Escuché' : 'Escribiste' }}: <span class="jp">{{ currentFeedback.heard }}</span></div>
+                                    }
+                                    <div class="small">Modelo: <span class="jp"><app-jp [text]="turnLine.jp" /></span></div>
+                                </div>
+                                <div class="grid-2">
+                                    <button class="btn ghost" (click)="retry()">Reintentar</button>
+                                    <button class="btn" (click)="accept()">Seguir</button>
+                                </div>
+                            } @else {
+                                <div class="tabs mini">
+                                    <button [class.on]="answerMode() === 'mic'" (click)="answerMode.set('mic')"><app-icon name="mic" [size]="16" /> Hablar</button>
+                                    <button [class.on]="answerMode() === 'type'" (click)="answerMode.set('type')"><app-icon name="keyboard" [size]="16" /> Escribir</button>
+                                </div>
+                                @if (answerMode() === 'mic') {
+                                    @if (speechSVC.canListen) {
+                                        <div class="micwrap">
+                                            <button class="mic" [class.on]="speechSVC.listening()" (click)="speakAnswer()" aria-label="Hablar">
+                                                <app-icon name="mic" [size]="30" />
+                                            </button>
+                                            <span class="small muted">{{ speechSVC.listening() ? 'Escuchando…' : 'Toca y habla' }}</span>
+                                        </div>
+                                    } @else {
+                                        <p class="small muted center">Tu navegador no permite reconocimiento de voz. Dilo en voz alta y compáralo con la pista, o usa «Escribir».</p>
+                                    }
+                                    @if (micMessage()) {
+                                        <p class="small err center">{{ micMessage() }}</p>
+                                    }
+                                } @else {
+                                    <app-kana-input #kanaInput mode="kana" placeholder="escribe en romaji…" [(value)]="typedText" (enter)="typeAnswer()" />
+                                    <button class="btn block" [disabled]="!typedText()" (click)="typeAnswer()">Comprobar</button>
+                                }
+                                <button class="btn ghost sm block" (click)="skipLine()">Saltar esta frase</button>
+                            }
+                        </div>
+                    } @else if (results()[step()]; as stepResult) {
+                        <div class="turn">
+                            @if (stepResult.method !== 'saltada') {
+                                <div class="fb" [class.good]="stepResult.score >= 0.75" [class.mid]="stepResult.score >= 0.5 && stepResult.score < 0.75">
+                                    <b>{{ scoreLabel(stepResult.score) }} · {{ Math.round(stepResult.score * 100) }}%</b>
+                                    @if (stepResult.heard) {
+                                        <div class="small">{{ stepResult.method === 'voz' ? 'Escuché' : 'Escribiste' }}: <span class="jp">{{ stepResult.heard }}</span></div>
+                                    }
+                                    <div class="small">Modelo: <span class="jp"><app-jp [text]="lines()[step()].jp" /></span></div>
+                                </div>
+                            }
+                            <button class="btn block" (click)="continueAfter()">Escuchar el modelo y continuar</button>
+                        </div>
+                    } @else {
+                        <p class="small muted center listening"><app-icon name="volume" [size]="16" /> {{ speakerName(role() === 'A' ? 'B' : 'A') }} está hablando…</p>
+                    }
+                }
+                <!-- Final: precisión media y otra ronda -->
+                @case ('done') {
+                    <div class="stack">
+                        <div class="done-head">
+                            <b class="big">{{ averageScore() }}%</b>
+                            <span class="muted small">precisión media</span>
+                        </div>
+                        <div class="grid-2">
+                            <button class="btn ghost" (click)="startRole(role() === 'A' ? 'B' : 'A')">Cambiar de papel</button>
+                            <button class="btn accent" (click)="startRole(role())">Otra vez</button>
+                        </div>
+                        <button class="btn ghost sm block" (click)="location.back()">Terminar</button>
+                    </div>
+                }
+            }
+        </footer>
+    </div>
+} @else {
+    <div class="empty">Cargando…</div>
+}

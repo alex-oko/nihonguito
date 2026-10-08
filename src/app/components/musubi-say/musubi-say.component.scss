@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+.bubble {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px 18px 18px 6px;
+    padding: 9px 13px 10px;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    box-shadow: var(--shadow);
+}
+/* Pico fuera de la burbuja, apuntando a Musubi */
+.bubble::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    bottom: 10px;
+    width: 12px;
+    height: 14px;
+    background: var(--surface);
+    border-left: 1px solid var(--line);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+.who {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+}

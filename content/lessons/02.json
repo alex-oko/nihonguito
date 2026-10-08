@@ -1,0 +1,890 @@
+{
+ "id": 2,
+ "title": "Un detallito de México",
+ "titleJp": "メキシコの チョコレートです",
+ "summary": "Lucía le regala a Yui un chocolate mexicano. Al final del día, en la oficina, buscan al dueño de un paraguas y de un cuaderno.",
+ "vocab": [
+  {
+   "id": "L02-001",
+   "kana": "これ",
+   "es": "esto (cerca de mí)",
+   "type": "pron",
+   "lesson": 2
+  },
+  {
+   "id": "L02-002",
+   "kana": "それ",
+   "es": "eso (cerca de ti)",
+   "type": "pron",
+   "lesson": 2
+  },
+  {
+   "id": "L02-003",
+   "kana": "あれ",
+   "es": "aquello (lejos de ambos)",
+   "type": "pron",
+   "lesson": 2
+  },
+  {
+   "id": "L02-004",
+   "kana": "この ～",
+   "es": "este/esta ～",
+   "type": "other",
+   "lesson": 2
+  },
+  {
+   "id": "L02-005",
+   "kana": "その ～",
+   "es": "ese/esa ～",
+   "type": "other",
+   "lesson": 2
+  },
+  {
+   "id": "L02-006",
+   "kana": "あの ～",
+   "es": "aquel/aquella ～",
+   "type": "other",
+   "lesson": 2
+  },
+  {
+   "id": "L02-007",
+   "kana": "ほん",
+   "kanji": "本",
+   "es": "libro",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-008",
+   "kana": "じしょ",
+   "kanji": "辞書",
+   "es": "diccionario",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-009",
+   "kana": "ざっし",
+   "kanji": "雑誌",
+   "es": "revista",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-010",
+   "kana": "しんぶん",
+   "kanji": "新聞",
+   "es": "periódico",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-011",
+   "kana": "ノート",
+   "es": "cuaderno",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-012",
+   "kana": "てちょう",
+   "kanji": "手帳",
+   "es": "agenda de bolsillo",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-013",
+   "kana": "めいし",
+   "kanji": "名刺",
+   "es": "tarjeta de visita",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-014",
+   "kana": "カード",
+   "es": "tarjeta",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-015",
+   "kana": "テレホンカード",
+   "es": "tarjeta telefónica",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-016",
+   "kana": "えんぴつ",
+   "kanji": "鉛筆",
+   "es": "lápiz",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-017",
+   "kana": "ボールペン",
+   "es": "bolígrafo",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-018",
+   "kana": "シャープペンシル",
+   "es": "portaminas",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-019",
+   "kana": "かぎ",
+   "es": "llave",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-020",
+   "kana": "とけい",
+   "kanji": "時計",
+   "es": "reloj",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-021",
+   "kana": "かさ",
+   "kanji": "傘",
+   "es": "paraguas",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-022",
+   "kana": "かばん",
+   "es": "bolso, maletín",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-023",
+   "kana": "[カセット]テープ",
+   "es": "cinta (de casete)",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-024",
+   "kana": "テープレコーダー",
+   "es": "grabadora",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-025",
+   "kana": "テレビ",
+   "es": "televisión",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-026",
+   "kana": "ラジオ",
+   "es": "radio",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-027",
+   "kana": "カメラ",
+   "es": "cámara",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-028",
+   "kana": "コンピューター",
+   "es": "ordenador, computadora",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-029",
+   "kana": "じどうしゃ",
+   "kanji": "自動車",
+   "es": "automóvil",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-030",
+   "kana": "つくえ",
+   "kanji": "机",
+   "es": "escritorio, mesa",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-031",
+   "kana": "いす",
+   "es": "silla",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-032",
+   "kana": "チョコレート",
+   "es": "chocolate",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-033",
+   "kana": "コーヒー",
+   "es": "café",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-034",
+   "kana": "えいご",
+   "kanji": "英語",
+   "es": "inglés (idioma)",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-035",
+   "kana": "にほんご",
+   "kanji": "日本語",
+   "es": "japonés (idioma)",
+   "type": "noun",
+   "lesson": 2
+  },
+  {
+   "id": "L02-036",
+   "kana": "～ご",
+   "kanji": "～語",
+   "es": "idioma ～",
+   "type": "other",
+   "lesson": 2
+  },
+  {
+   "id": "L02-037",
+   "kana": "なん",
+   "kanji": "何",
+   "es": "qué",
+   "type": "pron",
+   "lesson": 2
+  },
+  {
+   "id": "L02-038",
+   "kana": "そう",
+   "es": "así",
+   "type": "adv",
+   "lesson": 2
+  },
+  {
+   "id": "L02-039",
+   "kana": "ちがいます。",
+   "kanji": "違います。",
+   "es": "No, no es así.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-040",
+   "kana": "そうですか。",
+   "es": "¿Ah, sí? / Ya veo.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-041",
+   "kana": "あのう",
+   "es": "eh… (al dudar)",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-042",
+   "kana": "ほんの きもちです。",
+   "kanji": "ほんの 気持ちです。",
+   "es": "Es un detalle sin importancia.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-043",
+   "kana": "どうぞ。",
+   "es": "Tenga. / Adelante.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-044",
+   "kana": "どうも。",
+   "es": "Gracias.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-045",
+   "kana": "[どうも] ありがとう [ございます]。",
+   "es": "(Muchas) gracias.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-046",
+   "kana": "これから おせわに なります。",
+   "kanji": "これから お世話に なります。",
+   "es": "Cuento con su ayuda desde hoy.",
+   "type": "expr",
+   "lesson": 2
+  },
+  {
+   "id": "L02-047",
+   "kana": "こちらこそ よろしく。",
+   "es": "El gusto es mío.",
+   "type": "expr",
+   "lesson": 2
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "これは 傘です。",
+   "es": "Esto es un paraguas."
+  },
+  {
+   "jp": "それは 日本語の 辞書です。",
+   "es": "Eso es un diccionario de japonés."
+  },
+  {
+   "jp": "あれは なかむらさんの かばんです。",
+   "es": "Aquel es el bolso de Yui."
+  },
+  {
+   "jp": "この ノートは わたしのです。",
+   "es": "Este cuaderno es mío."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "それは 何ですか。",
+   "qes": "¿Qué es eso?",
+   "ajp": "これですか。メキシコの コーヒーです。",
+   "aes": "¿Esto? Es café de México."
+  },
+  {
+   "qjp": "あの 傘は だれのですか。",
+   "qes": "¿De quién es aquel paraguas?",
+   "ajp": "もりさんのです。",
+   "aes": "Es del Sr. Mori."
+  },
+  {
+   "qjp": "これは 日本語の 新聞ですか。",
+   "qes": "¿Esto es un periódico en japonés?",
+   "ajp": "いいえ、違います。英語の 新聞です。",
+   "aes": "No. Es un periódico en inglés."
+  },
+  {
+   "qjp": "その 手帳は ルシアさんのですか。",
+   "qes": "Lucía, ¿esa agenda es tuya?",
+   "ajp": "はい、そうです。わたしのです。",
+   "aes": "Sí, es mía."
+  },
+  {
+   "qjp": "これは 何の 雑誌ですか。",
+   "qes": "¿De qué es esta revista?",
+   "ajp": "カメラの 雑誌です。",
+   "aes": "Es una revista de cámaras."
+  },
+  {
+   "qjp": "それは きのしたさんの カメラですか、カルロスさんの カメラですか。",
+   "qes": "¿Esa cámara es de Kenta o de Carlos?",
+   "ajp": "カルロスさんのです。",
+   "aes": "Es de Carlos."
+  },
+  {
+   "qjp": "この 時計は なかむらさんのですか。",
+   "qes": "¿Este reloj es de Yui?",
+   "ajp": "いいえ、なかむらさんのじゃ ありません。",
+   "aes": "No, no es de Yui."
+  },
+  {
+   "qjp": "この コンピューターは だれのですか。",
+   "qes": "¿De quién es esta computadora?",
+   "ajp": "あおば商事のです。",
+   "aes": "Es de Aoba Shōji."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "これ／それ／あれ — esto, eso, aquello",
+   "explain": "Son palabras que funcionan solas, como un sustantivo: これ es lo que está cerca de quien habla, それ lo que está cerca de quien escucha, y あれ lo que está lejos de los dos. Ojo: en español 'eso' puede ser lo que está cerca de ti o un poco lejos; en japonés それ es específicamente 'lo que tienes tú / está a tu lado'.",
+   "examples": [
+    {
+     "jp": "それは 日本語の 新聞ですか。",
+     "es": "¿Eso (que tienes) es un periódico en japonés?"
+    },
+    {
+     "jp": "あれは カフェ「こもれび」です。",
+     "es": "Aquello es el café Komorebi."
+    }
+   ]
+  },
+  {
+   "title": "この／その／あの + cosa",
+   "explain": "Si quieres decir 'este libro' y no solo 'esto', usas この, その, あの delante del sustantivo. Nunca van solas. Error típico: decir 'これ 本' en vez de 'この 本', o 'この は' en vez de 'これは'.",
+   "examples": [
+    {
+     "jp": "この 傘は わたしのです。",
+     "es": "Este paraguas es mío."
+    },
+    {
+     "jp": "あの かばんは だれのですか。",
+     "es": "¿De quién es aquel bolso?"
+    }
+   ]
+  },
+  {
+   "title": "そうです／そうじゃ ありません — sí / no lo es",
+   "explain": "Cuando te preguntan '¿es X?' con un sustantivo, puedes contestar corto: はい、そうです ('sí, así es') o いいえ、そうじゃ ありません ('no, no es así'). También vale いいえ、ちがいます ('no, es otra cosa'). Es como en español responder 'sí, lo es' sin repetir la palabra.",
+   "examples": [
+    {
+     "jp": "それは 名刺ですか。…はい、そうです。",
+     "es": "¿Eso es una tarjeta de visita? — Sí."
+    },
+    {
+     "jp": "これは テレホンカードですか。…いいえ、そうじゃ ありません。",
+     "es": "¿Esto es una tarjeta telefónica? — No, no lo es."
+    }
+   ]
+  },
+  {
+   "title": "〜ですか、〜ですか — pregunta de elección",
+   "explain": "Pones dos preguntas seguidas, cada una con か, y la otra persona elige una. Es como el 'o' de '¿es A o es B?'. Ojo: aquí NO se contesta con はい ni いいえ; se responde repitiendo la opción correcta.",
+   "examples": [
+    {
+     "jp": "それは 日本語の 本ですか、英語の 本ですか。…英語の 本です。",
+     "es": "¿Ese libro es en japonés o en inglés? …Es en inglés."
+    },
+    {
+     "jp": "これは 「さ」ですか、「ち」ですか。…「さ」です。",
+     "es": "¿Esto es \"sa\" o \"chi\"? …Es \"sa\"."
+    }
+   ]
+  },
+  {
+   "title": "N1 の N2 — de qué trata / de quién es",
+   "explain": "Con の, la primera palabra describe a la segunda. Puede decir el tema ('libro de coches') o el dueño ('mi libro', 'el paraguas de Yui'). El orden es al revés que en español: primero el dueño o el tema, luego la cosa. Si ya se sabe de qué cosa hablamos, puedes quitar N2 (わたしの = 'el mío'), pero nunca lo quites si N2 es una persona.",
+   "examples": [
+    {
+     "jp": "これは カメラの 本です。",
+     "es": "Esto es un libro de cámaras."
+    },
+    {
+     "jp": "この 傘は だれのですか。…ルシアさんのです。",
+     "es": "¿De quién es este paraguas? …Es de Lucía."
+    }
+   ]
+  },
+  {
+   "title": "そうですか — 'ah, ya veo'",
+   "explain": "Se dice al recibir una información nueva, para mostrar que la has entendido. Se pronuncia bajando el tono al final; no es una pregunta real, es como decir '¡ah, vale!' o 'ya veo'.",
+   "examples": [
+    {
+     "jp": "この ノートは きのしたさんのですか。…いいえ、カルロスさんのです。…そうですか。",
+     "es": "¿Este cuaderno es de Kenta? …No, es de Carlos. …Ah, ya veo."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "あのう、これ、ほんの 気持ちです。",
+   "es": "Eh… esto es un detallito para ti."
+  },
+  {
+   "jp": "何ですか。",
+   "es": "¿Qué es?"
+  },
+  {
+   "jp": "メキシコの チョコレートです。",
+   "es": "Es chocolate de México."
+  },
+  {
+   "jp": "この 傘は だれのですか。",
+   "es": "¿De quién es este paraguas?"
+  },
+  {
+   "jp": "どうも ありがとう ございます。",
+   "es": "Muchas gracias."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L02-c1",
+   "lesson": 2,
+   "title": "Un regalo para Yui",
+   "tags": [
+    "comida"
+   ],
+   "situation": "Por la mañana, en la oficina, Lucía le da a Yui un chocolate que trajo de México.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "なかむらさん、おはよう ございます。",
+     "es": "Buenos días, Yui."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "おはよう ございます、ルシアさん。",
+     "es": "Buenos días, Lucía."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あのう、これ、ほんの 気持ちです。どうぞ。",
+     "es": "Eh… es un detallito para ti. Toma."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "わあ、どうも ありがとう ございます。何ですか。",
+     "es": "¡Ay, muchas gracias! ¿Qué es?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "メキシコの チョコレートです。",
+     "es": "Es chocolate de México."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "これは コーヒーの チョコレートですか。",
+     "es": "¿Es chocolate de café?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "いいえ、違います。シナモンの チョコレートです。",
+     "es": "No. Es chocolate con canela."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "そうですか。それは 何ですか。",
+     "es": "¡Qué rico! ¿Y eso qué es?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "これですか。メキシコの コーヒーです。もりさんのです。",
+     "es": "¿Esto? Es café de México. Es para el Sr. Mori."
+    }
+   ]
+  },
+  {
+   "id": "L02-c2",
+   "lesson": 2,
+   "title": "¿De quién es este paraguas?",
+   "tags": [
+    "trabajo"
+   ],
+   "situation": "Al final del día, Yui encuentra un paraguas y un cuaderno en la oficina y busca a sus dueños.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "皆さん、この 傘は だれのですか。",
+     "es": "Oigan todos, ¿de quién es este paraguas?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わたしのじゃ ありません。",
+     "es": "No es mío."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "もりさんの 傘ですか。",
+     "es": "¿Es su paraguas, Sr. Mori?"
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "いいえ、違います。それは あおば商事の 傘です。",
+     "es": "No. Ese es un paraguas de la empresa."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "そうですか。",
+     "es": "Ah, ya veo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あのう、なかむらさん、その ノートは 何の ノートですか。",
+     "es": "Eh… Yui, ¿de qué es ese cuaderno?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "これですか。日本語の ノートです。",
+     "es": "¿Este? Es un cuaderno de japonés."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、わたしのです。",
+     "es": "¡Ah, es mío!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "はい、どうぞ。",
+     "es": "Aquí tienes."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "どうも ありがとう ございます。",
+     "es": "Muchas gracias."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Apellidos japoneses frecuentes",
+   "items": [
+    {
+     "kana": "さとう",
+     "kanji": "佐藤",
+     "es": "Sato"
+    },
+    {
+     "kana": "すずき",
+     "kanji": "鈴木",
+     "es": "Suzuki"
+    },
+    {
+     "kana": "たかはし",
+     "kanji": "高橋",
+     "es": "Takahashi"
+    },
+    {
+     "kana": "たなか",
+     "kanji": "田中",
+     "es": "Tanaka"
+    },
+    {
+     "kana": "わたなべ",
+     "kanji": "渡辺",
+     "es": "Watanabe"
+    },
+    {
+     "kana": "いとう",
+     "kanji": "伊藤",
+     "es": "Ito"
+    },
+    {
+     "kana": "なかむら",
+     "kanji": "中村",
+     "es": "Nakamura"
+    },
+    {
+     "kana": "やまもと",
+     "kanji": "山本",
+     "es": "Yamamoto"
+    },
+    {
+     "kana": "こばやし",
+     "kanji": "小林",
+     "es": "Kobayashi"
+    },
+    {
+     "kana": "さいとう",
+     "kanji": "斎藤",
+     "es": "Saito"
+    },
+    {
+     "kana": "かとう",
+     "kanji": "加藤",
+     "es": "Kato"
+    },
+    {
+     "kana": "よしだ",
+     "kanji": "吉田",
+     "es": "Yoshida"
+    },
+    {
+     "kana": "やまだ",
+     "kanji": "山田",
+     "es": "Yamada"
+    },
+    {
+     "kana": "ささき",
+     "kanji": "佐々木",
+     "es": "Sasaki"
+    },
+    {
+     "kana": "まつもと",
+     "kanji": "松本",
+     "es": "Matsumoto"
+    },
+    {
+     "kana": "やまぐち",
+     "kanji": "山口",
+     "es": "Yamaguchi"
+    },
+    {
+     "kana": "きむら",
+     "kanji": "木村",
+     "es": "Kimura"
+    },
+    {
+     "kana": "いのうえ",
+     "kanji": "井上",
+     "es": "Inoue"
+    },
+    {
+     "kana": "あべ",
+     "kanji": "阿部",
+     "es": "Abe"
+    },
+    {
+     "kana": "はやし",
+     "kanji": "林",
+     "es": "Hayashi"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Cuando alguien llega nuevo a un trabajo o vuelve de un viaje, suele llevar algo pequeño para compartir, casi siempre dulces en porciones individuales. Al darlo se le quita importancia con ほんの 気持ちです.",
+  "En muchas oficinas hay paraguas \"de la casa\" o paraguas olvidados que cualquiera puede tomar prestados si empieza a llover de repente."
+ ],
+ "extras": [
+  {
+   "jp": "これは 東京の ちずです。",
+   "es": "Este es un mapa de Tokio.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "それは わたしの パスポートです。",
+   "es": "Ese es mi pasaporte.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "これは メキシコの コーヒーです。",
+   "es": "Este es café de México.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "あれは 日本の おかしですか。",
+   "es": "¿Aquello son dulces japoneses?",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "これは わたしの 名刺です。",
+   "es": "Esta es mi tarjeta de visita.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "この コンピューターは わたしのじゃ ありません。",
+   "es": "Esta computadora no es mía.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "これは 日本語の 辞書です。",
+   "es": "Este es un diccionario de japonés.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "その ノートは 何の ノートですか。",
+   "es": "¿De qué es ese cuaderno?",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "これは アニメの 雑誌です。",
+   "es": "Esta es una revista de anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "あの ポスターは きのしたさんのです。",
+   "es": "Aquel póster es de Kenta.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "これは わたしの ゲームです。",
+   "es": "Este es mi videojuego.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "それは 何の ゲームですか。",
+   "es": "¿Qué juego es ese?",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "これは サッカーの 雑誌です。",
+   "es": "Esta es una revista de fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "あの ボールは カルロスさんのです。",
+   "es": "Aquel balón es de Carlos.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "これは ピアノの 本です。",
+   "es": "Este es un libro de piano.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "あの ギターは だれのですか。",
+   "es": "¿De quién es aquella guitarra?",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

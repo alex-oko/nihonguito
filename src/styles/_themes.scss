@@ -1,0 +1,126 @@
+/* ---- Variables y temas: tokens del tema base en :root y un bloque por data-theme ---- */
+:root {
+    /* Tema base: paleta elegida por el usuario */
+    --bg: #f9f5eb;
+    --surface: #fffdf8;
+    --surface-2: #f1e9db;
+    --ink: #17263b;
+    --ink-2: #2d4059;
+    --muted: #6e7784;
+    --line: #dfd7c9;
+    --accent: #ea5455;
+    --accent-soft: #fbe3df;
+    --accent-ink: #ffffff;
+    --signal: #f07b3f;
+    --signal-ink: #24160e;
+    --panel: #002b5b;
+    --panel-ink: #ffffff;
+    --panel-line: #2d4059;
+    --ok: #318866;
+    --ok-soft: #e1f1e8;
+    --bad: #d94045;
+    --bad-soft: #fbe1e2;
+    --gold: #d68c20;
+    --gold-soft: #faedd0;
+    --indigo: #315a8b;
+    --indigo-soft: #e0e8f2;
+
+    --font: 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    --font-hand: 'Klee One', 'Noto Sans JP', 'Hiragino Mincho ProN', serif;
+
+    --r-sm: 10px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px rgb(0 0 0 / 0.04);
+    --nav-h: 64px;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+    --safe-t: env(safe-area-inset-top, 0px);
+    color-scheme: light;
+}
+
+/* Tema Sol: amarillo y azul, claro */
+:root[data-theme='sol'] {
+    --bg: #fff7d1;
+    --surface: #fffdf2;
+    --surface-2: #f7e8a8;
+    --ink: #102b4b;
+    --ink-2: #244d76;
+    --muted: #667386;
+    --line: #dfcb72;
+    --accent: #e5ad12;
+    --accent-soft: #faeaa4;
+    --accent-ink: #17283b;
+    --signal: #f28c28;
+    --signal-ink: #231407;
+    --panel: #173b67;
+    --panel-ink: #fffdf2;
+    --panel-line: #355d86;
+    --ok: #398870;
+    --ok-soft: #dcefe6;
+    --bad: #c94b43;
+    --bad-soft: #f6dfdc;
+    --gold: #d79512;
+    --gold-soft: #f8e9ac;
+    --indigo: #326a9c;
+    --indigo-soft: #dce9f3;
+    --shadow: 0 2px 0 rgb(23 59 103 / 0.08), 0 9px 24px rgb(23 59 103 / 0.08);
+}
+
+/* Tema Violeta: morado y verde, oscuro */
+:root[data-theme='violeta'] {
+    --bg: #100b1a;
+    --surface: #1b1228;
+    --surface-2: #2a1b3b;
+    --ink: #f2edf6;
+    --ink-2: #cbbdd8;
+    --muted: #90839e;
+    --line: #45305d;
+    --accent: #9a5bd0;
+    --accent-soft: #352047;
+    --accent-ink: #ffffff;
+    --signal: #a6d632;
+    --signal-ink: #111909;
+    --panel: #261637;
+    --panel-ink: #f5eef9;
+    --panel-line: #7040a0;
+    --ok: #a6d632;
+    --ok-soft: #253516;
+    --bad: #f05a67;
+    --bad-soft: #401d2a;
+    --gold: #efaa42;
+    --gold-soft: #3b2b18;
+    --indigo: #bd8ae4;
+    --indigo-soft: #30203e;
+    --shadow: 0 0 0 1px rgb(166 214 50 / 0.04), 0 12px 30px rgb(0 0 0 / 0.28);
+    color-scheme: dark;
+}
+
+/* Tema Carmesí: rojo y naranja, oscuro */
+:root[data-theme='carmesi'] {
+    --bg: #190d0d;
+    --surface: #291313;
+    --surface-2: #3a1b1c;
+    --ink: #fff1e8;
+    --ink-2: #e8c3b5;
+    --muted: #a8867d;
+    --line: #5b2b2b;
+    --accent: #e13b35;
+    --accent-soft: #4c1a1b;
+    --accent-ink: #ffffff;
+    --signal: #f08035;
+    --signal-ink: #241006;
+    --panel: #4c1117;
+    --panel-ink: #fff3e9;
+    --panel-line: #8e2a2d;
+    --ok: #68b487;
+    --ok-soft: #1d3929;
+    --bad: #ff5757;
+    --bad-soft: #4d1b1b;
+    --gold: #f0a13b;
+    --gold-soft: #412919;
+    --indigo: #df7874;
+    --indigo-soft: #412324;
+    --shadow: 0 12px 30px rgb(0 0 0 / 0.25);
+    color-scheme: dark;
+}

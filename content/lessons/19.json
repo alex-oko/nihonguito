@@ -1,0 +1,753 @@
+{
+ "id": 19,
+ "title": "¿Has subido al Fuji?",
+ "titleJp": "富士山に 登った ことが ありますか",
+ "summary": "En un descanso de la escuela Kotonoha, Lucía y Carlos se cuentan lo que ya han hecho en Japón. Luego, en el café, Carlos anuncia que está a dieta… a partir de mañana.",
+ "vocab": [
+  {
+   "id": "L19-001",
+   "kana": "のぼります",
+   "kanji": "登ります",
+   "es": "subir [a una montaña]",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-002",
+   "kana": "とまります",
+   "kanji": "泊まります",
+   "es": "alojarse [en un hotel]",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-003",
+   "kana": "そうじします",
+   "kanji": "掃除します",
+   "es": "limpiar (la casa)",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-004",
+   "kana": "せんたくします",
+   "kanji": "洗濯します",
+   "es": "lavar la ropa",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-005",
+   "kana": "れんしゅうします",
+   "kanji": "練習します",
+   "es": "practicar",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-006",
+   "kana": "なります",
+   "es": "hacerse, llegar a ser",
+   "type": "verb",
+   "lesson": 19
+  },
+  {
+   "id": "L19-007",
+   "kana": "ねむい",
+   "kanji": "眠い",
+   "es": "tener sueño",
+   "type": "i-adj",
+   "lesson": 19
+  },
+  {
+   "id": "L19-008",
+   "kana": "つよい",
+   "kanji": "強い",
+   "es": "fuerte",
+   "type": "i-adj",
+   "lesson": 19
+  },
+  {
+   "id": "L19-009",
+   "kana": "よわい",
+   "kanji": "弱い",
+   "es": "débil",
+   "type": "i-adj",
+   "lesson": 19
+  },
+  {
+   "id": "L19-010",
+   "kana": "ちょうしが いい",
+   "kanji": "調子が いい",
+   "es": "estar en buena forma",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-011",
+   "kana": "ちょうしが わるい",
+   "kanji": "調子が 悪い",
+   "es": "estar en mala forma",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-012",
+   "kana": "ちょうし",
+   "kanji": "調子",
+   "es": "estado, forma",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-013",
+   "kana": "ゴルフ",
+   "es": "golf",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-014",
+   "kana": "すもう",
+   "kanji": "相撲",
+   "es": "sumo",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-015",
+   "kana": "パチンコ",
+   "es": "pachinko",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-016",
+   "kana": "おちゃ",
+   "kanji": "お茶",
+   "es": "ceremonia del té",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-017",
+   "kana": "ひ",
+   "kanji": "日",
+   "es": "día, fecha",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-018",
+   "kana": "いちど",
+   "kanji": "一度",
+   "es": "una vez",
+   "type": "adv",
+   "lesson": 19
+  },
+  {
+   "id": "L19-019",
+   "kana": "いちども",
+   "kanji": "一度も",
+   "es": "ni una vez (con negativo)",
+   "type": "adv",
+   "lesson": 19
+  },
+  {
+   "id": "L19-020",
+   "kana": "だんだん",
+   "es": "poco a poco",
+   "type": "adv",
+   "lesson": 19
+  },
+  {
+   "id": "L19-021",
+   "kana": "もうすぐ",
+   "es": "pronto, dentro de poco",
+   "type": "adv",
+   "lesson": 19
+  },
+  {
+   "id": "L19-022",
+   "kana": "おかげさまで",
+   "es": "gracias (a su apoyo)",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-023",
+   "kana": "かんぱい",
+   "kanji": "乾杯",
+   "es": "¡Salud! (brindis)",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-024",
+   "kana": "じつは",
+   "kanji": "実は",
+   "es": "la verdad es que…",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-025",
+   "kana": "ダイエット",
+   "es": "dieta",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-026",
+   "kana": "なんかいも",
+   "kanji": "何回も",
+   "es": "muchas veces",
+   "type": "adv",
+   "lesson": 19
+  },
+  {
+   "id": "L19-027",
+   "kana": "しかし",
+   "es": "sin embargo",
+   "type": "other",
+   "lesson": 19
+  },
+  {
+   "id": "L19-028",
+   "kana": "むり[な]",
+   "kanji": "無理[な]",
+   "es": "excesivo, imposible",
+   "type": "na-adj",
+   "lesson": 19
+  },
+  {
+   "id": "L19-029",
+   "kana": "からだに いい",
+   "kanji": "体に いい",
+   "es": "bueno para la salud",
+   "type": "expr",
+   "lesson": 19
+  },
+  {
+   "id": "L19-030",
+   "kana": "ケーキ",
+   "es": "pastel, tarta",
+   "type": "noun",
+   "lesson": 19
+  },
+  {
+   "id": "L19-031",
+   "kana": "かつしか ほくさい",
+   "kanji": "葛飾 北斎",
+   "es": "Katsushika Hokusai (pintor)",
+   "type": "name",
+   "lesson": 19
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "富士山に 登った ことが あります。",
+   "es": "He subido al monte Fuji."
+  },
+  {
+   "jp": "休みの 日は 掃除したり、洗濯したり します。",
+   "es": "Los días libres limpio, lavo la ropa y cosas así."
+  },
+  {
+   "jp": "だんだん 寒く なりました。",
+   "es": "Poco a poco empezó a hacer frío."
+  },
+  {
+   "jp": "なかむらさんは ピアノが 上手に なりました。",
+   "es": "Yui ya toca muy bien el piano."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "相撲を 見た ことが ありますか。",
+   "qes": "¿Has visto sumo alguna vez?",
+   "ajp": "いいえ、一度も ありません。",
+   "aes": "No, nunca."
+  },
+  {
+   "qjp": "お寺に 泊まった ことが ありますか。",
+   "qes": "¿Has dormido alguna vez en un templo?",
+   "ajp": "はい、一度 あります。京都で 泊まりました。",
+   "aes": "Sí, una vez. Fue en Kioto."
+  },
+  {
+   "qjp": "週末は 何を しましたか。",
+   "qes": "¿Qué hiciste el fin de semana?",
+   "ajp": "映画を 見たり、買い物したり しました。",
+   "aes": "Vi una película, fui de compras y esas cosas."
+  },
+  {
+   "qjp": "休みの 日は いつも 何を しますか。",
+   "qes": "¿Qué sueles hacer en tus días libres?",
+   "ajp": "テニスを したり、ピアノを 弾いたり します。",
+   "aes": "Juego tenis, toco el piano…"
+  },
+  {
+   "qjp": "体の 調子は どうですか。",
+   "qes": "¿Qué tal de salud?",
+   "ajp": "おかげさまで、元気に なりました。",
+   "aes": "Muy bien, gracias. Ya me recuperé."
+  },
+  {
+   "qjp": "きのしたさんは 何に なりたいですか。",
+   "qes": "Kenta, ¿qué quieres ser?",
+   "ajp": "ゲームの エンジニアに なりたいです。",
+   "aes": "Quiero ser ingeniero de videojuegos."
+  },
+  {
+   "qjp": "眠いですか。",
+   "qes": "¿Tienes sueño?",
+   "ajp": "ええ、きのう 2時まで ゲームを しましたから。",
+   "aes": "Sí, ayer jugué videojuegos hasta las dos."
+  },
+  {
+   "qjp": "日本語が 上手に なりましたね。",
+   "qes": "¡Qué bien hablas japonés ya!",
+   "ajp": "いいえ、まだまだです。",
+   "aes": "No, todavía me falta mucho."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Forma た — el pasado simple",
+   "explain": "La forma た es el pasado informal. ¡Es muy fácil si ya sabes la forma て!: cambia て por た y で por だ. Todo lo demás queda igual, en todos los grupos.",
+   "examples": [
+    {
+     "jp": "のぼって → のぼった、とまって → とまった",
+     "es": "subir → subí; alojarse → me alojé"
+    },
+    {
+     "jp": "れんしゅうして → れんしゅうした、きて → きた",
+     "es": "practicar → practiqué; venir → vine"
+    }
+   ]
+  },
+  {
+   "title": "V-た ことが あります — haber hecho alguna vez",
+   "explain": "Sirve para contar experiencias de tu vida: 'he… alguna vez'. Literalmente es 'existe la experiencia de haber…'. No lo uses para algo concreto con fecha: si dices 'el año pasado', usa el pasado normal (ました). Para 'nunca' responde いちども ありません.",
+   "examples": [
+    {
+     "jp": "すき焼きを 作った ことが あります。",
+     "es": "He preparado sukiyaki (alguna vez)."
+    },
+    {
+     "jp": "馬に 乗った ことが ありますか。…いいえ、一度も ありません。",
+     "es": "¿Has montado a caballo alguna vez? — No, nunca."
+    }
+   ]
+  },
+  {
+   "title": "V-たり、 V-たり します — hacer cosas como…",
+   "explain": "Das dos ejemplos de actividades y das a entender que hubo más: 'hago esto, aquello, etc.'. El tiempo (presente/pasado) se marca solo al final, en します/しました. Diferencia con la forma て: て cuenta acciones en orden; たり solo da ejemplos sin orden. No se usa para rutinas obvias como comer o dormir.",
+   "examples": [
+    {
+     "jp": "日曜日は 掃除したり、洗濯したり します。",
+     "es": "Los domingos limpio, lavo la ropa, etc."
+    },
+    {
+     "jp": "京都で お寺を 見たり、写真を 撮ったり しました。",
+     "es": "En Kioto vi templos, tomé fotos y cosas así."
+    }
+   ]
+  },
+  {
+   "title": "～く / ～に なります — volverse, hacerse",
+   "explain": "なります expresa un cambio: algo 'se pone' o 'llega a ser'. Adjetivo い: cambia la い final por く (さむい → さむく なります). Adjetivo な y sustantivos: añade に (げんきに なります, ２５さいに なります). Error típico: decir 'さむいに なります'.",
+   "examples": [
+    {
+     "jp": "だんだん 暑く なります。",
+     "es": "Va a hacer cada vez más calor."
+    },
+    {
+     "jp": "ルシアさんは 来月 25歳に なります。",
+     "es": "Lucía cumple 25 años el mes que viene."
+    }
+   ]
+  },
+  {
+   "title": "そうですね — así es",
+   "explain": "Úsalo para mostrar que estás de acuerdo con algo que el otro dice y que tú ya sabías o pensabas: 'sí, es verdad'. En cambio そうですか (con tono bajando) es para cuando te dan una información nueva: 'ah, ¿sí?'.",
+   "examples": [
+    {
+     "jp": "きょうは 寒いですね。…そうですね。",
+     "es": "Hoy hace frío, ¿no? — Sí, es verdad."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "一度も ありません。",
+   "es": "Nunca (ni una vez)."
+  },
+  {
+   "jp": "とても 寒かったですよ。",
+   "es": "Hacía muchísimo frío."
+  },
+  {
+   "jp": "だんだん おもしろく なりました。",
+   "es": "Cada vez me gusta más."
+  },
+  {
+   "jp": "実は きのうから ダイエットを して います。",
+   "es": "La verdad es que estoy a dieta desde ayer."
+  },
+  {
+   "jp": "ダイエットは あしたから します。",
+   "es": "La dieta, a partir de mañana."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L19-c1",
+   "lesson": 19,
+   "title": "Cosas que hemos hecho en Japón",
+   "tags": [
+    "viajes"
+   ],
+   "situation": "En el descanso de la escuela Kotonoha, Carlos y Lucía hablan de sus experiencias en Japón.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "ルシアさんは 富士山に 登った ことが ありますか。",
+     "es": "Lucía, ¿has subido alguna vez al monte Fuji?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "いいえ、一度も ありません。カルロスさんは？",
+     "es": "No, nunca. ¿Y tú, Carlos?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "去年の 夏 一度 登りました。とても 寒かったですよ。",
+     "es": "Subí una vez el verano pasado. Hacía muchísimo frío."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "へえ、すごいですね。わたしも ぜひ 登りたいです。",
+     "es": "¡Vaya, qué increíble! Yo también quiero subir sin falta."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "ルシアさんは 週末 何を して いますか。",
+     "es": "Lucía, ¿qué haces los fines de semana?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "お寺を 見に 行ったり、お茶を 習ったり します。",
+     "es": "Voy a ver templos, aprendo ceremonia del té…"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "お茶ですか。わたしは お茶の 教室へ 行った ことが ありません。",
+     "es": "¿Ceremonia del té? Yo nunca he ido a una clase."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "だんだん おもしろく なりましたよ。今度 いっしょに 行きませんか。",
+     "es": "Cada vez me gusta más. ¿Vienes conmigo la próxima vez?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいですね。ぜひ。",
+     "es": "¡Buena idea! Claro que sí."
+    }
+   ]
+  },
+  {
+   "id": "L19-c2",
+   "lesson": 19,
+   "title": "La dieta, a partir de mañana",
+   "tags": [
+    "comida"
+   ],
+   "situation": "En el café Komorebi, Carlos le cuenta a Anna que está a dieta, pero el Sr. Tanaka acaba de hacer un pastel.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "いらっしゃい。きょうの ケーキは チョコレートケーキですよ。",
+     "es": "Bienvenidos. El pastel de hoy es de chocolate."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "わあ、いいですね。カルロスさんも 食べますか。",
+     "es": "¡Qué rico! Carlos, ¿tú también vas a comer?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいえ。実は きのうから ダイエットを して います。",
+     "es": "No. La verdad es que estoy a dieta desde ayer."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "えっ、ほんとうですか。",
+     "es": "¿En serio?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "ええ。だんだん 体の 調子が 悪く なりましたから。",
+     "es": "Sí. Poco a poco me empecé a sentir peor."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "毎日 何を して いますか。",
+     "es": "¿Y qué haces cada día?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "朝 ジョギングを したり、野菜を たくさん 食べたり して います。",
+     "es": "Salgo a correr en la mañana, como muchas verduras…"
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "そうですか。じゃ、ケーキは やめますか。",
+     "es": "Ya veo. Entonces, ¿nada de pastel?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "うーん……。ダイエットは あしたから します。ケーキを ください。",
+     "es": "Mmm… La dieta, a partir de mañana. Un pastel, por favor."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "カルロスさん、それは ダイエットじゃ ありませんよ。",
+     "es": "Carlos, eso no es una dieta."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Cultura tradicional y pasatiempos",
+   "items": [
+    {
+     "kana": "さどう（おちゃ）",
+     "kanji": "茶道（お茶）",
+     "es": "ceremonia del té"
+    },
+    {
+     "kana": "かどう（いけばな）",
+     "kanji": "華道（生け花）",
+     "es": "arreglo floral"
+    },
+    {
+     "kana": "しょどう",
+     "kanji": "書道",
+     "es": "caligrafía"
+    },
+    {
+     "kana": "かぶき",
+     "kanji": "歌舞伎",
+     "es": "kabuki (teatro)"
+    },
+    {
+     "kana": "のう",
+     "kanji": "能",
+     "es": "teatro noh"
+    },
+    {
+     "kana": "ぶんらく",
+     "kanji": "文楽",
+     "es": "bunraku (marionetas)"
+    },
+    {
+     "kana": "すもう",
+     "kanji": "相撲",
+     "es": "sumo"
+    },
+    {
+     "kana": "じゅうどう",
+     "kanji": "柔道",
+     "es": "judo"
+    },
+    {
+     "kana": "けんどう",
+     "kanji": "剣道",
+     "es": "kendo"
+    },
+    {
+     "kana": "からて",
+     "kanji": "空手",
+     "es": "kárate"
+    },
+    {
+     "kana": "まんざい",
+     "kanji": "漫才",
+     "es": "manzai (dúo cómico)"
+    },
+    {
+     "kana": "らくご",
+     "kanji": "落語",
+     "es": "rakugo (monólogo cómico)"
+    },
+    {
+     "kana": "いご",
+     "kanji": "囲碁",
+     "es": "go (juego de mesa)"
+    },
+    {
+     "kana": "しょうぎ",
+     "kanji": "将棋",
+     "es": "shogi (ajedrez japonés)"
+    },
+    {
+     "kana": "パチンコ",
+     "kanji": "",
+     "es": "pachinko"
+    },
+    {
+     "kana": "カラオケ",
+     "kanji": "",
+     "es": "karaoke"
+    },
+    {
+     "kana": "ぼんおどり",
+     "kanji": "盆踊り",
+     "es": "baile del festival Obon"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "El monte Fuji solo se puede subir en temporada de verano, más o menos de julio a principios de septiembre. Mucha gente sube de noche para ver el amanecer desde la cima, y allá arriba hace frío incluso en agosto.",
+  "Cuando alguien te pregunta cómo estás o cómo te va, los japoneses suelen contestar おかげさまで: es una forma amable de agradecer el apoyo de los demás en general, aunque esa persona no haya hecho nada concreto."
+ ],
+ "extras": [
+  {
+   "jp": "京都で お寺を 見たり、写真を 撮ったり しました。",
+   "es": "En Kioto vi templos, tomé fotos y esas cosas.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "一人で 外国を 旅行した ことが あります。",
+   "es": "He viajado solo/a al extranjero.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "すき焼きを 食べた ことが ありますか。",
+   "es": "¿Has comido sukiyaki alguna vez?",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "日本の 料理が だんだん 好きに なりました。",
+   "es": "Cada vez me gusta más la comida japonesa.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "来月から 課長に なります。",
+   "es": "A partir del mes que viene seré jefe/a de sección.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "日本の 会社で 働いた ことが あります。",
+   "es": "He trabajado en una empresa japonesa.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "日本語が だんだん おもしろく なりました。",
+   "es": "El japonés me parece cada vez más interesante.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "毎晩 漢字を 書いたり、ことばを 覚えたり します。",
+   "es": "Cada noche escribo kanji, memorizo palabras…",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "日本語で アニメを 見た ことが あります。",
+   "es": "He visto anime en japonés.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "アニメを 見て、日本が 好きに なりました。",
+   "es": "Viendo anime empezó a gustarme Japón.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "この ゲームは 何回も しました。",
+   "es": "Este videojuego lo he jugado muchas veces.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "ゲームが だんだん 上手に なりました。",
+   "es": "Poco a poco me he vuelto bueno/a en el juego.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "相撲を 見た ことが ありますか。",
+   "es": "¿Has visto sumo alguna vez?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "週末は ゴルフを したり、ジョギングを したり します。",
+   "es": "Los fines de semana juego golf, salgo a correr…",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "カラオケで 日本の 歌を 歌った ことが あります。",
+   "es": "He cantado canciones japonesas en el karaoke.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "毎日 ピアノを 練習して、上手に なりました。",
+   "es": "Practiqué piano todos los días y ya toco bien.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

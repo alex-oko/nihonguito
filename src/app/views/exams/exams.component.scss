@@ -1,0 +1,99 @@
+.head {
+    margin: 12px 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.say {
+    margin: 12px 0 4px;
+}
+.lv-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    color: var(--ink);
+    background: none;
+    border: 0;
+    font: inherit;
+}
+.lv {
+    width: 38px;
+    height: 38px;
+    flex: none;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    background: var(--surface-2);
+}
+.lv.now {
+    background: var(--accent);
+    color: var(--accent-ink, #fff);
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    display: block;
+    font-weight: 600;
+}
+.small {
+    display: block;
+}
+.t .small {
+    display: inline;
+}
+.pill {
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    white-space: nowrap;
+    background: var(--surface-2);
+    color: var(--muted);
+}
+.pill[data-t='ok'] {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+.pill[data-t='mid'] {
+    background: var(--gold-soft);
+    color: var(--gold);
+}
+.pill[data-t='bad'] {
+    background: var(--bad-soft);
+    color: var(--bad);
+}
+.pill[data-t='next'] {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    margin: 8px 2px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+.create {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+.ci {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}

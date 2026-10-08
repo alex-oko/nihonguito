@@ -1,0 +1,133 @@
+/* ---- Botones: .btn y sus variantes, botón de icono, chips y badges ---- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    padding: 0 20px;
+    border-radius: var(--r-md);
+    border: 1px solid transparent;
+    background: var(--ink);
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.12s, opacity 0.12s, background 0.12s;
+    user-select: none;
+    text-align: center;
+}
+.btn:active {
+    transform: scale(0.97);
+}
+.btn:disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+.btn.block {
+    width: 100%;
+}
+.btn.accent {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-right-color: var(--signal);
+    border-right-width: 6px;
+}
+.btn.ok {
+    background: var(--ok);
+    color: #fff;
+}
+.btn.bad {
+    background: var(--bad);
+    color: #fff;
+}
+.btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+.btn.soft {
+    background: var(--surface-2);
+    color: var(--ink);
+}
+.btn.sm {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 0.9rem;
+    border-radius: var(--r-sm);
+}
+
+.icon-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--ink-2);
+    cursor: pointer;
+    flex: none;
+}
+.icon-btn:active {
+    background: var(--surface-2);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.chip.on {
+    background: var(--panel);
+    color: var(--panel-ink);
+    border-color: var(--signal);
+}
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.chips.scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -16px;
+    padding: 2px 16px;
+}
+.chips.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--surface-2);
+    color: var(--ink-2);
+}
+.badge.accent {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.badge.ok {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+.badge.gold {
+    background: var(--gold-soft);
+    color: var(--gold);
+}

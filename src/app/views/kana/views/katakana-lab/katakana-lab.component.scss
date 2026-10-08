@@ -1,0 +1,94 @@
+/* ---- Introducción ---- */
+.intro {
+    background: var(--accent-soft) !important;
+    border-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.glyphs {
+    font-size: 2.2rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+/* ---- Plan de práctica ---- */
+.step {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+}
+.n {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    flex: none;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+}
+
+/* ---- Parejas que se confunden ---- */
+.chars {
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.lc {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--line);
+    background: var(--bg);
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.lc:active {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+/* ---- Reglas ---- */
+.body {
+    margin: 4px 0 8px;
+    color: var(--ink-2);
+}
+.ex {
+    padding: 4px 0;
+}
+.exw {
+    font-size: 1.2rem;
+    min-width: 110px;
+}
+
+/* ---- Tu nombre en katakana ---- */
+.field {
+    width: 100%;
+    font: inherit;
+    padding: 12px 14px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    outline: none;
+}
+.field:focus {
+    border-color: var(--ink);
+}
+.result {
+    justify-content: space-between;
+    margin: 14px 0 6px;
+}
+.big {
+    font-size: 2.2rem;
+    word-break: break-all;
+}

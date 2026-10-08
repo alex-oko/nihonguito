@@ -1,0 +1,957 @@
+{
+ "id": 7,
+ "title": "De visita en casa de Yui",
+ "titleJp": "ごめんください",
+ "summary": "Lucía visita por primera vez la casa de Yui, que la recibe con pantuflas y té. Días después, Carlos cumple 30 años y Lucía le da su regalo.",
+ "vocab": [
+  {
+   "id": "L07-001",
+   "kana": "きります",
+   "kanji": "切ります",
+   "es": "cortar",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-002",
+   "kana": "おくります",
+   "kanji": "送ります",
+   "es": "enviar",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-003",
+   "kana": "あげます",
+   "es": "dar, regalar",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-004",
+   "kana": "もらいます",
+   "es": "recibir",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-005",
+   "kana": "かします",
+   "kanji": "貸します",
+   "es": "prestar",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-006",
+   "kana": "かります",
+   "kanji": "借ります",
+   "es": "pedir prestado",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-007",
+   "kana": "おしえます",
+   "kanji": "教えます",
+   "es": "enseñar",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-008",
+   "kana": "ならいます",
+   "kanji": "習います",
+   "es": "aprender (de alguien)",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-009",
+   "kana": "かけます［でんわを～］",
+   "kanji": "［電話を～］",
+   "es": "hacer [una llamada]",
+   "type": "verb",
+   "lesson": 7
+  },
+  {
+   "id": "L07-010",
+   "kana": "て",
+   "kanji": "手",
+   "es": "mano",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-011",
+   "kana": "はし",
+   "es": "palillos",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-012",
+   "kana": "スプーン",
+   "es": "cuchara",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-013",
+   "kana": "ナイフ",
+   "es": "cuchillo",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-014",
+   "kana": "フォーク",
+   "es": "tenedor",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-015",
+   "kana": "はさみ",
+   "es": "tijeras",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-016",
+   "kana": "ファクス",
+   "es": "fax",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-017",
+   "kana": "ワープロ",
+   "es": "procesador de textos",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-018",
+   "kana": "パソコン",
+   "es": "ordenador personal",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-019",
+   "kana": "パンチ",
+   "es": "perforadora",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-020",
+   "kana": "ホッチキス",
+   "es": "grapadora",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-021",
+   "kana": "セロテープ",
+   "es": "celo, cinta adhesiva",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-022",
+   "kana": "けしゴム",
+   "kanji": "消しゴム",
+   "es": "goma de borrar",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-023",
+   "kana": "かみ",
+   "kanji": "紙",
+   "es": "papel",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-024",
+   "kana": "はな",
+   "kanji": "花",
+   "es": "flor",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-025",
+   "kana": "シャツ",
+   "es": "camisa, camiseta",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-026",
+   "kana": "プレゼント",
+   "es": "regalo",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-027",
+   "kana": "にもつ",
+   "kanji": "荷物",
+   "es": "paquete, equipaje",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-028",
+   "kana": "おかね",
+   "kanji": "お金",
+   "es": "dinero",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-029",
+   "kana": "きっぷ",
+   "kanji": "切符",
+   "es": "billete (de tren, etc.)",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-030",
+   "kana": "クリスマス",
+   "es": "Navidad",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-031",
+   "kana": "ちち",
+   "kanji": "父",
+   "es": "(mi) padre",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-032",
+   "kana": "はは",
+   "kanji": "母",
+   "es": "(mi) madre",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-033",
+   "kana": "おとうさん",
+   "kanji": "お父さん",
+   "es": "padre (de otro)",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-034",
+   "kana": "おかあさん",
+   "kanji": "お母さん",
+   "es": "madre (de otro)",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-035",
+   "kana": "もう",
+   "es": "ya",
+   "type": "adv",
+   "lesson": 7
+  },
+  {
+   "id": "L07-036",
+   "kana": "まだ",
+   "es": "todavía (no)",
+   "type": "adv",
+   "lesson": 7
+  },
+  {
+   "id": "L07-037",
+   "kana": "これから",
+   "es": "a partir de ahora, ahora",
+   "type": "adv",
+   "lesson": 7
+  },
+  {
+   "id": "L07-038",
+   "kana": "［～、］すてきですね。",
+   "es": "¡Qué bonito [~]!",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-039",
+   "kana": "ごめんください。",
+   "es": "¿Se puede? (al llegar a una casa)",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-040",
+   "kana": "いらっしゃい。",
+   "es": "¡Bienvenido!",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-041",
+   "kana": "どうぞ おあがり ください。",
+   "kanji": "どうぞ お上がり ください。",
+   "es": "Pase, por favor.",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-042",
+   "kana": "しつれいします。",
+   "kanji": "失礼します。",
+   "es": "Con permiso.",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-043",
+   "kana": "［～は］いかがですか。",
+   "es": "¿Le apetece [~]?",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-044",
+   "kana": "いただきます。",
+   "es": "(se dice antes de comer o beber)",
+   "type": "expr",
+   "lesson": 7
+  },
+  {
+   "id": "L07-045",
+   "kana": "りょこう",
+   "kanji": "旅行",
+   "es": "viaje (~を します: viajar)",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-046",
+   "kana": "おみやげ",
+   "kanji": "お土産",
+   "es": "recuerdo, regalo de viaje",
+   "type": "noun",
+   "lesson": 7
+  },
+  {
+   "id": "L07-047",
+   "kana": "ヨーロッパ",
+   "es": "Europa",
+   "type": "name",
+   "lesson": 7
+  },
+  {
+   "id": "L07-048",
+   "kana": "スペイン",
+   "es": "España",
+   "type": "name",
+   "lesson": 7
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "わたしは はしで ラーメンを 食べます。",
+   "es": "Como ramen con palillos."
+  },
+  {
+   "jp": "ルシアさんは なかむらさんに 花を あげました。",
+   "es": "Lucía le regaló flores a Yui."
+  },
+  {
+   "jp": "カルロスさんは アンナさんに 本を もらいました。",
+   "es": "Carlos recibió un libro de Anna."
+  },
+  {
+   "jp": "もう 切符を 買いました。",
+   "es": "Ya compré el boleto."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "何で 紙を 切りますか。",
+   "qes": "¿Con qué cortas el papel?",
+   "ajp": "はさみで 切ります。",
+   "aes": "Con tijeras."
+  },
+  {
+   "qjp": "日本語で メールを 書きますか。",
+   "qes": "¿Escribes los correos en japonés?",
+   "ajp": "いいえ、英語で 書きます。",
+   "aes": "No, los escribo en inglés."
+  },
+  {
+   "qjp": "「切符」は 英語で 何ですか。",
+   "qes": "¿Cómo se dice \"kippu\" en inglés?",
+   "ajp": "「チケット」です。",
+   "aes": "Se dice \"ticket\"."
+  },
+  {
+   "qjp": "カルロスさんに 何を あげますか。",
+   "qes": "¿Qué le vas a regalar a Carlos?",
+   "ajp": "日本の お酒を あげます。",
+   "aes": "Le voy a regalar sake japonés."
+  },
+  {
+   "qjp": "その シャツ、すてきですね。",
+   "qes": "¡Qué bonita esa camisa!",
+   "ajp": "ありがとう ございます。母に もらいました。",
+   "aes": "Gracias. Me la regaló mi mamá."
+  },
+  {
+   "qjp": "もう 晩ごはんを 食べましたか。",
+   "qes": "¿Ya cenaste?",
+   "ajp": "いいえ、まだです。これから 食べます。",
+   "aes": "No, todavía no. Voy a cenar ahora."
+  },
+  {
+   "qjp": "だれに 日本語を 習いますか。",
+   "qes": "¿Con quién aprendes japonés?",
+   "ajp": "ことのは日本語学校の 先生に 習います。",
+   "aes": "Con los profesores de la escuela Kotonoha."
+  },
+  {
+   "qjp": "もう メキシコに 荷物を 送りましたか。",
+   "qes": "¿Ya mandaste el paquete a México?",
+   "ajp": "はい、もう 送りました。",
+   "aes": "Sí, ya lo mandé."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "[herramienta] で V — con qué haces algo",
+   "explain": "で también indica el instrumento o el medio: con palillos, con tijeras, en japonés, por radio. Es el mismo で de 'ir en tren' (L5). Truco: si en español dices 'con…' (herramienta) o 'en…' (idioma), casi siempre es で.",
+   "examples": [
+    {
+     "jp": "ルシアさんは はしで ごはんを 食べます。",
+     "es": "Lucía come con palillos."
+    },
+    {
+     "jp": "パソコンで レポートを 書きます。",
+     "es": "Escribo el informe en la computadora."
+    }
+   ]
+  },
+  {
+   "title": "「…」は 〜語で 何ですか — ¿cómo se dice?",
+   "explain": "Con esta frase preguntas cómo se dice una palabra en otro idioma. Literalmente: '«…», en idioma X, ¿qué es?'. Es muy útil en clase: pon la palabra, luego el idioma con で, y 何ですか.",
+   "examples": [
+    {
+     "jp": "「ありがとう」は スペイン語で 何ですか。…「グラシアス」です。",
+     "es": "¿Cómo se dice \"arigatō\" en español? …\"Gracias\"."
+    }
+   ]
+  },
+  {
+   "title": "[persona] に あげます — dar a alguien",
+   "explain": "Con verbos como あげます (dar), かします (prestar), おしえます (enseñar), la persona que recibe se marca con に, como 'a' en 'le doy flores a Yui'. El orden típico: quien da は, quien recibe に, la cosa を, verbo. Con おくります o でんわを かけます, si el destino es un lugar (una empresa) también puedes usar へ.",
+   "examples": [
+    {
+     "jp": "わたしは きのしたさんに 傘を 貸しました。",
+     "es": "Le presté un paraguas a Kenta."
+    },
+    {
+     "jp": "毎週 メキシコの 母に 電話を かけます。",
+     "es": "Todas las semanas llamo a mi mamá en México."
+    }
+   ]
+  },
+  {
+   "title": "persona に もらいます / かります / ならいます — recibir de alguien",
+   "explain": "Con verbos de 'recibir' (もらいます recibir, かります pedir prestado, ならいます aprender) el sujeto es quien recibe, y la persona que da, presta o enseña se marca con に. Piensa en に como 'de parte de'. También puedes usar から ('desde') en lugar de に; con empresas, bancos o escuelas se usa siempre から. Error típico: usar に con un banco o una empresa; ahí va から.",
+   "examples": [
+    {
+     "jp": "わたしは 母に 手紙を もらいました。",
+     "es": "Recibí una carta de mi mamá."
+    },
+    {
+     "jp": "銀行から お金を 借りました。",
+     "es": "Pedí dinero prestado al banco."
+    }
+   ]
+  },
+  {
+   "title": "もう Vました — 'ya lo hice'",
+   "explain": "もう significa 'ya' y va con el verbo en pasado (Vました) para decir que algo ya está terminado. Si ya está hecho, respondes はい、もう Vました. Si todavía no, dices いいえ、まだです ('todavía no'). Error típico: responder いいえ、Vませんでした; eso significa 'no lo hice' (en un momento pasado), no 'todavía no'.",
+   "examples": [
+    {
+     "jp": "もう 昼ごはんを 食べましたか。…はい、もう 食べました。",
+     "es": "¿Ya almorzaste? …Sí, ya almorcé."
+    },
+    {
+     "jp": "もう カルロスさんの プレゼントを 買いましたか。…いいえ、まだです。",
+     "es": "¿Ya compraste el regalo de Carlos? …No, todavía no."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "ごめんください。",
+   "es": "¿Se puede?"
+  },
+  {
+   "jp": "いらっしゃい。どうぞ お上がり ください。",
+   "es": "¡Bienvenida! Pasa, por favor."
+  },
+  {
+   "jp": "失礼します。",
+   "es": "Con permiso."
+  },
+  {
+   "jp": "お茶は いかがですか。",
+   "es": "¿Quieres un té?"
+  },
+  {
+   "jp": "その カップ、すてきですね。",
+   "es": "¡Qué bonita esa taza!"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L07-c1",
+   "lesson": 7,
+   "title": "En casa de Yui",
+   "situation": "Lucía visita por primera vez la casa de Yui. En la entrada se quita los zapatos y Yui le ofrece pantuflas y té.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ごめんください。",
+     "es": "¿Se puede?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ルシアさん、いらっしゃい。どうぞ お上がり ください。",
+     "es": "¡Lucía, bienvenida! Pasa, por favor."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "スリッパです。どうぞ。",
+     "es": "Aquí tienes unas pantuflas."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "どうも。失礼します。",
+     "es": "Gracias. Con permiso."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "これ、メキシコの コーヒーです。どうぞ。",
+     "es": "Esto es café de México. Es para ti."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ありがとう ございます。お茶は いかがですか。",
+     "es": "Muchas gracias. ¿Quieres un té?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、いただきます。",
+     "es": "Sí, gracias."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、この カップ、すてきですね。",
+     "es": "Ay, ¡qué bonita esta taza!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ありがとう ございます。京都の お土産です。母に もらいました。",
+     "es": "Gracias. Es un recuerdo de Kioto. Me la regaló mi mamá."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わたしも 母に メキシコの カップを もらいました。",
+     "es": "Yo también tengo una taza mexicana que me regaló mi mamá."
+    }
+   ]
+  },
+  {
+   "id": "L07-c2",
+   "lesson": 7,
+   "title": "Carlos cumple 30",
+   "situation": "Después de clase en la escuela Kotonoha, Lucía le da a Carlos su regalo de cumpleaños.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "カルロスさん、お誕生日 おめでとう ございます。",
+     "es": "Carlos, ¡feliz cumpleaños!"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "ありがとう ございます。もう 30歳です。",
+     "es": "Muchas gracias. Ya tengo 30."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "これ、プレゼントです。どうぞ。",
+     "es": "Esto es un regalo. Es para ti."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "わあ、ありがとう ございます。これは 何ですか。",
+     "es": "¡Ay, muchas gracias! ¿Qué es?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "日本の はしです。",
+     "es": "Son unos palillos japoneses."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "すてきですね。この はしで 毎日 ごはんを 食べます。",
+     "es": "¡Qué bonitos! Voy a comer con ellos todos los días."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "アンナさんに 何を もらいましたか。",
+     "es": "¿Y qué te regaló Anna?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "写真の 本を もらいました。",
+     "es": "Me regaló un libro de fotografía."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "もう 家族に 電話を かけましたか。",
+     "es": "¿Ya llamaste a tu familia?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいえ、まだです。これから かけます。",
+     "es": "No, todavía no. Los voy a llamar ahora."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Mi familia (hablando de la propia)",
+   "items": [
+    {
+     "kana": "そふ",
+     "kanji": "祖父",
+     "es": "abuelo"
+    },
+    {
+     "kana": "そぼ",
+     "kanji": "祖母",
+     "es": "abuela"
+    },
+    {
+     "kana": "そふぼ",
+     "kanji": "祖父母",
+     "es": "abuelos"
+    },
+    {
+     "kana": "ちち",
+     "kanji": "父",
+     "es": "padre"
+    },
+    {
+     "kana": "はは",
+     "kanji": "母",
+     "es": "madre"
+    },
+    {
+     "kana": "りょうしん",
+     "kanji": "両親",
+     "es": "padres"
+    },
+    {
+     "kana": "あに",
+     "kanji": "兄",
+     "es": "hermano mayor"
+    },
+    {
+     "kana": "あね",
+     "kanji": "姉",
+     "es": "hermana mayor"
+    },
+    {
+     "kana": "おとうと",
+     "kanji": "弟",
+     "es": "hermano menor"
+    },
+    {
+     "kana": "いもうと",
+     "kanji": "妹",
+     "es": "hermana menor"
+    },
+    {
+     "kana": "きょうだい",
+     "kanji": "兄弟",
+     "es": "hermanos"
+    },
+    {
+     "kana": "つま",
+     "kanji": "妻",
+     "es": "esposa"
+    },
+    {
+     "kana": "おっと",
+     "kanji": "夫",
+     "es": "marido"
+    },
+    {
+     "kana": "ふうふ",
+     "kanji": "夫婦",
+     "es": "matrimonio (pareja)"
+    },
+    {
+     "kana": "むすこ",
+     "kanji": "息子",
+     "es": "hijo"
+    },
+    {
+     "kana": "むすめ",
+     "kanji": "娘",
+     "es": "hija"
+    },
+    {
+     "kana": "こども",
+     "kanji": "子ども",
+     "es": "hijos, niños"
+    }
+   ]
+  },
+  {
+   "topic": "La familia de otra persona (forma respetuosa)",
+   "items": [
+    {
+     "kana": "おじいさん",
+     "kanji": "",
+     "es": "su abuelo"
+    },
+    {
+     "kana": "おばあさん",
+     "kanji": "",
+     "es": "su abuela"
+    },
+    {
+     "kana": "おとうさん",
+     "kanji": "お父さん",
+     "es": "su padre"
+    },
+    {
+     "kana": "おかあさん",
+     "kanji": "お母さん",
+     "es": "su madre"
+    },
+    {
+     "kana": "ごりょうしん",
+     "kanji": "ご両親",
+     "es": "sus padres"
+    },
+    {
+     "kana": "おにいさん",
+     "kanji": "お兄さん",
+     "es": "su hermano mayor"
+    },
+    {
+     "kana": "おねえさん",
+     "kanji": "お姉さん",
+     "es": "su hermana mayor"
+    },
+    {
+     "kana": "おとうとさん",
+     "kanji": "弟さん",
+     "es": "su hermano menor"
+    },
+    {
+     "kana": "いもうとさん",
+     "kanji": "妹さん",
+     "es": "su hermana menor"
+    },
+    {
+     "kana": "ごきょうだい",
+     "kanji": "ご兄弟",
+     "es": "sus hermanos"
+    },
+    {
+     "kana": "おくさん",
+     "kanji": "奥さん",
+     "es": "su esposa"
+    },
+    {
+     "kana": "ごしゅじん",
+     "kanji": "ご主人",
+     "es": "su marido"
+    },
+    {
+     "kana": "ごふうふ",
+     "kanji": "ご夫婦",
+     "es": "el matrimonio (de otros)"
+    },
+    {
+     "kana": "むすこさん",
+     "kanji": "息子さん",
+     "es": "su hijo"
+    },
+    {
+     "kana": "むすめさん",
+     "kanji": "娘さん",
+     "es": "su hija"
+    },
+    {
+     "kana": "おこさん",
+     "kanji": "お子さん",
+     "es": "sus hijos"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Al entrar a una casa japonesa te quitas los zapatos en la entrada (げんかん) y te pones las pantuflas que te ofrecen. Si pasas a un cuarto con tatami, también te quitas las pantuflas y entras solo con calcetines.",
+  "Cuando visitas a alguien o vuelves de un viaje, se acostumbra llevar un pequeño regalo, muchas veces dulces típicos de tu ciudad o país. No tiene que ser caro: lo importante es el detalle."
+ ],
+ "extras": [
+  {
+   "jp": "母に 京都の お土産を あげました。",
+   "es": "Le di a mi mamá un recuerdo de Kioto.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "旅行の 写真を 友達に 送りました。",
+   "es": "Les mandé a mis amigos las fotos del viaje.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "はしで すしを 食べます。",
+   "es": "Como sushi con palillos.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "なかむらさんに 日本の お茶を もらいました。",
+   "es": "Yui me regaló té japonés.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "パソコンで レポートを 書きます。",
+   "es": "Escribo informes en la computadora.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "もう メールを 送りました。",
+   "es": "Ya mandé el correo.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "先生に 日本語を 習います。",
+   "es": "Aprendo japonés con una profesora.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "友達に 辞書を 借りました。",
+   "es": "Le pedí prestado el diccionario a un amigo.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "誕生日に アニメの シャツを もらいました。",
+   "es": "Para mi cumpleaños me regalaron una camiseta de anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "友達に アニメの 本を 貸しました。",
+   "es": "Le presté un libro de anime a un amigo.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "きのしたさんに ゲームを 借りました。",
+   "es": "Kenta me prestó un videojuego.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "誕生日に 彼に ゲームを あげます。",
+   "es": "Para su cumpleaños le voy a regalar un videojuego a mi novio.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "友達に テニスを 教えます。",
+   "es": "Le enseño tenis a un amigo.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "父に サッカーボールを もらいました。",
+   "es": "Mi papá me regaló un balón de fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "先生に ピアノを 習います。",
+   "es": "Aprendo piano con una profesora.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "友達に CDを 貸しました。",
+   "es": "Le presté un CD a un amigo.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

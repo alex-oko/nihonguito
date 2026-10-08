@@ -1,0 +1,801 @@
+{
+ "id": 23,
+ "title": "¿Cómo llego a tu casa?",
+ "titleJp": "交差点を 渡ると、白い 建物が あるよ",
+ "summary": "Lucía llama a Anna desde la estación de Mitaka para preguntarle cómo llegar a su casa. Otro día, Kenta le enseña a usar la copiadora de la tienda de conveniencia.",
+ "vocab": [
+  {
+   "id": "L23-001",
+   "kana": "ききます",
+   "kanji": "聞きます",
+   "es": "preguntar (a alguien: に)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-002",
+   "kana": "まわします",
+   "kanji": "回します",
+   "es": "girar (algo)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-003",
+   "kana": "ひきます",
+   "kanji": "引きます",
+   "es": "tirar, jalar",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-004",
+   "kana": "かえます",
+   "kanji": "変えます",
+   "es": "cambiar",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-005",
+   "kana": "さわります",
+   "kanji": "触ります",
+   "es": "tocar (algo: に)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-006",
+   "kana": "でます",
+   "kanji": "出ます",
+   "es": "salir (el cambio: が)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-007",
+   "kana": "うごきます",
+   "kanji": "動きます",
+   "es": "moverse, funcionar",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-008",
+   "kana": "あるきます",
+   "kanji": "歩きます",
+   "es": "caminar (por: を)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-009",
+   "kana": "わたります",
+   "kanji": "渡ります",
+   "es": "cruzar (を)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-010",
+   "kana": "きを つけます",
+   "kanji": "気を つけます",
+   "es": "tener cuidado (con: に)",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-011",
+   "kana": "ひっこしします",
+   "kanji": "引っ越しします",
+   "es": "mudarse de casa",
+   "type": "verb",
+   "lesson": 23
+  },
+  {
+   "id": "L23-012",
+   "kana": "でんきや",
+   "kanji": "電気屋",
+   "es": "electricista, tienda eléctrica",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-013",
+   "kana": "～や",
+   "kanji": "～屋",
+   "es": "tienda / comerciante de ~",
+   "type": "other",
+   "lesson": 23
+  },
+  {
+   "id": "L23-014",
+   "kana": "サイズ",
+   "es": "talla, tamaño",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-015",
+   "kana": "おと",
+   "kanji": "音",
+   "es": "sonido",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-016",
+   "kana": "きかい",
+   "kanji": "機械",
+   "es": "máquina",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-017",
+   "kana": "つまみ",
+   "es": "perilla, botón giratorio",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-018",
+   "kana": "こしょう",
+   "kanji": "故障",
+   "es": "avería (～します: estropearse)",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-019",
+   "kana": "みち",
+   "kanji": "道",
+   "es": "camino, calle",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-020",
+   "kana": "こうさてん",
+   "kanji": "交差点",
+   "es": "cruce",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-021",
+   "kana": "しんごう",
+   "kanji": "信号",
+   "es": "semáforo",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-022",
+   "kana": "かど",
+   "kanji": "角",
+   "es": "esquina",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-023",
+   "kana": "はし",
+   "kanji": "橋",
+   "es": "puente",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-024",
+   "kana": "ちゅうしゃじょう",
+   "kanji": "駐車場",
+   "es": "aparcamiento",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-025",
+   "kana": "－め",
+   "kanji": "－目",
+   "es": "-º (ordinal: 2º, 3º)",
+   "type": "counter",
+   "lesson": 23
+  },
+  {
+   "id": "L23-026",
+   "kana": "[お]しょうがつ",
+   "kanji": "[お]正月",
+   "es": "Año Nuevo",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-027",
+   "kana": "ごちそうさま[でした]。",
+   "es": "gracias por la comida",
+   "type": "expr",
+   "lesson": 23
+  },
+  {
+   "id": "L23-028",
+   "kana": "たてもの",
+   "kanji": "建物",
+   "es": "edificio",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-029",
+   "kana": "がいこくじんとうろくしょう",
+   "kanji": "外国人登録証",
+   "es": "tarjeta de residente extranjero",
+   "type": "noun",
+   "lesson": 23
+  },
+  {
+   "id": "L23-030",
+   "kana": "しょうとくたいし",
+   "kanji": "聖徳太子",
+   "es": "Príncipe Shotoku",
+   "type": "name",
+   "lesson": 23
+  },
+  {
+   "id": "L23-031",
+   "kana": "ほうりゅうじ",
+   "kanji": "法隆寺",
+   "es": "templo Horyuji (Nara)",
+   "type": "name",
+   "lesson": 23
+  },
+  {
+   "id": "L23-032",
+   "kana": "みたか",
+   "kanji": "三鷹",
+   "es": "Mitaka (ciudad de Tokio)",
+   "type": "name",
+   "lesson": 23
+  },
+  {
+   "id": "L23-033",
+   "kana": "みたかえき",
+   "kanji": "三鷹駅",
+   "es": "estación de Mitaka",
+   "type": "name",
+   "lesson": 23
+  },
+  {
+   "id": "L23-034",
+   "kana": "こうえんまえ",
+   "kanji": "公園前",
+   "es": "Kōen-mae (parada de autobús)",
+   "type": "name",
+   "lesson": 23
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "雨の とき、バスで 会社へ 行きます。",
+   "es": "Cuando llueve, voy a la empresa en autobús."
+  },
+  {
+   "jp": "眠い とき、コーヒーを 飲みます。",
+   "es": "Cuando tengo sueño, tomo café."
+  },
+  {
+   "jp": "お金を 入れると、切符が 出ます。",
+   "es": "Si metes el dinero, sale el boleto."
+  },
+  {
+   "jp": "橋を 渡ると、左に 公園が あります。",
+   "es": "Al cruzar el puente, a la izquierda hay un parque."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "暇な とき、何を しますか。",
+   "qes": "¿Qué haces cuando tienes tiempo libre?",
+   "ajp": "公園を 散歩します。",
+   "aes": "Salgo a pasear por el parque."
+  },
+  {
+   "qjp": "子どもの とき、何が 好きでしたか。",
+   "qes": "¿Qué te gustaba de niño?",
+   "ajp": "サッカーが 好きでした。",
+   "aes": "Me gustaba el fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "qjp": "初めて 日本へ 来た とき、どう 思いましたか。",
+   "qes": "¿Qué pensaste cuando llegaste a Japón por primera vez?",
+   "ajp": "電車が 静かだと 思いました。",
+   "aes": "Pensé que los trenes eran muy silenciosos.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "qjp": "この ボタンを 押すと、何が 出ますか。",
+   "qes": "¿Qué sale si aprietas este botón?",
+   "ajp": "温かい お茶が 出ます。",
+   "aes": "Sale té caliente."
+  },
+  {
+   "qjp": "銀行は どこですか。",
+   "qes": "¿Dónde está el banco?",
+   "ajp": "あの 角を 左へ 曲がると、右に あります。",
+   "aes": "Si das vuelta a la izquierda en esa esquina, está a la derecha."
+  },
+  {
+   "qjp": "この エアコン、動きませんね。",
+   "qes": "Este aire acondicionado no funciona, ¿verdad?",
+   "ajp": "故障だと 思います。電気屋に 電話しましょう。",
+   "aes": "Creo que está descompuesto. Llamemos a la tienda de electrodomésticos."
+  },
+  {
+   "qjp": "友達の うちへ 行く とき、何を 持って 行きますか。",
+   "qes": "¿Qué llevas cuando vas a casa de un amigo?",
+   "ajp": "果物を 持って 行きます。",
+   "aes": "Llevo fruta."
+  },
+  {
+   "qjp": "駅まで どうやって 行きますか。",
+   "qes": "¿Cómo se llega a la estación?",
+   "ajp": "この 道を まっすぐ 歩いて、橋を 渡ると、駅が あります。",
+   "aes": "Sigue este camino derecho y, al cruzar el puente, ahí está la estación."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "～とき — 'cuando…'",
+   "explain": "とき significa 'momento', y funciona como un sustantivo: lo que va delante se une igual que en la lección 22. Verbo en forma simple (diccionario, ない, た), adjetivo-い tal cual (さむい とき), adjetivo-な con な (ひまな とき) y sustantivo con の (子どもの とき). Error típico: olvidar el の con sustantivos (子ども とき ✗). Otro detalle: con adjetivos y sustantivos, el tiempo va en la frase final; puedes decir わかい とき… aunque hables del pasado.",
+   "examples": [
+    {
+     "jp": "暇な とき、いっしょに カラオケに 行きませんか。",
+     "es": "Cuando tengas tiempo, ¿vamos juntos al karaoke?"
+    },
+    {
+     "jp": "子どもの とき、よく 川で 泳ぎました。",
+     "es": "De niño nadaba seguido en el río."
+    }
+   ]
+  },
+  {
+   "title": "V diccionario とき vs. V-た とき",
+   "explain": "La forma del verbo antes de とき dice si esa acción ya terminó o no cuando pasa lo otro. Forma diccionario = todavía no ha terminado ('al ir a…', 'antes de llegar'). Forma た = ya terminó ('después de llegar'). くにへ かえる とき = compré algo antes de llegar, en el camino; くにへ かえった とき = lo compré ya allí. No depende del pasado o presente de la frase final.",
+   "examples": [
+    {
+     "jp": "国へ 帰る とき、空港で お土産を 買います。",
+     "es": "Cuando regrese a mi país, voy a comprar recuerdos en el aeropuerto (antes de irme)."
+    },
+    {
+     "jp": "国へ 帰った とき、家族と メキシコの 料理を 食べます。",
+     "es": "Cuando regrese a mi país, voy a comer comida mexicana con mi familia (ya allá)."
+    }
+   ]
+  },
+  {
+   "title": "V diccionario と — 'si haces X, siempre pasa Y'",
+   "explain": "と después de un verbo en forma diccionario indica una consecuencia automática: cada vez que haces X, ocurre Y. Sirve mucho para máquinas y para dar direcciones ('si doblas a la derecha, está el banco'). Importante: después de と NO puedes poner deseos, invitaciones, pedidos ni decisiones (～たいです, ～ませんか, ～て ください). Para eso se usa ～たら (lección 25).",
+   "examples": [
+    {
+     "jp": "ここを 押すと、お釣りが 出ます。",
+     "es": "Si aprietas aquí, sale el cambio."
+    },
+    {
+     "jp": "二つ目の 角を 右へ 曲がると、駐車場が あります。",
+     "es": "Si das vuelta a la derecha en la segunda esquina, hay un estacionamiento."
+    }
+   ]
+  },
+  {
+   "title": "が para describir lo que ves u oyes",
+   "explain": "Cuando describes tal cual una situación que estás percibiendo (un sonido, la luz, algo que sale de una máquina), el sujeto lleva が, no は. Es como narrar lo que pasa delante de ti. Ya lo vimos con el tiempo atmosférico (あめが ふって います).",
+   "examples": [
+    {
+     "jp": "あ、雪が 降って いますよ。",
+     "es": "¡Mira, está nevando!"
+    },
+    {
+     "jp": "部屋が 暗く なりました。",
+     "es": "El cuarto se quedó oscuro."
+    }
+   ]
+  },
+  {
+   "title": "Lugar を + verbo de movimiento",
+   "explain": "Con verbos de desplazamiento como あるきます, わたります, さんぽします o まがります, el lugar POR donde pasas lleva を, no で. Piensa 'recorro la calle', 'cruzo el puente'. Error típico: はしで わたります ✗ → はしを わたります ✓.",
+   "examples": [
+    {
+     "jp": "毎晩 川の 近くを 散歩します。",
+     "es": "Todas las noches salgo a caminar cerca del río."
+    },
+    {
+     "jp": "この 橋を 渡って ください。",
+     "es": "Cruce este puente, por favor."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "アンナの うちまで どうやって 行くの？",
+   "es": "¿Cómo llego a tu casa, Anna?"
+  },
+  {
+   "jp": "公園前で 降りてね。",
+   "es": "Bájate en Kōen-mae."
+  },
+  {
+   "jp": "道を 渡る とき、車に 気を つけてね。",
+   "es": "Cuando cruces la calle, ten cuidado con los coches."
+  },
+  {
+   "jp": "この ボタンを 押すと、コピーが 出るよ。",
+   "es": "Si aprietas este botón, sale la copia."
+  },
+  {
+   "jp": "ここに 置いた 紙を 忘れないでね。",
+   "es": "No olvides la hoja que pusiste aquí."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L23-c1",
+   "lesson": 23,
+   "title": "Camino a casa de Anna",
+   "tags": [
+    "viajes"
+   ],
+   "situation": "Lucía llega a la estación de Mitaka y le llama a Anna para preguntarle cómo llegar a su casa.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "もしもし、アンナ？ 今 三鷹駅に いるけど、アンナの うちまで どうやって 行くの？",
+     "es": "¿Bueno, Anna? Ya estoy en la estación de Mitaka. ¿Cómo llego a tu casa?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "駅の 前で バスに 乗って、公園前で 降りてね。",
+     "es": "Toma el autobús frente a la estación y bájate en Kōen-mae."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "公園前ね。何分ぐらい かかる？",
+     "es": "Kōen-mae. ¿Cuánto tarda más o menos?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "10分ぐらい。バスを 降りると、大きい 交差点が あるよ。",
+     "es": "Unos diez minutos. Al bajar del autobús hay un cruce grande."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "うん。それから？",
+     "es": "Ajá. ¿Y luego?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "その 交差点を 渡って、まっすぐ 歩くと、左に 白い 建物が あるよ。わたしの アパートは そこ。",
+     "es": "Cruzas ahí, sigues derecho y a la izquierda hay un edificio blanco. Ese es mi departamento."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "白い 建物ね。わかった。",
+     "es": "Un edificio blanco. Entendido."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "あ、交差点を 渡る とき、車に 気を つけてね。信号が ないから。",
+     "es": "Ah, cuando cruces, ten cuidado con los coches. No hay semáforo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "うん、ありがとう。じゃ、あとで。",
+     "es": "Sí, gracias. Nos vemos al rato."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "待ってるね。",
+     "es": "Te espero."
+    }
+   ]
+  },
+  {
+   "id": "L23-c2",
+   "lesson": 23,
+   "title": "La copiadora de la tienda",
+   "situation": "Lucía necesita sacar una copia en la tienda de conveniencia y Kenta le explica cómo funciona la máquina.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "けんたくん、この コピー機の 使い方、わかる？",
+     "es": "Kenta, ¿sabes cómo se usa esta copiadora?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "うん。まず、ここに 紙を 置いて、ふたを 閉めて。",
+     "es": "Sí. Primero pon la hoja aquí y cierra la tapa."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ここ？",
+     "es": "¿Aquí?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "そう。それから お金を 入れて、この ボタンを 押すと、コピーが 出るよ。",
+     "es": "Eso. Luego metes el dinero y, si aprietas este botón, sale la copia."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "サイズを 変える ときは？",
+     "es": "¿Y para cambiar el tamaño?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "ここを 押して。",
+     "es": "Aprieta aquí."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あれ、機械が 動かないよ。",
+     "es": "¿Eh? La máquina no se mueve."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "たぶん お金が 足りないと 思う。あと 10円 入れて。",
+     "es": "Creo que falta dinero. Mete otros diez yenes."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、コピーが 出た！ ありがとう。",
+     "es": "¡Ah, ya salió la copia! Gracias."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "それから、ここに 置いた 紙を 忘れないでね。",
+     "es": "Y no olvides la hoja que pusiste aquí."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Calles y tráfico (どうろ・こうつう 道路・交通)",
+   "items": [
+    {
+     "kana": "ほどう",
+     "kanji": "歩道",
+     "es": "acera"
+    },
+    {
+     "kana": "しゃどう",
+     "kanji": "車道",
+     "es": "calzada"
+    },
+    {
+     "kana": "こうそくどうろ",
+     "kanji": "高速道路",
+     "es": "autopista"
+    },
+    {
+     "kana": "とおり",
+     "kanji": "通り",
+     "es": "calle, avenida"
+    },
+    {
+     "kana": "こうさてん",
+     "kanji": "交差点",
+     "es": "cruce"
+    },
+    {
+     "kana": "おうだんほどう",
+     "kanji": "横断歩道",
+     "es": "paso de peatones"
+    },
+    {
+     "kana": "ほどうきょう",
+     "kanji": "歩道橋",
+     "es": "puente peatonal"
+    },
+    {
+     "kana": "かど",
+     "kanji": "角",
+     "es": "esquina"
+    },
+    {
+     "kana": "しんごう",
+     "kanji": "信号",
+     "es": "semáforo"
+    },
+    {
+     "kana": "さか",
+     "kanji": "坂",
+     "es": "cuesta"
+    },
+    {
+     "kana": "ふみきり",
+     "kanji": "踏切",
+     "es": "paso a nivel"
+    },
+    {
+     "kana": "ガソリンスタンド",
+     "kanji": "",
+     "es": "gasolinera"
+    }
+   ]
+  },
+  {
+   "topic": "Señales de tráfico",
+   "items": [
+    {
+     "kana": "とまれ",
+     "kanji": "止まれ",
+     "es": "Stop / Alto"
+    },
+    {
+     "kana": "しんにゅうきんし",
+     "kanji": "進入禁止",
+     "es": "prohibido entrar"
+    },
+    {
+     "kana": "いっぽうつうこう",
+     "kanji": "一方通行",
+     "es": "sentido único"
+    },
+    {
+     "kana": "ちゅうしゃきんし",
+     "kanji": "駐車禁止",
+     "es": "prohibido aparcar"
+    },
+    {
+     "kana": "うせつきんし",
+     "kanji": "右折禁止",
+     "es": "prohibido girar a la derecha"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Las copiadoras de las tiendas de conveniencia hacen mucho más que copias: puedes imprimir fotos o archivos desde el celular, escanear documentos e incluso imprimir boletos de conciertos.",
+  "En Japón la mayoría de las calles no tiene nombre; las direcciones se basan en barrios y números de manzana. Por eso, para explicar un camino se usan referencias como un konbini, un puente o un semáforo."
+ ],
+ "extras": [
+  {
+   "jp": "旅行の とき、いつも 地図を 持って 行きます。",
+   "es": "Cuando viajo, siempre llevo un mapa.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "この 道を まっすぐ 行くと、海が あります。",
+   "es": "Si sigues este camino derecho, llegas al mar.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "おなかが すいた とき、コンビニで おにぎりを 買います。",
+   "es": "Cuando me da hambre, compro un onigiri en el konbini.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "ごはんを 食べる とき、はしを 使います。",
+   "es": "Cuando como arroz, uso palillos.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "会議の とき、電話を 使っては いけません。",
+   "es": "Durante las juntas no se puede usar el teléfono.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "コピー機が 故障した とき、もりさんに 言います。",
+   "es": "Cuando se descompone la copiadora, le aviso al Sr. Mori.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "わからない とき、先生に 聞きます。",
+   "es": "Cuando no entiendo algo, le pregunto a la profesora.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "学校へ 行く とき、橋を 渡ります。",
+   "es": "Cuando voy a la escuela, cruzo un puente.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "暇な とき、アニメを 見ます。",
+   "es": "Cuando tengo tiempo libre, veo anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "子どもの とき、毎日 アニメを 見て いました。",
+   "es": "De niña veía anime todos los días.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "この ボタンを 押すと、ゲームが 始まります。",
+   "es": "Si aprietas este botón, empieza el juego.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "疲れた とき、ゲームを します。",
+   "es": "Cuando estoy cansado, juego videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "毎朝 公園を ジョギングします。",
+   "es": "Todas las mañanas salgo a correr por el parque.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "雨の とき、ジムで 練習します。",
+   "es": "Cuando llueve, entreno en el gimnasio.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "この つまみを 右へ 回すと、音が 大きく なります。",
+   "es": "Si giras esta perilla a la derecha, sube el volumen.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "寂しい とき、好きな 歌を 聞きます。",
+   "es": "Cuando me siento sola, escucho mis canciones favoritas.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar level-head">
+        <a class="icon-btn" routerLink="/examen" aria-label="Volver"><app-icon name="back" /></a>
+        <div class="grow">
+            <span class="eyebrow">CENTRO DE EVALUACIÓN</span>
+            <h1>Examen de nivel</h1>
+        </div>
+        <span class="points-badge">50 PTS</span>
+    </header>
+
+    <!-- Presentación -->
+    <section class="intro">
+        <div class="intro-copy">
+            <span class="intro-kicker">日本語能力チェック</span>
+            <h2>Demuestra lo que has aprendido</h2>
+            <p>Responde en una hoja de estilo académico. Las preguntas cambian en cada intento y la corrección llega al entregar.</p>
+        </div>
+        <div class="paper-icon jp" aria-hidden="true"><span>期末</span><small>テスト</small></div>
+        <div class="exam-meta">
+            <span><b>50</b> puntos</span>
+            <span><b>∞</b> sin límite</span>
+            <span><b>赤</b> corrección final</span>
+        </div>
+    </section>
+
+    <!-- Hoja en curso o último resultado -->
+    @if (levelExamSVC.draft(); as draft) {
+        <a class="resume" routerLink="/examen/nivel/hoja">
+            <span class="resume-icon"><app-icon [name]="draft.submittedAt ? 'trophy' : 'pencil'" [size]="20" /></span>
+            <div class="grow">
+                <span class="eyebrow">{{ draft.submittedAt ? 'ÚLTIMA MISIÓN' : 'EN CURSO' }}</span>
+                <div class="t">{{ draft.submittedAt ? 'Ver último resultado' : 'Continuar examen' }}</div>
+                <div class="small muted jp">{{ draft.exam.title }} {{ draft.exam.subtitle }}</div>
+            </div>
+            <app-icon name="chevron" />
+        </a>
+    }
+
+    <!-- Exámenes por nivel -->
+    @for (levelGroup of levels; track levelGroup.level) {
+        <section class="level-group">
+            <header class="level-title">
+                <span class="level-number">{{ levelGroup.level.toString().padStart(2, '0') }}</span>
+                <div>
+                    <h2>Nivel {{ levelGroup.level }}</h2>
+                    <p>{{ levelGroup.presets.length }} {{ levelGroup.presets.length === 1 ? 'evaluación disponible' : 'evaluaciones disponibles' }}</p>
+                </div>
+            </header>
+            <div class="exam-grid">
+                @for (preset of levelGroup.presets; track preset.id) {
+                    <button class="exam" [class.rec]="preset.id === recommended()" [disabled]="busy()" (click)="open(preset)">
+                        <div class="exam-top">
+                            <span class="kind jp">{{ kindJp[preset.kind] }}</span>
+                            @if (levelExamSVC.best()[preset.id] != null) {
+                                <span class="score" [class.ok]="levelExamSVC.best()[preset.id] >= 80">{{ levelExamSVC.best()[preset.id] }}%</span>
+                            } @else if (preset.id === recommended()) {
+                                <span class="recommended">Recomendado</span>
+                            }
+                        </div>
+                        <h3>{{ kindEs[preset.kind] }}</h3>
+                        <p class="coverage">{{ label(preset) }}</p>
+                        <p class="contents">{{ sections(preset) }}</p>
+                        <span class="exam-action">Abrir evaluación <app-icon name="chevron" [size]="16" /></span>
+                    </button>
+                }
+            </div>
+        </section>
+    }
+
+    <!-- Examen personalizado -->
+    <h2 class="section-title custom-title">Crea tu propia evaluación</h2>
+    <div class="card custom">
+        <div class="custom-head">
+            <span class="custom-icon"><app-icon name="pencil" [size]="20" /></span>
+            <div>
+                <div class="t">Examen personalizado</div>
+                <p class="small muted">Combina lecciones y añade Kana seleccionando la lección 0.</p>
+            </div>
+        </div>
+        <app-lesson-picker [(selected)]="customLessons" />
+        <button class="btn accent block" [disabled]="!customLessons().length || busy()" (click)="openCustom()">
+            <app-icon name="pencil" [size]="18" />Crear hoja
+        </button>
+    </div>
+
+    <!-- Confirmación para sustituir una hoja sin entregar -->
+    @if (confirmFor(); as pendingPreset) {
+        <div class="sheet-backdrop" (click)="confirmFor.set(null)">
+            <div class="sheet" (click)="$event.stopPropagation()">
+                <div class="grab"></div>
+                <h3 class="t">¿Empezar un examen nuevo?</h3>
+                <p class="small muted">Tienes un examen sin entregar. Si empiezas otro, se perderán tus respuestas.</p>
+                <div class="grid-2" style="margin-top: 16px">
+                    <button class="btn ghost" (click)="confirmFor.set(null)">Cancelar</button>
+                    <button class="btn accent" (click)="start(pendingPreset)">Empezar</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,18 @@
+<!-- Sin espacios de texto entre nodos: partirían las palabras. Los saltos de línea solos entre etiquetas los quita Angular -->
+@switch (mode()) {
+    @case ('kana') {
+        <span>{{ kana() }}</span>
+    }
+    @case ('furigana') {
+        @for (segment of segments(); track $index) {
+            @if (isPair(segment)) {
+                <ruby>{{ segment[0] }}<rt>{{ segment[1] }}</rt></ruby>
+            } @else {
+                <span>{{ segment }}</span>
+            }
+        }
+    }
+    @default {
+        <span>{{ text() }}</span>
+    }
+}

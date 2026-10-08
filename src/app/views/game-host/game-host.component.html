@@ -1,0 +1,28 @@
+@if (!isStarted()) {
+    <!-- Selector de lecciones -->
+    <div class="page full">
+        <header class="topbar">
+            <button class="icon-btn" (click)="location.back()" aria-label="Volver"><app-icon name="back" /></button>
+            <h1>{{ info().title }}</h1>
+        </header>
+        <p class="muted">{{ info().desc }}</p>
+        <h2 class="section-title">¿Con qué lecciones?</h2>
+        <app-lesson-picker [(selected)]="selectedLessons" />
+        <button class="btn accent block go" [disabled]="!selectedLessons().length || isLoading()" (click)="start()">
+            <app-icon name="play" [size]="18" />{{ isLoading() ? 'Preparando…' : 'Jugar' }}
+        </button>
+    </div>
+} @else {
+    <!-- Juego -->
+    @switch (game()) {
+        @case ('parejas') {
+            <app-match-game [pairs]="pairs()" title="Parejas" (again)="start()" />
+        }
+        @case ('contrarreloj') {
+            <app-speed-game [questions]="choiceQuestions()" [title]="speedTitle()" [storageKey]="speedKey()" (again)="rebuildSpeed()" />
+        }
+        @default {
+            <app-question-runner [questions]="questions()" [title]="info().title" (again)="start()" />
+        }
+    }
+}

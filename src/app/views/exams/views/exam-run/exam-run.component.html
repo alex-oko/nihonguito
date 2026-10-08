@@ -1,0 +1,4 @@
+<!-- Examen personalizado en curso -->
+@if (examSVC.current(); as exam) {
+    <app-question-runner [questions]="exam.questions" [title]="exam.title" [exam]="exam.strict" (finished)="saved($event)" (again)="again()" />
+}

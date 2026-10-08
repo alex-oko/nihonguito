@@ -1,0 +1,349 @@
+<div class="page">
+    <!-- Barra superior: volver y lección anterior / siguiente -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/lecciones" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Lección {{ lessonId() }}</h1>
+        @if (prev() !== null) {
+            <a class="icon-btn" [routerLink]="['/lecciones', prev()]" aria-label="Anterior"><app-icon name="back" [size]="18" /></a>
+        }
+        @if (next() !== null) {
+            <a class="icon-btn" [routerLink]="['/lecciones', next()]" aria-label="Siguiente"><app-icon name="chevron" [size]="18" /></a>
+        }
+    </header>
+
+    @if (lesson(); as currentLesson) {
+        <!-- Cabecera de la lección -->
+        <section class="hero">
+            @if (currentLesson.titleJp) {
+                <p class="jp tjp"><app-jp [text]="currentLesson.titleJp" /></p>
+            }
+            <h2 class="hero-title">{{ currentLesson.title }}</h2>
+            @if (currentLesson.summary) {
+                <p class="muted small">{{ currentLesson.summary }}</p>
+            }
+            @if (currentLesson.vocab.length) {
+                <div class="row prog">
+                    <div class="bar ok grow"><i [style.width.%]="(learned() / currentLesson.vocab.length) * 100"></i></div>
+                    <span class="small muted">{{ learned() }}/{{ currentLesson.vocab.length }} palabras</span>
+                </div>
+            }
+        </section>
+
+        <!-- Pestañas -->
+        <div class="ltabs sticky" role="tablist">
+            @for (tabItem of tabs; track tabItem.id) {
+                <button role="tab" [class.on]="tab() === tabItem.id" [attr.aria-selected]="tab() === tabItem.id" (click)="tab.set(tabItem.id)">
+                    <app-icon [name]="tabItem.icon" [size]="18" />{{ tabItem.label }}
+                </button>
+            }
+        </div>
+        @if (tabHint(); as hint) {
+            <p class="small muted tab-hint">{{ hint }}</p>
+        }
+
+        @switch (tab()) {
+            @case ('practice') {
+                <!-- Ejercicios: sesión guiada -->
+                @if (plan(); as guidedPlan) {
+                    <section class="card guided">
+                        <div class="row gh">
+                            <div class="grow">
+                                <div class="t">Sesión guiada</div>
+                                <div class="small d">Todo combinado, paso a paso · ~6 min</div>
+                            </div>
+                        </div>
+                        <div class="stones">
+                            @for (stone of steps(); track stone.label; let stepIndex = $index) {
+                                <div class="stone" [class.now]="stepIndex === 0">
+                                    <i><app-icon [name]="stone.icon" [size]="18" /></i>
+                                    <span>{{ stone.label }}</span>
+                                </div>
+                            }
+                        </div>
+                        @if (guidedPlan.grammar.length) {
+                            <p class="small d gram-line">Gramática de hoy: <span class="jp">{{ guidedPlan.grammar.join(' · ') }}</span></p>
+                        }
+                        <a class="btn accent block go" [routerLink]="['/lecciones', currentLesson.id, 'practica', 'guided']">
+                            <app-icon name="play" [size]="17" />Empezar sesión guiada
+                        </a>
+                    </section>
+                }
+
+                <!-- Ejercicios de vocabulario -->
+                <h3 class="section-title">Vocabulario <small>{{ vocabModes.length }} ejercicios · tu acierto</small></h3>
+                <div class="modes">
+                    @for (exerciseMode of vocabModes; track exerciseMode.id) {
+                        <a class="mode" [routerLink]="['/lecciones', currentLesson.id, 'practica', exerciseMode.id]" [class.weak]="exerciseMode.id === weakMode()" [attr.data-c]="exerciseMode.color">
+                            <span class="mi"><app-icon [name]="exerciseMode.icon" [size]="18" /></span>
+                            <span class="ml">{{ exerciseMode.label }}</span>
+                            <em [attr.data-t]="modeStat(exerciseMode).tone">{{ modeStat(exerciseMode).text }}</em>
+                        </a>
+                    }
+                </div>
+                @if (report()?.hard?.length) {
+                    <div class="hard">
+                        <span class="small muted">Se te escapan:</span>
+                        @for (word of report()!.hard; track word.id) {
+                            <button class="chip" (click)="say(readingOf(word))"><span class="jp"><app-jp [text]="mainForm(word)" /></span> · {{ word.es }}</button>
+                        }
+                    </div>
+                }
+
+                <!-- Ejercicios de frases y gramática -->
+                @if (sentenceModes().length) {
+                    <h3 class="section-title">Frases y gramática <small>{{ sentenceModes().length }} ejercicios</small></h3>
+                    <div class="modes">
+                        @for (exerciseMode of sentenceModes(); track exerciseMode.id) {
+                            <a class="mode" [routerLink]="['/lecciones', currentLesson.id, 'practica', exerciseMode.id]" [class.weak]="exerciseMode.id === weakMode()" data-c="gold">
+                                <span class="mi"><app-icon [name]="exerciseMode.icon" [size]="18" /></span>
+                                <span class="ml">{{ exerciseMode.label }}</span>
+                                <em [attr.data-t]="modeStat(exerciseMode).tone">{{ modeStat(exerciseMode).text }}</em>
+                            </a>
+                        }
+                    </div>
+                }
+
+                <!-- Conversaciones y prueba de la lección -->
+                <h3 class="section-title">Hablar y comprobar</h3>
+                @for (conversation of currentLesson.conversations; track conversation.id) {
+                    <a class="card convo" [routerLink]="['/lecciones', currentLesson.id, 'conversacion', conversation.id]">
+                        <span class="ci" data-c="indigo"><app-icon name="mic" [size]="20" /></span>
+                        <div class="grow">
+                            <div class="t">Conversación: {{ conversation.title }}</div>
+                            <div class="small muted">{{ conversation.lines.length }} líneas · escucha, repite y responde</div>
+                        </div>
+                        <app-icon name="chevron" />
+                    </a>
+                }
+                <a class="card convo final" [routerLink]="['/lecciones', currentLesson.id, 'practica', 'test']">
+                    <span class="ci" data-c="gold"><app-icon name="trophy" [size]="20" /></span>
+                    <div class="grow">
+                        <div class="t">Prueba de la lección</div>
+                        <div class="small muted">Todo mezclado · con 80% la das por dominada</div>
+                    </div>
+                    @if (report()?.best != null) {
+                        <span class="pill" [attr.data-t]="toneOf(report()!.best)">{{ report()!.best }}%</span>
+                    } @else {
+                        <app-icon name="chevron" />
+                    }
+                </a>
+            }
+            @case ('vocab') {
+                <!-- Palabras: filtros por tipo -->
+                <div class="row toolbar">
+                    <div class="chips scroll grow">
+                        @for (filterItem of typeFilters(); track filterItem.id) {
+                            <button class="chip" [class.on]="typeFilter() === filterItem.id" (click)="typeFilter.set(filterItem.id)">{{ filterItem.label }}</button>
+                        }
+                    </div>
+                </div>
+
+                <!-- Palabras: escritura y romaji -->
+                <div class="row toggles small">
+                    <div class="chips seg">
+                        @for (scriptOption of scripts; track scriptOption.id) {
+                            <button class="chip" [class.on]="script() === scriptOption.id" (click)="setScript(scriptOption.id)">{{ scriptOption.label }}</button>
+                        }
+                    </div>
+                    <label class="row"><input type="checkbox" class="switch" [checked]="showRomaji()" (change)="toggleRomaji()" /> Romaji</label>
+                </div>
+
+                <!-- Palabras: lista -->
+                <div class="card list">
+                    @for (word of words(); track word.id) {
+                        <div class="list-item word" (click)="say(readingOf(word))">
+                            <span class="dot" [attr.data-b]="masteryBox(word)"></span>
+                            <div class="grow">
+                                <div class="jp wm"><app-jp [text]="mainForm(word)" /></div>
+                                @if (mainForm(word) !== readingOf(word) && script() === 'kanji') {
+                                    <div class="jp small muted">{{ readingOf(word) }}</div>
+                                }
+                                @if (showRomaji()) {
+                                    <div class="small muted rom">{{ toRomaji(readingOf(word)) }}</div>
+                                }
+                            </div>
+                            <div class="es">{{ word.es }}</div>
+                        </div>
+                    } @empty {
+                        <div class="empty">Sin palabras en esta categoría.</div>
+                    }
+                </div>
+                <p class="small muted center hint">Toca una palabra para escucharla.</p>
+            }
+            @case ('grammar') {
+                <!-- Gramática: un punto por tarjeta -->
+                <div class="stack">
+                    @for (grammarPoint of currentLesson.grammar; track $index; let grammarIndex = $index) {
+                        <article class="card gram">
+                            <div class="gnum">{{ grammarIndex + 1 }}</div>
+                            <h3 class="jp gt"><app-jp [text]="grammarPoint.title" /></h3>
+                            <p class="gx">{{ grammarPoint.explain }}</p>
+                            @for (example of grammarPoint.examples ?? []; track $index) {
+                                <div class="ex row">
+                                    <div class="grow">
+                                        <div class="jp"><app-jp [text]="example.jp" /></div>
+                                        @if (showRomaji()) {
+                                            <div class="small muted rom">{{ toRomaji(example.jp) }}</div>
+                                        }
+                                        <div class="small muted">{{ example.es }}</div>
+                                    </div>
+                                    <app-speak [text]="example.jp" />
+                                </div>
+                            }
+                        </article>
+                    } @empty {
+                        <div class="empty">Esta lección no tiene notas gramaticales.</div>
+                    }
+                </div>
+                @if (currentLesson.grammar.length) {
+                    <a class="btn block gram-go" [routerLink]="['/lecciones', currentLesson.id, 'practica', 'grammar']">
+                        <app-icon name="target" [size]="18" />Practicar esta gramática
+                    </a>
+                }
+            }
+            @case ('phrases') {
+                <!-- Frases para ti (según intereses) -->
+                @if (forYouList().length) {
+                    <h3 class="section-title">Frases para ti</h3>
+                    <p class="small muted for-you-hint">
+                        @if (hasInterests()) {
+                            Sobre lo que te gusta. Cámbialo en <a routerLink="/perfil" fragment="intereses">Perfil</a>.
+                        } @else {
+                            Elige tus intereses en <a routerLink="/perfil" fragment="intereses">Perfil</a> para ver solo los tuyos.
+                        }
+                    </p>
+                    <div class="card list">
+                        @for (phrase of forYouList(); track $index) {
+                            <div class="list-item phrase" (click)="toggleReveal('y' + $index)">
+                                <div class="grow">
+                                    <span class="badge tag">{{ tagLabel(phrase.tags?.[0]) }}</span>
+                                    <div class="jp pj"><app-jp [text]="phrase.jp" /></div>
+                                    @if (showRomaji()) {
+                                        <div class="small muted rom">{{ toRomaji(phrase.jp) }}</div>
+                                    }
+                                    <div class="small tr" [class.hide]="!revealed().has('y' + $index)">{{ phrase.es }}</div>
+                                </div>
+                                <app-speak [text]="phrase.jp" />
+                            </div>
+                        }
+                    </div>
+                }
+
+                <!-- Frases modelo -->
+                @if (currentLesson.patterns.length) {
+                    <h3 class="section-title">Frases modelo</h3>
+                    <div class="card list">
+                        @for (phrase of currentLesson.patterns; track $index) {
+                            <div class="list-item phrase" (click)="toggleReveal('p' + $index)">
+                                <div class="grow">
+                                    <div class="jp pj"><app-jp [text]="phrase.jp" /></div>
+                                    @if (showRomaji()) {
+                                        <div class="small muted rom">{{ toRomaji(phrase.jp) }}</div>
+                                    }
+                                    <div class="small tr" [class.hide]="!revealed().has('p' + $index)">{{ phrase.es }}</div>
+                                </div>
+                                <app-speak [text]="phrase.jp" />
+                            </div>
+                        }
+                    </div>
+                }
+
+                <!-- Preguntas y respuestas -->
+                @if (currentLesson.examples.length) {
+                    <h3 class="section-title">Preguntas y respuestas</h3>
+                    <div class="stack">
+                        @for (qa of currentLesson.examples; track $index) {
+                            <div class="card qa" (click)="toggleReveal('e' + $index)">
+                                <div class="row">
+                                    <span class="badge">Q</span>
+                                    <div class="grow jp"><app-jp [text]="qa.qjp" /></div>
+                                    <app-speak [text]="qa.qjp" />
+                                </div>
+                                <div class="small tr" [class.hide]="!revealed().has('e' + $index)">{{ qa.qes }}</div>
+                                <div class="row a">
+                                    <span class="badge accent">A</span>
+                                    <div class="grow jp"><app-jp [text]="qa.ajp" /></div>
+                                    <app-speak [text]="qa.ajp" />
+                                </div>
+                                <div class="small tr" [class.hide]="!revealed().has('e' + $index)">{{ qa.aes }}</div>
+                            </div>
+                        }
+                    </div>
+                }
+                <p class="small muted center hint">Toca una frase para ver la traducción.</p>
+
+                <!-- Frases útiles del diálogo -->
+                @if (currentLesson.phrases.length) {
+                    <h3 class="section-title">Frases útiles del diálogo</h3>
+                    <div class="card list">
+                        @for (phrase of currentLesson.phrases; track $index) {
+                            <div class="list-item">
+                                <div class="grow">
+                                    <div class="jp"><app-jp [text]="phrase.jp" /></div>
+                                    <div class="small muted">{{ phrase.es }}</div>
+                                </div>
+                                <app-speak [text]="phrase.jp" />
+                            </div>
+                        }
+                    </div>
+                }
+
+                <!-- Enlaces a las conversaciones -->
+                @if (currentLesson.conversations.length) {
+                    <h3 class="section-title">Practica la conversación</h3>
+                }
+                @for (conversation of currentLesson.conversations; track conversation.id) {
+                    <a class="card convo" [routerLink]="['/lecciones', currentLesson.id, 'conversacion', conversation.id]">
+                        <app-icon name="chat" [size]="22" />
+                        <div class="grow">
+                            <div class="t">{{ conversation.title }}</div>
+                            @if (conversation.situation) {
+                                <div class="small muted">{{ conversation.situation }}</div>
+                            }
+                        </div>
+                        <app-icon name="chevron" />
+                    </a>
+                }
+            }
+            @case ('extra') {
+                <!-- Vocabulario extra por temas (acordeón) -->
+                @for (extraTopic of currentLesson.extraVocab; track $index; let topicIndex = $index) {
+                    <div class="card topic">
+                        <button class="topic-head row" (click)="openTopic.set(openTopic() === topicIndex ? null : topicIndex)">
+                            <span class="grow t">{{ extraTopic.topic }}</span>
+                            <span class="small muted">{{ extraTopic.items.length }}</span>
+                            <app-icon [name]="openTopic() === topicIndex ? 'x' : 'chevron'" [size]="16" />
+                        </button>
+                        @if (openTopic() === topicIndex) {
+                            <div class="topic-items">
+                                @for (extraItem of extraTopic.items; track $index) {
+                                    <div class="row ti" (click)="say(extraItem.kana || extraItem.kanji || '')">
+                                        <span class="jp grow"><app-jp [text]="extraItem.kanji || extraItem.kana" /></span>
+                                        <span class="small es">{{ extraItem.es }}</span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+
+                <!-- Japón en la vida real -->
+                @if (currentLesson.culture.length) {
+                    <h3 class="section-title">Japón en la vida real</h3>
+                    <div class="stack">
+                        @for (cultureNote of currentLesson.culture; track $index) {
+                            <div class="card culture"><app-icon name="bulb" [size]="18" /><span>{{ cultureNote }}</span></div>
+                        }
+                    </div>
+                }
+                @if (!currentLesson.extraVocab.length && !currentLesson.culture.length) {
+                    <div class="empty">Sin material extra.</div>
+                }
+            }
+        }
+    } @else if (hasError()) {
+        <div class="empty">No se pudo cargar la lección.</div>
+    } @else {
+        <div class="empty">Cargando…</div>
+    }
+</div>

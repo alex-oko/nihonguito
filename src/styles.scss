@@ -1,0 +1,29 @@
+// Estilos globales de Nihonguito. Cada parcial vive en src/styles/ y el orden importa:
+// las reglas salen en el CSS en este mismo orden (las de después ganan a igual especificidad).
+
+// Variables CSS del tema base y de los temas sol, violeta y carmesí (data-theme)
+@use 'styles/themes';
+// Box-sizing, fondo y tipografía del documento, reset de botones, enlaces y títulos
+@use 'styles/base';
+// .jp, .hand, .muted, .small, .center
+@use 'styles/utilities';
+// <ruby>/<rt> y el interlineado de data-script="furigana"
+@use 'styles/furigana';
+// .page, .topbar, .hero-title, .section-title, .stack, .row, .grid-2, .grid-3
+@use 'styles/layout';
+// .card, .tile, .list, .list-item
+@use 'styles/surfaces';
+// .btn y variantes, .icon-btn, .chip/.chips, .badge
+@use 'styles/buttons';
+// Pestañas segmentadas (.tabs)
+@use 'styles/tabs';
+// Barra de progreso (.bar)
+@use 'styles/progress';
+// Interruptor (.switch) y input range
+@use 'styles/forms';
+// Keyframes fade-up, pop, shake, slide-up y clases .pop/.shake
+@use 'styles/animations';
+// Estado vacío (.empty) y hojas inferiores (.sheet-backdrop, .sheet)
+@use 'styles/overlays';
+// prefers-reduced-motion
+@use 'styles/motion';

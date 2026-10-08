@@ -1,0 +1,56 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <h1 class="hero-title">Lecciones</h1>
+        <p class="muted">
+            {{ lessonSVC.index().length ? total() + ' lecciones · vas en la ' + progressSVC.lastLesson().id : 'Vocabulario, gramática, frases y conversaciones.' }}
+        </p>
+    </header>
+
+    <!-- Niveles con sus lecciones y exámenes -->
+    @for (group of groups(); track group.level) {
+        <h2 class="section-title">Nivel {{ group.level }} <small>{{ group.sub }}</small></h2>
+        <div class="stack">
+            @for (item of group.items; track $index) {
+                @if (item.kind === 'lesson') {
+                    <!-- Fila de lección -->
+                    <a class="card lesson" [routerLink]="['/lecciones', item.row.meta.id]" [attr.data-state]="item.row.state">
+                        <span class="num">
+                            @if (item.row.state === 'done') {
+                                <app-icon name="check" [size]="18" [stroke]="3" />
+                            } @else {
+                                {{ item.row.meta.id }}
+                            }
+                        </span>
+                        <span class="grow">
+                            @if (item.row.meta.titleJp) {
+                                <span class="jp tjp"><app-jp [text]="item.row.meta.titleJp" /></span>
+                            }
+                            <span class="t">{{ item.row.meta.title }}</span>
+                            <span class="bar ok"><i [style.width.%]="item.row.meta.vocabCount ? (item.row.known / item.row.meta.vocabCount) * 100 : 0"></i></span>
+                            <span class="small muted">
+                                {{ item.row.known }}/{{ item.row.meta.vocabCount }} palabras
+                                @if (item.row.best !== null) {
+                                    · prueba {{ item.row.best }}%
+                                }
+                            </span>
+                        </span>
+                        <span class="pill" [attr.data-t]="item.row.tone">{{ item.row.pill }}</span>
+                    </a>
+                } @else {
+                    <!-- Fila de examen de nivel -->
+                    <a class="card exam" routerLink="/examenes" [class.next]="item.exam.preset.id === nextExam().id">
+                        <span class="ei"><app-icon name="clipboard" [size]="20" /></span>
+                        <span class="grow">
+                            <span class="t">{{ kindEs(item.exam.preset) }} del Nivel {{ item.exam.preset.level }}</span>
+                            <span class="small muted">{{ examLine(item.exam) }}</span>
+                        </span>
+                        <app-icon name="chevron" />
+                    </a>
+                }
+            }
+        </div>
+    } @empty {
+        <div class="card empty">Cargando…</div>
+    }
+</div>

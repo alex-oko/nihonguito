@@ -1,0 +1,227 @@
+/* ---- Estructura: cabecera, chat y panel pegado abajo (sticky) ---- */
+.wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: calc(8px + var(--safe-t)) 16px 0;
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+}
+/* ---- Interruptores de texto e intro ---- */
+.toggles {
+    margin: 4px 0 12px;
+}
+.toggles .chip {
+    font-size: 0.8rem;
+    padding: 5px 11px;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.people {
+    gap: 8px;
+}
+.who {
+    font-family: var(--font-jp);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+/* A = voz femenina, B = voz masculina */
+.who.a {
+    background: var(--surface-2);
+}
+.who.b {
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+/* ---- Chat: burbujas de A a la izquierda y de B a la derecha ---- */
+.chat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 0 20px;
+}
+.msg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 86%;
+    cursor: pointer;
+    animation: fade-up 0.25s ease both;
+}
+.msg.right {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+.nm {
+    color: var(--muted);
+    margin: 0 8px 3px;
+    font-family: var(--font-jp);
+}
+.bubble {
+    padding: 10px 14px;
+    border-radius: 18px 18px 18px 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.right .bubble {
+    border-radius: 18px 18px 6px 18px;
+    background: var(--indigo-soft);
+    border-color: transparent;
+}
+/* Línea que está sonando */
+.msg.playing .bubble {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.mine .bubble {
+    background: var(--accent-soft);
+}
+.line {
+    font-size: 1.12rem;
+    line-height: 1.45;
+}
+.rom {
+    font-style: italic;
+    color: var(--ink-2);
+}
+.es {
+    color: var(--muted);
+}
+.es-big {
+    font-weight: 600;
+}
+/* Nota de una línea ya respondida */
+.score {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bad);
+}
+.score.mid {
+    color: var(--gold);
+}
+.score.good {
+    color: var(--ok);
+}
+
+/* ---- Panel del turno: pista, micrófono y corrección ---- */
+.panel {
+    position: sticky;
+    bottom: 0;
+    margin: 0 -16px;
+    padding: 14px 16px calc(16px + var(--safe-b));
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+}
+.turn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.es-q {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.hintbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: var(--r-md);
+    background: var(--surface-2);
+    font-size: 1.05rem;
+}
+.tabs.mini button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.micwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.mic {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: none;
+    background: var(--ink);
+    color: var(--bg);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.mic.on {
+    background: var(--accent);
+    color: #fff;
+    animation: pulse 1.2s ease infinite;
+}
+/* El micrófono late mientras escucha */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(217 69 58 / 0.45);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgb(217 69 58 / 0);
+    }
+}
+.err {
+    color: var(--bad);
+}
+.fb {
+    padding: 10px 12px;
+    border-radius: var(--r-md);
+    background: var(--bad-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.fb.mid {
+    background: var(--gold-soft);
+}
+.fb.good {
+    background: var(--ok-soft);
+}
+.listening {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 0;
+}
+/* ---- Resultado final ---- */
+.done-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.big {
+    font-size: 2.2rem;
+}

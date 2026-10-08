@@ -1,0 +1,24 @@
+<!-- Práctica del modo elegido (no pinta nada hasta que carga la lección) -->
+@if (lesson()) {
+    @switch (mode()) {
+        @case ('learn') {
+            <!-- Tarjetas -->
+            <app-flashcards [words]="cards()" [title]="title()" [lessonId]="lessonId()" (again)="build()" />
+        }
+        @case ('match') {
+            <!-- Parejas -->
+            <app-match-game [pairs]="pairs()" [title]="title()" (again)="build()" />
+        }
+        @default {
+            <!-- Resto de modos: preguntas (la prueba final guarda la nota) -->
+            <app-question-runner
+                [questions]="questions()"
+                [title]="title()"
+                [lessonId]="lessonId()"
+                [final]="mode() === 'test'"
+                (again)="build()"
+                (finished)="done()"
+            />
+        }
+    }
+}

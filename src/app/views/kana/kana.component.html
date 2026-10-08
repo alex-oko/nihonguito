@@ -1,0 +1,67 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <div class="grow">
+            <h1 class="hero-title">Kana</h1>
+            <p class="muted">Los dos silabarios del japonés. Cada símbolo es un sonido.</p>
+        </div>
+        <app-musubi [size]="52" />
+    </header>
+
+    <!-- Tarjetas de hiragana y katakana -->
+    <div class="stack">
+        @for (script of scripts; track script.id) {
+            <section class="card script">
+                <a class="top" [routerLink]="['/kana', script.id]">
+                    <span class="gl hand" [attr.data-s]="script.id">{{ script.glyph }}</span>
+                    <span class="grow">
+                        <span class="t">{{ script.name }} <span class="jp muted small">{{ script.jp }}</span></span>
+                        <span class="small muted block">{{ script.desc }}</span>
+                        <span class="row prog">
+                            <span class="bar ok grow"><i [style.width.%]="mastery()[script.id].pct"></i></span>
+                            <span class="small muted">{{ mastery()[script.id].done }}/{{ mastery()[script.id].total }}</span>
+                        </span>
+                    </span>
+                    <app-icon name="chevron" />
+                </a>
+                <!-- Filas guardadas: practicar otra vez en un toque -->
+                @if (saved()[script.id]; as savedRows) {
+                    <div class="last">
+                        <span class="small muted grow">Tus filas: <span class="jp">{{ savedRows.heads }}</span> · {{ savedRows.count }} símbolos</span>
+                        <a class="go" [routerLink]="['/kana', script.id, 'practica', 'mixed']" [queryParams]="{ rows: savedRows.rows }">
+                            <app-icon name="play" [size]="14" />Practicar
+                        </a>
+                    </div>
+                }
+            </section>
+        }
+    </div>
+
+    <!-- Enlaces al laboratorio y a números y tiempo -->
+    <a class="card link" routerLink="/kana/lab">
+        <span class="ic" data-c="indigo"><app-icon name="flask" [size]="20" /></span>
+        <div class="grow">
+            <div class="lt">Laboratorio de katakana</div>
+            <div class="small muted">Trucos para memorizar, parejas que se confunden, reglas y palabras reales.</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+    <a class="card link" routerLink="/tiempo">
+        <span class="ic" data-c="gold"><app-icon name="clock" [size]="20" /></span>
+        <div class="grow">
+            <div class="lt">Números, fechas y tiempo</div>
+            <div class="small muted">Días, meses, horas, expresiones y duraciones con audio y práctica.</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+
+    <!-- Consejos -->
+    <h2 class="section-title">Cómo aprender kana</h2>
+    <div class="card tips">
+        <div class="tip"><b>1.</b> Aprende de 1 a 2 filas por día (あいうえお, かきくけこ…).</div>
+        <div class="tip"><b>2.</b> Toca cada símbolo en la tabla para escucharlo y ver su truco.</div>
+        <div class="tip"><b>3.</b> Practica con el quiz y el memorama hasta que salga sin pensar.</div>
+        <div class="tip"><b>4.</b> Traza el símbolo con el dedo: escribir ayuda a recordar.</div>
+        <div class="tip"><b>5.</b> Lee palabras reales: es la mejor forma de fijarlos.</div>
+    </div>
+</div>

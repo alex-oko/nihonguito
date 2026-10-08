@@ -1,0 +1,1004 @@
+{
+ "id": 4,
+ "title": "Mi rutina en Tokio",
+ "titleJp": "毎朝 6時半に 起きます",
+ "summary": "Lucía llama a la escuela de japonés Kotonoha para preguntar los días y el horario de las clases. Luego le cuenta a Yui cómo es su día.",
+ "vocab": [
+  {
+   "id": "L04-001",
+   "kana": "おきます",
+   "kanji": "起きます",
+   "es": "levantarse",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-002",
+   "kana": "ねます",
+   "kanji": "寝ます",
+   "es": "acostarse, dormir",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-003",
+   "kana": "はたらきます",
+   "kanji": "働きます",
+   "es": "trabajar",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-004",
+   "kana": "やすみます",
+   "kanji": "休みます",
+   "es": "descansar, librar",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-005",
+   "kana": "べんきょうします",
+   "kanji": "勉強します",
+   "es": "estudiar",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-006",
+   "kana": "おわります",
+   "kanji": "終わります",
+   "es": "terminar",
+   "type": "verb",
+   "lesson": 4
+  },
+  {
+   "id": "L04-007",
+   "kana": "デパート",
+   "es": "grandes almacenes",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-008",
+   "kana": "ぎんこう",
+   "kanji": "銀行",
+   "es": "banco",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-009",
+   "kana": "ゆうびんきょく",
+   "kanji": "郵便局",
+   "es": "oficina de correos",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-010",
+   "kana": "としょかん",
+   "kanji": "図書館",
+   "es": "biblioteca",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-011",
+   "kana": "びじゅつかん",
+   "kanji": "美術館",
+   "es": "museo de arte",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-012",
+   "kana": "いま",
+   "kanji": "今",
+   "es": "ahora",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-013",
+   "kana": "－じ",
+   "kanji": "－時",
+   "es": "… en punto (hora)",
+   "type": "counter",
+   "lesson": 4
+  },
+  {
+   "id": "L04-014",
+   "kana": "－ふん（－ぷん）",
+   "kanji": "－分",
+   "es": "… minutos",
+   "type": "counter",
+   "lesson": 4
+  },
+  {
+   "id": "L04-015",
+   "kana": "はん",
+   "kanji": "半",
+   "es": "y media",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-016",
+   "kana": "なんじ",
+   "kanji": "何時",
+   "es": "¿qué hora?",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-017",
+   "kana": "なんぷん",
+   "kanji": "何分",
+   "es": "¿cuántos minutos?",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-018",
+   "kana": "ごぜん",
+   "kanji": "午前",
+   "es": "de la mañana (a. m.)",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-019",
+   "kana": "ごご",
+   "kanji": "午後",
+   "es": "de la tarde (p. m.)",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-020",
+   "kana": "あさ",
+   "kanji": "朝",
+   "es": "mañana (parte del día)",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-021",
+   "kana": "ひる",
+   "kanji": "昼",
+   "es": "mediodía, día",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-022",
+   "kana": "ばん（よる）",
+   "kanji": "晩（夜）",
+   "es": "noche",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-023",
+   "kana": "おととい",
+   "es": "anteayer",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-024",
+   "kana": "きのう",
+   "es": "ayer",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-025",
+   "kana": "きょう",
+   "es": "hoy",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-026",
+   "kana": "あした",
+   "es": "mañana (día)",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-027",
+   "kana": "あさって",
+   "es": "pasado mañana",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-028",
+   "kana": "けさ",
+   "es": "esta mañana",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-029",
+   "kana": "こんばん",
+   "kanji": "今晩",
+   "es": "esta noche",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-030",
+   "kana": "やすみ",
+   "kanji": "休み",
+   "es": "descanso, día libre",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-031",
+   "kana": "ひるやすみ",
+   "kanji": "昼休み",
+   "es": "pausa del mediodía",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-032",
+   "kana": "まいあさ",
+   "kanji": "毎朝",
+   "es": "cada mañana",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-033",
+   "kana": "まいばん",
+   "kanji": "毎晩",
+   "es": "cada noche",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-034",
+   "kana": "まいにち",
+   "kanji": "毎日",
+   "es": "todos los días",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-035",
+   "kana": "げつようび",
+   "kanji": "月曜日",
+   "es": "lunes",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-036",
+   "kana": "かようび",
+   "kanji": "火曜日",
+   "es": "martes",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-037",
+   "kana": "すいようび",
+   "kanji": "水曜日",
+   "es": "miércoles",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-038",
+   "kana": "もくようび",
+   "kanji": "木曜日",
+   "es": "jueves",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-039",
+   "kana": "きんようび",
+   "kanji": "金曜日",
+   "es": "viernes",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-040",
+   "kana": "どようび",
+   "kanji": "土曜日",
+   "es": "sábado",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-041",
+   "kana": "にちようび",
+   "kanji": "日曜日",
+   "es": "domingo",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-042",
+   "kana": "なんようび",
+   "kanji": "何曜日",
+   "es": "¿qué día de la semana?",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-043",
+   "kana": "ばんごう",
+   "kanji": "番号",
+   "es": "número",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-044",
+   "kana": "なんばん",
+   "kanji": "何番",
+   "es": "¿qué número?",
+   "type": "noun",
+   "lesson": 4
+  },
+  {
+   "id": "L04-045",
+   "kana": "～から",
+   "es": "desde ~",
+   "type": "other",
+   "lesson": 4
+  },
+  {
+   "id": "L04-046",
+   "kana": "～まで",
+   "es": "hasta ~",
+   "type": "other",
+   "lesson": 4
+  },
+  {
+   "id": "L04-047",
+   "kana": "～と～",
+   "es": "~ y ~ (entre nombres)",
+   "type": "other",
+   "lesson": 4
+  },
+  {
+   "id": "L04-048",
+   "kana": "そちら",
+   "es": "ahí, su casa/empresa (del otro)",
+   "type": "pron",
+   "lesson": 4
+  },
+  {
+   "id": "L04-049",
+   "kana": "たいへんですね。",
+   "kanji": "大変ですね。",
+   "es": "¡Qué duro!, ¡vaya!",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-050",
+   "kana": "えーと",
+   "es": "eh…, a ver…",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-051",
+   "kana": "104",
+   "es": "información telefónica",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-052",
+   "kana": "おねがいします。",
+   "kanji": "お願いします。",
+   "es": "Por favor (al pedir algo).",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-053",
+   "kana": "かしこまりました。",
+   "es": "Entendido (muy cortés).",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-054",
+   "kana": "おといあわせの ばんごう",
+   "kanji": "お問い合わせの 番号",
+   "es": "el número que consulta",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-055",
+   "kana": "［どうも］ありがとう ございました。",
+   "es": "Muchas gracias (por lo hecho).",
+   "type": "expr",
+   "lesson": 4
+  },
+  {
+   "id": "L04-056",
+   "kana": "ニューヨーク",
+   "es": "Nueva York",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-057",
+   "kana": "ペキン",
+   "es": "Pekín",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-058",
+   "kana": "ロンドン",
+   "es": "Londres",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-059",
+   "kana": "バンコク",
+   "es": "Bangkok",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-060",
+   "kana": "ロサンゼルス",
+   "es": "Los Ángeles",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-061",
+   "kana": "みなとびじゅつかん",
+   "kanji": "みなと美術館",
+   "es": "museo de arte (ficticio)",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-062",
+   "kana": "まるやまデパート",
+   "es": "grandes almacenes (ficticios)",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-063",
+   "kana": "ひまわりとしょかん",
+   "kanji": "ひまわり図書館",
+   "es": "biblioteca (ficticia)",
+   "type": "name",
+   "lesson": 4
+  },
+  {
+   "id": "L04-064",
+   "kana": "こだまぎんこう",
+   "kanji": "こだま銀行",
+   "es": "banco (ficticio)",
+   "type": "name",
+   "lesson": 4
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "今 8時半です。",
+   "es": "Ahora son las ocho y media."
+  },
+  {
+   "jp": "会社は 9時から 6時までです。",
+   "es": "El trabajo es de nueve a seis."
+  },
+  {
+   "jp": "わたしは 毎朝 6時半に 起きます。",
+   "es": "Me levanto a las seis y media todas las mañanas."
+  },
+  {
+   "jp": "わたしは きのう 勉強しませんでした。",
+   "es": "Ayer no estudié."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "今 何時ですか。",
+   "qes": "¿Qué hora es?",
+   "ajp": "7時45分です。",
+   "aes": "Son las siete y cuarenta y cinco."
+  },
+  {
+   "qjp": "メキシコは 今 何時ですか。",
+   "qes": "¿Qué hora es ahora en México?",
+   "ajp": "午後 11時です。",
+   "aes": "Son las once de la noche."
+  },
+  {
+   "qjp": "銀行は 何時から 何時までですか。",
+   "qes": "¿De qué hora a qué hora abre el banco?",
+   "ajp": "9時から 3時までです。",
+   "aes": "De nueve a tres."
+  },
+  {
+   "qjp": "ルシアさんは 毎朝 何時に 起きますか。",
+   "qes": "Lucía, ¿a qué hora te levantas cada mañana?",
+   "ajp": "6時半に 起きます。",
+   "aes": "A las seis y media."
+  },
+  {
+   "qjp": "土曜日も 働きますか。",
+   "qes": "¿También trabajas los sábados?",
+   "ajp": "いいえ、働きません。",
+   "aes": "No, no trabajo."
+  },
+  {
+   "qjp": "きのう 勉強しましたか。",
+   "qes": "¿Estudiaste ayer?",
+   "ajp": "はい、10時まで 勉強しました。",
+   "aes": "Sí, estudié hasta las diez."
+  },
+  {
+   "qjp": "美術館の 休みは 何曜日ですか。",
+   "qes": "¿Qué día cierra el museo?",
+   "ajp": "月曜日です。",
+   "aes": "Los lunes."
+  },
+  {
+   "qjp": "カフェ「こもれび」は 何時までですか。",
+   "qes": "¿Hasta qué hora abre el café Komorebi?",
+   "ajp": "夜 10時までです。",
+   "aes": "Hasta las diez de la noche."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "今 －時－分です — decir la hora",
+   "explain": "La hora se dice con número + 時 (hora) + número + 分 (minutos). 分 se lee ふん tras 2, 5, 7, 9 y ぷん tras 1, 3, 4, 6, 8, 10 (いっぷん, ろっぷん, はっぷん, じゅっぷん). Para preguntar, pon なん delante del contador: なんじ, なんぷん. Si quieres la hora de otra ciudad, pon la ciudad como tema con は.",
+   "examples": [
+    {
+     "jp": "今 何時ですか。…9時10分です。",
+     "es": "¿Qué hora es? …Las nueve y diez."
+    },
+    {
+     "jp": "メキシコは 今 何時ですか。…午後 11時です。",
+     "es": "¿Qué hora es ahora en México? …Las once de la noche."
+    }
+   ]
+  },
+  {
+   "title": "V ます — el verbo educado",
+   "explain": "Los verbos terminados en ます son la forma educada que usas con gente que no es de confianza. El verbo va siempre al final de la frase, no en medio como en español.",
+   "examples": [
+    {
+     "jp": "ルシアさんは 毎晩 勉強します。",
+     "es": "Lucía estudia todas las noches."
+    }
+   ]
+  },
+  {
+   "title": "ます／ません／ました／ませんでした — tiempos del verbo",
+   "explain": "Solo hay dos tiempos: presente-futuro (ます: hábito, verdad o algo que harás) y pasado (ました). En negativo: ません y ませんでした. Para preguntar, añade か al final sin cambiar el orden. Error típico: responder そうです a una pregunta con verbo; hay que repetir el verbo: はい、起きました／いいえ、起きませんでした.",
+   "examples": [
+    {
+     "jp": "あした 休みます。",
+     "es": "Mañana descanso."
+    },
+    {
+     "jp": "きのう 働きましたか。…いいえ、働きませんでした。",
+     "es": "¿Trabajaste ayer? …No, no trabajé."
+    }
+   ]
+  },
+  {
+   "title": "[tiempo] に V — ¿a qué hora?",
+   "explain": "に marca el momento exacto en que pasa algo, como 'a las' o 'el'. Se usa con tiempos que llevan número (6時に, 3月2日に). NO se usa con palabras como きょう, あした, きのう, 毎朝, 今. Con los días de la semana es opcional. Error típico: decir あしたに.",
+   "examples": [
+    {
+     "jp": "わたしは 11時半に 寝ます。",
+     "es": "Me acuesto a las once y media."
+    },
+    {
+     "jp": "クラスは 9時に 終わります。",
+     "es": "La clase termina a las nueve."
+    }
+   ]
+  },
+  {
+   "title": "〜から 〜まで — desde… hasta…",
+   "explain": "から es 'desde' y まで es 'hasta', para horas, días o lugares. Pueden ir juntos o por separado. También puedes terminar con です: 'el banco es de 9 a 3'.",
+   "examples": [
+    {
+     "jp": "クラスは 7時から 9時までです。",
+     "es": "La clase es de siete a nueve."
+    },
+    {
+     "jp": "きのう 12時まで 勉強しました。",
+     "es": "Ayer estudié hasta las doce."
+    }
+   ]
+  },
+  {
+   "title": "N1 と N2 — 'y' entre nombres",
+   "explain": "と une dos sustantivos, como 'y'. Ojo: solo sirve para nombres; no se usa para unir frases o verbos.",
+   "examples": [
+    {
+     "jp": "クラスは 火曜日と 木曜日です。",
+     "es": "Las clases son martes y jueves."
+    },
+    {
+     "jp": "ルシアさんと なかむらさんは あおば商事の 社員です。",
+     "es": "Lucía y Yui trabajan en Aoba Shōji."
+    }
+   ]
+  },
+  {
+   "title": "〜ね — '¿verdad?' / '¡qué…!'",
+   "explain": "ね al final muestra que compartes el sentimiento del otro ('¡qué duro!') o que buscas confirmación, como '¿verdad?' o '¿no?'. Es muy útil para repetir un dato y comprobar que lo has entendido bien.",
+   "examples": [
+    {
+     "jp": "毎晩 1時まで 働きます。…大変ですね。",
+     "es": "Trabajo hasta la una cada noche. …¡Qué pesado!"
+    },
+    {
+     "jp": "クラスは 火曜日と 木曜日ですね。",
+     "es": "Las clases son martes y jueves, ¿verdad?"
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "はい、ことのは日本語学校です。",
+   "es": "Escuela de japonés Kotonoha, buenas tardes."
+  },
+  {
+   "jp": "何時から 何時までですか。",
+   "es": "¿De qué hora a qué hora es?"
+  },
+  {
+   "jp": "7時から 9時までですね。",
+   "es": "De siete a nueve, ¿verdad?"
+  },
+  {
+   "jp": "大変ですね。",
+   "es": "¡Qué pesado!"
+  },
+  {
+   "jp": "どうも ありがとう ございました。",
+   "es": "Muchas gracias."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L04-c1",
+   "lesson": 4,
+   "title": "Llamada a la escuela",
+   "tags": [
+    "estudios"
+   ],
+   "situation": "Lucía llama por teléfono a la escuela de japonés Kotonoha para preguntar por las clases.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "うけつけ",
+     "jp": "はい、ことのは日本語学校です。",
+     "es": "Escuela de japonés Kotonoha, dígame."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "すみません。日本語の クラスは 何曜日ですか。",
+     "es": "Disculpe, ¿qué días son las clases de japonés?"
+    },
+    {
+     "who": "A",
+     "name": "うけつけ",
+     "jp": "火曜日と 木曜日です。",
+     "es": "Martes y jueves."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "何時から 何時までですか。",
+     "es": "¿De qué hora a qué hora?"
+    },
+    {
+     "who": "A",
+     "name": "うけつけ",
+     "jp": "夜 7時から 9時までです。",
+     "es": "De siete a nueve de la noche."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "7時から 9時までですね。学校の 休みは 何曜日ですか。",
+     "es": "De siete a nueve, ¿verdad? ¿Y qué día cierra la escuela?"
+    },
+    {
+     "who": "A",
+     "name": "うけつけ",
+     "jp": "日曜日です。",
+     "es": "Los domingos."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "受付は 何時までですか。",
+     "es": "¿Hasta qué hora atiende la recepción?"
+    },
+    {
+     "who": "A",
+     "name": "うけつけ",
+     "jp": "午後 9時半までです。",
+     "es": "Hasta las nueve y media de la noche."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わかりました。どうも ありがとう ございました。",
+     "es": "Entendido. Muchas gracias."
+    }
+   ]
+  },
+  {
+   "id": "L04-c2",
+   "lesson": 4,
+   "title": "Un día normal",
+   "tags": [
+    "trabajo"
+   ],
+   "situation": "En el comedor de la empresa, Lucía y Yui comparan sus horarios.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ルシアさんは 毎朝 何時に 起きますか。",
+     "es": "Lucía, ¿a qué hora te levantas en las mañanas?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "6時半に 起きます。なかむらさんは？",
+     "es": "A las seis y media. ¿Y tú, Yui?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "わたしは 7時に 起きます。",
+     "es": "Yo me levanto a las siete."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "会社は 6時に 終わりますね。",
+     "es": "El trabajo termina a las seis, ¿no?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "はい。でも、わたしは 毎晩 8時まで 働きます。",
+     "es": "Sí. Pero yo trabajo hasta las ocho todas las noches."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "8時までですか。大変ですね。",
+     "es": "¿Hasta las ocho? ¡Qué pesado!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ルシアさんは 毎晩 何時に 寝ますか。",
+     "es": "Lucía, ¿a qué hora te duermes?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "11時に 寝ます。火曜日と 木曜日は 日本語の クラスです。",
+     "es": "A las once. Los martes y jueves tengo clase de japonés."
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "そうですか。きのうも 勉強しましたか。",
+     "es": "Ah, ¿sí? ¿Ayer también estudiaste?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、9時まで 勉強しました。",
+     "es": "Sí, estudié hasta las nueve."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Teléfonos importantes",
+   "items": [
+    {
+     "kana": "けいさつしょ",
+     "kanji": "警察署",
+     "es": "comisaría (110)"
+    },
+    {
+     "kana": "しょうぼうしょ",
+     "kanji": "消防署",
+     "es": "bomberos (119)"
+    },
+    {
+     "kana": "じほう",
+     "kanji": "時報",
+     "es": "servicio de la hora (117)"
+    },
+    {
+     "kana": "てんきよほう",
+     "kanji": "天気予報",
+     "es": "previsión del tiempo (177)"
+    },
+    {
+     "kana": "でんわばんごうあんない",
+     "kanji": "電話番号案内",
+     "es": "información telefónica (104)"
+    }
+   ]
+  },
+  {
+   "topic": "Direcciones postales",
+   "items": [
+    {
+     "kana": "けん",
+     "kanji": "県",
+     "es": "prefectura"
+    },
+    {
+     "kana": "し",
+     "kanji": "市",
+     "es": "ciudad"
+    },
+    {
+     "kana": "く",
+     "kanji": "区",
+     "es": "distrito"
+    },
+    {
+     "kana": "ごう",
+     "kanji": "号",
+     "es": "número (de piso/apartamento)"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Casi todos los museos de Japón cierran los lunes; si el lunes es festivo, abren ese día y descansan el martes.",
+  "Las ventanillas de los bancos suelen atender solo de 9:00 a 15:00 entre semana, pero los cajeros de las tiendas de conveniencia funcionan casi a cualquier hora."
+ ],
+ "extras": [
+  {
+   "jp": "メキシコは 今 何時ですか。",
+   "es": "¿Qué hora es ahora en México?",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "ホテルの チェックインは 3時からです。",
+   "es": "El check-in del hotel es a partir de las tres.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "レストランは 11時からです。",
+   "es": "El restaurante abre a las once.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "スーパーは 夜 10時までです。",
+   "es": "El supermercado abre hasta las diez de la noche.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "わたしは 9時から 6時まで 働きます。",
+   "es": "Trabajo de nueve a seis.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "あした 休みます。",
+   "es": "Mañana me tomo el día libre.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "毎晩 11時まで 勉強します。",
+   "es": "Estudio hasta las once todas las noches.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "テストは 金曜日です。",
+   "es": "El examen es el viernes.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "その アニメは 土曜日の 夜 11時からです。",
+   "es": "Ese anime empieza el sábado a las once de la noche.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "アニメの イベントは 何時に 終わりますか。",
+   "es": "¿A qué hora termina el evento de anime?",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "ゲームの イベントは 10時からです。",
+   "es": "El evento de videojuegos empieza a las diez.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "ゲームの たいかいは 土曜日と 日曜日です。",
+   "es": "El torneo de videojuegos es el sábado y el domingo.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "テニスの れんしゅうは 土曜日です。",
+   "es": "El entrenamiento de tenis es el sábado.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "サッカーの しあいは 何時からですか。",
+   "es": "¿A qué hora empieza el partido de fútbol?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "ピアノの レッスンは 水曜日です。",
+   "es": "La clase de piano es el miércoles.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "コンサートは 7時から 9時までです。",
+   "es": "El concierto es de siete a nueve.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

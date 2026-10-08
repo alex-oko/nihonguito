@@ -1,0 +1,57 @@
+:host {
+    display: block;
+}
+
+/* ---- Cuenta atrás: tiempo y barra que se vacía ---- */
+.base {
+    padding: 10px 14px 12px;
+    border-radius: var(--r-md);
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+.base-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.base-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.base-time {
+    font-size: 1.25rem;
+    font-variant-numeric: tabular-nums;
+}
+.track {
+    height: 10px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    overflow: hidden;
+}
+.track i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+}
+/* Alarma: últimos segundos en rojo y la barra parpadea */
+.base.low .base-time {
+    color: var(--bad);
+}
+.base.low .track i {
+    background: var(--bad);
+    animation: blink 0.6s steps(1) infinite;
+}
+/* ---- Cronómetro: píldora compacta ---- */
+.watch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,105 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/practicar" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Verbos</h1>
+    </header>
+
+    <!-- Pestañas -->
+    <div class="tabs">
+        <button [class.on]="tab() === 'rules'" (click)="tab.set('rules')">Reglas</button>
+        <button [class.on]="tab() === 'list'" (click)="tab.set('list')">Lista</button>
+        <button [class.on]="tab() === 'practice'" (click)="tab.set('practice')">Practicar</button>
+    </div>
+
+    @switch (tab()) {
+        @case ('rules') {
+            <!-- Reglas: grupos y formas -->
+            <div class="stack top">
+                <div class="card">
+                    <div class="t">Los 3 grupos de verbos</div>
+                    <p class="small body">
+                        <b>Grupo I:</b> antes de ます hay un sonido en «i» (か<b>き</b>ます, の<b>み</b>ます, い<b>き</b>ます).<br />
+                        <b>Grupo II:</b> antes de ます hay un sonido en «e» (た<b>べ</b>ます, <b>ね</b>ます) y algunos en «i» como <b>み</b>ます, <b>お</b>きます.<br />
+                        <b>Grupo III:</b> solo dos: <b>します</b> (hacer) y <b>きます</b> (venir), y los que terminan en します (べんきょうします).
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="t">Forma て — Grupo I (la canción)</div>
+                    <div class="rules">
+                        @for (teRule of teRules; track teRule[0]) {
+                            <div class="rule row">
+                                <span class="jp end">{{ teRule[0] }}</span>
+                                <app-icon name="chevron" [size]="14" />
+                                <span class="jp res">{{ teRule[1] }}</span>
+                                <span class="jp small muted grow ex">{{ teRule[2] }}</span>
+                            </div>
+                        }
+                    </div>
+                    <p class="small muted">Excepción: いきます → いって.</p>
+                </div>
+                <div class="card">
+                    <div class="t">Forma て — Grupos II y III</div>
+                    <p class="small body">
+                        Grupo II: quita ます y pon て → たべます → <b class="jp">たべて</b>.<br />
+                        Grupo III: します → <b class="jp">して</b>, きます → <b class="jp">きて</b>.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="t">Las otras formas salen de la て</div>
+                    <p class="small body">
+                        <b>Forma た</b> (pasado informal): cambia て→た y で→だ. のんで → <b class="jp">のんだ</b>.<br />
+                        <b>Forma ない</b> (negativo informal): Grupo I cambia la «i» por «a» + ない (かきます → <b class="jp">かかない</b>; い→わ: かいます → <b class="jp">かわない</b>). Grupo II: quita ます + ない. します → しない, きます → こない.<br />
+                        <b>Forma diccionario</b>: Grupo I cambia la «i» por «u» (かきます → <b class="jp">かく</b>). Grupo II: quita ます + る. します → する, きます → くる.
+                    </p>
+                </div>
+                <button class="btn accent block" (click)="tab.set('practice')">Practicar ahora</button>
+            </div>
+        }
+        @case ('list') {
+            <!-- Lista de verbos con sus formas -->
+            <div class="chips top">
+                @for (groupNumber of [0, 1, 2, 3]; track groupNumber) {
+                    <button class="chip" [class.on]="group() === groupNumber" (click)="group.set(groupNumber)">{{ groupNumber === 0 ? 'Todos' : 'Grupo ' + 'I'.repeat(groupNumber) }}</button>
+                }
+            </div>
+            <div class="card list vlist">
+                @for (verb of filtered(); track verb.masu) {
+                    <div class="list-item v">
+                        <div class="grow">
+                            <div class="row">
+                                <span class="jp vm"><app-jp [text]="verb.kanji || verb.masu" /></span>
+                                <span class="badge">{{ 'I'.repeat(verb.group) }}</span>
+                            </div>
+                            <div class="small muted">{{ verb.es }}</div>
+                            <div class="forms jp small">
+                                <span>て: {{ verb.te }}</span><span>ない: {{ verb.nai }}</span><span>た: {{ verb.ta }}</span><span>dic: {{ verb.dict }}</span>
+                            </div>
+                        </div>
+                        <app-speak [text]="verb.masu" />
+                    </div>
+                } @empty {
+                    <div class="empty">Cargando…</div>
+                }
+            </div>
+        }
+        @case ('practice') {
+            <!-- Práctica: formas y grupo -->
+            <h2 class="section-title">¿Qué formas quieres practicar?</h2>
+            <div class="chips">
+                @for (form of allForms; track form) {
+                    <button class="chip" [class.on]="forms().includes(form)" (click)="toggleForm(form)">{{ formLabel[form] }}</button>
+                }
+            </div>
+            <h2 class="section-title">¿Qué grupo?</h2>
+            <div class="chips">
+                @for (groupNumber of [0, 1, 2, 3]; track groupNumber) {
+                    <button class="chip" [class.on]="group() === groupNumber" (click)="group.set(groupNumber)">{{ groupNumber === 0 ? 'Todos' : 'Grupo ' + 'I'.repeat(groupNumber) }}</button>
+                }
+            </div>
+            <button class="btn accent block go" [disabled]="!forms().length" (click)="practice()">
+                <app-icon name="play" [size]="18" />Empezar
+            </button>
+        }
+    }
+</div>

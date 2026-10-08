@@ -1,0 +1,57 @@
+<div class="wrap">
+    <!-- Cabecera con progreso -->
+    <header class="head">
+        <button class="icon-btn" (click)="location.back()" aria-label="Salir"><app-icon name="x" /></button>
+        <div class="bar grow"><i [style.width.%]="((index() + 1) / list().length) * 100"></i></div>
+        <span class="small muted">{{ index() + 1 }}/{{ list().length }}</span>
+    </header>
+
+    @if (current(); as kana) {
+        <!-- Romaji e instrucción del paso -->
+        <div class="info">
+            <div>
+                <div class="rom">{{ kana.romaji[0] }}</div>
+                <div class="small muted">{{ step() === 'copy' ? 'Copia sobre la guía' : step() === 'memory' ? 'Ahora de memoria' : '¿Se parece?' }}</div>
+            </div>
+            <button class="icon-btn" (click)="speak()" aria-label="Escuchar"><app-icon name="volume" /></button>
+        </div>
+
+        <!-- Lienzo con la guía detrás -->
+        <div class="pad">
+            <div class="guide hand" [class.hidden]="step() === 'memory'" [class.reveal]="step() === 'check'">{{ kana.char }}</div>
+            <div class="cross"></div>
+            <canvas
+                #canvas
+                (pointerdown)="startStroke($event)"
+                (pointermove)="continueStroke($event)"
+                (pointerup)="endStroke()"
+                (pointercancel)="endStroke()"
+                (pointerleave)="endStroke()"
+            ></canvas>
+        </div>
+
+        <!-- Truco de memoria -->
+        @if (tip(); as tipText) {
+            <p class="tip small"><app-icon name="bulb" [size]="16" /> {{ tipText }}</p>
+        }
+
+        <!-- Acciones de cada paso -->
+        <div class="actions">
+            <button class="btn ghost" (click)="clear()"><app-icon name="trash" [size]="18" />Borrar</button>
+            @switch (step()) {
+                @case ('copy') {
+                    <button class="btn" (click)="toMemory()">Siguiente paso</button>
+                }
+                @case ('memory') {
+                    <button class="btn" (click)="step.set('check')">Comprobar</button>
+                }
+                @case ('check') {
+                    <div class="grid-2 full">
+                        <button class="btn soft" (click)="rate(false)">Repetir</button>
+                        <button class="btn ok" (click)="rate(true)">¡Bien!</button>
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>

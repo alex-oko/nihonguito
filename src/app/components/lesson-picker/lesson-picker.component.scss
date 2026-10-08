@@ -1,0 +1,26 @@
+/* ---- Atajos ---- */
+.quick {
+    margin-bottom: 10px;
+}
+
+/* ---- Cuadrícula de números ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    gap: 6px;
+}
+.n {
+    aspect-ratio: 1;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+}
+/* Lección elegida: invertida */
+.n.on {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bg);
+}

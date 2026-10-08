@@ -1,0 +1,150 @@
+/* ---- Cabecera ---- */
+.head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 8px 0 18px;
+}
+.head p {
+    margin: 2px 0;
+}
+.seal {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px 4px;
+    background: var(--panel);
+    color: var(--signal);
+    border: 2px solid var(--signal);
+    font: 700 2rem var(--font-jp);
+}
+
+/* ---- Pestañas y explicación del tema ---- */
+.tabs {
+    margin-bottom: 14px;
+}
+.tabs button span {
+    font-size: 1.1rem;
+}
+.mission {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3px 12px;
+    padding: 13px 14px;
+    margin-bottom: 12px;
+    background: var(--panel);
+    color: var(--panel-ink);
+    border-left: 5px solid var(--signal);
+    border-radius: var(--r-md);
+}
+.mission > span:not(.progress) {
+    grid-column: 1/-1;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+.progress {
+    font-size: 0.72rem;
+    color: var(--signal);
+}
+
+/* ---- Lista de estudio ---- */
+.entries {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.entry {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px !important;
+}
+.entry.seen {
+    border-color: var(--ok);
+}
+.learn {
+    border: 0;
+    background: transparent;
+    color: var(--ok);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.glyph {
+    min-width: 92px;
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+.grow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.reading {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+.entry small {
+    color: var(--muted);
+    margin-top: 3px;
+}
+.practice {
+    margin-top: 14px;
+}
+
+/* ---- Quiz y resultado ---- */
+.quiz-card {
+    text-align: center;
+    padding: 24px !important;
+}
+.quiz-glyph {
+    font-size: 3rem;
+    margin: 20px 0 2px;
+}
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin: 24px 0;
+}
+.answers button {
+    min-height: 56px;
+    border: 2px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 600;
+}
+.answers button.correct {
+    border-color: var(--ok);
+    background: var(--ok-soft);
+}
+.answers button.wrong {
+    border-color: var(--bad);
+    background: var(--bad-soft);
+}
+.result {
+    font-weight: 600;
+}
+.score {
+    font-size: 3.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+.quiz-card .btn + .btn {
+    margin-top: 8px;
+}
+
+/* ---- Móvil estrecho ---- */
+@media (max-width: 420px) {
+    .glyph {
+        min-width: 72px;
+        font-size: 1.2rem;
+    }
+    .entry {
+        gap: 8px;
+    }
+    .answers {
+        grid-template-columns: 1fr;
+    }
+}

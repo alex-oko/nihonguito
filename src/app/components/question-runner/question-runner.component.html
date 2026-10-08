@@ -1,0 +1,237 @@
+<!-- Resultado de la sesión -->
+@if (result(); as sessionResult) {
+    <app-result-screen [result]="sessionResult" [exam]="exam()" [lessonId]="lessonId()" (again)="restart()" (exit)="close()" />
+} @else if (current(); as question) {
+    <div class="runner">
+        <!-- Cabecera: salir, barra de progreso y racha o contador -->
+        <header class="head">
+            <button class="icon-btn" (click)="close()" aria-label="Salir"><app-icon name="x" /></button>
+            <div class="bar grow"><i [style.width.%]="progressPercent()"></i></div>
+            @if (!exam() && combo() >= 3) {
+                <span class="combo pop" [attr.data-k]="combo()"><app-icon name="flame" [size]="16" [fill]="true" />{{ combo() }}</span>
+            } @else {
+                <span class="count muted small">{{ index() + 1 }}/{{ total() }}</span>
+            }
+        </header>
+
+        <main class="body" [class.shake]="shakeKey() && phase() === 'feedback' && !feedback()?.correct">
+            <p class="label">{{ question.label }}</p>
+            @if (question.kind === 'note') {
+                <!-- Tarjeta de explicación (sesiones guiadas) -->
+                <section class="note">
+                    <h2 class="note-title jp"><app-jp [text]="question.prompt" /></h2>
+                    @if (question.body) {
+                        <p class="note-body">{{ question.body }}</p>
+                    }
+                    @if (question.words?.length) {
+                        <div class="note-words">
+                            @for (word of question.words; track $index) {
+                                <button class="note-word" (click)="say(word.reading)">
+                                    <span class="grow">
+                                        <span class="jp nw"><app-jp [text]="word.jp" /></span>
+                                        @if (word.jp !== word.reading && script() === 'kanji') {
+                                            <span class="jp small muted">{{ word.reading }}</span>
+                                        }
+                                        @if (showRomaji()) {
+                                            <span class="small muted">{{ romajiOf(word.reading) }}</span>
+                                        }
+                                    </span>
+                                    <span class="nes">{{ word.es }}</span>
+                                    <app-icon name="volume" [size]="16" />
+                                </button>
+                            }
+                        </div>
+                    }
+                    @for (example of question.examples ?? []; track $index) {
+                        <button class="note-ex" (click)="say(example.jp)">
+                            <span class="grow">
+                                <span class="jp"><app-jp [text]="example.jp" /></span>
+                                @if (showRomaji()) {
+                                    <span class="small muted">{{ romajiOf(example.jp) }}</span>
+                                }
+                                <span class="small muted">{{ example.es }}</span>
+                            </span>
+                            <app-icon name="volume" [size]="16" />
+                        </button>
+                    }
+                    @if (question.tip) {
+                        <p class="note-tip small"><app-icon name="bulb" [size]="16" /><span>{{ question.tip }}</span></p>
+                    }
+                </section>
+            } @else {
+                <!-- Enunciado -->
+                <section class="prompt">
+                    @if (question.audioOnly && !isRevealed()) {
+                        <div class="listen-btns">
+                            <button class="play-big" (click)="play()" aria-label="Escuchar"><app-icon name="volume" [size]="34" /></button>
+                            <button class="btn soft sm" (click)="play(true)">Lento</button>
+                        </div>
+                    } @else {
+                        <div
+                            class="prompt-text"
+                            [class.jp-big]="question.promptStyle === 'jp-big'"
+                            [class.jp]="question.promptStyle === 'jp' || question.promptStyle === 'jp-big'"
+                            [class.long]="question.prompt.length > 16"
+                        >
+                            <app-jp [text]="question.prompt" />
+                        </div>
+                        @if (question.sub && (!question.subIsReading || script() === 'kanji')) {
+                            <div class="prompt-sub">{{ question.sub }}</div>
+                        }
+                        @if (showRomaji() && question.promptStyle === 'jp' && question.kind !== 'speak' && phase() === 'feedback') {
+                            <div class="prompt-sub romaji">{{ romajiOf(question.audio || question.prompt) }}</div>
+                        }
+                        @if (question.audio && question.kind !== 'order') {
+                            <div class="row center-row">
+                                <button class="icon-btn" (click)="play()" aria-label="Escuchar"><app-icon name="volume" /></button>
+                                <button class="btn soft sm" (click)="play(true)">Lento</button>
+                            </div>
+                        }
+                    }
+                </section>
+
+                <!-- Zona de respuesta -->
+                @switch (question.kind) {
+                    @case ('choice') {
+                        <div class="choices" [class.two]="question.choiceStyle === 'jp-big'">
+                            @for (choice of question.choices; track choice; let choiceIndex = $index) {
+                                <button
+                                    class="choice"
+                                    [class.jp]="question.choiceStyle !== 'es'"
+                                    [class.jp-big]="question.choiceStyle === 'jp-big'"
+                                    [class.right]="phase() === 'feedback' && choice === question.answer"
+                                    [class.wrong]="phase() === 'feedback' && choice === selected() && choice !== question.answer"
+                                    [class.dim]="phase() === 'feedback' && choice !== question.answer && choice !== selected()"
+                                    [disabled]="phase() !== 'asking'"
+                                    (click)="choose(choice)"
+                                >
+                                    <span class="k">{{ choiceIndex + 1 }}</span>
+                                    <span class="c"><app-jp [text]="choice" /></span>
+                                </button>
+                            }
+                        </div>
+                    }
+                    @case ('type') {
+                        <div class="type-area">
+                            <app-kana-input
+                                #kanaInput
+                                [mode]="question.input"
+                                [placeholder]="question.placeholder || (question.input === 'romaji' ? 'romaji' : 'escribe en romaji…')"
+                                [disabled]="phase() !== 'asking'"
+                                [(value)]="typed"
+                                (enter)="submitTyped()"
+                            />
+                            @if (question.input === 'kana' || question.input === 'katakana') {
+                                <p class="hint small muted center">Ej.: «ka» → {{ question.input === 'katakana' ? 'カ' : 'か' }}, «nn» → {{ question.input === 'katakana' ? 'ン' : 'ん' }}, «-» → ー</p>
+                            }
+                        </div>
+                    }
+                    @case ('order') {
+                        @if (orderQuestion(); as order) {
+                            <div class="order">
+                                <div class="answer-line jp" [class.filled]="picked().length">
+                                    @for (token of pickedTokens(); track $index; let position = $index) {
+                                        <button class="token placed" (click)="untapToken(position)"><app-jp [text]="token" /></button>
+                                    } @empty {
+                                        <span class="muted small">Toca las palabras en orden</span>
+                                    }
+                                </div>
+                                <div class="bank jp">
+                                    @for (token of order.tokens; track $index; let tokenIndex = $index) {
+                                        <button class="token" [class.used]="picked().includes(tokenIndex)" [disabled]="picked().includes(tokenIndex) || phase() !== 'asking'" (click)="tapToken(tokenIndex)">
+                                            <app-jp [text]="token" />
+                                        </button>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                    @case ('speak') {
+                        <div class="speak-area">
+                            @if (speechSVC.canListen) {
+                                <button class="mic" [class.on]="speechSVC.listening()" (click)="listen()" [disabled]="phase() !== 'asking'" aria-label="Hablar">
+                                    <app-icon name="mic" [size]="34" />
+                                </button>
+                                <p class="small muted center">{{ speechSVC.listening() ? 'Escuchando…' : 'Toca el micrófono y dilo en voz alta' }}</p>
+                            }
+                            @if (heard() && phase() === 'asking') {
+                                <p class="heard jp">Escuché: «{{ heard() }}»</p>
+                            }
+                            @if (micError()) {
+                                <p class="mic-error small">{{ micError() }}</p>
+                            }
+                            @if ((!speechSVC.canListen || micError() || attempts() > 0) && phase() === 'asking' && !exam()) {
+                                <div class="self">
+                                    <p class="small muted center">¿Cómo te salió? Compáralo con el modelo:</p>
+                                    <div class="grid-2">
+                                        <button class="btn ghost sm" (click)="selfAssess(false)">Necesito práctica</button>
+                                        <button class="btn soft sm" (click)="selfAssess(true)">¡Lo dije bien!</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+            }
+        </main>
+
+        <!-- Pie: corrección con Musubi o botones para responder -->
+        <footer class="foot" [class.ok]="phase() === 'feedback' && feedback()?.correct" [class.bad]="phase() === 'feedback' && !feedback()?.correct">
+            @if (phase() === 'feedback' && feedback(); as currentFeedback) {
+                <div class="fb-row">
+                    <app-musubi class="fb-musubi" [size]="54" [mood]="currentFeedback.correct ? (combo() >= 5 && combo() % 5 === 0 ? 'wow' : 'happy') : 'oops'" />
+                    <div class="fb">
+                        <div class="fb-title">
+                            <app-icon [name]="currentFeedback.correct ? 'check' : 'x'" [size]="22" [stroke]="3" />
+                            {{ currentFeedback.correct ? currentFeedback.praise : currentFeedback.close ? '¡Casi! La respuesta es:' : 'Respuesta correcta:' }}
+                        </div>
+                        @if (!currentFeedback.correct || question.kind === 'type' || question.kind === 'order' || question.kind === 'speak') {
+                            <div class="fb-answer jp"><app-jp [text]="currentFeedback.answer" /></div>
+                        }
+                        @if (currentFeedback.note) {
+                            <div class="small fb-note">{{ currentFeedback.note }}@if (question.kind === 'speak' && currentFeedback.given && currentFeedback.given.length > 1) { · Escuché «{{ currentFeedback.given }}»}</div>
+                        }
+                        @if (question.explain && (!currentFeedback.correct || question.kind === 'choice')) {
+                            <div class="small fb-note">{{ question.explain }}</div>
+                        }
+                        @if (!currentFeedback.correct && !exam()) {
+                            <div class="small fb-note">Tranquilo: esta vuelve más tarde para que la fijes.</div>
+                        }
+                    </div>
+                </div>
+                <button class="btn block" [class.ok]="currentFeedback.correct" [class.bad]="!currentFeedback.correct" (click)="next()">Continuar</button>
+            } @else {
+                @switch (question.kind) {
+                    @case ('note') {
+                        <button class="btn block" (click)="next()">Entendido, a practicar</button>
+                    }
+                    @case ('type') {
+                        <div class="grid-2">
+                            <button class="btn ghost" (click)="skip()">No sé</button>
+                            <button class="btn" [disabled]="!typed()" (click)="submitTyped()">Comprobar</button>
+                        </div>
+                    }
+                    @case ('order') {
+                        <div class="grid-2">
+                            <button class="btn ghost" (click)="picked.set([])">Borrar</button>
+                            <button class="btn" [disabled]="!picked().length" (click)="submitOrder()">Comprobar</button>
+                        </div>
+                    }
+                    @case ('speak') {
+                        <button class="btn ghost block" (click)="skip()">Saltar</button>
+                    }
+                    @default {
+                        <button class="btn ghost block" (click)="skip()">No sé</button>
+                    }
+                }
+            }
+        </footer>
+    </div>
+} @else {
+    <!-- Sin preguntas -->
+    <div class="empty">
+        <div class="glyph">空</div>
+        <p>No hay ejercicios para esta selección.</p>
+        <button class="btn ghost sm" style="margin-top: 16px" (click)="close()">Volver</button>
+    </div>
+}

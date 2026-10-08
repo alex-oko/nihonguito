@@ -1,0 +1,56 @@
+<!-- Cabecera: examen y veredicto -->
+@let current = readiness();
+<div class="head">
+    <div class="grow">
+        <span class="k">{{ eyebrow() }}</span>
+        <span class="t">Nivel {{ current.preset.level }} · {{ kindEs(current.preset) }}</span>
+        <span class="small muted"><span class="jp">{{ kindJp(current.preset) }}</span> · {{ lessons(current.preset) }} · sobre 50 puntos</span>
+    </div>
+    <span class="verdict" [attr.data-v]="current.verdict">{{ verdict[current.verdict] }}</span>
+</div>
+
+<!-- Regla de 0 a 50 -->
+<div class="ruler" role="img" [attr.aria-label]="sentence()">
+    <div class="track"><i class="z1"></i><i class="z2"></i><i class="z3"></i></div>
+    @if (current.score !== null) {
+        <div class="fill" [style.width.%]="pct()" [attr.data-v]="current.verdict"></div>
+        <div class="me" [style.left.%]="pct()"><b>Tú: {{ current.score }}</b><i></i></div>
+    }
+</div>
+<div class="ticks small">
+    <span class="t0"><b>0</b></span>
+    <span [style.left.%]="70"><b>{{ pass }}</b></span>
+    <span [style.left.%]="80"><b>{{ ready }}</b></span>
+    <span class="t50"><b>50</b></span>
+    <!-- Las etiquetas cuelgan hacia lados opuestos para no pisarse en pantallas estrechas -->
+    <span class="lab l-pass" [style.left.%]="70">aprueba</span>
+    <span class="lab l-ready" [style.left.%]="80">listo</span>
+</div>
+<p class="sentence">{{ sentence() }}</p>
+
+<!-- Qué subir primero -->
+@if (todo().length) {
+    <div class="todo">
+        @for (check of todo(); track check.label) {
+            <a class="item" [routerLink]="link(check)" [attr.data-t]="check.tone">
+                <span class="ic"><app-icon [name]="icon(check)" [size]="16" /></span>
+                <span class="grow">
+                    <span class="it">{{ check.label }}</span>
+                    <span class="small muted">{{ check.value }}</span>
+                </span>
+                @if (check.tone === 'ok') {
+                    <span class="gain done">listo</span>
+                } @else if (check.gain > 0) {
+                    <span class="gain">+{{ check.gain }} {{ check.gain === 1 ? 'pt' : 'pts' }}</span>
+                }
+            </a>
+        }
+    </div>
+}
+
+<!-- Empezar el examen -->
+@if (showStart()) {
+    <button class="btn block go" (click)="start.emit(current.preset)">
+        <app-icon name="clipboard" [size]="18" />Hacer examen de nivel
+    </button>
+}

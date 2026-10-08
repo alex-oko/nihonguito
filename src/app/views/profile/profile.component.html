@@ -1,0 +1,204 @@
+
+<div class="page">
+    <!-- Cabecera: Musubi, nombre editable y nivel -->
+    <header class="head">
+        <app-musubi class="avatar-m" [size]="60" mood="happy" />
+        <div>
+            <input class="name" placeholder="Tu nombre" [value]="settings().name" (change)="updateSetting('name', $any($event.target).value)" />
+            <div class="small muted">Nivel {{ progressSVC.level() }} · {{ progressSVC.stats().xp }} XP</div>
+        </div>
+    </header>
+
+    <!-- Racha, palabras aprendidas y % de aciertos -->
+    <div class="grid-3">
+        <div class="card st"><b>{{ progressSVC.currentStreak() }}</b><span class="small muted">racha</span></div>
+        <div class="card st"><b>{{ wordsLearned() }}</b><span class="small muted">palabras</span></div>
+        <div class="card st"><b>{{ accuracy() }}%</b><span class="small muted">aciertos</span></div>
+    </div>
+
+    <!-- XP de los últimos 7 días -->
+    <h2 class="section-title">Últimos 7 días</h2>
+    <div class="card week">
+        @for (day of week(); track day.key) {
+            <div class="day">
+                <div class="col"><i [style.height.%]="day.pct" [class.today]="day.today"></i></div>
+                <span class="small muted">{{ day.label }}</span>
+            </div>
+        }
+    </div>
+
+    <!-- Kana dominados -->
+    <div class="grid-2 kana-m">
+        <div class="card">
+            <div class="small muted">Hiragana dominado</div>
+            <b>{{ kanaMastered().hiragana }}/46</b>
+        </div>
+        <div class="card">
+            <div class="small muted">Katakana dominado</div>
+            <b>{{ kanaMastered().katakana }}/46</b>
+        </div>
+    </div>
+
+    <!-- Intereses (Inicio enlaza aquí con #intereses) -->
+    <h2 class="section-title" id="intereses">Tus intereses</h2>
+    <p class="small muted interests-hint">Elige lo que te gusta: las prácticas te darán más frases sobre esos temas.</p>
+    <div class="interests">
+        @for (interest of interests; track interest.id) {
+            <button class="interest" [class.on]="settings().interests.includes(interest.id)" (click)="toggleInterest(interest.id)" [attr.aria-pressed]="settings().interests.includes(interest.id)">
+                <span class="ig"><app-icon [name]="interest.icon" [size]="18" /></span>
+                <span>{{ interest.label }}</span>
+            </button>
+        }
+    </div>
+
+    <!-- Ajustes: plantilla visual, romaji, escritura, voz, sonido, vibración y meta -->
+    <h2 class="section-title">Ajustes</h2>
+    <div class="theme-grid" aria-label="Plantilla visual">
+        @for (theme of themes; track theme.id) {
+            <button
+                class="theme-card"
+                [class.on]="settings().theme === theme.id"
+                [style.--preview-bg]="theme.colors[0]"
+                [style.--preview-a]="theme.colors[1]"
+                [style.--preview-b]="theme.colors[2]"
+                [style.--preview-c]="theme.colors[3]"
+                (click)="updateSetting('theme', theme.id)"
+            >
+                <span class="theme-preview">
+                    <i></i><i></i><i></i>
+                    @if (settings().theme === theme.id) {
+                        <b class="tick"><app-icon name="check" [size]="16" [stroke]="3" /></b>
+                    }
+                </span>
+                <span class="theme-name">{{ theme.label }}</span>
+                <span class="theme-sub">{{ theme.sub }}</span>
+            </button>
+        }
+    </div>
+    <div class="card list">
+        <label class="list-item">
+            <span class="grow">Mostrar romaji</span>
+            <input type="checkbox" class="switch" [checked]="settings().romaji" (change)="updateSetting('romaji', !settings().romaji)" />
+        </label>
+        <div class="list-item col-item">
+            <div class="full">
+                <div>Escritura japonesa</div>
+                <div class="small muted">Cómo ver las palabras que tienen kanji</div>
+            </div>
+            <div class="chips">
+                @for (option of scriptOptions; track option.id) {
+                    <button class="chip" [class.on]="settings().script === option.id" (click)="updateSetting('script', option.id)">{{ option.label }}</button>
+                }
+            </div>
+            <div class="sample jp">
+                @switch (settings().script) {
+                    @case ('kana') { わたしは かいしゃいんです。 }
+                    @case ('furigana') { <ruby>私<rt>わたし</rt></ruby>は <ruby>会社員<rt>かいしゃいん</rt></ruby>です。 }
+                    @default { 私は 会社員です。 }
+                }
+            </div>
+        </div>
+        <div class="list-item col-item">
+            <div class="row full">
+                <span class="grow">Velocidad de la voz</span>
+                <span class="small muted">{{ settings().rate.toFixed(1) }}×</span>
+                <button class="icon-btn" (click)="testVoice()" aria-label="Probar voz"><app-icon name="volume" [size]="18" /></button>
+            </div>
+            <input type="range" min="0.5" max="1.3" step="0.1" [value]="settings().rate" (input)="updateSetting('rate', +$any($event.target).value)" />
+        </div>
+        <label class="list-item">
+            <span class="grow"><b>Sonidos</b><small class="audio-sub">Interruptor maestro</small></span>
+            <input type="checkbox" class="switch" [checked]="settings().sound" (change)="updateSetting('sound', !settings().sound)" />
+        </label>
+        <label class="list-item">
+            <span class="grow">Vibración</span>
+            <input type="checkbox" class="switch" [checked]="settings().vibration" (change)="updateSetting('vibration', !settings().vibration)" />
+        </label>
+        <div class="list-item">
+            <span class="grow">Meta diaria</span>
+            <div class="chips">
+                @for (goal of goals; track goal) {
+                    <button class="chip" [class.on]="settings().dailyGoal === goal" (click)="updateSetting('dailyGoal', goal)">{{ goal }}</button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio sin conexión, o aviso si el dispositivo no tiene voz japonesa -->
+    @if (speechSVC.hasRecordings()) {
+        <h2 class="section-title">Audio sin conexión</h2>
+        <div class="card install small">
+            <p>La app trae {{ speechSVC.recordingKeys().length }} audios grabados. Se guardan mientras los escuchas; descárgalos todos para practicar sin internet.</p>
+            @if (audioDownload(); as download) {
+                <div class="bar ok"><i [style.width.%]="(download.done / download.total) * 100"></i></div>
+                <p class="muted">{{ download.done === download.total ? '¡Listo! Todos los audios están guardados.' : 'Descargando ' + download.done + ' de ' + download.total + '…' }}</p>
+            } @else {
+                <button class="btn soft block" (click)="downloadAudio()">Descargar todos los audios (~{{ audioMb() }} MB)</button>
+            }
+        </div>
+    } @else if (!speechSVC.canSpeak || !speechSVC.hasJapaneseVoice()) {
+        <div class="card warn small">
+            <app-icon name="volume" [size]="18" />
+            <span>
+                Tu dispositivo no tiene voz japonesa. En Android: Ajustes → Idioma → Texto a voz → instala «Japonés». En iPhone: Ajustes →
+                Accesibilidad → Contenido leído → Voces → Japonés.
+            </span>
+        </div>
+    }
+
+    <!-- Instalar la PWA -->
+    <h2 class="section-title">Instalar en tu teléfono</h2>
+    <div class="card install small">
+        @if (installPrompt()) {
+            <button class="btn accent block" (click)="install()">Instalar app</button>
+        }
+        <p><b>Android (Chrome):</b> menú ⋮ → «Instalar aplicación» o «Añadir a pantalla de inicio».</p>
+        <p><b>iPhone (Safari):</b> botón Compartir → «Añadir a pantalla de inicio».</p>
+        <p class="muted">Después funciona sin internet.</p>
+    </div>
+
+    <!-- Versión y búsqueda de actualizaciones (UpdateService) -->
+    <h2 class="section-title">Versión de la app</h2>
+    <div class="card install small update">
+        <div class="row">
+            <div class="grow">
+                <b>Nihonguito v{{ updateSVC.version }}</b>
+                <div class="muted">Compilada el {{ updateSVC.built }}</div>
+            </div>
+            @if (updateSVC.state() === 'ready') {
+                <span class="badge accent">Nueva</span>
+            }
+        </div>
+        <button
+            class="btn block"
+            [class.accent]="updateSVC.state() === 'ready'"
+            [class.soft]="updateSVC.state() !== 'ready'"
+            [disabled]="updateSVC.state() === 'checking' || updateSVC.state() === 'installing'"
+            (click)="updateSVC.check()"
+        >
+            <app-icon name="refresh" [size]="18" />
+            @switch (updateSVC.state()) {
+                @case ('checking') { Buscando… }
+                @case ('installing') { Actualizando… }
+                @case ('ready') { Instalar nueva versión }
+                @default { Buscar actualización }
+            }
+        </button>
+        @switch (updateSVC.state()) {
+            @case ('latest') { <p class="muted">Ya tienes la última versión.</p> }
+            @case ('ready') { <p class="muted">Hay una versión nueva descargada. Pulsa el botón para reiniciar la app con ella.</p> }
+            @case ('error') { <p class="muted">No se pudo comprobar. Revisa tu conexión a internet.</p> }
+            @case ('unavailable') { <p class="muted">Modo desarrollo: el botón solo recarga la página.</p> }
+        }
+    </div>
+
+    <!-- Borrar progreso y créditos -->
+    <h2 class="section-title">Datos</h2>
+    <button class="btn ghost block danger" (click)="reset()"><app-icon name="trash" [size]="18" />Borrar todo mi progreso</button>
+    <div class="brand"><img src="logo.svg" alt="" width="56" height="56" /><b>Nihonguito</b></div>
+    <p class="small muted center credits">25 lecciones con contenido original sobre la vida diaria. Hecho para practicar a diario. 頑張って！</p>
+    @if (speechSVC.credits().length) {
+        <p class="small muted center">Voces: {{ speechSVC.credits().join(' · ') }}</p>
+    }
+    <p class="small muted center version">v{{ updateSVC.version }}</p>
+</div>

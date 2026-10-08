@@ -1,0 +1,1095 @@
+{
+ "id": 8,
+ "title": "¿Qué tal la vida en Tokio?",
+ "titleJp": "東京の 生活は どうですか",
+ "summary": "El Sr. Mori le pregunta a Lucía qué tal su nuevo departamento y la vida en Tokio. Por la noche, Kenta la lleva por primera vez al café del Sr. Tanaka.",
+ "vocab": [
+  {
+   "id": "L08-001",
+   "kana": "ハンサム[な]",
+   "es": "guapo (hombre)",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-002",
+   "kana": "きれい[な]",
+   "es": "bonito; limpio",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-003",
+   "kana": "しずか[な]",
+   "kanji": "静か[な]",
+   "es": "tranquilo, silencioso",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-004",
+   "kana": "にぎやか[な]",
+   "es": "animado, con mucha gente",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-005",
+   "kana": "ゆうめい[な]",
+   "kanji": "有名[な]",
+   "es": "famoso",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-006",
+   "kana": "しんせつ[な]",
+   "kanji": "親切[な]",
+   "es": "amable",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-007",
+   "kana": "げんき[な]",
+   "kanji": "元気[な]",
+   "es": "sano, con energía",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-008",
+   "kana": "ひま[な]",
+   "kanji": "暇[な]",
+   "es": "libre, desocupado",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-009",
+   "kana": "べんり[な]",
+   "kanji": "便利[な]",
+   "es": "práctico, cómodo",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-010",
+   "kana": "すてき[な]",
+   "es": "precioso, encantador",
+   "type": "na-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-011",
+   "kana": "おおきい",
+   "kanji": "大きい",
+   "es": "grande",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-012",
+   "kana": "ちいさい",
+   "kanji": "小さい",
+   "es": "pequeño",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-013",
+   "kana": "あたらしい",
+   "kanji": "新しい",
+   "es": "nuevo",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-014",
+   "kana": "ふるい",
+   "kanji": "古い",
+   "es": "viejo (cosas)",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-015",
+   "kana": "いい（よい）",
+   "es": "bueno",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-016",
+   "kana": "わるい",
+   "kanji": "悪い",
+   "es": "malo",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-017",
+   "kana": "あつい",
+   "kanji": "暑い、熱い",
+   "es": "caluroso; caliente",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-018",
+   "kana": "さむい",
+   "kanji": "寒い",
+   "es": "frío (clima)",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-019",
+   "kana": "つめたい",
+   "kanji": "冷たい",
+   "es": "frío (al tacto)",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-020",
+   "kana": "むずかしい",
+   "kanji": "難しい",
+   "es": "difícil",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-021",
+   "kana": "やさしい",
+   "kanji": "易しい",
+   "es": "fácil",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-022",
+   "kana": "たかい",
+   "kanji": "高い",
+   "es": "caro; alto",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-023",
+   "kana": "やすい",
+   "kanji": "安い",
+   "es": "barato",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-024",
+   "kana": "ひくい",
+   "kanji": "低い",
+   "es": "bajo (altura)",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-025",
+   "kana": "おもしろい",
+   "es": "interesante, divertido",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-026",
+   "kana": "おいしい",
+   "es": "rico, sabroso",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-027",
+   "kana": "いそがしい",
+   "kanji": "忙しい",
+   "es": "ocupado",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-028",
+   "kana": "たのしい",
+   "kanji": "楽しい",
+   "es": "agradable, divertido",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-029",
+   "kana": "しろい",
+   "kanji": "白い",
+   "es": "blanco",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-030",
+   "kana": "くろい",
+   "kanji": "黒い",
+   "es": "negro",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-031",
+   "kana": "あかい",
+   "kanji": "赤い",
+   "es": "rojo",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-032",
+   "kana": "あおい",
+   "kanji": "青い",
+   "es": "azul",
+   "type": "i-adj",
+   "lesson": 8
+  },
+  {
+   "id": "L08-033",
+   "kana": "さくら",
+   "kanji": "桜",
+   "es": "cerezo, flor de cerezo",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-034",
+   "kana": "やま",
+   "kanji": "山",
+   "es": "montaña",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-035",
+   "kana": "まち",
+   "kanji": "町",
+   "es": "pueblo, ciudad pequeña",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-036",
+   "kana": "たべもの",
+   "kanji": "食べ物",
+   "es": "comida",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-037",
+   "kana": "くるま",
+   "kanji": "車",
+   "es": "coche",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-038",
+   "kana": "ところ",
+   "kanji": "所",
+   "es": "lugar",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-039",
+   "kana": "りょう",
+   "kanji": "寮",
+   "es": "residencia (estudiantes)",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-040",
+   "kana": "べんきょう",
+   "kanji": "勉強",
+   "es": "estudio",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-041",
+   "kana": "せいかつ",
+   "kanji": "生活",
+   "es": "vida diaria",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-042",
+   "kana": "[お]しごと",
+   "kanji": "[お]仕事",
+   "es": "trabajo",
+   "type": "noun",
+   "lesson": 8
+  },
+  {
+   "id": "L08-043",
+   "kana": "どう",
+   "es": "cómo, qué tal",
+   "type": "adv",
+   "lesson": 8
+  },
+  {
+   "id": "L08-044",
+   "kana": "どんな ～",
+   "es": "qué tipo de ～",
+   "type": "other",
+   "lesson": 8
+  },
+  {
+   "id": "L08-045",
+   "kana": "どれ",
+   "es": "cuál (de varios)",
+   "type": "pron",
+   "lesson": 8
+  },
+  {
+   "id": "L08-046",
+   "kana": "とても",
+   "es": "muy",
+   "type": "adv",
+   "lesson": 8
+  },
+  {
+   "id": "L08-047",
+   "kana": "あまり",
+   "es": "no muy (con negativo)",
+   "type": "adv",
+   "lesson": 8
+  },
+  {
+   "id": "L08-048",
+   "kana": "そして",
+   "es": "y además (entre frases)",
+   "type": "other",
+   "lesson": 8
+  },
+  {
+   "id": "L08-049",
+   "kana": "～が、～",
+   "es": "～, pero ～",
+   "type": "other",
+   "lesson": 8
+  },
+  {
+   "id": "L08-050",
+   "kana": "おげんきですか。",
+   "kanji": "お元気ですか。",
+   "es": "¿Cómo está?",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-051",
+   "kana": "そうですね。",
+   "es": "Pues… / Veamos…",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-052",
+   "kana": "にほんの せいかつに なれましたか。",
+   "kanji": "日本の 生活に 慣れましたか。",
+   "es": "¿Ya te acostumbraste a Japón?",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-053",
+   "kana": "[～、] もう いっぱい いかがですか。",
+   "kanji": "[～、] もう 一杯 いかがですか。",
+   "es": "¿Otra taza (de ～)?",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-054",
+   "kana": "いいえ、けっこうです。",
+   "es": "No, gracias.",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-055",
+   "kana": "もう ～です[ね]。",
+   "es": "Ya son ～, ¿eh?",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-056",
+   "kana": "そろそろ しつれいします。",
+   "kanji": "そろそろ 失礼します。",
+   "es": "Ya me tengo que ir.",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-057",
+   "kana": "また いらっしゃって ください。",
+   "es": "Vuelva cuando quiera.",
+   "type": "expr",
+   "lesson": 8
+  },
+  {
+   "id": "L08-058",
+   "kana": "ふじさん",
+   "kanji": "富士山",
+   "es": "Monte Fuji",
+   "type": "name",
+   "lesson": 8
+  },
+  {
+   "id": "L08-059",
+   "kana": "びわこ",
+   "kanji": "琵琶湖",
+   "es": "Lago Biwa",
+   "type": "name",
+   "lesson": 8
+  },
+  {
+   "id": "L08-060",
+   "kana": "シャンハイ",
+   "es": "Shanghái",
+   "type": "name",
+   "lesson": 8
+  },
+  {
+   "id": "L08-061",
+   "kana": "とうきょうタワー",
+   "kanji": "東京タワー",
+   "es": "Torre de Tokio",
+   "type": "name",
+   "lesson": 8
+  },
+  {
+   "id": "L08-062",
+   "kana": "きんかくじ",
+   "kanji": "金閣寺",
+   "es": "Templo Kinkakuji",
+   "type": "name",
+   "lesson": 8
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "東京は にぎやかです。",
+   "es": "Tokio es muy animado."
+  },
+  {
+   "jp": "この コーヒーは おいしいです。",
+   "es": "Este café está rico."
+  },
+  {
+   "jp": "ここは 静かな 町です。",
+   "es": "Este es un barrio tranquilo."
+  },
+  {
+   "jp": "富士山は 高い 山です。",
+   "es": "El monte Fuji es una montaña alta."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "東京は どうですか。",
+   "qes": "¿Qué tal Tokio?",
+   "ajp": "にぎやかですが、ちょっと 高いです。",
+   "aes": "Es animado, pero un poco caro."
+  },
+  {
+   "qjp": "ルシアさんの 部屋は 大きいですか。",
+   "qes": "Lucía, ¿tu departamento es grande?",
+   "ajp": "いいえ、大きくないです。小さいですが、新しいです。",
+   "aes": "No, no es grande. Es pequeño, pero nuevo."
+  },
+  {
+   "qjp": "カフェ「こもれび」は 静かですか。",
+   "qes": "¿El café Komorebi es tranquilo?",
+   "ajp": "はい、とても 静かです。",
+   "aes": "Sí, muy tranquilo."
+  },
+  {
+   "qjp": "日本語の 勉強は どうですか。",
+   "qes": "¿Qué tal el estudio del japonés?",
+   "ajp": "難しいですが、おもしろいです。",
+   "aes": "Es difícil, pero interesante."
+  },
+  {
+   "qjp": "京都は どんな 町ですか。",
+   "qes": "¿Cómo es Kioto?",
+   "ajp": "古い 町です。",
+   "aes": "Es una ciudad antigua."
+  },
+  {
+   "qjp": "お仕事は どうですか。",
+   "qes": "¿Qué tal el trabajo?",
+   "ajp": "忙しいですが、楽しいです。",
+   "aes": "Hay mucho que hacer, pero es divertido."
+  },
+  {
+   "qjp": "ルシアさんの 傘は どれですか。",
+   "qes": "¿Cuál es el paraguas de Lucía?",
+   "ajp": "あの 赤い 傘です。",
+   "aes": "Aquel paraguas rojo."
+  },
+  {
+   "qjp": "きょうは 寒いですか。",
+   "qes": "¿Hace frío hoy?",
+   "ajp": "いいえ、あまり 寒くないです。",
+   "aes": "No, no hace mucho frío."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Dos tipos de adjetivos: い y な",
+   "explain": "En japonés hay dos familias de adjetivos. Los adjetivos い terminan en い (たかい, おおきい). Los adjetivos な aparecen en el diccionario con [な] (しずか[な], きれい[な]). Cada familia cambia de forma de manera distinta, así que al aprender un adjetivo aprende también a qué familia pertenece. Ojo: きれい y ゆうめい terminan en い, pero son adjetivos な.",
+   "examples": [
+    {
+     "jp": "新しい、古い、忙しい",
+     "es": "adjetivos い: nuevo, viejo, ocupado"
+    },
+    {
+     "jp": "静か、便利、きれい",
+     "es": "adjetivos な: tranquilo, práctico, bonito"
+    }
+   ]
+  },
+  {
+   "title": "N は adj です — describir algo",
+   "explain": "Para decir cómo es algo: N は + adjetivo + です. Con adjetivos い se pone el adjetivo tal cual + です (たかいです). Con adjetivos な se quita el な (しずかです, no しずかなです). El です solo le da cortesía a la frase.",
+   "examples": [
+    {
+     "jp": "たなかさんは 親切です。",
+     "es": "El Sr. Tanaka es amable."
+    },
+    {
+     "jp": "この ケーキは おいしいです。",
+     "es": "Este pastel está rico."
+    }
+   ]
+  },
+  {
+   "title": "La forma negativa de los adjetivos",
+   "explain": "Adjetivos な: igual que con sustantivos, adj + じゃ ありません (しずかじゃ ありません). Adjetivos い: quita la い final y añade くないです (たかい → たかくないです). Excepción muy importante: いい → よくないです. Error típico: decir たかいじゃ ありません; con adjetivos い nunca se usa じゃ ありません.",
+   "examples": [
+    {
+     "jp": "わたしの 部屋は 静かじゃ ありません。",
+     "es": "Mi cuarto no es tranquilo."
+    },
+    {
+     "jp": "この 店は 高くないです。",
+     "es": "Esta tienda no es cara."
+    }
+   ]
+  },
+  {
+   "title": "Preguntas con adjetivos — repite el adjetivo",
+   "explain": "Se pregunta añadiendo か al final, como siempre. Al responder, repite el adjetivo: はい、さむいです / いいえ、さむくないです. Error típico: responder はい、そうです o いいえ、そうじゃ ありません; con adjetivos eso no se usa.",
+   "examples": [
+    {
+     "jp": "東京は 暑いですか。…はい、暑いです。",
+     "es": "¿Hace calor en Tokio? …Sí, hace calor."
+    },
+    {
+     "jp": "この カメラは いいですか。…いいえ、よくないです。",
+     "es": "¿Esta cámara es buena? …No, no es buena."
+    }
+   ]
+  },
+  {
+   "title": "adj + N — el adjetivo va delante",
+   "explain": "Al contrario que en español ('montaña alta'), en japonés el adjetivo va siempre antes del sustantivo: たかい やま. Los adjetivos い se unen directamente; los adjetivos な recuperan su な: しずかな まち. Error típico: olvidar el な (しずか まち).",
+   "examples": [
+    {
+     "jp": "カフェ「こもれび」は 静かな 店です。",
+     "es": "El café Komorebi es un lugar tranquilo."
+    },
+    {
+     "jp": "ひかり大学は 大きい 大学です。",
+     "es": "La Universidad Hikari es una universidad grande."
+    }
+   ]
+  },
+  {
+   "title": "とても / あまり — 'muy' y 'no muy'",
+   "explain": "Se colocan delante del adjetivo. とても = 'muy' y va con frases afirmativas. あまり = 'no muy / no tanto' y solo va con frases negativas. Error típico: decir あまり たかいです; あまり siempre necesita el verbo o adjetivo en negativo.",
+   "examples": [
+    {
+     "jp": "たなかさんの コーヒーは とても おいしいです。",
+     "es": "El café del Sr. Tanaka es muy rico."
+    },
+    {
+     "jp": "わたしの 町は あまり にぎやかじゃ ありません。",
+     "es": "Mi barrio no es muy animado."
+    }
+   ]
+  },
+  {
+   "title": "N は どうですか — '¿qué tal…?'",
+   "explain": "Sirve para pedir la opinión o impresión de alguien sobre algo que ha vivido, visitado o conocido: un lugar, una comida, el trabajo. Es como '¿Qué tal…?' en español. Se responde normalmente con un adjetivo.",
+   "examples": [
+    {
+     "jp": "新しい 部屋は どうですか。…きれいです。",
+     "es": "¿Qué tal el departamento nuevo? …Está bonito."
+    }
+   ]
+  },
+  {
+   "title": "N1 は どんな N2 ですか — '¿qué tipo de…?'",
+   "explain": "どんな significa 'qué clase de' y siempre va pegado delante de un sustantivo. Sirve para pedir una descripción. La respuesta suele ser adjetivo + sustantivo.",
+   "examples": [
+    {
+     "jp": "なかむらさんは どんな 人ですか。…親切な 人です。",
+     "es": "¿Cómo es Yui? …Es una persona amable."
+    }
+   ]
+  },
+  {
+   "title": "Frase1 が、frase2 — 'pero'",
+   "explain": "が después de una frase completa significa 'pero' y une dos frases que contrastan. Se pone al final de la primera frase, después de です o ます. Cuidado: esta が es distinta de la partícula が de sujeto que verás más adelante.",
+   "examples": [
+    {
+     "jp": "わたしの 部屋は 小さいですが、便利です。",
+     "es": "Mi departamento es pequeño, pero práctico."
+    }
+   ]
+  },
+  {
+   "title": "どれ — '¿cuál?' entre varias cosas",
+   "explain": "どれ se usa para elegir uno entre tres o más objetos concretos que se pueden ver o señalar. Es como 'cuál' en español. Se contesta con これ/それ/あれ o con この/その/あの + sustantivo.",
+   "examples": [
+    {
+     "jp": "ルシアさんの かばんは どれですか。…あの 黒い かばんです。",
+     "es": "¿Cuál es la bolsa de Lucía? …Aquella bolsa negra."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "日本の 生活に 慣れましたか。",
+   "es": "¿Ya te acostumbraste a la vida en Japón?"
+  },
+  {
+   "jp": "コーヒー、もう 一杯 いかがですか。",
+   "es": "¿Otra taza de café?"
+  },
+  {
+   "jp": "いいえ、けっこうです。",
+   "es": "No, gracias."
+  },
+  {
+   "jp": "もう 9時ですね。そろそろ 失礼します。",
+   "es": "Ya son las nueve. Ya me tengo que ir."
+  },
+  {
+   "jp": "また いらっしゃって ください。",
+   "es": "Vuelve cuando quieras."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L08-c1",
+   "lesson": 8,
+   "title": "Un departamento pequeño",
+   "tags": [
+    "trabajo"
+   ],
+   "situation": "En la oficina, el Sr. Mori le pregunta a Lucía qué tal su nuevo departamento y la vida en Tokio.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "ルシアさん、日本の 生活に 慣れましたか。",
+     "es": "Lucía, ¿ya te acostumbraste a la vida en Japón?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい。毎日 とても 楽しいです。",
+     "es": "Sí. Todos los días son muy divertidos."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "新しい 部屋は どうですか。",
+     "es": "¿Qué tal tu nuevo departamento?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "小さいですが、とても 便利です。",
+     "es": "Es pequeño, pero muy práctico."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "そうですか。どんな 町ですか。",
+     "es": "¿Ah, sí? ¿Y cómo es el barrio?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "静かな 町です。とても いい 所ですよ。",
+     "es": "Es un barrio tranquilo. Es un lugar muy agradable."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "東京は どうですか。",
+     "es": "¿Y qué tal Tokio?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "とても にぎやかですが、ちょっと 高いです。",
+     "es": "Es muy animado, pero un poco caro."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "お仕事は どうですか。",
+     "es": "¿Y el trabajo?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "忙しいですが、とても おもしろいです。",
+     "es": "Hay mucho que hacer, pero es muy interesante."
+    }
+   ]
+  },
+  {
+   "id": "L08-c2",
+   "lesson": 8,
+   "title": "Primera visita a Komorebi",
+   "tags": [
+    "comida"
+   ],
+   "situation": "Por la noche, Kenta lleva a Lucía al café Komorebi, donde trabaja, y le presenta al Sr. Tanaka, el dueño.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "たなかさん、こちらは ルシアさんです。",
+     "es": "Sr. Tanaka, le presento a Lucía."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "初めまして。どうぞ よろしく お願いします。",
+     "es": "Mucho gusto. Encantada."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "いらっしゃい。こもれびの コーヒーです。どうぞ。",
+     "es": "Bienvenida. Este es el café de Komorebi. Pruébalo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "いただきます。とても おいしいですね。",
+     "es": "Gracias. ¡Está muy rico!"
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "ありがとう。この 店は どうですか。",
+     "es": "Gracias. ¿Qué te parece el local?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "静かな いい 店ですね。",
+     "es": "Es un lugar tranquilo y muy agradable."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "コーヒー、もう 一杯 いかがですか。",
+     "es": "¿Otra taza de café?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "いいえ、けっこうです。",
+     "es": "No, gracias."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、もう 9時ですね。そろそろ 失礼します。",
+     "es": "Ay, ya son las nueve. Ya me tengo que ir."
+    },
+    {
+     "who": "B",
+     "name": "たなか",
+     "jp": "そうですか。また いらっしゃって ください。",
+     "es": "¿Ah, sí? Vuelve cuando quieras."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Colores (sustantivo / adjetivo い)",
+   "items": [
+    {
+     "kana": "しろ / しろい",
+     "kanji": "白 / 白い",
+     "es": "blanco"
+    },
+    {
+     "kana": "くろ / くろい",
+     "kanji": "黒 / 黒い",
+     "es": "negro"
+    },
+    {
+     "kana": "あか / あかい",
+     "kanji": "赤 / 赤い",
+     "es": "rojo"
+    },
+    {
+     "kana": "あお / あおい",
+     "kanji": "青 / 青い",
+     "es": "azul"
+    },
+    {
+     "kana": "みどり",
+     "kanji": "緑",
+     "es": "verde (sin adjetivo い)"
+    },
+    {
+     "kana": "むらさき",
+     "kanji": "紫",
+     "es": "morado (sin adjetivo い)"
+    },
+    {
+     "kana": "きいろ / きいろい",
+     "kanji": "黄色 / 黄色い",
+     "es": "amarillo"
+    },
+    {
+     "kana": "ちゃいろ / ちゃいろい",
+     "kanji": "茶色 / 茶色い",
+     "es": "marrón"
+    },
+    {
+     "kana": "ピンク",
+     "kanji": "",
+     "es": "rosa"
+    },
+    {
+     "kana": "オレンジ",
+     "kanji": "",
+     "es": "naranja"
+    },
+    {
+     "kana": "グレー",
+     "kanji": "",
+     "es": "gris"
+    },
+    {
+     "kana": "ベージュ",
+     "kanji": "",
+     "es": "beige"
+    }
+   ]
+  },
+  {
+   "topic": "Sabores",
+   "items": [
+    {
+     "kana": "あまい",
+     "kanji": "甘い",
+     "es": "dulce"
+    },
+    {
+     "kana": "からい",
+     "kanji": "辛い",
+     "es": "picante"
+    },
+    {
+     "kana": "にがい",
+     "kanji": "苦い",
+     "es": "amargo"
+    },
+    {
+     "kana": "しおからい",
+     "kanji": "塩辛い",
+     "es": "salado"
+    },
+    {
+     "kana": "すっぱい",
+     "kanji": "酸っぱい",
+     "es": "ácido, agrio"
+    },
+    {
+     "kana": "こい",
+     "kanji": "濃い",
+     "es": "fuerte, concentrado"
+    },
+    {
+     "kana": "うすい",
+     "kanji": "薄い",
+     "es": "suave, aguado"
+    }
+   ]
+  },
+  {
+   "topic": "Estaciones",
+   "items": [
+    {
+     "kana": "はる",
+     "kanji": "春",
+     "es": "primavera"
+    },
+    {
+     "kana": "なつ",
+     "kanji": "夏",
+     "es": "verano"
+    },
+    {
+     "kana": "あき",
+     "kanji": "秋",
+     "es": "otoño"
+    },
+    {
+     "kana": "ふゆ",
+     "kanji": "冬",
+     "es": "invierno"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "Los departamentos para una persona en Tokio suelen ser pequeños: unos 20 metros cuadrados con una cocinita y un baño compacto es lo normal. A cambio, casi siempre hay una estación de tren a pocos minutos a pie.",
+  "Las cafeterías de barrio de toda la vida (きっさてん) son lugares tranquilos donde el dueño conoce a sus clientes habituales. Muchas preparan el café taza por taza y sirven un desayuno sencillo por la mañana."
+ ],
+ "extras": [
+  {
+   "jp": "京都は きれいな 町です。",
+   "es": "Kioto es una ciudad bonita.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "北海道は 寒いですが、きれいです。",
+   "es": "Hokkaido es frío, pero bonito.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "日本の 食べ物は とても おいしいです。",
+   "es": "La comida japonesa es muy rica.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "この ラーメンは 安いですが、おいしいです。",
+   "es": "Este ramen es barato, pero rico.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "わたしの 仕事は 忙しいですが、楽しいです。",
+   "es": "Mi trabajo es muy ocupado, pero divertido.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "新しい パソコンは とても 便利です。",
+   "es": "La computadora nueva es muy práctica.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "日本語は 難しいですが、おもしろいです。",
+   "es": "El japonés es difícil, pero interesante.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "ひらがなは あまり 難しくないです。",
+   "es": "El hiragana no es muy difícil.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "日本の アニメは とても おもしろいです。",
+   "es": "El anime japonés es muy entretenido.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "どんな アニメを 見ますか。…古い アニメを 見ます。",
+   "es": "¿Qué tipo de anime ves? …Veo anime antiguo.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "この ゲームは 難しいですが、楽しいです。",
+   "es": "Este videojuego es difícil, pero divertido.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "新しい ゲームは 高いです。",
+   "es": "Los videojuegos nuevos son caros.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "テニスは 楽しい スポーツです。",
+   "es": "El tenis es un deporte divertido.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "この ジムは 安いですが、あまり きれいじゃ ありません。",
+   "es": "Este gimnasio es barato, pero no muy limpio.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "なかむらさんの ピアノは とても すてきです。",
+   "es": "Yui toca el piano de maravilla.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "この うたは 古いですが、すてきです。",
+   "es": "Esta canción es vieja, pero preciosa.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

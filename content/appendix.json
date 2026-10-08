@@ -1,0 +1,4202 @@
+{
+ "grammar": [
+  {
+   "title": "Repaso: は",
+   "explain": "Marca el tema: 'en cuanto a…, …' (L1). También sirve para contrastar una cosa con otra ('esto sí, aquello no') y para destacar tiempo o lugar como tema.",
+   "examples": [
+    {
+     "jp": "わたしは ルシアです。",
+     "es": "Yo soy Lucía."
+    },
+    {
+     "jp": "ビールは のみますが、ワインは のみません。",
+     "es": "Cerveza sí bebo, pero vino no."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: も",
+   "explain": "Significa 'también' (L1) o, con números, 'nada menos que' (なんかいも = muchas veces). Con interrogativo + verbo negativo significa 'nada / nadie / ningún sitio' (どこも, 何も, だれも).",
+   "examples": [
+    {
+     "jp": "アンナさんも ドイツ人です。",
+     "es": "Anna también es alemana."
+    },
+    {
+     "jp": "きのうは どこも 行きませんでした。",
+     "es": "Ayer no fui a ningún sitio."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: の",
+   "explain": "Une dos sustantivos como 'de' en español (あおば商事の ルシアさん, 日本の 車). Indica de quién es algo (ゆいさんの かばん) y puede sustituir a un sustantivo ya mencionado: 大きいの = 'uno grande'.",
+   "examples": [
+    {
+     "jp": "これは コンピューターの 本です。",
+     "es": "Este es un libro de informática."
+    },
+    {
+     "jp": "もっと 大きいのは ありませんか。",
+     "es": "¿No tiene uno más grande?"
+    }
+   ]
+  },
+  {
+   "title": "Repaso: を",
+   "explain": "Marca el objeto directo (L6). También el lugar del que sales (うちを 出ます, 電車を おります) y el lugar por donde pasas con verbos de movimiento (L23: みちを わたります).",
+   "examples": [
+    {
+     "jp": "ジュースを のみます。",
+     "es": "Bebo zumo."
+    },
+    {
+     "jp": "この 道を まっすぐ 行くと、駅が あります。",
+     "es": "Siguiendo recto esta calle, está la estación."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: が",
+   "explain": "Marca el sujeto en muchos casos: con すき, じょうず, わかります, あります, ほしい, いります, できます (L9-L20); con あります/います para decir qué hay; para describir lo que ves (あめが ふって います); en comparaciones con pregunta (どちらが はやいですか); dentro de frases subordinadas (たら, とき, ても, frases que describen un sustantivo); y cuando la pregunta es 'quién/qué' o das información nueva (L24).",
+   "examples": [
+    {
+     "jp": "イタリアりょうりが すきです。",
+     "es": "Me gusta la comida italiana."
+    },
+    {
+     "jp": "だれが はらいましたか。",
+     "es": "¿Quién pagó?"
+    }
+   ]
+  },
+  {
+   "title": "Repaso: に",
+   "explain": "Tiene muchos usos: hora o fecha exacta (6時に), persona que recibe (ゆいさんに あげます) o de quien recibes (もらいます), lugar donde algo está (つくえの 上に), lugar al que entras o te subes (きっさてんに 入ります, 電車に のります), frecuencia (1週間に 1回), propósito (べんきょうしに 来ました) y resultado de un cambio (10さいに なりました).",
+   "examples": [
+    {
+     "jp": "あさ 6時に おきます。",
+     "es": "Me levanto a las seis."
+    },
+    {
+     "jp": "きょうとへ はなみに 行きます。",
+     "es": "Voy a Kioto a ver los cerezos."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: へ",
+   "explain": "Indica la dirección o el destino de un movimiento: 'hacia'. Se pronuncia 'e'. Muchas veces se puede cambiar por に.",
+   "examples": [
+    {
+     "jp": "あの しんごうを 右へ まがって ください。",
+     "es": "Gire a la derecha en ese semáforo."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: で",
+   "explain": "Indica el medio o instrumento (タクシーで, 日本語で), el lugar donde ocurre una acción (駅で かいます) y el ámbito en una comparación (1年で 夏が いちばん すきです).",
+   "examples": [
+    {
+     "jp": "タクシーで うちへ かえります。",
+     "es": "Vuelvo a casa en taxi."
+    },
+    {
+     "jp": "駅で しんぶんを かいます。",
+     "es": "Compro el periódico en la estación."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: と",
+   "explain": "'Con' alguien (かぞくと 来ました); 'y' en una lista completa; en comparaciones (サッカーと やきゅうと どちらが…); y para citar lo que piensas o dices (～と おもいます, ～と いいます, L21).",
+   "examples": [
+    {
+     "jp": "あした あめが ふると おもいます。",
+     "es": "Creo que mañana lloverá."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: や, から, まで, までに, より, でも",
+   "explain": "や = 'y… entre otras cosas' (lista incompleta). から/まで = 'desde/hasta'. までに = 'antes de, como tarde' (plazo). より = 'más que' en comparaciones. でも después de un sustantivo = 'o algo así', para sugerir con suavidad.",
+   "examples": [
+    {
+     "jp": "土曜日までに 本を かえさなければ なりません。",
+     "es": "Tengo que devolver el libro antes del sábado."
+    },
+    {
+     "jp": "ビールでも のみませんか。",
+     "es": "¿Tomamos una cerveza o algo?"
+    }
+   ]
+  },
+  {
+   "title": "Repaso: か, ね, よ (final de frase)",
+   "explain": "か convierte la frase en pregunta (y entre sustantivos significa 'o'). ね busca que el otro esté de acuerdo o confirma algo ('¿verdad?'). よ comunica algo que el otro no sabe ('te lo digo yo').",
+   "examples": [
+    {
+     "jp": "たいへんですね。",
+     "es": "Qué duro, ¿eh?"
+    },
+    {
+     "jp": "つぎの ふつうですよ。",
+     "es": "Es el próximo tren local, ¿eh?"
+    }
+   ]
+  },
+  {
+   "title": "Repaso: usos de la forma ます (raíz)",
+   "explain": "Con la raíz del verbo (sin ます) se forman: ～ませんか (invitar), ～ましょう (proponer), ～たいです (querer), ～に 行きます (ir a hacer algo), ～ましょうか (ofrecerse).",
+   "examples": [
+    {
+     "jp": "カメラを かいたいです。",
+     "es": "Quiero comprar una cámara."
+    },
+    {
+     "jp": "タクシーを よびましょうか。",
+     "es": "¿Le llamo un taxi?"
+    }
+   ]
+  },
+  {
+   "title": "Repaso: usos de la forma て",
+   "explain": "～て ください (pedir), ～て います (acción en curso o estado), ～ても いいです (permiso), ～ては いけません (prohibición), ～てから (después de), ～て、～て (encadenar acciones), ～て あげます/もらいます/くれます (favores, L24) y ～ても (aunque, L25).",
+   "examples": [
+    {
+     "jp": "しごとが おわってから、およぎに 行きます。",
+     "es": "Después de terminar el trabajo, iré a nadar."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: usos de la forma ない",
+   "explain": "～ないで ください (por favor, no…), ～なければ なりません (tener que), ～なくても いいです (no hace falta).",
+   "examples": [
+    {
+     "jp": "くつを ぬがなくても いいです。",
+     "es": "No hace falta quitarse los zapatos."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: usos de la forma diccionario y la forma た",
+   "explain": "Diccionario: ～ことが できます (saber/poder), ～ことです (mi afición es…), ～まえに (antes de), ～と (si haces X, pasa Y). Forma た: ～ことが あります (haber hecho alguna vez), ～たり、～たり します (hacer cosas como…), ～たら (si / cuando).",
+   "examples": [
+    {
+     "jp": "ねる まえに、本を 読みます。",
+     "es": "Antes de dormir, leo."
+    },
+    {
+     "jp": "ほっかいどうへ 行った ことが あります。",
+     "es": "He estado en Hokkaido."
+    }
+   ]
+  },
+  {
+   "title": "Repaso: usos de la forma simple",
+   "explain": "La forma simple aparece antes de ～と おもいます (creo que), ～と いいます (dice que), ～でしょう (¿verdad? / probablemente), delante de un sustantivo para describirlo (L22) y antes de とき (L23).",
+   "examples": [
+    {
+     "jp": "これは わたしが 作った ケーキです。",
+     "es": "Este es el pastel que hice yo."
+    },
+    {
+     "jp": "あした パーティーに 行くでしょう?",
+     "es": "Mañana vas a la fiesta, ¿no?"
+    }
+   ]
+  },
+  {
+   "title": "Palabras para unir frases (resumen)",
+   "explain": "El libro repasa las formas de enlazar ideas. Para sumar: そして (y además), ～て/～で/～くて (unir verbos, adjetivos o sustantivos), ～たり～たり (hacer cosas como…). Para ordenar en el tiempo: ～てから (después de), ～まえに (antes de), ～とき (cuando). Para dar razones: から (porque). Para contrastar: ～が, ～けど, でも, しかし (pero). Para condiciones: ～と (siempre que), ～たら (si/cuando), ～ても (aunque). Error típico: usar そして para unir dos adjetivos; con adjetivos es más natural ～くて o ～で.",
+   "examples": [
+    {
+     "jp": "この へやは ひろくて、あかるいです。",
+     "es": "Esta habitación es amplia y luminosa."
+    },
+    {
+     "jp": "じかんが ありませんから、タクシーで 行きます。",
+     "es": "Como no tengo tiempo, voy en taxi."
+    }
+   ]
+  },
+  {
+   "title": "Los tres grupos de verbos",
+   "explain": "Todos los verbos japoneses (menos dos) siguen reglas fijas. Grupo I: antes de ます hay un sonido en \"i\" (かきます, のみます). Grupo II: casi siempre antes de ます hay un sonido en \"e\" (たべます), y algunos en \"i\" que hay que memorizar (みます, おきます, かります). Grupo III: します (y todo lo que termina en します, como べんきょうします) y きます (venir). Saber el grupo es como saber si un verbo español es -ar, -er o -ir.",
+   "examples": [
+    {
+     "jp": "かきます → かく（I）",
+     "es": "escribir"
+    },
+    {
+     "jp": "たべます → たべる（II）",
+     "es": "comer"
+    }
+   ]
+  },
+  {
+   "title": "Cómo sacar la forma て",
+   "explain": "Grupo II: quita ます y pon て (たべて). Grupo III: して y きて. Grupo I depende de la sílaba antes de ます: い/ち/り → って (かって, まって, かえって); み/び/に → んで (のんで, あそんで); き → いて (かいて); ぎ → いで (およいで); し → して (はなして). Excepción famosa: いきます → いって, no いいて. La forma た se hace igual, cambiando て→た y で→だ.",
+   "examples": [
+    {
+     "jp": "よみます → よんで → よんだ",
+     "es": "leer"
+    },
+    {
+     "jp": "いきます → いって → いった",
+     "es": "ir (excepción)"
+    }
+   ]
+  },
+  {
+   "title": "Forma diccionario y forma ない",
+   "explain": "Grupo I: cambia la \"i\" de antes de ます por \"u\" para la forma diccionario (かきます → かく) y por \"a\" + ない para la negativa (かかない). Ojo: si la sílaba es い, la negativa usa わ (かいます → かわない). Grupo II: quita ます y añade る o ない (たべる, たべない). Grupo III: する/しない y くる/こない. あります es especial: su negativa es simplemente ない.",
+   "examples": [
+    {
+     "jp": "のみます → のむ → のまない",
+     "es": "beber"
+    },
+    {
+     "jp": "きます → くる → こない",
+     "es": "venir"
+    }
+   ]
+  },
+  {
+   "title": "Números: cambios de sonido",
+   "explain": "Al juntar números con otras palabras, a veces cambia el sonido: 300 es さんびゃく, 600 ろっぴゃく, 800 はっぴゃく; 3.000 es さんぜん y 8.000 はっせん. Los números grandes se cuentan de 10.000 en 10.000 (まん), no de mil en mil como en español: 100.000 = じゅうまん (10 × 10.000). El 4 y el 7 tienen dos lecturas (よん/し, なな/しち); en la mayoría de palabras se prefieren よん y なな.",
+   "examples": [
+    {
+     "jp": "さんびゃく えん",
+     "es": "300 yenes"
+    },
+    {
+     "jp": "じゅうまん えん",
+     "es": "100.000 yenes"
+    }
+   ]
+  },
+  {
+   "title": "Contadores: número + sufijo",
+   "explain": "En japonés no basta con decir el número: se añade un sufijo según el tipo de cosa (personas 人, papeles 枚, máquinas 台, libros 冊, botellas 本…). Con 1, 6, 8 y 10 suele doblarse la consonante (いっぽん, ろっぽん, はっぽん, じゅっぽん) y con 3 a veces se suaviza (さんぼん, さんがい). Para cosas sin contador especial se usa ひとつ, ふたつ… Error típico: decir いちにん; para personas es ひとり y ふたり.",
+   "examples": [
+    {
+     "jp": "ビールを 2本 ください。（にほん）",
+     "es": "Dos cervezas (botellas), por favor."
+    },
+    {
+     "jp": "きょうだいが ふたり います。",
+     "es": "Tengo dos hermanos."
+    }
+   ]
+  },
+  {
+   "title": "Fechas: días del mes especiales",
+   "explain": "Del día 1 al 10, más el 14, 20 y 24, los días tienen lecturas propias (ついたち, ふつか, みっか, よっか, いつか, むいか, なのか, ようか, ここのか, とおか, じゅうよっか, はつか, にじゅうよっか). Los demás son número + にち. Los meses son número + がつ, pero abril es しがつ, julio しちがつ y septiembre くがつ. Las palabras ふつか a とおか también sirven para decir cuántos días dura algo; el día 1 como duración es いちにち.",
+   "examples": [
+    {
+     "jp": "たんじょうびは しがつ ようかです。",
+     "es": "Mi cumpleaños es el 8 de abril."
+    },
+    {
+     "jp": "みっか やすみます。",
+     "es": "Descanso tres días."
+    }
+   ]
+  }
+ ],
+ "tables": [
+  {
+   "topic": "Adverbios de cantidad y grado",
+   "items": [
+    {
+     "kana": "みんな",
+     "kanji": "",
+     "es": "todos"
+    },
+    {
+     "kana": "ぜんぶ",
+     "kanji": "",
+     "es": "todo"
+    },
+    {
+     "kana": "たくさん",
+     "kanji": "",
+     "es": "mucho"
+    },
+    {
+     "kana": "とても",
+     "kanji": "",
+     "es": "muy"
+    },
+    {
+     "kana": "よく",
+     "kanji": "",
+     "es": "bien"
+    },
+    {
+     "kana": "だいたい",
+     "kanji": "",
+     "es": "casi todo"
+    },
+    {
+     "kana": "すこし",
+     "kanji": "",
+     "es": "un poco"
+    },
+    {
+     "kana": "ちょっと",
+     "kanji": "",
+     "es": "un poquito"
+    },
+    {
+     "kana": "もう すこし",
+     "kanji": "",
+     "es": "un poco más"
+    },
+    {
+     "kana": "もう",
+     "kanji": "",
+     "es": "otro más"
+    },
+    {
+     "kana": "ずっと",
+     "kanji": "",
+     "es": "mucho más"
+    },
+    {
+     "kana": "いちばん",
+     "kanji": "",
+     "es": "el más"
+    }
+   ]
+  },
+  {
+   "topic": "Adverbios de frecuencia",
+   "items": [
+    {
+     "kana": "いつも",
+     "kanji": "",
+     "es": "siempre"
+    },
+    {
+     "kana": "ときどき",
+     "kanji": "",
+     "es": "a veces"
+    },
+    {
+     "kana": "よく",
+     "kanji": "",
+     "es": "a menudo"
+    },
+    {
+     "kana": "はじめて",
+     "kanji": "",
+     "es": "por primera vez"
+    },
+    {
+     "kana": "また",
+     "kanji": "",
+     "es": "otra vez"
+    },
+    {
+     "kana": "もう いちど",
+     "kanji": "",
+     "es": "una vez más"
+    }
+   ]
+  },
+  {
+   "topic": "Adverbios de tiempo",
+   "items": [
+    {
+     "kana": "いま",
+     "kanji": "",
+     "es": "ahora"
+    },
+    {
+     "kana": "すぐ",
+     "kanji": "",
+     "es": "enseguida"
+    },
+    {
+     "kana": "もう",
+     "kanji": "",
+     "es": "ya"
+    },
+    {
+     "kana": "まだ",
+     "kanji": "",
+     "es": "todavía (no)"
+    },
+    {
+     "kana": "これから",
+     "kanji": "",
+     "es": "a partir de ahora"
+    },
+    {
+     "kana": "そろそろ",
+     "kanji": "",
+     "es": "ya va siendo hora"
+    },
+    {
+     "kana": "あとで",
+     "kanji": "",
+     "es": "luego, más tarde"
+    },
+    {
+     "kana": "まず",
+     "kanji": "",
+     "es": "primero"
+    },
+    {
+     "kana": "つぎに",
+     "kanji": "",
+     "es": "a continuación"
+    },
+    {
+     "kana": "さいきん",
+     "kanji": "",
+     "es": "últimamente"
+    }
+   ]
+  },
+  {
+   "topic": "Adverbios de modo",
+   "items": [
+    {
+     "kana": "じぶんで",
+     "kanji": "",
+     "es": "uno mismo"
+    },
+    {
+     "kana": "ひとりで",
+     "kanji": "",
+     "es": "solo"
+    },
+    {
+     "kana": "みんなで",
+     "kanji": "",
+     "es": "todos juntos"
+    },
+    {
+     "kana": "いっしょに",
+     "kanji": "",
+     "es": "juntos"
+    },
+    {
+     "kana": "べつべつに",
+     "kanji": "",
+     "es": "por separado"
+    },
+    {
+     "kana": "ぜんぶで",
+     "kanji": "",
+     "es": "en total"
+    },
+    {
+     "kana": "ほかに",
+     "kanji": "",
+     "es": "además"
+    },
+    {
+     "kana": "はやく",
+     "kanji": "",
+     "es": "temprano, rápido"
+    },
+    {
+     "kana": "ゆっくり",
+     "kanji": "",
+     "es": "despacio, con calma"
+    },
+    {
+     "kana": "だんだん",
+     "kanji": "",
+     "es": "poco a poco"
+    },
+    {
+     "kana": "まっすぐ",
+     "kanji": "",
+     "es": "recto"
+    }
+   ]
+  },
+  {
+   "topic": "Adverbios con negación o suposición",
+   "items": [
+    {
+     "kana": "あまり",
+     "kanji": "",
+     "es": "no mucho (+ negativo)"
+    },
+    {
+     "kana": "ぜんぜん",
+     "kanji": "",
+     "es": "nada (+ negativo)"
+    },
+    {
+     "kana": "なかなか",
+     "kanji": "",
+     "es": "no fácilmente (+ negativo)"
+    },
+    {
+     "kana": "いちども",
+     "kanji": "",
+     "es": "ni una vez (+ negativo)"
+    },
+    {
+     "kana": "ぜひ",
+     "kanji": "",
+     "es": "sin falta"
+    },
+    {
+     "kana": "たぶん",
+     "kanji": "",
+     "es": "probablemente"
+    },
+    {
+     "kana": "きっと",
+     "kanji": "",
+     "es": "seguro que"
+    },
+    {
+     "kana": "もし",
+     "kanji": "",
+     "es": "si (suposición)"
+    },
+    {
+     "kana": "いくら",
+     "kanji": "",
+     "es": "por más que"
+    }
+   ]
+  },
+  {
+   "topic": "Otros adverbios",
+   "items": [
+    {
+     "kana": "とくに",
+     "kanji": "",
+     "es": "especialmente"
+    },
+    {
+     "kana": "じつは",
+     "kanji": "",
+     "es": "en realidad"
+    },
+    {
+     "kana": "ほんとうに",
+     "kanji": "",
+     "es": "de verdad"
+    },
+    {
+     "kana": "もちろん",
+     "kanji": "",
+     "es": "por supuesto"
+    }
+   ]
+  },
+  {
+   "topic": "Números 0–90",
+   "items": [
+    {
+     "kana": "ゼロ、れい",
+     "es": "0"
+    },
+    {
+     "kana": "いち",
+     "es": "1"
+    },
+    {
+     "kana": "に",
+     "es": "2"
+    },
+    {
+     "kana": "さん",
+     "es": "3"
+    },
+    {
+     "kana": "よん、し",
+     "es": "4"
+    },
+    {
+     "kana": "ご",
+     "es": "5"
+    },
+    {
+     "kana": "ろく",
+     "es": "6"
+    },
+    {
+     "kana": "なな、しち",
+     "es": "7"
+    },
+    {
+     "kana": "はち",
+     "es": "8"
+    },
+    {
+     "kana": "きゅう、く",
+     "es": "9"
+    },
+    {
+     "kana": "じゅう",
+     "es": "10"
+    },
+    {
+     "kana": "じゅういち",
+     "es": "11"
+    },
+    {
+     "kana": "じゅうに",
+     "es": "12"
+    },
+    {
+     "kana": "じゅうさん",
+     "es": "13"
+    },
+    {
+     "kana": "じゅうよん、じゅうし",
+     "es": "14"
+    },
+    {
+     "kana": "じゅうご",
+     "es": "15"
+    },
+    {
+     "kana": "じゅうろく",
+     "es": "16"
+    },
+    {
+     "kana": "じゅうなな、じゅうしち",
+     "es": "17"
+    },
+    {
+     "kana": "じゅうはち",
+     "es": "18"
+    },
+    {
+     "kana": "じゅうきゅう、じゅうく",
+     "es": "19"
+    },
+    {
+     "kana": "にじゅう",
+     "es": "20"
+    },
+    {
+     "kana": "さんじゅう",
+     "es": "30"
+    },
+    {
+     "kana": "よんじゅう",
+     "es": "40"
+    },
+    {
+     "kana": "ごじゅう",
+     "es": "50"
+    },
+    {
+     "kana": "ろくじゅう",
+     "es": "60"
+    },
+    {
+     "kana": "ななじゅう、しちじゅう",
+     "es": "70"
+    },
+    {
+     "kana": "はちじゅう",
+     "es": "80"
+    },
+    {
+     "kana": "きゅうじゅう",
+     "es": "90"
+    }
+   ]
+  },
+  {
+   "topic": "Centenas",
+   "items": [
+    {
+     "kana": "ひゃく",
+     "es": "100"
+    },
+    {
+     "kana": "にひゃく",
+     "es": "200"
+    },
+    {
+     "kana": "さんびゃく",
+     "es": "300"
+    },
+    {
+     "kana": "よんひゃく",
+     "es": "400"
+    },
+    {
+     "kana": "ごひゃく",
+     "es": "500"
+    },
+    {
+     "kana": "ろっぴゃく",
+     "es": "600"
+    },
+    {
+     "kana": "ななひゃく",
+     "es": "700"
+    },
+    {
+     "kana": "はっぴゃく",
+     "es": "800"
+    },
+    {
+     "kana": "きゅうひゃく",
+     "es": "900"
+    }
+   ]
+  },
+  {
+   "topic": "Millares",
+   "items": [
+    {
+     "kana": "せん",
+     "es": "1.000"
+    },
+    {
+     "kana": "にせん",
+     "es": "2.000"
+    },
+    {
+     "kana": "さんぜん",
+     "es": "3.000"
+    },
+    {
+     "kana": "よんせん",
+     "es": "4.000"
+    },
+    {
+     "kana": "ごせん",
+     "es": "5.000"
+    },
+    {
+     "kana": "ろくせん",
+     "es": "6.000"
+    },
+    {
+     "kana": "ななせん",
+     "es": "7.000"
+    },
+    {
+     "kana": "はっせん",
+     "es": "8.000"
+    },
+    {
+     "kana": "きゅうせん",
+     "es": "9.000"
+    }
+   ]
+  },
+  {
+   "topic": "Números grandes, decimales y fracciones",
+   "items": [
+    {
+     "kana": "いちまん",
+     "es": "10.000"
+    },
+    {
+     "kana": "じゅうまん",
+     "es": "100.000"
+    },
+    {
+     "kana": "ひゃくまん",
+     "es": "1.000.000"
+    },
+    {
+     "kana": "せんまん",
+     "es": "10.000.000"
+    },
+    {
+     "kana": "いちおく",
+     "es": "100.000.000"
+    },
+    {
+     "kana": "じゅうななてんご",
+     "es": "17,5"
+    },
+    {
+     "kana": "れいてんはちさん",
+     "es": "0,83"
+    },
+    {
+     "kana": "にぶんの いち",
+     "es": "1/2"
+    },
+    {
+     "kana": "よんぶんの さん",
+     "es": "3/4"
+    }
+   ]
+  },
+  {
+   "topic": "Días: ayer, hoy, mañana…",
+   "items": [
+    {
+     "kana": "おととい",
+     "es": "anteayer"
+    },
+    {
+     "kana": "おとといの あさ",
+     "es": "anteayer por la mañana"
+    },
+    {
+     "kana": "おとといの ばん",
+     "es": "anteayer por la noche"
+    },
+    {
+     "kana": "きのう",
+     "es": "ayer"
+    },
+    {
+     "kana": "きのうの あさ",
+     "es": "ayer por la mañana"
+    },
+    {
+     "kana": "きのうの ばん",
+     "es": "anoche"
+    },
+    {
+     "kana": "きょう",
+     "es": "hoy"
+    },
+    {
+     "kana": "けさ",
+     "es": "esta mañana"
+    },
+    {
+     "kana": "こんばん",
+     "es": "esta noche"
+    },
+    {
+     "kana": "あした",
+     "es": "mañana"
+    },
+    {
+     "kana": "あしたの あさ",
+     "es": "mañana por la mañana"
+    },
+    {
+     "kana": "あしたの ばん",
+     "es": "mañana por la noche"
+    },
+    {
+     "kana": "あさって",
+     "es": "pasado mañana"
+    },
+    {
+     "kana": "あさっての あさ",
+     "es": "pasado mañana por la mañana"
+    },
+    {
+     "kana": "あさっての ばん",
+     "es": "pasado mañana por la noche"
+    },
+    {
+     "kana": "まいにち",
+     "es": "cada día"
+    },
+    {
+     "kana": "まいあさ",
+     "es": "cada mañana"
+    },
+    {
+     "kana": "まいばん",
+     "es": "cada noche"
+    }
+   ]
+  },
+  {
+   "topic": "Semanas, meses y años",
+   "items": [
+    {
+     "kana": "せんせんしゅう（にしゅうかんまえ）",
+     "es": "hace dos semanas"
+    },
+    {
+     "kana": "せんしゅう",
+     "es": "la semana pasada"
+    },
+    {
+     "kana": "こんしゅう",
+     "es": "esta semana"
+    },
+    {
+     "kana": "らいしゅう",
+     "es": "la semana que viene"
+    },
+    {
+     "kana": "さらいしゅう",
+     "es": "dentro de dos semanas"
+    },
+    {
+     "kana": "まいしゅう",
+     "es": "cada semana"
+    },
+    {
+     "kana": "せんせんげつ（にかげつまえ）",
+     "es": "hace dos meses"
+    },
+    {
+     "kana": "せんげつ",
+     "es": "el mes pasado"
+    },
+    {
+     "kana": "こんげつ",
+     "es": "este mes"
+    },
+    {
+     "kana": "らいげつ",
+     "es": "el mes que viene"
+    },
+    {
+     "kana": "さらいげつ",
+     "es": "dentro de dos meses"
+    },
+    {
+     "kana": "まいつき",
+     "es": "cada mes"
+    },
+    {
+     "kana": "おととし",
+     "es": "hace dos años"
+    },
+    {
+     "kana": "きょねん",
+     "es": "el año pasado"
+    },
+    {
+     "kana": "ことし",
+     "es": "este año"
+    },
+    {
+     "kana": "らいねん",
+     "es": "el año que viene"
+    },
+    {
+     "kana": "さらいねん",
+     "es": "dentro de dos años"
+    },
+    {
+     "kana": "まいとし、まいねん",
+     "es": "cada año"
+    }
+   ]
+  },
+  {
+   "topic": "La hora（－時）",
+   "items": [
+    {
+     "kana": "いちじ",
+     "kanji": "1時",
+     "es": "las 1"
+    },
+    {
+     "kana": "にじ",
+     "kanji": "2時",
+     "es": "las 2"
+    },
+    {
+     "kana": "さんじ",
+     "kanji": "3時",
+     "es": "las 3"
+    },
+    {
+     "kana": "よじ",
+     "kanji": "4時",
+     "es": "las 4"
+    },
+    {
+     "kana": "ごじ",
+     "kanji": "5時",
+     "es": "las 5"
+    },
+    {
+     "kana": "ろくじ",
+     "kanji": "6時",
+     "es": "las 6"
+    },
+    {
+     "kana": "しちじ",
+     "kanji": "7時",
+     "es": "las 7"
+    },
+    {
+     "kana": "はちじ",
+     "kanji": "8時",
+     "es": "las 8"
+    },
+    {
+     "kana": "くじ",
+     "kanji": "9時",
+     "es": "las 9"
+    },
+    {
+     "kana": "じゅうじ",
+     "kanji": "10時",
+     "es": "las 10"
+    },
+    {
+     "kana": "じゅういちじ",
+     "kanji": "11時",
+     "es": "las 11"
+    },
+    {
+     "kana": "じゅうにじ",
+     "kanji": "12時",
+     "es": "las 12"
+    },
+    {
+     "kana": "なんじ",
+     "kanji": "何時",
+     "es": "¿qué hora?"
+    }
+   ]
+  },
+  {
+   "topic": "Minutos（－分）",
+   "items": [
+    {
+     "kana": "いっぷん",
+     "es": "1 min"
+    },
+    {
+     "kana": "にふん",
+     "es": "2 min"
+    },
+    {
+     "kana": "さんぷん",
+     "es": "3 min"
+    },
+    {
+     "kana": "よんぷん",
+     "es": "4 min"
+    },
+    {
+     "kana": "ごふん",
+     "es": "5 min"
+    },
+    {
+     "kana": "ろっぷん",
+     "es": "6 min"
+    },
+    {
+     "kana": "ななふん、しちふん",
+     "es": "7 min"
+    },
+    {
+     "kana": "はっぷん",
+     "es": "8 min"
+    },
+    {
+     "kana": "きゅうふん",
+     "es": "9 min"
+    },
+    {
+     "kana": "じゅっぷん、じっぷん",
+     "es": "10 min"
+    },
+    {
+     "kana": "じゅうごふん",
+     "es": "15 min"
+    },
+    {
+     "kana": "さんじゅっぷん、さんじっぷん、はん",
+     "es": "30 min (はん = y media)"
+    },
+    {
+     "kana": "なんぷん",
+     "es": "¿cuántos minutos?"
+    }
+   ]
+  },
+  {
+   "topic": "Días de la semana（～曜日）",
+   "items": [
+    {
+     "kana": "にちようび",
+     "es": "domingo"
+    },
+    {
+     "kana": "げつようび",
+     "es": "lunes"
+    },
+    {
+     "kana": "かようび",
+     "es": "martes"
+    },
+    {
+     "kana": "すいようび",
+     "es": "miércoles"
+    },
+    {
+     "kana": "もくようび",
+     "es": "jueves"
+    },
+    {
+     "kana": "きんようび",
+     "es": "viernes"
+    },
+    {
+     "kana": "どようび",
+     "es": "sábado"
+    },
+    {
+     "kana": "なんようび",
+     "es": "¿qué día de la semana?"
+    }
+   ]
+  },
+  {
+   "topic": "Meses（－月）",
+   "items": [
+    {
+     "kana": "いちがつ",
+     "kanji": "1月",
+     "es": "enero"
+    },
+    {
+     "kana": "にがつ",
+     "kanji": "2月",
+     "es": "febrero"
+    },
+    {
+     "kana": "さんがつ",
+     "kanji": "3月",
+     "es": "marzo"
+    },
+    {
+     "kana": "しがつ",
+     "kanji": "4月",
+     "es": "abril"
+    },
+    {
+     "kana": "ごがつ",
+     "kanji": "5月",
+     "es": "mayo"
+    },
+    {
+     "kana": "ろくがつ",
+     "kanji": "6月",
+     "es": "junio"
+    },
+    {
+     "kana": "しちがつ",
+     "kanji": "7月",
+     "es": "julio"
+    },
+    {
+     "kana": "はちがつ",
+     "kanji": "8月",
+     "es": "agosto"
+    },
+    {
+     "kana": "くがつ",
+     "kanji": "9月",
+     "es": "septiembre"
+    },
+    {
+     "kana": "じゅうがつ",
+     "kanji": "10月",
+     "es": "octubre"
+    },
+    {
+     "kana": "じゅういちがつ",
+     "kanji": "11月",
+     "es": "noviembre"
+    },
+    {
+     "kana": "じゅうにがつ",
+     "kanji": "12月",
+     "es": "diciembre"
+    },
+    {
+     "kana": "なんがつ",
+     "kanji": "何月",
+     "es": "¿qué mes?"
+    }
+   ]
+  },
+  {
+   "topic": "Días del mes（－日）",
+   "items": [
+    {
+     "kana": "ついたち",
+     "kanji": "1日",
+     "es": "día 1"
+    },
+    {
+     "kana": "ふつか",
+     "kanji": "2日",
+     "es": "día 2"
+    },
+    {
+     "kana": "みっか",
+     "kanji": "3日",
+     "es": "día 3"
+    },
+    {
+     "kana": "よっか",
+     "kanji": "4日",
+     "es": "día 4"
+    },
+    {
+     "kana": "いつか",
+     "kanji": "5日",
+     "es": "día 5"
+    },
+    {
+     "kana": "むいか",
+     "kanji": "6日",
+     "es": "día 6"
+    },
+    {
+     "kana": "なのか",
+     "kanji": "7日",
+     "es": "día 7"
+    },
+    {
+     "kana": "ようか",
+     "kanji": "8日",
+     "es": "día 8"
+    },
+    {
+     "kana": "ここのか",
+     "kanji": "9日",
+     "es": "día 9"
+    },
+    {
+     "kana": "とおか",
+     "kanji": "10日",
+     "es": "día 10"
+    },
+    {
+     "kana": "じゅういちにち",
+     "kanji": "11日",
+     "es": "día 11"
+    },
+    {
+     "kana": "じゅうににち",
+     "kanji": "12日",
+     "es": "día 12"
+    },
+    {
+     "kana": "じゅうさんにち",
+     "kanji": "13日",
+     "es": "día 13"
+    },
+    {
+     "kana": "じゅうよっか",
+     "kanji": "14日",
+     "es": "día 14"
+    },
+    {
+     "kana": "じゅうごにち",
+     "kanji": "15日",
+     "es": "día 15"
+    },
+    {
+     "kana": "じゅうろくにち",
+     "kanji": "16日",
+     "es": "día 16"
+    },
+    {
+     "kana": "じゅうしちにち",
+     "kanji": "17日",
+     "es": "día 17"
+    },
+    {
+     "kana": "じゅうはちにち",
+     "kanji": "18日",
+     "es": "día 18"
+    },
+    {
+     "kana": "じゅうくにち",
+     "kanji": "19日",
+     "es": "día 19"
+    },
+    {
+     "kana": "はつか",
+     "kanji": "20日",
+     "es": "día 20"
+    },
+    {
+     "kana": "にじゅういちにち",
+     "kanji": "21日",
+     "es": "día 21"
+    },
+    {
+     "kana": "にじゅうににち",
+     "kanji": "22日",
+     "es": "día 22"
+    },
+    {
+     "kana": "にじゅうさんにち",
+     "kanji": "23日",
+     "es": "día 23"
+    },
+    {
+     "kana": "にじゅうよっか",
+     "kanji": "24日",
+     "es": "día 24"
+    },
+    {
+     "kana": "にじゅうごにち",
+     "kanji": "25日",
+     "es": "día 25"
+    },
+    {
+     "kana": "にじゅうろくにち",
+     "kanji": "26日",
+     "es": "día 26"
+    },
+    {
+     "kana": "にじゅうしちにち",
+     "kanji": "27日",
+     "es": "día 27"
+    },
+    {
+     "kana": "にじゅうはちにち",
+     "kanji": "28日",
+     "es": "día 28"
+    },
+    {
+     "kana": "にじゅうくにち",
+     "kanji": "29日",
+     "es": "día 29"
+    },
+    {
+     "kana": "さんじゅうにち",
+     "kanji": "30日",
+     "es": "día 30"
+    },
+    {
+     "kana": "さんじゅういちにち",
+     "kanji": "31日",
+     "es": "día 31"
+    },
+    {
+     "kana": "なんにち",
+     "kanji": "何日",
+     "es": "¿qué día?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en horas（－時間）",
+   "items": [
+    {
+     "kana": "いちじかん",
+     "es": "1 h"
+    },
+    {
+     "kana": "にじかん",
+     "es": "2 h"
+    },
+    {
+     "kana": "さんじかん",
+     "es": "3 h"
+    },
+    {
+     "kana": "よじかん",
+     "es": "4 h"
+    },
+    {
+     "kana": "ごじかん",
+     "es": "5 h"
+    },
+    {
+     "kana": "ろくじかん",
+     "es": "6 h"
+    },
+    {
+     "kana": "ななじかん、しちじかん",
+     "es": "7 h"
+    },
+    {
+     "kana": "はちじかん",
+     "es": "8 h"
+    },
+    {
+     "kana": "くじかん",
+     "es": "9 h"
+    },
+    {
+     "kana": "じゅうじかん",
+     "es": "10 h"
+    },
+    {
+     "kana": "なんじかん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en minutos（－分）",
+   "items": [
+    {
+     "kana": "いっぷん",
+     "es": "1 min"
+    },
+    {
+     "kana": "にふん",
+     "es": "2 min"
+    },
+    {
+     "kana": "さんぷん",
+     "es": "3 min"
+    },
+    {
+     "kana": "よんぷん",
+     "es": "4 min"
+    },
+    {
+     "kana": "ごふん",
+     "es": "5 min"
+    },
+    {
+     "kana": "ろっぷん",
+     "es": "6 min"
+    },
+    {
+     "kana": "ななふん、しちふん",
+     "es": "7 min"
+    },
+    {
+     "kana": "はっぷん",
+     "es": "8 min"
+    },
+    {
+     "kana": "きゅうふん",
+     "es": "9 min"
+    },
+    {
+     "kana": "じゅっぷん、じっぷん",
+     "es": "10 min"
+    },
+    {
+     "kana": "なんぷん",
+     "es": "¿cuántos minutos?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en días（－日）",
+   "items": [
+    {
+     "kana": "いちにち",
+     "es": "1 día(s)"
+    },
+    {
+     "kana": "ふつか",
+     "es": "2 día(s)"
+    },
+    {
+     "kana": "みっか",
+     "es": "3 día(s)"
+    },
+    {
+     "kana": "よっか",
+     "es": "4 día(s)"
+    },
+    {
+     "kana": "いつか",
+     "es": "5 día(s)"
+    },
+    {
+     "kana": "むいか",
+     "es": "6 día(s)"
+    },
+    {
+     "kana": "なのか",
+     "es": "7 día(s)"
+    },
+    {
+     "kana": "ようか",
+     "es": "8 día(s)"
+    },
+    {
+     "kana": "ここのか",
+     "es": "9 día(s)"
+    },
+    {
+     "kana": "とおか",
+     "es": "10 día(s)"
+    },
+    {
+     "kana": "なんにち",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en semanas（－週間）",
+   "items": [
+    {
+     "kana": "いっしゅうかん",
+     "es": "1 semana(s)"
+    },
+    {
+     "kana": "にしゅうかん",
+     "es": "2 semana(s)"
+    },
+    {
+     "kana": "さんしゅうかん",
+     "es": "3 semana(s)"
+    },
+    {
+     "kana": "よんしゅうかん",
+     "es": "4 semana(s)"
+    },
+    {
+     "kana": "ごしゅうかん",
+     "es": "5 semana(s)"
+    },
+    {
+     "kana": "ろくしゅうかん",
+     "es": "6 semana(s)"
+    },
+    {
+     "kana": "ななしゅうかん、しちしゅうかん",
+     "es": "7 semana(s)"
+    },
+    {
+     "kana": "はっしゅうかん",
+     "es": "8 semana(s)"
+    },
+    {
+     "kana": "きゅうしゅうかん",
+     "es": "9 semana(s)"
+    },
+    {
+     "kana": "じゅっしゅうかん、じっしゅうかん",
+     "es": "10 semana(s)"
+    },
+    {
+     "kana": "なんしゅうかん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en meses（－か月）",
+   "items": [
+    {
+     "kana": "いっかげつ",
+     "es": "1 mes(es)"
+    },
+    {
+     "kana": "にかげつ",
+     "es": "2 mes(es)"
+    },
+    {
+     "kana": "さんかげつ",
+     "es": "3 mes(es)"
+    },
+    {
+     "kana": "よんかげつ",
+     "es": "4 mes(es)"
+    },
+    {
+     "kana": "ごかげつ",
+     "es": "5 mes(es)"
+    },
+    {
+     "kana": "ろっかげつ、はんとし",
+     "es": "6 mes(es)"
+    },
+    {
+     "kana": "ななかげつ、しちかげつ",
+     "es": "7 mes(es)"
+    },
+    {
+     "kana": "はちかげつ、はっかげつ",
+     "es": "8 mes(es)"
+    },
+    {
+     "kana": "きゅうかげつ",
+     "es": "9 mes(es)"
+    },
+    {
+     "kana": "じゅっかげつ、じっかげつ",
+     "es": "10 mes(es)"
+    },
+    {
+     "kana": "なんかげつ",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Duración en años（－年）",
+   "items": [
+    {
+     "kana": "いちねん",
+     "es": "1 año(s)"
+    },
+    {
+     "kana": "にねん",
+     "es": "2 año(s)"
+    },
+    {
+     "kana": "さんねん",
+     "es": "3 año(s)"
+    },
+    {
+     "kana": "よねん",
+     "es": "4 año(s)"
+    },
+    {
+     "kana": "ごねん",
+     "es": "5 año(s)"
+    },
+    {
+     "kana": "ろくねん",
+     "es": "6 año(s)"
+    },
+    {
+     "kana": "ななねん、しちねん",
+     "es": "7 año(s)"
+    },
+    {
+     "kana": "はちねん",
+     "es": "8 año(s)"
+    },
+    {
+     "kana": "きゅうねん",
+     "es": "9 año(s)"
+    },
+    {
+     "kana": "じゅうねん",
+     "es": "10 año(s)"
+    },
+    {
+     "kana": "なんねん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Contar cosas en general (つ)",
+   "items": [
+    {
+     "kana": "ひとつ",
+     "es": "1 cosa(s)"
+    },
+    {
+     "kana": "ふたつ",
+     "es": "2 cosa(s)"
+    },
+    {
+     "kana": "みっつ",
+     "es": "3 cosa(s)"
+    },
+    {
+     "kana": "よっつ",
+     "es": "4 cosa(s)"
+    },
+    {
+     "kana": "いつつ",
+     "es": "5 cosa(s)"
+    },
+    {
+     "kana": "むっつ",
+     "es": "6 cosa(s)"
+    },
+    {
+     "kana": "ななつ",
+     "es": "7 cosa(s)"
+    },
+    {
+     "kana": "やっつ",
+     "es": "8 cosa(s)"
+    },
+    {
+     "kana": "ここのつ",
+     "es": "9 cosa(s)"
+    },
+    {
+     "kana": "とお",
+     "es": "10 cosa(s)"
+    },
+    {
+     "kana": "いくつ",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Personas（－人）",
+   "items": [
+    {
+     "kana": "ひとり",
+     "es": "1 persona(s)"
+    },
+    {
+     "kana": "ふたり",
+     "es": "2 persona(s)"
+    },
+    {
+     "kana": "さんにん",
+     "es": "3 persona(s)"
+    },
+    {
+     "kana": "よにん",
+     "es": "4 persona(s)"
+    },
+    {
+     "kana": "ごにん",
+     "es": "5 persona(s)"
+    },
+    {
+     "kana": "ろくにん",
+     "es": "6 persona(s)"
+    },
+    {
+     "kana": "ななにん、しちにん",
+     "es": "7 persona(s)"
+    },
+    {
+     "kana": "はちにん",
+     "es": "8 persona(s)"
+    },
+    {
+     "kana": "きゅうにん",
+     "es": "9 persona(s)"
+    },
+    {
+     "kana": "じゅうにん",
+     "es": "10 persona(s)"
+    },
+    {
+     "kana": "なんにん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Orden, número（－番）",
+   "items": [
+    {
+     "kana": "いちばん",
+     "es": "1 º (número de orden)"
+    },
+    {
+     "kana": "にばん",
+     "es": "2 º (número de orden)"
+    },
+    {
+     "kana": "さんばん",
+     "es": "3 º (número de orden)"
+    },
+    {
+     "kana": "よんばん",
+     "es": "4 º (número de orden)"
+    },
+    {
+     "kana": "ごばん",
+     "es": "5 º (número de orden)"
+    },
+    {
+     "kana": "ろくばん",
+     "es": "6 º (número de orden)"
+    },
+    {
+     "kana": "ななばん",
+     "es": "7 º (número de orden)"
+    },
+    {
+     "kana": "はちばん",
+     "es": "8 º (número de orden)"
+    },
+    {
+     "kana": "きゅうばん",
+     "es": "9 º (número de orden)"
+    },
+    {
+     "kana": "じゅうばん",
+     "es": "10 º (número de orden)"
+    },
+    {
+     "kana": "なんばん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Cosas finas y planas: papel, camisas（－枚）",
+   "items": [
+    {
+     "kana": "いちまい",
+     "es": "1 hoja(s)"
+    },
+    {
+     "kana": "にまい",
+     "es": "2 hoja(s)"
+    },
+    {
+     "kana": "さんまい",
+     "es": "3 hoja(s)"
+    },
+    {
+     "kana": "よんまい",
+     "es": "4 hoja(s)"
+    },
+    {
+     "kana": "ごまい",
+     "es": "5 hoja(s)"
+    },
+    {
+     "kana": "ろくまい",
+     "es": "6 hoja(s)"
+    },
+    {
+     "kana": "ななまい",
+     "es": "7 hoja(s)"
+    },
+    {
+     "kana": "はちまい",
+     "es": "8 hoja(s)"
+    },
+    {
+     "kana": "きゅうまい",
+     "es": "9 hoja(s)"
+    },
+    {
+     "kana": "じゅうまい",
+     "es": "10 hoja(s)"
+    },
+    {
+     "kana": "なんまい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Máquinas y vehículos（－台）",
+   "items": [
+    {
+     "kana": "いちだい",
+     "es": "1 aparato(s)"
+    },
+    {
+     "kana": "にだい",
+     "es": "2 aparato(s)"
+    },
+    {
+     "kana": "さんだい",
+     "es": "3 aparato(s)"
+    },
+    {
+     "kana": "よんだい",
+     "es": "4 aparato(s)"
+    },
+    {
+     "kana": "ごだい",
+     "es": "5 aparato(s)"
+    },
+    {
+     "kana": "ろくだい",
+     "es": "6 aparato(s)"
+    },
+    {
+     "kana": "ななだい",
+     "es": "7 aparato(s)"
+    },
+    {
+     "kana": "はちだい",
+     "es": "8 aparato(s)"
+    },
+    {
+     "kana": "きゅうだい",
+     "es": "9 aparato(s)"
+    },
+    {
+     "kana": "じゅうだい",
+     "es": "10 aparato(s)"
+    },
+    {
+     "kana": "なんだい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Edad（－歳）",
+   "items": [
+    {
+     "kana": "いっさい",
+     "es": "1 año(s) de edad"
+    },
+    {
+     "kana": "にさい",
+     "es": "2 año(s) de edad"
+    },
+    {
+     "kana": "さんさい",
+     "es": "3 año(s) de edad"
+    },
+    {
+     "kana": "よんさい",
+     "es": "4 año(s) de edad"
+    },
+    {
+     "kana": "ごさい",
+     "es": "5 año(s) de edad"
+    },
+    {
+     "kana": "ろくさい",
+     "es": "6 año(s) de edad"
+    },
+    {
+     "kana": "ななさい",
+     "es": "7 año(s) de edad"
+    },
+    {
+     "kana": "はっさい",
+     "es": "8 año(s) de edad"
+    },
+    {
+     "kana": "きゅうさい",
+     "es": "9 año(s) de edad"
+    },
+    {
+     "kana": "じゅっさい、じっさい",
+     "es": "10 año(s) de edad"
+    },
+    {
+     "kana": "なんさい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Libros y cuadernos（－冊）",
+   "items": [
+    {
+     "kana": "いっさつ",
+     "es": "1 libro(s)"
+    },
+    {
+     "kana": "にさつ",
+     "es": "2 libro(s)"
+    },
+    {
+     "kana": "さんさつ",
+     "es": "3 libro(s)"
+    },
+    {
+     "kana": "よんさつ",
+     "es": "4 libro(s)"
+    },
+    {
+     "kana": "ごさつ",
+     "es": "5 libro(s)"
+    },
+    {
+     "kana": "ろくさつ",
+     "es": "6 libro(s)"
+    },
+    {
+     "kana": "ななさつ",
+     "es": "7 libro(s)"
+    },
+    {
+     "kana": "はっさつ",
+     "es": "8 libro(s)"
+    },
+    {
+     "kana": "きゅうさつ",
+     "es": "9 libro(s)"
+    },
+    {
+     "kana": "じゅっさつ、じっさつ",
+     "es": "10 libro(s)"
+    },
+    {
+     "kana": "なんさつ",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Ropa（－着）",
+   "items": [
+    {
+     "kana": "いっちゃく",
+     "es": "1 prenda(s)"
+    },
+    {
+     "kana": "にちゃく",
+     "es": "2 prenda(s)"
+    },
+    {
+     "kana": "さんちゃく",
+     "es": "3 prenda(s)"
+    },
+    {
+     "kana": "よんちゃく",
+     "es": "4 prenda(s)"
+    },
+    {
+     "kana": "ごちゃく",
+     "es": "5 prenda(s)"
+    },
+    {
+     "kana": "ろくちゃく",
+     "es": "6 prenda(s)"
+    },
+    {
+     "kana": "ななちゃく",
+     "es": "7 prenda(s)"
+    },
+    {
+     "kana": "はっちゃく",
+     "es": "8 prenda(s)"
+    },
+    {
+     "kana": "きゅうちゃく",
+     "es": "9 prenda(s)"
+    },
+    {
+     "kana": "じゅっちゃく、じっちゃく",
+     "es": "10 prenda(s)"
+    },
+    {
+     "kana": "なんちゃく",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Veces（－回）",
+   "items": [
+    {
+     "kana": "いっかい",
+     "es": "1 vez/veces"
+    },
+    {
+     "kana": "にかい",
+     "es": "2 vez/veces"
+    },
+    {
+     "kana": "さんかい",
+     "es": "3 vez/veces"
+    },
+    {
+     "kana": "よんかい",
+     "es": "4 vez/veces"
+    },
+    {
+     "kana": "ごかい",
+     "es": "5 vez/veces"
+    },
+    {
+     "kana": "ろっかい",
+     "es": "6 vez/veces"
+    },
+    {
+     "kana": "ななかい",
+     "es": "7 vez/veces"
+    },
+    {
+     "kana": "はっかい",
+     "es": "8 vez/veces"
+    },
+    {
+     "kana": "きゅうかい",
+     "es": "9 vez/veces"
+    },
+    {
+     "kana": "じゅっかい、じっかい",
+     "es": "10 vez/veces"
+    },
+    {
+     "kana": "なんかい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Objetos pequeños（－個）",
+   "items": [
+    {
+     "kana": "いっこ",
+     "es": "1 pieza(s)"
+    },
+    {
+     "kana": "にこ",
+     "es": "2 pieza(s)"
+    },
+    {
+     "kana": "さんこ",
+     "es": "3 pieza(s)"
+    },
+    {
+     "kana": "よんこ",
+     "es": "4 pieza(s)"
+    },
+    {
+     "kana": "ごこ",
+     "es": "5 pieza(s)"
+    },
+    {
+     "kana": "ろっこ",
+     "es": "6 pieza(s)"
+    },
+    {
+     "kana": "ななこ",
+     "es": "7 pieza(s)"
+    },
+    {
+     "kana": "はっこ",
+     "es": "8 pieza(s)"
+    },
+    {
+     "kana": "きゅうこ",
+     "es": "9 pieza(s)"
+    },
+    {
+     "kana": "じゅっこ、じっこ",
+     "es": "10 pieza(s)"
+    },
+    {
+     "kana": "なんこ",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Calzado y calcetines（－足）",
+   "items": [
+    {
+     "kana": "いっそく",
+     "es": "1 par(es)"
+    },
+    {
+     "kana": "にそく",
+     "es": "2 par(es)"
+    },
+    {
+     "kana": "さんぞく",
+     "es": "3 par(es)"
+    },
+    {
+     "kana": "よんそく",
+     "es": "4 par(es)"
+    },
+    {
+     "kana": "ごそく",
+     "es": "5 par(es)"
+    },
+    {
+     "kana": "ろくそく",
+     "es": "6 par(es)"
+    },
+    {
+     "kana": "ななそく",
+     "es": "7 par(es)"
+    },
+    {
+     "kana": "はっそく",
+     "es": "8 par(es)"
+    },
+    {
+     "kana": "きゅうそく",
+     "es": "9 par(es)"
+    },
+    {
+     "kana": "じゅっそく、じっそく",
+     "es": "10 par(es)"
+    },
+    {
+     "kana": "なんぞく",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Casas（－軒）",
+   "items": [
+    {
+     "kana": "いっけん",
+     "es": "1 casa(s)"
+    },
+    {
+     "kana": "にけん",
+     "es": "2 casa(s)"
+    },
+    {
+     "kana": "さんげん",
+     "es": "3 casa(s)"
+    },
+    {
+     "kana": "よんけん",
+     "es": "4 casa(s)"
+    },
+    {
+     "kana": "ごけん",
+     "es": "5 casa(s)"
+    },
+    {
+     "kana": "ろっけん",
+     "es": "6 casa(s)"
+    },
+    {
+     "kana": "ななけん",
+     "es": "7 casa(s)"
+    },
+    {
+     "kana": "はっけん",
+     "es": "8 casa(s)"
+    },
+    {
+     "kana": "きゅうけん",
+     "es": "9 casa(s)"
+    },
+    {
+     "kana": "じゅっけん、じっけん",
+     "es": "10 casa(s)"
+    },
+    {
+     "kana": "なんげん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Pisos/plantas de un edificio（－階）",
+   "items": [
+    {
+     "kana": "いっかい",
+     "es": "1 º piso"
+    },
+    {
+     "kana": "にかい",
+     "es": "2 º piso"
+    },
+    {
+     "kana": "さんがい",
+     "es": "3 º piso"
+    },
+    {
+     "kana": "よんかい",
+     "es": "4 º piso"
+    },
+    {
+     "kana": "ごかい",
+     "es": "5 º piso"
+    },
+    {
+     "kana": "ろっかい",
+     "es": "6 º piso"
+    },
+    {
+     "kana": "ななかい",
+     "es": "7 º piso"
+    },
+    {
+     "kana": "はっかい",
+     "es": "8 º piso"
+    },
+    {
+     "kana": "きゅうかい",
+     "es": "9 º piso"
+    },
+    {
+     "kana": "じゅっかい、じっかい",
+     "es": "10 º piso"
+    },
+    {
+     "kana": "なんがい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Cosas largas y finas: lápices, botellas（－本）",
+   "items": [
+    {
+     "kana": "いっぽん",
+     "es": "1 objeto(s) largo(s)"
+    },
+    {
+     "kana": "にほん",
+     "es": "2 objeto(s) largo(s)"
+    },
+    {
+     "kana": "さんぼん",
+     "es": "3 objeto(s) largo(s)"
+    },
+    {
+     "kana": "よんほん",
+     "es": "4 objeto(s) largo(s)"
+    },
+    {
+     "kana": "ごほん",
+     "es": "5 objeto(s) largo(s)"
+    },
+    {
+     "kana": "ろっぽん",
+     "es": "6 objeto(s) largo(s)"
+    },
+    {
+     "kana": "ななほん",
+     "es": "7 objeto(s) largo(s)"
+    },
+    {
+     "kana": "はっぽん",
+     "es": "8 objeto(s) largo(s)"
+    },
+    {
+     "kana": "きゅうほん",
+     "es": "9 objeto(s) largo(s)"
+    },
+    {
+     "kana": "じゅっぽん、じっぽん",
+     "es": "10 objeto(s) largo(s)"
+    },
+    {
+     "kana": "なんぼん",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Vasos, tazas de bebida（－杯）",
+   "items": [
+    {
+     "kana": "いっぱい",
+     "es": "1 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "にはい",
+     "es": "2 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "さんばい",
+     "es": "3 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "よんはい",
+     "es": "4 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "ごはい",
+     "es": "5 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "ろっぱい",
+     "es": "6 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "ななはい",
+     "es": "7 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "はっぱい",
+     "es": "8 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "きゅうはい",
+     "es": "9 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "じゅっぱい、じっぱい",
+     "es": "10 vaso(s)/taza(s)"
+    },
+    {
+     "kana": "なんばい",
+     "es": "¿cuántos?"
+    }
+   ]
+  },
+  {
+   "topic": "Animales pequeños, peces, insectos（－匹）",
+   "items": [
+    {
+     "kana": "いっぴき",
+     "es": "1 animal(es)"
+    },
+    {
+     "kana": "にひき",
+     "es": "2 animal(es)"
+    },
+    {
+     "kana": "さんびき",
+     "es": "3 animal(es)"
+    },
+    {
+     "kana": "よんひき",
+     "es": "4 animal(es)"
+    },
+    {
+     "kana": "ごひき",
+     "es": "5 animal(es)"
+    },
+    {
+     "kana": "ろっぴき",
+     "es": "6 animal(es)"
+    },
+    {
+     "kana": "ななひき",
+     "es": "7 animal(es)"
+    },
+    {
+     "kana": "はっぴき",
+     "es": "8 animal(es)"
+    },
+    {
+     "kana": "きゅうひき",
+     "es": "9 animal(es)"
+    },
+    {
+     "kana": "じゅっぴき、じっぴき",
+     "es": "10 animal(es)"
+    },
+    {
+     "kana": "なんびき",
+     "es": "¿cuántos?"
+    }
+   ]
+  }
+ ],
+ "verbs": [
+  {
+   "masu": "あいます",
+   "kanji": "会います",
+   "es": "ver a, quedar con (amigos)",
+   "dict": "あう",
+   "te": "あって",
+   "nai": "あわない",
+   "ta": "あった",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "あそびます",
+   "kanji": "遊びます",
+   "es": "jugar, divertirse",
+   "dict": "あそぶ",
+   "te": "あそんで",
+   "nai": "あそばない",
+   "ta": "あそんだ",
+   "group": 1,
+   "lesson": 13
+  },
+  {
+   "masu": "あらいます",
+   "kanji": "洗います",
+   "es": "lavar",
+   "dict": "あらう",
+   "te": "あらって",
+   "nai": "あらわない",
+   "ta": "あらった",
+   "group": 1,
+   "lesson": 18
+  },
+  {
+   "masu": "あります",
+   "kanji": "あります",
+   "es": "tener, haber (cosas)",
+   "dict": "ある",
+   "te": "あって",
+   "nai": "ない",
+   "ta": "あった",
+   "group": 1,
+   "lesson": 9
+  },
+  {
+   "masu": "あります",
+   "kanji": "あります",
+   "es": "estar (cosas)",
+   "dict": "ある",
+   "te": "あって",
+   "nai": "ない",
+   "ta": "あった",
+   "group": 1,
+   "lesson": 10
+  },
+  {
+   "masu": "あります",
+   "kanji": "あります",
+   "es": "celebrarse (un evento)",
+   "dict": "ある",
+   "te": "あって",
+   "nai": "ない",
+   "ta": "あった",
+   "group": 1,
+   "lesson": 21
+  },
+  {
+   "masu": "あるきます",
+   "kanji": "歩きます",
+   "es": "caminar (por la calle)",
+   "dict": "あるく",
+   "te": "あるいて",
+   "nai": "あるかない",
+   "ta": "あるいた",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "いいます",
+   "kanji": "言います",
+   "es": "decir",
+   "dict": "いう",
+   "te": "いって",
+   "nai": "いわない",
+   "ta": "いった",
+   "group": 1,
+   "lesson": 21
+  },
+  {
+   "masu": "いきます",
+   "kanji": "行きます",
+   "es": "ir",
+   "dict": "いく",
+   "te": "いって",
+   "nai": "いかない",
+   "ta": "いった",
+   "group": 1,
+   "lesson": 5
+  },
+  {
+   "masu": "いそぎます",
+   "kanji": "急ぎます",
+   "es": "darse prisa",
+   "dict": "いそぐ",
+   "te": "いそいで",
+   "nai": "いそがない",
+   "ta": "いそいだ",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "いります",
+   "kanji": "要ります",
+   "es": "hacer falta, necesitarse",
+   "dict": "いる",
+   "te": "いって",
+   "nai": "いらない",
+   "ta": "いった",
+   "group": 1,
+   "lesson": 20
+  },
+  {
+   "masu": "うごきます",
+   "kanji": "動きます",
+   "es": "moverse, funcionar",
+   "dict": "うごく",
+   "te": "うごいて",
+   "nai": "うごかない",
+   "ta": "うごいた",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "うたいます",
+   "kanji": "歌います",
+   "es": "cantar",
+   "dict": "うたう",
+   "te": "うたって",
+   "nai": "うたわない",
+   "ta": "うたった",
+   "group": 1,
+   "lesson": 18
+  },
+  {
+   "masu": "うります",
+   "kanji": "売ります",
+   "es": "vender",
+   "dict": "うる",
+   "te": "うって",
+   "nai": "うらない",
+   "ta": "うった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "おきます",
+   "kanji": "置きます",
+   "es": "poner, dejar (algo)",
+   "dict": "おく",
+   "te": "おいて",
+   "nai": "おかない",
+   "ta": "おいた",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "おくります",
+   "kanji": "送ります",
+   "es": "enviar",
+   "dict": "おくる",
+   "te": "おくって",
+   "nai": "おくらない",
+   "ta": "おくった",
+   "group": 1,
+   "lesson": 7
+  },
+  {
+   "masu": "おくります",
+   "kanji": "送ります",
+   "es": "acompañar (a alguien)",
+   "dict": "おくる",
+   "te": "おくって",
+   "nai": "おくらない",
+   "ta": "おくった",
+   "group": 1,
+   "lesson": 24
+  },
+  {
+   "masu": "おします",
+   "kanji": "押します",
+   "es": "pulsar, empujar",
+   "dict": "おす",
+   "te": "おして",
+   "nai": "おさない",
+   "ta": "おした",
+   "group": 1,
+   "lesson": 16
+  },
+  {
+   "masu": "おもいます",
+   "kanji": "思います",
+   "es": "pensar, creer",
+   "dict": "おもう",
+   "te": "おもって",
+   "nai": "おもわない",
+   "ta": "おもった",
+   "group": 1,
+   "lesson": 21
+  },
+  {
+   "masu": "おもいだします",
+   "kanji": "思い出します",
+   "es": "recordar",
+   "dict": "おもいだす",
+   "te": "おもいだして",
+   "nai": "おもいださない",
+   "ta": "おもいだした",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "およぎます",
+   "kanji": "泳ぎます",
+   "es": "nadar",
+   "dict": "およぐ",
+   "te": "およいで",
+   "nai": "およがない",
+   "ta": "およいだ",
+   "group": 1,
+   "lesson": 13
+  },
+  {
+   "masu": "おわります",
+   "kanji": "終わります",
+   "es": "terminar",
+   "dict": "おわる",
+   "te": "おわって",
+   "nai": "おわらない",
+   "ta": "おわった",
+   "group": 1,
+   "lesson": 4
+  },
+  {
+   "masu": "かいます",
+   "kanji": "買います",
+   "es": "comprar",
+   "dict": "かう",
+   "te": "かって",
+   "nai": "かわない",
+   "ta": "かった",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "かえします",
+   "kanji": "返します",
+   "es": "devolver",
+   "dict": "かえす",
+   "te": "かえして",
+   "nai": "かえさない",
+   "ta": "かえした",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "かえります",
+   "kanji": "帰ります",
+   "es": "volver (a casa)",
+   "dict": "かえる",
+   "te": "かえって",
+   "nai": "かえらない",
+   "ta": "かえった",
+   "group": 1,
+   "lesson": 5
+  },
+  {
+   "masu": "かかります",
+   "kanji": "かかります",
+   "es": "tardar; costar",
+   "dict": "かかる",
+   "te": "かかって",
+   "nai": "かからない",
+   "ta": "かかった",
+   "group": 1,
+   "lesson": 11
+  },
+  {
+   "masu": "かきます",
+   "kanji": "書きます",
+   "es": "escribir; dibujar",
+   "dict": "かく",
+   "te": "かいて",
+   "nai": "かかない",
+   "ta": "かいた",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "かします",
+   "kanji": "貸します",
+   "es": "prestar",
+   "dict": "かす",
+   "te": "かして",
+   "nai": "かさない",
+   "ta": "かした",
+   "group": 1,
+   "lesson": 7
+  },
+  {
+   "masu": "かちます",
+   "kanji": "勝ちます",
+   "es": "ganar",
+   "dict": "かつ",
+   "te": "かって",
+   "nai": "かたない",
+   "ta": "かった",
+   "group": 1,
+   "lesson": 21
+  },
+  {
+   "masu": "かぶります",
+   "kanji": "かぶります",
+   "es": "ponerse (sombrero)",
+   "dict": "かぶる",
+   "te": "かぶって",
+   "nai": "かぶらない",
+   "ta": "かぶった",
+   "group": 1,
+   "lesson": 22
+  },
+  {
+   "masu": "ききます",
+   "kanji": "聞きます",
+   "es": "oír, escuchar",
+   "dict": "きく",
+   "te": "きいて",
+   "nai": "きかない",
+   "ta": "きいた",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "ききます",
+   "kanji": "聞きます",
+   "es": "preguntar (al profesor)",
+   "dict": "きく",
+   "te": "きいて",
+   "nai": "きかない",
+   "ta": "きいた",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "きります",
+   "kanji": "切ります",
+   "es": "cortar; colgar",
+   "dict": "きる",
+   "te": "きって",
+   "nai": "きらない",
+   "ta": "きった",
+   "group": 1,
+   "lesson": 7
+  },
+  {
+   "masu": "けします",
+   "kanji": "消します",
+   "es": "apagar; borrar",
+   "dict": "けす",
+   "te": "けして",
+   "nai": "けさない",
+   "ta": "けした",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "さわります",
+   "kanji": "触ります",
+   "es": "tocar (la puerta)",
+   "dict": "さわる",
+   "te": "さわって",
+   "nai": "さわらない",
+   "ta": "さわった",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "しります",
+   "kanji": "知ります",
+   "es": "llegar a saber",
+   "dict": "しる",
+   "te": "しって",
+   "nai": "しらない",
+   "ta": "しった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "すいます",
+   "kanji": "吸います",
+   "es": "fumar",
+   "dict": "すう",
+   "te": "すって",
+   "nai": "すわない",
+   "ta": "すった",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "すみます",
+   "kanji": "住みます",
+   "es": "vivir (en un sitio)",
+   "dict": "すむ",
+   "te": "すんで",
+   "nai": "すまない",
+   "ta": "すんだ",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "すわります",
+   "kanji": "座ります",
+   "es": "sentarse",
+   "dict": "すわる",
+   "te": "すわって",
+   "nai": "すわらない",
+   "ta": "すわった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "たちます",
+   "kanji": "立ちます",
+   "es": "ponerse de pie",
+   "dict": "たつ",
+   "te": "たって",
+   "nai": "たたない",
+   "ta": "たった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "だします",
+   "kanji": "出します",
+   "es": "mandar (una carta)",
+   "dict": "だす",
+   "te": "だして",
+   "nai": "ださない",
+   "ta": "だした",
+   "group": 1,
+   "lesson": 13
+  },
+  {
+   "masu": "だします",
+   "kanji": "出します",
+   "es": "sacar (dinero)",
+   "dict": "だす",
+   "te": "だして",
+   "nai": "ださない",
+   "ta": "だした",
+   "group": 1,
+   "lesson": 16
+  },
+  {
+   "masu": "だします",
+   "kanji": "出します",
+   "es": "entregar (un informe)",
+   "dict": "だす",
+   "te": "だして",
+   "nai": "ださない",
+   "ta": "だした",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "つかいます",
+   "kanji": "使います",
+   "es": "usar",
+   "dict": "つかう",
+   "te": "つかって",
+   "nai": "つかわない",
+   "ta": "つかった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "つきます",
+   "kanji": "着きます",
+   "es": "llegar (a la estación)",
+   "dict": "つく",
+   "te": "ついて",
+   "nai": "つかない",
+   "ta": "ついた",
+   "group": 1,
+   "lesson": 25
+  },
+  {
+   "masu": "つくります",
+   "kanji": "作ります、造ります",
+   "es": "hacer, fabricar",
+   "dict": "つくる",
+   "te": "つくって",
+   "nai": "つくらない",
+   "ta": "つくった",
+   "group": 1,
+   "lesson": 15
+  },
+  {
+   "masu": "つれて いきます",
+   "kanji": "連れて 行きます",
+   "es": "llevar (a alguien)",
+   "dict": "つれて いく",
+   "te": "つれて いって",
+   "nai": "つれて いかない",
+   "ta": "つれて いった",
+   "group": 1,
+   "lesson": 24
+  },
+  {
+   "masu": "てつだいます",
+   "kanji": "手伝います",
+   "es": "ayudar",
+   "dict": "てつだう",
+   "te": "てつだって",
+   "nai": "てつだわない",
+   "ta": "てつだった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "とまります",
+   "kanji": "泊まります",
+   "es": "alojarse (en un hotel)",
+   "dict": "とまる",
+   "te": "とまって",
+   "nai": "とまらない",
+   "ta": "とまった",
+   "group": 1,
+   "lesson": 19
+  },
+  {
+   "masu": "とります",
+   "kanji": "取ります",
+   "es": "coger; pasar (algo)",
+   "dict": "とる",
+   "te": "とって",
+   "nai": "とらない",
+   "ta": "とった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "とります",
+   "kanji": "撮ります",
+   "es": "sacar (fotos)",
+   "dict": "とる",
+   "te": "とって",
+   "nai": "とらない",
+   "ta": "とった",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "とります",
+   "kanji": "取ります",
+   "es": "hacerse mayor",
+   "dict": "とる",
+   "te": "とって",
+   "nai": "とらない",
+   "ta": "とった",
+   "group": 1,
+   "lesson": 25
+  },
+  {
+   "masu": "なおします",
+   "kanji": "直します",
+   "es": "arreglar, corregir",
+   "dict": "なおす",
+   "te": "なおして",
+   "nai": "なおさない",
+   "ta": "なおした",
+   "group": 1,
+   "lesson": 20
+  },
+  {
+   "masu": "なくします",
+   "kanji": "なくします",
+   "es": "perder (algo)",
+   "dict": "なくす",
+   "te": "なくして",
+   "nai": "なくさない",
+   "ta": "なくした",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "ならいます",
+   "kanji": "習います",
+   "es": "aprender (de alguien)",
+   "dict": "ならう",
+   "te": "ならって",
+   "nai": "ならわない",
+   "ta": "ならった",
+   "group": 1,
+   "lesson": 7
+  },
+  {
+   "masu": "なります",
+   "kanji": "なります",
+   "es": "hacerse, llegar a ser",
+   "dict": "なる",
+   "te": "なって",
+   "nai": "ならない",
+   "ta": "なった",
+   "group": 1,
+   "lesson": 19
+  },
+  {
+   "masu": "ぬぎます",
+   "kanji": "脱ぎます",
+   "es": "quitarse (ropa)",
+   "dict": "ぬぐ",
+   "te": "ぬいで",
+   "nai": "ぬがない",
+   "ta": "ぬいだ",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "のぼります",
+   "kanji": "登ります",
+   "es": "subir (una montaña)",
+   "dict": "のぼる",
+   "te": "のぼって",
+   "nai": "のぼらない",
+   "ta": "のぼった",
+   "group": 1,
+   "lesson": 19
+  },
+  {
+   "masu": "のみます",
+   "kanji": "飲みます",
+   "es": "beber",
+   "dict": "のむ",
+   "te": "のんで",
+   "nai": "のまない",
+   "ta": "のんだ",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "のみます",
+   "kanji": "飲みます",
+   "es": "tomar (medicina)",
+   "dict": "のむ",
+   "te": "のんで",
+   "nai": "のまない",
+   "ta": "のんだ",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "のります",
+   "kanji": "乗ります",
+   "es": "subir (al tren)",
+   "dict": "のる",
+   "te": "のって",
+   "nai": "のらない",
+   "ta": "のった",
+   "group": 1,
+   "lesson": 16
+  },
+  {
+   "masu": "はいります",
+   "kanji": "入ります",
+   "es": "entrar (en una cafetería)",
+   "dict": "はいる",
+   "te": "はいって",
+   "nai": "はいらない",
+   "ta": "はいった",
+   "group": 1,
+   "lesson": 13
+  },
+  {
+   "masu": "はいります",
+   "kanji": "入ります",
+   "es": "ingresar (en la universidad)",
+   "dict": "はいる",
+   "te": "はいって",
+   "nai": "はいらない",
+   "ta": "はいった",
+   "group": 1,
+   "lesson": 16
+  },
+  {
+   "masu": "はいります",
+   "kanji": "入ります",
+   "es": "bañarse (en la bañera)",
+   "dict": "はいる",
+   "te": "はいって",
+   "nai": "はいらない",
+   "ta": "はいった",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "はきます",
+   "kanji": "はきます",
+   "es": "ponerse (zapatos, pantalones)",
+   "dict": "はく",
+   "te": "はいて",
+   "nai": "はかない",
+   "ta": "はいた",
+   "group": 1,
+   "lesson": 22
+  },
+  {
+   "masu": "はたらきます",
+   "kanji": "働きます",
+   "es": "trabajar",
+   "dict": "はたらく",
+   "te": "はたらいて",
+   "nai": "はたらかない",
+   "ta": "はたらいた",
+   "group": 1,
+   "lesson": 4
+  },
+  {
+   "masu": "ひきます",
+   "kanji": "弾きます",
+   "es": "tocar (piano, guitarra)",
+   "dict": "ひく",
+   "te": "ひいて",
+   "nai": "ひかない",
+   "ta": "ひいた",
+   "group": 1,
+   "lesson": 18
+  },
+  {
+   "masu": "ひきます",
+   "kanji": "引きます",
+   "es": "tirar (de algo)",
+   "dict": "ひく",
+   "te": "ひいて",
+   "nai": "ひかない",
+   "ta": "ひいた",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "ふります",
+   "kanji": "降ります",
+   "es": "llover",
+   "dict": "ふる",
+   "te": "ふって",
+   "nai": "ふらない",
+   "ta": "ふった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "はらいます",
+   "kanji": "払います",
+   "es": "pagar",
+   "dict": "はらう",
+   "te": "はらって",
+   "nai": "はらわない",
+   "ta": "はらった",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "はなします",
+   "kanji": "話します",
+   "es": "hablar",
+   "dict": "はなす",
+   "te": "はなして",
+   "nai": "はなさない",
+   "ta": "はなした",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "まがります",
+   "kanji": "曲がります",
+   "es": "girar (a la derecha)",
+   "dict": "まがる",
+   "te": "まがって",
+   "nai": "まがらない",
+   "ta": "まがった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "まちます",
+   "kanji": "待ちます",
+   "es": "esperar",
+   "dict": "まつ",
+   "te": "まって",
+   "nai": "またない",
+   "ta": "まった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "まわします",
+   "kanji": "回します",
+   "es": "girar (algo)",
+   "dict": "まわす",
+   "te": "まわして",
+   "nai": "まわさない",
+   "ta": "まわした",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "もちます",
+   "kanji": "持ちます",
+   "es": "llevar en la mano",
+   "dict": "もつ",
+   "te": "もって",
+   "nai": "もたない",
+   "ta": "もった",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "もって いきます",
+   "kanji": "持って 行きます",
+   "es": "llevar (algo)",
+   "dict": "もって いく",
+   "te": "もって いって",
+   "nai": "もって いかない",
+   "ta": "もって いった",
+   "group": 1,
+   "lesson": 17
+  },
+  {
+   "masu": "もらいます",
+   "kanji": "もらいます",
+   "es": "recibir",
+   "dict": "もらう",
+   "te": "もらって",
+   "nai": "もらわない",
+   "ta": "もらった",
+   "group": 1,
+   "lesson": 7
+  },
+  {
+   "masu": "やくに たちます",
+   "kanji": "役に 立ちます",
+   "es": "ser útil",
+   "dict": "やくに たつ",
+   "te": "やくに たって",
+   "nai": "やくに たたない",
+   "ta": "やくに たった",
+   "group": 1,
+   "lesson": 21
+  },
+  {
+   "masu": "やすみます",
+   "kanji": "休みます",
+   "es": "descansar",
+   "dict": "やすむ",
+   "te": "やすんで",
+   "nai": "やすまない",
+   "ta": "やすんだ",
+   "group": 1,
+   "lesson": 4
+  },
+  {
+   "masu": "やすみます",
+   "kanji": "休みます",
+   "es": "faltar (al trabajo)",
+   "dict": "やすむ",
+   "te": "やすんで",
+   "nai": "やすまない",
+   "ta": "やすんだ",
+   "group": 1,
+   "lesson": 11
+  },
+  {
+   "masu": "よびます",
+   "kanji": "呼びます",
+   "es": "llamar (a alguien)",
+   "dict": "よぶ",
+   "te": "よんで",
+   "nai": "よばない",
+   "ta": "よんだ",
+   "group": 1,
+   "lesson": 14
+  },
+  {
+   "masu": "よみます",
+   "kanji": "読みます",
+   "es": "leer",
+   "dict": "よむ",
+   "te": "よんで",
+   "nai": "よまない",
+   "ta": "よんだ",
+   "group": 1,
+   "lesson": 6
+  },
+  {
+   "masu": "わかります",
+   "kanji": "わかります",
+   "es": "entender",
+   "dict": "わかる",
+   "te": "わかって",
+   "nai": "わからない",
+   "ta": "わかった",
+   "group": 1,
+   "lesson": 9
+  },
+  {
+   "masu": "わたります",
+   "kanji": "渡ります",
+   "es": "cruzar (un puente)",
+   "dict": "わたる",
+   "te": "わたって",
+   "nai": "わたらない",
+   "ta": "わたった",
+   "group": 1,
+   "lesson": 23
+  },
+  {
+   "masu": "あけます",
+   "kanji": "開けます",
+   "es": "abrir",
+   "dict": "あける",
+   "te": "あけて",
+   "nai": "あけない",
+   "ta": "あけた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "あげます",
+   "kanji": "あげます",
+   "es": "dar, regalar",
+   "dict": "あげる",
+   "te": "あげて",
+   "nai": "あげない",
+   "ta": "あげた",
+   "group": 2,
+   "lesson": 7
+  },
+  {
+   "masu": "あつめます",
+   "kanji": "集めます",
+   "es": "coleccionar, reunir",
+   "dict": "あつめる",
+   "te": "あつめて",
+   "nai": "あつめない",
+   "ta": "あつめた",
+   "group": 2,
+   "lesson": 18
+  },
+  {
+   "masu": "あびます",
+   "kanji": "浴びます",
+   "es": "ducharse",
+   "dict": "あびる",
+   "te": "あびて",
+   "nai": "あびない",
+   "ta": "あびた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "います",
+   "kanji": "います",
+   "es": "estar (personas, animales)",
+   "dict": "いる",
+   "te": "いて",
+   "nai": "いない",
+   "ta": "いた",
+   "group": 2,
+   "lesson": 10
+  },
+  {
+   "masu": "います",
+   "kanji": "います",
+   "es": "tener (hijos)",
+   "dict": "いる",
+   "te": "いて",
+   "nai": "いない",
+   "ta": "いた",
+   "group": 2,
+   "lesson": 11
+  },
+  {
+   "masu": "います",
+   "kanji": "います",
+   "es": "estar, quedarse (en Japón)",
+   "dict": "いる",
+   "te": "いて",
+   "nai": "いない",
+   "ta": "いた",
+   "group": 2,
+   "lesson": 11
+  },
+  {
+   "masu": "いれます",
+   "kanji": "入れます",
+   "es": "meter, poner dentro",
+   "dict": "いれる",
+   "te": "いれて",
+   "nai": "いれない",
+   "ta": "いれた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "いれます",
+   "kanji": "いれます",
+   "es": "preparar (café)",
+   "dict": "いれる",
+   "te": "いれて",
+   "nai": "いれない",
+   "ta": "いれた",
+   "group": 2,
+   "lesson": 24
+  },
+  {
+   "masu": "うまれます",
+   "kanji": "生まれます",
+   "es": "nacer",
+   "dict": "うまれる",
+   "te": "うまれて",
+   "nai": "うまれない",
+   "ta": "うまれた",
+   "group": 2,
+   "lesson": 22
+  },
+  {
+   "masu": "おきます",
+   "kanji": "起きます",
+   "es": "levantarse",
+   "dict": "おきる",
+   "te": "おきて",
+   "nai": "おきない",
+   "ta": "おきた",
+   "group": 2,
+   "lesson": 4
+  },
+  {
+   "masu": "おしえます",
+   "kanji": "教えます",
+   "es": "enseñar",
+   "dict": "おしえる",
+   "te": "おしえて",
+   "nai": "おしえない",
+   "ta": "おしえた",
+   "group": 2,
+   "lesson": 7
+  },
+  {
+   "masu": "おしえます",
+   "kanji": "教えます",
+   "es": "decir (la dirección)",
+   "dict": "おしえる",
+   "te": "おしえて",
+   "nai": "おしえない",
+   "ta": "おしえた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "おぼえます",
+   "kanji": "覚えます",
+   "es": "memorizar",
+   "dict": "おぼえる",
+   "te": "おぼえて",
+   "nai": "おぼえない",
+   "ta": "おぼえた",
+   "group": 2,
+   "lesson": 17
+  },
+  {
+   "masu": "おります",
+   "kanji": "降ります",
+   "es": "bajar (del tren)",
+   "dict": "おりる",
+   "te": "おりて",
+   "nai": "おりない",
+   "ta": "おりた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "かえます",
+   "kanji": "換えます",
+   "es": "cambiar, canjear",
+   "dict": "かえる",
+   "te": "かえて",
+   "nai": "かえない",
+   "ta": "かえた",
+   "group": 2,
+   "lesson": 18
+  },
+  {
+   "masu": "かえます",
+   "kanji": "変えます",
+   "es": "cambiar (algo)",
+   "dict": "かえる",
+   "te": "かえて",
+   "nai": "かえない",
+   "ta": "かえた",
+   "group": 2,
+   "lesson": 23
+  },
+  {
+   "masu": "かけます",
+   "kanji": "かけます",
+   "es": "llamar (por teléfono)",
+   "dict": "かける",
+   "te": "かけて",
+   "nai": "かけない",
+   "ta": "かけた",
+   "group": 2,
+   "lesson": 7
+  },
+  {
+   "masu": "かけます",
+   "kanji": "かけます",
+   "es": "ponerse (gafas)",
+   "dict": "かける",
+   "te": "かけて",
+   "nai": "かけない",
+   "ta": "かけた",
+   "group": 2,
+   "lesson": 22
+  },
+  {
+   "masu": "かります",
+   "kanji": "借ります",
+   "es": "pedir prestado",
+   "dict": "かりる",
+   "te": "かりて",
+   "nai": "かりない",
+   "ta": "かりた",
+   "group": 2,
+   "lesson": 7
+  },
+  {
+   "masu": "かんがえます",
+   "kanji": "考えます",
+   "es": "pensar, reflexionar",
+   "dict": "かんがえる",
+   "te": "かんがえて",
+   "nai": "かんがえない",
+   "ta": "かんがえた",
+   "group": 2,
+   "lesson": 25
+  },
+  {
+   "masu": "きを つけます",
+   "kanji": "気を つけます",
+   "es": "tener cuidado (con los coches)",
+   "dict": "きを つける",
+   "te": "きを つけて",
+   "nai": "きを つけない",
+   "ta": "きを つけた",
+   "group": 2,
+   "lesson": 23
+  },
+  {
+   "masu": "きます",
+   "kanji": "着ます",
+   "es": "ponerse (camisa)",
+   "dict": "きる",
+   "te": "きて",
+   "nai": "きない",
+   "ta": "きた",
+   "group": 2,
+   "lesson": 22
+  },
+  {
+   "masu": "くれます",
+   "kanji": "くれます",
+   "es": "darme (a mí)",
+   "dict": "くれる",
+   "te": "くれて",
+   "nai": "くれない",
+   "ta": "くれた",
+   "group": 2,
+   "lesson": 24
+  },
+  {
+   "masu": "しめます",
+   "kanji": "閉めます",
+   "es": "cerrar",
+   "dict": "しめる",
+   "te": "しめて",
+   "nai": "しめない",
+   "ta": "しめた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "しらべます",
+   "kanji": "調べます",
+   "es": "investigar, consultar",
+   "dict": "しらべる",
+   "te": "しらべて",
+   "nai": "しらべない",
+   "ta": "しらべた",
+   "group": 2,
+   "lesson": 20
+  },
+  {
+   "masu": "すてます",
+   "kanji": "捨てます",
+   "es": "tirar (a la basura)",
+   "dict": "すてる",
+   "te": "すてて",
+   "nai": "すてない",
+   "ta": "すてた",
+   "group": 2,
+   "lesson": 18
+  },
+  {
+   "masu": "たべます",
+   "kanji": "食べます",
+   "es": "comer",
+   "dict": "たべる",
+   "te": "たべて",
+   "nai": "たべない",
+   "ta": "たべた",
+   "group": 2,
+   "lesson": 6
+  },
+  {
+   "masu": "たります",
+   "kanji": "足ります",
+   "es": "ser suficiente",
+   "dict": "たりる",
+   "te": "たりて",
+   "nai": "たりない",
+   "ta": "たりた",
+   "group": 2,
+   "lesson": 21
+  },
+  {
+   "masu": "つかれます",
+   "kanji": "疲れます",
+   "es": "cansarse",
+   "dict": "つかれる",
+   "te": "つかれて",
+   "nai": "つかれない",
+   "ta": "つかれた",
+   "group": 2,
+   "lesson": 13
+  },
+  {
+   "masu": "つけます",
+   "kanji": "つけます",
+   "es": "encender",
+   "dict": "つける",
+   "te": "つけて",
+   "nai": "つけない",
+   "ta": "つけた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "でかけます",
+   "kanji": "出かけます",
+   "es": "salir (de casa)",
+   "dict": "でかける",
+   "te": "でかけて",
+   "nai": "でかけない",
+   "ta": "でかけた",
+   "group": 2,
+   "lesson": 17
+  },
+  {
+   "masu": "できます",
+   "kanji": "できます",
+   "es": "poder, saber hacer",
+   "dict": "できる",
+   "te": "できて",
+   "nai": "できない",
+   "ta": "できた",
+   "group": 2,
+   "lesson": 18
+  },
+  {
+   "masu": "でます",
+   "kanji": "出ます",
+   "es": "salir (de la cafetería)",
+   "dict": "でる",
+   "te": "でて",
+   "nai": "でない",
+   "ta": "でた",
+   "group": 2,
+   "lesson": 13
+  },
+  {
+   "masu": "でます",
+   "kanji": "出ます",
+   "es": "graduarse",
+   "dict": "でる",
+   "te": "でて",
+   "nai": "でない",
+   "ta": "でた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "でます",
+   "kanji": "出ます",
+   "es": "salir (el cambio)",
+   "dict": "でる",
+   "te": "でて",
+   "nai": "でない",
+   "ta": "でた",
+   "group": 2,
+   "lesson": 23
+  },
+  {
+   "masu": "とめます",
+   "kanji": "止めます",
+   "es": "parar, aparcar",
+   "dict": "とめる",
+   "te": "とめて",
+   "nai": "とめない",
+   "ta": "とめた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "ねます",
+   "kanji": "寝ます",
+   "es": "acostarse, dormir",
+   "dict": "ねる",
+   "te": "ねて",
+   "nai": "ねない",
+   "ta": "ねた",
+   "group": 2,
+   "lesson": 4
+  },
+  {
+   "masu": "のりかえます",
+   "kanji": "乗り換えます",
+   "es": "hacer transbordo",
+   "dict": "のりかえる",
+   "te": "のりかえて",
+   "nai": "のりかえない",
+   "ta": "のりかえた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "はじめます",
+   "kanji": "始めます",
+   "es": "empezar",
+   "dict": "はじめる",
+   "te": "はじめて",
+   "nai": "はじめない",
+   "ta": "はじめた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "まけます",
+   "kanji": "負けます",
+   "es": "perder (un partido)",
+   "dict": "まける",
+   "te": "まけて",
+   "nai": "まけない",
+   "ta": "まけた",
+   "group": 2,
+   "lesson": 21
+  },
+  {
+   "masu": "みせます",
+   "kanji": "見せます",
+   "es": "mostrar, enseñar",
+   "dict": "みせる",
+   "te": "みせて",
+   "nai": "みせない",
+   "ta": "みせた",
+   "group": 2,
+   "lesson": 14
+  },
+  {
+   "masu": "みます",
+   "kanji": "見ます",
+   "es": "ver, mirar",
+   "dict": "みる",
+   "te": "みて",
+   "nai": "みない",
+   "ta": "みた",
+   "group": 2,
+   "lesson": 6
+  },
+  {
+   "masu": "むかえます",
+   "kanji": "迎えます",
+   "es": "ir a recoger (a alguien)",
+   "dict": "むかえる",
+   "te": "むかえて",
+   "nai": "むかえない",
+   "ta": "むかえた",
+   "group": 2,
+   "lesson": 13
+  },
+  {
+   "masu": "やめます",
+   "kanji": "やめます",
+   "es": "dejar (la empresa)",
+   "dict": "やめる",
+   "te": "やめて",
+   "nai": "やめない",
+   "ta": "やめた",
+   "group": 2,
+   "lesson": 16
+  },
+  {
+   "masu": "わすれます",
+   "kanji": "忘れます",
+   "es": "olvidar",
+   "dict": "わすれる",
+   "te": "わすれて",
+   "nai": "わすれない",
+   "ta": "わすれた",
+   "group": 2,
+   "lesson": 17
+  },
+  {
+   "masu": "あんないします",
+   "kanji": "案内します",
+   "es": "guiar, enseñar el camino",
+   "dict": "あんないする",
+   "te": "あんないして",
+   "nai": "あんないしない",
+   "ta": "あんないした",
+   "group": 3,
+   "lesson": 24
+  },
+  {
+   "masu": "うんてんします",
+   "kanji": "運転します",
+   "es": "conducir",
+   "dict": "うんてんする",
+   "te": "うんてんして",
+   "nai": "うんてんしない",
+   "ta": "うんてんした",
+   "group": 3,
+   "lesson": 18
+  },
+  {
+   "masu": "かいものします",
+   "kanji": "買い物します",
+   "es": "ir de compras",
+   "dict": "かいものする",
+   "te": "かいものして",
+   "nai": "かいものしない",
+   "ta": "かいものした",
+   "group": 3,
+   "lesson": 13
+  },
+  {
+   "masu": "きます",
+   "kanji": "来ます",
+   "es": "venir",
+   "dict": "くる",
+   "te": "きて",
+   "nai": "こない",
+   "ta": "きた",
+   "group": 3,
+   "lesson": 5
+  },
+  {
+   "masu": "けっこんします",
+   "kanji": "結婚します",
+   "es": "casarse",
+   "dict": "けっこんする",
+   "te": "けっこんして",
+   "nai": "けっこんしない",
+   "ta": "けっこんした",
+   "group": 3,
+   "lesson": 13
+  },
+  {
+   "masu": "けんがくします",
+   "kanji": "見学します",
+   "es": "visitar (para aprender)",
+   "dict": "けんがくする",
+   "te": "けんがくして",
+   "nai": "けんがくしない",
+   "ta": "けんがくした",
+   "group": 3,
+   "lesson": 18
+  },
+  {
+   "masu": "けんきゅうします",
+   "kanji": "研究します",
+   "es": "investigar",
+   "dict": "けんきゅうする",
+   "te": "けんきゅうして",
+   "nai": "けんきゅうしない",
+   "ta": "けんきゅうした",
+   "group": 3,
+   "lesson": 15
+  },
+  {
+   "masu": "コピーします",
+   "kanji": "コピーします",
+   "es": "fotocopiar",
+   "dict": "コピーする",
+   "te": "コピーして",
+   "nai": "コピーしない",
+   "ta": "コピーした",
+   "group": 3,
+   "lesson": 14
+  },
+  {
+   "masu": "さんぽします",
+   "kanji": "散歩します",
+   "es": "pasear (por el parque)",
+   "dict": "さんぽする",
+   "te": "さんぽして",
+   "nai": "さんぽしない",
+   "ta": "さんぽした",
+   "group": 3,
+   "lesson": 13
+  },
+  {
+   "masu": "ざんぎょうします",
+   "kanji": "残業します",
+   "es": "hacer horas extra",
+   "dict": "ざんぎょうする",
+   "te": "ざんぎょうして",
+   "nai": "ざんぎょうしない",
+   "ta": "ざんぎょうした",
+   "group": 3,
+   "lesson": 17
+  },
+  {
+   "masu": "します",
+   "kanji": "します",
+   "es": "hacer",
+   "dict": "する",
+   "te": "して",
+   "nai": "しない",
+   "ta": "した",
+   "group": 3,
+   "lesson": 6
+  },
+  {
+   "masu": "しゅうりします",
+   "kanji": "修理します",
+   "es": "reparar",
+   "dict": "しゅうりする",
+   "te": "しゅうりして",
+   "nai": "しゅうりしない",
+   "ta": "しゅうりした",
+   "group": 3,
+   "lesson": 20
+  },
+  {
+   "masu": "しゅっちょうします",
+   "kanji": "出張します",
+   "es": "viajar por trabajo",
+   "dict": "しゅっちょうする",
+   "te": "しゅっちょうして",
+   "nai": "しゅっちょうしない",
+   "ta": "しゅっちょうした",
+   "group": 3,
+   "lesson": 17
+  },
+  {
+   "masu": "しょうかいします",
+   "kanji": "紹介します",
+   "es": "presentar (a alguien)",
+   "dict": "しょうかいする",
+   "te": "しょうかいして",
+   "nai": "しょうかいしない",
+   "ta": "しょうかいした",
+   "group": 3,
+   "lesson": 24
+  },
+  {
+   "masu": "しょくじします",
+   "kanji": "食事します",
+   "es": "comer (una comida)",
+   "dict": "しょくじする",
+   "te": "しょくじして",
+   "nai": "しょくじしない",
+   "ta": "しょくじした",
+   "group": 3,
+   "lesson": 13
+  },
+  {
+   "masu": "しんぱいします",
+   "kanji": "心配します",
+   "es": "preocuparse",
+   "dict": "しんぱいする",
+   "te": "しんぱいして",
+   "nai": "しんぱいしない",
+   "ta": "しんぱいした",
+   "group": 3,
+   "lesson": 17
+  },
+  {
+   "masu": "せつめいします",
+   "kanji": "説明します",
+   "es": "explicar",
+   "dict": "せつめいする",
+   "te": "せつめいして",
+   "nai": "せつめいしない",
+   "ta": "せつめいした",
+   "group": 3,
+   "lesson": 24
+  },
+  {
+   "masu": "せんたくします",
+   "kanji": "洗濯します",
+   "es": "lavar la ropa",
+   "dict": "せんたくする",
+   "te": "せんたくして",
+   "nai": "せんたくしない",
+   "ta": "せんたくした",
+   "group": 3,
+   "lesson": 19
+  },
+  {
+   "masu": "そうじします",
+   "kanji": "掃除します",
+   "es": "limpiar (la casa)",
+   "dict": "そうじする",
+   "te": "そうじして",
+   "nai": "そうじしない",
+   "ta": "そうじした",
+   "group": 3,
+   "lesson": 19
+  },
+  {
+   "masu": "つれて きます",
+   "kanji": "連れて 来ます",
+   "es": "traer (a alguien)",
+   "dict": "つれて くる",
+   "te": "つれて きて",
+   "nai": "つれて こない",
+   "ta": "つれて きた",
+   "group": 3,
+   "lesson": 24
+  },
+  {
+   "masu": "でんわします",
+   "kanji": "電話します",
+   "es": "llamar por teléfono",
+   "dict": "でんわする",
+   "te": "でんわして",
+   "nai": "でんわしない",
+   "ta": "でんわした",
+   "group": 3,
+   "lesson": 20
+  },
+  {
+   "masu": "ひっこしします",
+   "kanji": "引っ越しします",
+   "es": "mudarse",
+   "dict": "ひっこしする",
+   "te": "ひっこしして",
+   "nai": "ひっこししない",
+   "ta": "ひっこしした",
+   "group": 3,
+   "lesson": 23
+  },
+  {
+   "masu": "べんきょうします",
+   "kanji": "勉強します",
+   "es": "estudiar",
+   "dict": "べんきょうする",
+   "te": "べんきょうして",
+   "nai": "べんきょうしない",
+   "ta": "べんきょうした",
+   "group": 3,
+   "lesson": 4
+  },
+  {
+   "masu": "もって きます",
+   "kanji": "持って 来ます",
+   "es": "traer (algo)",
+   "dict": "もって くる",
+   "te": "もって きて",
+   "nai": "もって こない",
+   "ta": "もって きた",
+   "group": 3,
+   "lesson": 17
+  },
+  {
+   "masu": "よやくします",
+   "kanji": "予約します",
+   "es": "reservar",
+   "dict": "よやくする",
+   "te": "よやくして",
+   "nai": "よやくしない",
+   "ta": "よやくした",
+   "group": 3,
+   "lesson": 18
+  },
+  {
+   "masu": "りゅうがくします",
+   "kanji": "留学します",
+   "es": "estudiar en el extranjero",
+   "dict": "りゅうがくする",
+   "te": "りゅうがくして",
+   "nai": "りゅうがくしない",
+   "ta": "りゅうがくした",
+   "group": 3,
+   "lesson": 25
+  },
+  {
+   "masu": "れんしゅうします",
+   "kanji": "練習します",
+   "es": "practicar",
+   "dict": "れんしゅうする",
+   "te": "れんしゅうして",
+   "nai": "れんしゅうしない",
+   "ta": "れんしゅうした",
+   "group": 3,
+   "lesson": 19
+  }
+ ]
+}

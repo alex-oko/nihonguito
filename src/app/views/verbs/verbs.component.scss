@@ -1,0 +1,57 @@
+/* ---- Pestaña «Reglas» ---- */
+.top {
+    margin-top: 16px;
+}
+.t {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.body {
+    line-height: 1.7;
+    color: var(--ink-2);
+}
+/* Tabla de la forma て */
+.rules {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 8px 0;
+}
+.rule {
+    gap: 8px;
+}
+.end {
+    font-size: 1.1rem;
+    min-width: 70px;
+}
+.res {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 36px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.ex {
+    text-align: right;
+}
+/* ---- Pestaña «Lista» ---- */
+.vlist {
+    margin-top: 12px;
+}
+.vm {
+    font-size: 1.15rem;
+}
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin-top: 4px;
+    color: var(--ink-2);
+}
+/* ---- Pestaña «Practicar» ---- */
+.go {
+    margin-top: 24px;
+}

@@ -1,0 +1,66 @@
+<div class="wrap">
+    <!-- Cabecera: salir, progreso y contador -->
+    <header class="head">
+        <button class="icon-btn" (click)="location.back()" aria-label="Salir"><app-icon name="x" /></button>
+        <div class="bar grow"><i [style.width.%]="(index() / queue().length) * 100"></i></div>
+        <span class="small muted">{{ Math.min(index() + 1, queue().length) }}/{{ queue().length }}</span>
+    </header>
+
+    @if (current(); as word) {
+        <!-- Tarjeta -->
+        <p class="small muted center">Toca la tarjeta para voltearla · desliza → si la sabes, ← para repasar</p>
+        <div
+            class="card fc"
+            [class.flipped]="isFlipped()"
+            [style.transform]="dragX() ? 'translateX(' + dragX() + 'px) rotate(' + dragX() / 20 + 'deg)' : ''"
+            [class.go-right]="leavingDirection() === 'right'"
+            [class.go-left]="leavingDirection() === 'left'"
+            (click)="flip()"
+            (pointerdown)="onPointerDown($event)"
+            (pointermove)="onPointerMove($event)"
+            (pointerup)="onPointerUp()"
+            (pointercancel)="onPointerUp()"
+        >
+            <div class="face">
+                @if (word.type && typeLabel[word.type]) {
+                    <span class="badge">{{ typeLabel[word.type] }}</span>
+                }
+                <div class="jp main"><app-jp [text]="mainText(word)" /></div>
+                @if (mainText(word) !== readingOf(word) && script() === 'kanji') {
+                    <div class="jp reading">{{ readingOf(word) }}</div>
+                }
+                @if (isFlipped()) {
+                    <div class="back">
+                        <div class="small muted rom">{{ romajiOf(readingOf(word)) }}</div>
+                        <div class="es">{{ word.es }}</div>
+                    </div>
+                } @else {
+                    <div class="small muted tap">¿Qué significa?</div>
+                }
+            </div>
+            <button class="icon-btn speak" (click)="say($event)" aria-label="Escuchar"><app-icon name="volume" /></button>
+            @if (dragX() > 40) {
+                <span class="stamp ok">¡La sé!</span>
+            } @else if (dragX() < -40) {
+                <span class="stamp bad">Repasar</span>
+            }
+        </div>
+
+        <!-- Botones de respuesta -->
+        <div class="grid-2 actions">
+            <button class="btn ghost" (click)="answer(false)"><app-icon name="refresh" [size]="18" />Repasar</button>
+            <button class="btn" (click)="answer(true)"><app-icon name="check" [size]="18" />¡La sé!</button>
+        </div>
+    } @else {
+        <!-- Fin de la ronda -->
+        <div class="end">
+            <div class="jp big">おつかれさま</div>
+            <h1 class="hero-title">¡Ronda terminada!</h1>
+            <p class="muted">{{ knownCount() }} que ya sabías · {{ reviewCount() }} para repasar</p>
+            <div class="stack">
+                <button class="btn accent block" (click)="toQuiz()"><app-icon name="sparkles" />Ahora ponte a prueba</button>
+                <button class="btn ghost block" (click)="again.emit()">Otra ronda de tarjetas</button>
+            </div>
+        </div>
+    }
+</div>

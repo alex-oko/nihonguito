@@ -1,0 +1,915 @@
+{
+ "id": 16,
+ "title": "Primero, mete la tarjeta",
+ "titleJp": "まず カードを 入れて ください",
+ "summary": "Kenta le enseña a Lucía, paso a paso, a sacar dinero del cajero automático. El lunes, Lucía le cuenta al Sr. Mori su fin de semana en Kamakura.",
+ "vocab": [
+  {
+   "id": "L16-001",
+   "kana": "のります",
+   "kanji": "乗ります",
+   "es": "subir (al tren) [でんしゃに～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-002",
+   "kana": "おります",
+   "kanji": "降ります",
+   "es": "bajar (del tren) [でんしゃを～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-003",
+   "kana": "のりかえます",
+   "kanji": "乗り換えます",
+   "es": "hacer transbordo",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-004",
+   "kana": "あびます",
+   "kanji": "浴びます",
+   "es": "ducharse [シャワーを～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-005",
+   "kana": "いれます",
+   "kanji": "入れます",
+   "es": "meter, introducir",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-006",
+   "kana": "だします",
+   "kanji": "出します",
+   "es": "sacar (dinero)",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-007",
+   "kana": "はいります",
+   "kanji": "入ります",
+   "es": "entrar (en la universidad) [だいがくに～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-008",
+   "kana": "でます",
+   "kanji": "出ます",
+   "es": "salir, graduarse (de la universidad) [だいがくを～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-009",
+   "kana": "やめます",
+   "es": "dejar (la empresa) [かいしゃを～]",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-010",
+   "kana": "おします",
+   "kanji": "押します",
+   "es": "pulsar, empujar",
+   "type": "verb",
+   "lesson": 16
+  },
+  {
+   "id": "L16-011",
+   "kana": "わかい",
+   "kanji": "若い",
+   "es": "joven",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-012",
+   "kana": "ながい",
+   "kanji": "長い",
+   "es": "largo",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-013",
+   "kana": "みじかい",
+   "kanji": "短い",
+   "es": "corto",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-014",
+   "kana": "あかるい",
+   "kanji": "明るい",
+   "es": "luminoso, claro",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-015",
+   "kana": "くらい",
+   "kanji": "暗い",
+   "es": "oscuro",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-016",
+   "kana": "せが たかい",
+   "kanji": "背が 高い",
+   "es": "alto (persona)",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-017",
+   "kana": "あたまが いい",
+   "kanji": "頭が いい",
+   "es": "inteligente, listo",
+   "type": "i-adj",
+   "lesson": 16
+  },
+  {
+   "id": "L16-018",
+   "kana": "からだ",
+   "kanji": "体",
+   "es": "cuerpo",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-019",
+   "kana": "あたま",
+   "kanji": "頭",
+   "es": "cabeza",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-020",
+   "kana": "かみ",
+   "kanji": "髪",
+   "es": "pelo, cabello",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-021",
+   "kana": "かお",
+   "kanji": "顔",
+   "es": "cara",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-022",
+   "kana": "め",
+   "kanji": "目",
+   "es": "ojo",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-023",
+   "kana": "みみ",
+   "kanji": "耳",
+   "es": "oreja, oído",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-024",
+   "kana": "くち",
+   "kanji": "口",
+   "es": "boca",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-025",
+   "kana": "は",
+   "kanji": "歯",
+   "es": "diente",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-026",
+   "kana": "おなか",
+   "es": "barriga, estómago",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-027",
+   "kana": "あし",
+   "kanji": "足",
+   "es": "pierna, pie",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-028",
+   "kana": "サービス",
+   "es": "servicio",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-029",
+   "kana": "ジョギング",
+   "es": "footing (～を します: correr)",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-030",
+   "kana": "シャワー",
+   "es": "ducha",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-031",
+   "kana": "みどり",
+   "kanji": "緑",
+   "es": "verde, vegetación",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-032",
+   "kana": "[お]てら",
+   "kanji": "[お]寺",
+   "es": "templo budista",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-033",
+   "kana": "じんじゃ",
+   "kanji": "神社",
+   "es": "santuario sintoísta",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-034",
+   "kana": "りゅうがくせい",
+   "kanji": "留学生",
+   "es": "estudiante extranjero",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-035",
+   "kana": "－ばん",
+   "kanji": "－番",
+   "es": "número ~",
+   "type": "counter",
+   "lesson": 16
+  },
+  {
+   "id": "L16-036",
+   "kana": "どうやって",
+   "es": "cómo, de qué manera",
+   "type": "adv",
+   "lesson": 16
+  },
+  {
+   "id": "L16-037",
+   "kana": "どの ～",
+   "es": "cuál ~ (entre 3 o más)",
+   "type": "pron",
+   "lesson": 16
+  },
+  {
+   "id": "L16-038",
+   "kana": "[いいえ、] まだまだです。",
+   "es": "[No,] aún me falta mucho. (modestia)",
+   "type": "expr",
+   "lesson": 16
+  },
+  {
+   "id": "L16-039",
+   "kana": "おひきだしですか。",
+   "kanji": "お引き出しですか。",
+   "es": "¿Va a sacar dinero?",
+   "type": "expr",
+   "lesson": 16
+  },
+  {
+   "id": "L16-040",
+   "kana": "まず",
+   "es": "primero",
+   "type": "adv",
+   "lesson": 16
+  },
+  {
+   "id": "L16-041",
+   "kana": "キャッシュカード",
+   "es": "tarjeta del banco",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-042",
+   "kana": "あんしょうばんごう",
+   "kanji": "暗証番号",
+   "es": "número secreto, PIN",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-043",
+   "kana": "つぎに",
+   "kanji": "次に",
+   "es": "a continuación",
+   "type": "adv",
+   "lesson": 16
+  },
+  {
+   "id": "L16-044",
+   "kana": "きんがく",
+   "kanji": "金額",
+   "es": "importe, cantidad",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-045",
+   "kana": "かくにん",
+   "kanji": "確認",
+   "es": "confirmación (～します: confirmar)",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-046",
+   "kana": "ボタン",
+   "es": "botón",
+   "type": "noun",
+   "lesson": 16
+  },
+  {
+   "id": "L16-047",
+   "kana": "JR",
+   "es": "Japan Railways",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-048",
+   "kana": "アジア",
+   "es": "Asia",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-049",
+   "kana": "バンドン",
+   "es": "Bandung (Indonesia)",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-050",
+   "kana": "ベラクルス",
+   "es": "Veracruz",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-051",
+   "kana": "フランケン",
+   "es": "Franconia (Alemania)",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-052",
+   "kana": "ベトナム",
+   "es": "Vietnam",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-053",
+   "kana": "フエ",
+   "es": "Hue (Vietnam)",
+   "type": "name",
+   "lesson": 16
+  },
+  {
+   "id": "L16-054",
+   "kana": "かまくら",
+   "kanji": "鎌倉",
+   "es": "Kamakura (ciudad histórica cerca de Tokio)",
+   "type": "name",
+   "lesson": 16
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "朝 シャワーを 浴びて、朝ごはんを 食べて、会社へ 行きます。",
+   "es": "En la mañana me baño, desayuno y voy a la oficina."
+  },
+  {
+   "jp": "仕事が 終わってから、スーパーへ 行きます。",
+   "es": "Después del trabajo voy al súper."
+  },
+  {
+   "jp": "鎌倉は 古くて、静かな 町です。",
+   "es": "Kamakura es una ciudad antigua y tranquila."
+  },
+  {
+   "jp": "アンナさんは 背が 高いです。",
+   "es": "Anna es alta."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "きのう 何を しましたか。",
+   "qes": "¿Qué hiciste ayer?",
+   "ajp": "友達と 鎌倉へ 行って、お寺を 見て、海で 遊びました。",
+   "aes": "Fui a Kamakura con unos amigos, vi templos y nos divertimos en el mar."
+  },
+  {
+   "qjp": "会社まで どうやって 行きますか。",
+   "qes": "¿Cómo llegas a la oficina?",
+   "ajp": "電車に 乗って、東京駅で 地下鉄に 乗り換えます。",
+   "aes": "Tomo el tren y en la estación de Tokio cambio al metro."
+  },
+  {
+   "qjp": "うちへ 帰ってから、何を しますか。",
+   "qes": "¿Qué haces después de llegar a casa?",
+   "ajp": "シャワーを 浴びて、晩ごはんを 作ります。",
+   "aes": "Me baño y hago la cena."
+  },
+  {
+   "qjp": "きのしたさんは どの 人ですか。",
+   "qes": "¿Cuál es Kenta?",
+   "ajp": "あの 若くて、背が 高い 人です。",
+   "aes": "Aquel chico joven y alto."
+  },
+  {
+   "qjp": "ルシアさんの 部屋は どうですか。",
+   "qes": "¿Qué tal es tu cuarto, Lucía?",
+   "ajp": "少し 狭いですが、明るくて、きれいです。",
+   "aes": "Es un poco pequeño, pero luminoso y limpio."
+  },
+  {
+   "qjp": "なかむらさんは どんな 人ですか。",
+   "qes": "¿Cómo es Yui?",
+   "ajp": "親切で、おもしろい 人です。",
+   "aes": "Es amable y divertida."
+  },
+  {
+   "qjp": "晩ごはんを 食べてから、宿題を しますか。",
+   "qes": "¿Haces la tarea después de cenar?",
+   "ajp": "いいえ、宿題を してから、食べます。",
+   "aes": "No, primero hago la tarea y luego ceno."
+  },
+  {
+   "qjp": "東京は どんな 町ですか。",
+   "qes": "¿Cómo es Tokio?",
+   "ajp": "人が 多くて、にぎやかな 町です。",
+   "aes": "Es una ciudad con mucha gente y muy animada."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Vて、Vて、V — encadenar acciones",
+   "explain": "Para contar varias acciones seguidas, pones todas en forma て menos la última, en el orden en que ocurren: 'hago esto, y luego esto, y luego esto'. Solo el último verbo marca el tiempo: si termina en ました, todo es pasado. Error típico: poner ました en cada verbo (見ました、飲みました ✗ dentro de la misma frase).",
+   "examples": [
+    {
+     "jp": "朝 起きて、ジョギングを して、シャワーを 浴びます。",
+     "es": "En la mañana me levanto, salgo a correr y me baño."
+    },
+    {
+     "jp": "週末 鎌倉へ 行って、お寺を 見て、すしを 食べました。",
+     "es": "El fin de semana fui a Kamakura, vi templos y comí sushi."
+    }
+   ]
+  },
+  {
+   "title": "Adjetivo-い → ～くて — unir adjetivos",
+   "explain": "Para decir 'es X y Y' con un adjetivo-い, cambia la い final por くて: 若い → 若くて, 大きい → 大きくて. Excepción: いい → よくて (no いくて).",
+   "examples": [
+    {
+     "jp": "きのしたさんは 若くて、元気です。",
+     "es": "Kenta es joven y lleno de energía."
+    },
+    {
+     "jp": "きのうは 天気が よくて、暖かかったです。",
+     "es": "Ayer hizo buen tiempo y estuvo templado."
+    }
+   ]
+  },
+  {
+   "title": "Sustantivo / adjetivo-な + で — unir frases",
+   "explain": "Con sustantivos y adjetivos-な, cambia です por で para seguir la frase: 静かです → 静かで, 学生です → 学生で. Puede unir cosas de temas distintos (Kenta es estudiante y Yui es empleada de empresa). Ojo: くて/で solo sirven para ideas que van en la misma dirección. Si hay contraste ('pequeño pero limpio'), usa が: 狭いですが、きれいです.",
+   "examples": [
+    {
+     "jp": "鎌倉は 静かで、きれいな 町です。",
+     "es": "Kamakura es una ciudad tranquila y bonita."
+    },
+    {
+     "jp": "きのしたさんは 学生で、なかむらさんは 会社員です。",
+     "es": "Kenta es estudiante y Yui es empleada de empresa."
+    }
+   ]
+  },
+  {
+   "title": "V1てから、V2 — después de V1, V2",
+   "explain": "Indica que primero terminas V1 y después haces V2, como 'después de…' o 'tras…'. Es más preciso que la cadena simple de て, porque subraya el orden. El tiempo lo marca el último verbo. Si la primera parte tiene su propio sujeto, este lleva が (コンサートが 終わってから…).",
+   "examples": [
+    {
+     "jp": "仕事が 終わってから、スーパーで 買い物します。",
+     "es": "Después del trabajo hago las compras en el súper."
+    },
+    {
+     "jp": "銀行で お金を 出してから、デパートへ 行きました。",
+     "es": "Después de sacar dinero en el banco, fui a la tienda departamental."
+    }
+   ]
+  },
+  {
+   "title": "S1は S2が adjetivo — describir una característica",
+   "explain": "S1 es el tema (de quién o qué hablas) y S2 es la parte concreta que describes. アンナさんは 髪が 長いです = 'Anna, (su) pelo es largo', o sea, 'Anna tiene el pelo largo'. En español usamos 'tener', pero en japonés se dice así, con は para el tema y が para la parte.",
+   "examples": [
+    {
+     "jp": "鎌倉は 緑が 多いです。",
+     "es": "Kamakura tiene mucha vegetación."
+    },
+    {
+     "jp": "アンナさんは 髪が 長いです。",
+     "es": "Anna tiene el pelo largo."
+    }
+   ]
+  },
+  {
+   "title": "どうやって — ¿cómo? (de qué manera)",
+   "explain": "Pregunta por el camino o el método para hacer algo: '¿cómo llegas?', '¿cómo se usa?'. Para responder, normalmente encadenas los pasos con la forma て.",
+   "examples": [
+    {
+     "jp": "ひかり大学まで どうやって 行きますか。…駅から 3番の バスに 乗って、大学の 前で 降ります。",
+     "es": "¿Cómo llegas a la Universidad Hikari? …Tomo el autobús 3 en la estación y me bajo frente a la universidad."
+    }
+   ]
+  },
+  {
+   "title": "どの N — ¿cuál N? (entre tres o más)",
+   "explain": "どの es el interrogativo de この/その/あの: pregunta cuál entre tres o más cosas o personas. Siempre va seguido de un sustantivo (どの 人, どの 本). Si no pones sustantivo, se usa どれ.",
+   "examples": [
+    {
+     "jp": "どの バスが 鎌倉へ 行きますか。…あの 青い バスです。",
+     "es": "¿Qué autobús va a Kamakura? …Aquel azul."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "すみませんが、使い方を 教えて ください。",
+   "es": "Disculpa, ¿me enseñas cómo se usa?"
+  },
+  {
+   "jp": "まず キャッシュカードを 入れて ください。",
+   "es": "Primero mete la tarjeta del banco."
+  },
+  {
+   "jp": "暗証番号を 押して、金額を 押して ください。",
+   "es": "Marca tu NIP y luego la cantidad."
+  },
+  {
+   "jp": "どうやって 行きましたか。",
+   "es": "¿Cómo fuiste?"
+  },
+  {
+   "jp": "いいえ、まだまだです。",
+   "es": "No, todavía me falta mucho."
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L16-c1",
+   "lesson": 16,
+   "title": "El cajero automático",
+   "situation": "Lucía necesita sacar dinero y no sabe usar el cajero; Kenta le explica paso a paso.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "きのしたさん、お金を 出したいです。すみませんが、使い方を 教えて ください。",
+     "es": "Kenta, quiero sacar dinero. ¿Me enseñas cómo se usa, por favor?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "いいですよ。まず キャッシュカードを 入れて ください。",
+     "es": "Claro. Primero mete la tarjeta del banco."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "入れました。次は？",
+     "es": "Ya la metí. ¿Y luego?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "次に 「お引き出し」の ボタンを 押して ください。",
+     "es": "Ahora presiona el botón de \"retiro\"."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい。それから？",
+     "es": "Listo. ¿Y después?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "暗証番号を 押して、金額を 押して ください。",
+     "es": "Marca tu NIP y luego la cantidad."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "2万円ですから、2と 万と 円ですね。",
+     "es": "Son 20,000 yenes, así que 2, luego \"diez mil\" y luego \"yen\", ¿no?"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "ええ。それから 確認の ボタンを 押して ください。",
+     "es": "Sí. Y luego presiona el botón de confirmar."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、お金が 出ました。簡単ですね。",
+     "es": "¡Ah, ya salió el dinero! Es fácil."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "カードと お金を 取ってから、帰りましょう。",
+     "es": "Toma la tarjeta y el dinero, y vámonos."
+    }
+   ]
+  },
+  {
+   "id": "L16-c2",
+   "lesson": 16,
+   "title": "Un fin de semana en Kamakura",
+   "tags": [
+    "viajes"
+   ],
+   "situation": "El lunes en la oficina, el Sr. Mori le pregunta a Lucía por su paseo a Kamakura con Anna.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "ルシアさん、週末 どこか 行きましたか。",
+     "es": "Lucía, ¿fuiste a algún lado el fin de semana?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、アンナさんと 鎌倉へ 行きました。",
+     "es": "Sí, fui a Kamakura con Anna."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "そうですか。どうやって 行きましたか。",
+     "es": "Ah, ¿sí? ¿Cómo fueron?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "東京駅で JRに 乗って、鎌倉で 降りました。",
+     "es": "Tomamos el tren de JR en la estación de Tokio y nos bajamos en Kamakura."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "鎌倉は どうでしたか。",
+     "es": "¿Qué tal Kamakura?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "緑が 多くて、静かな 町でした。",
+     "es": "Es una ciudad tranquila y llena de verde."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "何を しましたか。",
+     "es": "¿Qué hicieron?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "お寺を 見て、海の 近くを 散歩して、魚の 料理を 食べました。",
+     "es": "Vimos templos, paseamos cerca del mar y comimos pescado."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "いいですね。ルシアさん、日本語が 上手ですね。",
+     "es": "Qué bien. Lucía, tu japonés es muy bueno."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "いいえ、まだまだです。",
+     "es": "No, todavía me falta mucho."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Cómo usar el cajero (ATMの 使い方)",
+   "items": [
+    {
+     "kana": "おあずけいれ",
+     "kanji": "お預け入れ",
+     "es": "ingreso"
+    },
+    {
+     "kana": "おふりこみ",
+     "kanji": "お振り込み",
+     "es": "pago (a otra cuenta)"
+    },
+    {
+     "kana": "おふりかえ",
+     "kanji": "お振り替え",
+     "es": "transferencia"
+    },
+    {
+     "kana": "おひきだし",
+     "kanji": "お引き出し",
+     "es": "retirada de dinero"
+    },
+    {
+     "kana": "つうちょうきにゅう",
+     "kanji": "通帳記入",
+     "es": "actualizar la libreta"
+    },
+    {
+     "kana": "ざんだかしょうかい",
+     "kanji": "残高照会",
+     "es": "consulta de saldo"
+    },
+    {
+     "kana": "あんしょうばんごう",
+     "kanji": "暗証番号",
+     "es": "número secreto, PIN"
+    },
+    {
+     "kana": "えん",
+     "kanji": "円",
+     "es": "yen (botón del importe)"
+    },
+    {
+     "kana": "かくにん",
+     "kanji": "確認",
+     "es": "confirmar (botón)"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "En los cajeros japoneses la cantidad se marca con cifras y botones como 万 (diez mil) y 円: para sacar 20,000 yenes se pulsa 2, 万 y 円. Fuera del horario del banco o en fin de semana suelen cobrar una pequeña comisión.",
+  "Kamakura está a una hora de Tokio en tren. Fue capital de Japón hace unos 800 años y hoy es famosa por su gran Buda de bronce, sus templos entre árboles y su playa."
+ ],
+ "extras": [
+  {
+   "jp": "鎌倉へ 行って、お寺を 見たいです。",
+   "es": "Quiero ir a Kamakura a ver templos.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "京都は 古くて、きれいな 町です。",
+   "es": "Kioto es una ciudad antigua y bonita.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "この 店は 安くて、おいしいです。",
+   "es": "Este lugar es barato y rico.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "晩ごはんを 食べてから、お茶を 飲みます。",
+   "es": "Después de cenar tomo té.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "毎朝 メールを 読んでから、仕事を 始めます。",
+   "es": "Cada mañana leo los correos y después empiezo a trabajar.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "わたしの 会社は 人が 多くて、にぎやかです。",
+   "es": "En mi empresa hay mucha gente y siempre hay ambiente.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "学校が 終わってから、図書館で 勉強します。",
+   "es": "Después de clases estudio en la biblioteca.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "日本語の 先生は 親切で、おもしろいです。",
+   "es": "Mi profesor/a de japonés es amable y divertido/a.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "晩ごはんを 食べてから、アニメを 見ます。",
+   "es": "Después de cenar veo anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "この アニメは 絵が きれいです。",
+   "es": "Este anime tiene unos dibujos preciosos.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "宿題を してから、ゲームを します。",
+   "es": "Después de hacer la tarea juego videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "この ゲームは 新しくて、おもしろいです。",
+   "es": "Este videojuego es nuevo y divertido.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "朝 ジョギングを して、シャワーを 浴びます。",
+   "es": "En la mañana salgo a correr y me baño.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "カルロスさんは 足が 速いです。",
+   "es": "Carlos corre muy rápido.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "なかむらさんは 歌が 上手です。",
+   "es": "Yui canta muy bien.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "この 歌は 明るくて、楽しいです。",
+   "es": "Esta canción es alegre y divertida.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

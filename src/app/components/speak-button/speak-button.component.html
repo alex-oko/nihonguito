@@ -1,0 +1,12 @@
+<!-- Botón de altavoz: solo existe si el dispositivo puede hablar (voz del sistema o audios pregrabados) -->
+@if (speechSVC.canSpeak) {
+    <button
+        type="button"
+        class="speak"
+        [class.big]="big()"
+        (click)="say($event)"
+        [attr.aria-label]="'Escuchar ' + text()"
+    >
+        <app-icon name="volume" [size]="big() ? 26 : 18" />
+    </button>
+}

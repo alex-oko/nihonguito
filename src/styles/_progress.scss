@@ -1,0 +1,17 @@
+/* ---- Barra de progreso (.bar) ---- */
+.bar {
+    height: 8px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    overflow: hidden;
+}
+.bar > i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+    transition: width 0.35s ease;
+}
+.bar.ok > i {
+    background: var(--ok);
+}

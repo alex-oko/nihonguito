@@ -1,0 +1,15 @@
+<!-- Atajos de selección -->
+<div class="quick chips">
+    <button class="chip" (click)="upTo()">Hasta la lección {{ progressSVC.lastLesson().id }}</button>
+    <button class="chip" (click)="all()">Todas</button>
+    <button class="chip" (click)="selected.set([])">Ninguna</button>
+</div>
+
+<!-- Cuadrícula de lecciones -->
+<div class="grid">
+    @for (meta of lessonSVC.index(); track meta.id) {
+        <button class="n" [class.on]="selected().includes(meta.id)" (click)="toggle(meta.id)" [attr.aria-label]="'Lección ' + meta.id">
+            {{ meta.id }}
+        </button>
+    }
+</div>

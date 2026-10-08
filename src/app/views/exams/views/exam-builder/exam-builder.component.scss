@@ -1,0 +1,68 @@
+.level {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+}
+.paper {
+    width: 40px;
+    height: 48px;
+    flex: none;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    color: #1f1f22;
+    background: #fffdf6;
+    border-top: 3px solid #d3242b;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.18);
+}
+
+.head {
+    margin: 12px 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sec {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px !important;
+}
+.sec.on {
+    border-color: var(--ink) !important;
+}
+.check {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    border: 1.5px solid var(--line);
+    display: grid;
+    place-items: center;
+    flex: none;
+}
+.sec.on .check {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bg);
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+}
+.strict {
+    margin-top: 16px;
+    cursor: pointer;
+    gap: 12px;
+}
+.go {
+    margin-top: 20px;
+}

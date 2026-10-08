@@ -1,0 +1,13 @@
+/* ---- Furigana: <ruby>/<rt> y el interlineado extra cuando data-script="furigana" ---- */
+ruby {
+    ruby-position: over;
+}
+rt {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--muted);
+}
+/* Deja sitio para la furigana encima de cada línea */
+html[data-script='furigana'] .jp {
+    line-height: 2;
+}

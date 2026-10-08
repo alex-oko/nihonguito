@@ -1,0 +1,13 @@
+@if (isCountdown()) {
+    <!-- Cuenta atrás -->
+    <div class="base" [class.low]="isLow()" role="timer" [attr.aria-label]="ariaLabel()">
+        <div class="base-row">
+            <span class="small muted"><app-icon name="clock" [size]="15" /> Tiempo restante</span>
+            <b class="base-time">{{ timeText() }}</b>
+        </div>
+        <div class="track"><i [style.width.%]="percent()"></i></div>
+    </div>
+} @else {
+    <!-- Cronómetro -->
+    <span class="watch" role="timer" [attr.aria-label]="ariaLabel()"><app-icon name="clock" [size]="15" />{{ timeText() }}</span>
+}

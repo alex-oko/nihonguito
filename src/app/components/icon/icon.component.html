@@ -1,0 +1,14 @@
+<!-- Icono de línea: hereda el color del texto (currentColor) -->
+<svg
+    [attr.width]="size()"
+    [attr.height]="size()"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    [attr.stroke-width]="stroke()"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    <path [attr.d]="pathData()" [attr.fill]="fill() ? 'currentColor' : 'none'" />
+</svg>

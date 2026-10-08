@@ -1,0 +1,8 @@
+<!-- Musubi -->
+<app-musubi [mood]="mood()" [size]="size()" (poke)="poke.emit()" />
+
+<!-- Bocadillo con el texto proyectado -->
+<div class="bubble" role="status">
+    <span class="who">MUSUBI</span>
+    <ng-content />
+</div>

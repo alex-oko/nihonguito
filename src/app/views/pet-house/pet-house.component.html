@@ -1,0 +1,302 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/" aria-label="Volver al inicio"><app-icon name="back" /></a>
+        <div class="grow">
+            <h1>Casa de Musubi</h1>
+            <span class="small muted">{{ clockText() }}</span>
+        </div>
+        <span class="stage"><b>{{ currentStage().name }}</b><span class="jp">{{ currentStage().ja }}</span></span>
+    </header>
+
+    <!-- Habitación: dibujo de fondo, burbuja, Musubi y corazones -->
+    <section #room class="room" [class.night]="isNight() && !petState().asleep" [class.sleeping]="petState().asleep">
+        <svg class="bg" viewBox="0 0 360 270" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <!-- Cada objeto de la casa, dibujado en coordenadas de la habitación (también sirve para las miniaturas) -->
+            <ng-template #deco let-id>
+                @switch (id) {
+                    @case ('alfombra') {
+                        <ellipse cx="180" cy="236" rx="96" ry="24" fill="#5a8be8" />
+                        <ellipse cx="180" cy="236" rx="80" ry="17" fill="none" stroke="#f2b84b" stroke-width="3" stroke-dasharray="7 5" />
+                    }
+                    @case ('cojin') {
+                        <rect x="108" y="236" width="144" height="28" rx="12" fill="#e86a5a" />
+                        <path d="M116 250 h128" stroke="#c4483a" stroke-width="2" stroke-dasharray="4 4" />
+                    }
+                    @case ('cuadro') {
+                        <rect x="46" y="22" width="60" height="40" rx="3" fill="#a5714a" />
+                        <rect x="51" y="27" width="50" height="30" fill="#bfe3ff" />
+                        <path d="M51 57 L72 33 L80 41 L86 36 L101 57 Z" fill="#5a6fa8" />
+                        <path d="M67 39 L72 33 L77 39 L74 41 L72 39 L70 41 Z" fill="#fff" />
+                        <circle cx="92" cy="34" r="4" fill="#ea5455" />
+                    }
+                    @case ('lantern') {
+                        <line x1="180" y1="16" x2="180" y2="34" stroke="#2c2c2a" stroke-width="2" />
+                        <ellipse cx="180" cy="48" rx="13" ry="15" fill="#ea5455" />
+                        <rect x="172" y="32" width="16" height="4" fill="#2c2c2a" />
+                        <rect x="172" y="60" width="16" height="4" fill="#2c2c2a" />
+                    }
+                    @case ('furin') {
+                        <line x1="238" y1="16" x2="238" y2="30" stroke="#2c2c2a" stroke-width="1.5" />
+                        <path d="M228 41 a10 10 0 0 1 20 0 v2 h-20 z" fill="#d8f0ff" stroke="#2c2c2a" stroke-width="1.5" />
+                        <circle cx="234" cy="37" r="1.6" fill="#ea5455" />
+                        <circle cx="242" cy="37" r="1.6" fill="#ea5455" />
+                        <line x1="238" y1="43" x2="238" y2="52" stroke="#2c2c2a" stroke-width="1" />
+                        <rect x="233" y="52" width="10" height="13" rx="1" fill="#ea5455" />
+                    }
+                    @case ('plant') {
+                        <rect x="300" y="174" width="26" height="24" rx="4" fill="#c97a4a" />
+                        <path d="M313 176c-12-8-14-22-6-30 2 10 6 14 6 30zM313 176c10-10 22-10 24-4-8 2-14 2-24 4z" fill="#4f9a6e" />
+                        <path d="M313 176c-4-14 0-26 8-32 0 12-4 20-8 32z" fill="#6fbf5a" />
+                    }
+                    @case ('pecera') {
+                        <rect x="250" y="186" width="40" height="12" rx="2" fill="#a5714a" />
+                        <circle cx="270" cy="169" r="17" fill="#bfe3ff" fill-opacity="0.9" stroke="#7ab0d8" stroke-width="2" />
+                        <path d="M255 162 h30" stroke="#7ab0d8" stroke-width="2" />
+                        <path d="M262 172 q6 -7 12 0 q-6 7 -12 0z M273 172 l6 -4 v8 z" fill="#f08a5d" />
+                        <circle cx="266" cy="171" r="1" fill="#2c2c2a" />
+                    }
+                    @case ('daruma') {
+                        <ellipse cx="88" cy="80" rx="11" ry="12" fill="#ea5455" />
+                        <ellipse cx="88" cy="77" rx="6.5" ry="5" fill="#fff4e0" />
+                        <circle cx="85.5" cy="77" r="1.5" fill="#2c2c2a" />
+                        <circle cx="90.5" cy="77" r="1.5" fill="#2c2c2a" />
+                        <path d="M80 86 q8 4 16 0" stroke="#f2b84b" stroke-width="2" fill="none" />
+                    }
+                    @case ('kotatsu') {
+                        <rect x="22" y="182" width="86" height="12" rx="3" fill="#a5714a" />
+                        <rect x="18" y="192" width="94" height="20" rx="6" fill="#e86a5a" />
+                        <circle cx="52" cy="178" r="5" fill="#f08a2c" />
+                        <circle cx="64" cy="179" r="4.5" fill="#f2a03c" />
+                    }
+                    @case ('trophy') {
+                        <path d="M104 70h18v8a9 9 0 0 1-18 0z" fill="#f2b84b" />
+                        <rect x="110" y="86" width="6" height="6" fill="#f2b84b" />
+                    }
+                }
+            </ng-template>
+
+            <!-- Pared, ventana con el cielo de la hora y estantería -->
+            <rect width="360" height="270" class="wall" />
+            <rect width="360" height="16" class="wall2" />
+            <rect x="226" y="34" width="104" height="82" rx="6" class="wood" />
+            <rect x="232" y="40" width="92" height="70" rx="3" [attr.fill]="skyColor()" />
+            @if (showSun()) {
+                <circle cx="300" cy="62" r="13" fill="#ffd76a" />
+            } @else {
+                <circle cx="262" cy="60" r="10" fill="#fff6cf" />
+                <circle cx="290" cy="52" r="1.4" fill="#fff" />
+                <circle cx="308" cy="80" r="1.2" fill="#fff" />
+                <circle cx="246" cy="90" r="1.3" fill="#fff" />
+            }
+            <rect x="276" y="40" width="4" height="70" class="wood" />
+            <rect x="30" y="92" width="110" height="7" rx="2" class="wood" />
+            <rect x="38" y="70" width="9" height="22" fill="#e86a5a" />
+            <rect x="48" y="66" width="9" height="26" fill="#5a8be8" />
+            <rect x="58" y="72" width="9" height="20" fill="#f2b84b" />
+            <!-- Suelo -->
+            <rect y="196" width="360" height="74" class="floor" />
+            <line x1="0" y1="196" x2="360" y2="196" class="fl" />
+            <line x1="120" y1="196" x2="96" y2="270" class="fl" />
+            <line x1="240" y1="196" x2="264" y2="270" class="fl" />
+            <!-- Objetos de la casa que tiene -->
+            @for (item of roomItems(); track item.id) {
+                <ng-container *ngTemplateOutlet="deco; context: { $implicit: item.id }" />
+            }
+            <!-- Sombra de noche o de sueño -->
+            <rect width="360" height="270" class="shade" />
+        </svg>
+
+        <!-- Burbuja de diálogo y comida que entra -->
+        <div class="bubble" role="status">
+            <span class="ja">{{ bubbleLine()[0] }}</span>
+            <span class="es">{{ bubbleLine()[1] }}</span>
+        </div>
+        @if (eating(); as food) {
+            <span class="food jp">{{ food }}</span>
+        }
+        <!-- Musubi: se toca o se frota con el dedo -->
+        <div class="pet" (pointerdown)="onPointerDown($event)" (pointermove)="onPointerMove($event)" (pointerup)="onPointerUp()" (pointercancel)="onPointerUp()" (pointerleave)="onPointerUp()">
+            <span #squish class="squish"><app-musubi [mood]="petSVC.mood()" [size]="petSize()" [tappable]="false" /></span>
+        </div>
+        @if (!hasPatted()) {
+            <span class="pat-hint"><app-icon name="hand" [size]="13" />Tócalo o acarícialo con el dedo</span>
+        }
+        @for (pop of pops(); track pop.id) {
+            <svg class="pop" [class.star]="pop.isStar" [style.left.px]="pop.x" [style.top.px]="pop.y" [style.--dx]="pop.driftX + 'px'" viewBox="0 0 24 24" aria-hidden="true">
+                <path [attr.d]="pop.isStar ? starPath : heartPath" />
+            </svg>
+        }
+    </section>
+
+    <!-- Necesidades -->
+    <div class="meters">
+        @for (meter of meters(); track meter.id) {
+            <div class="meter" [attr.data-m]="meter.id">
+                <span class="mh"><app-icon [name]="meter.icon" [size]="15" />{{ meter.label }}<em>{{ meter.value }}%</em></span>
+                <span class="bar"><i [style.width.%]="meter.value"></i></span>
+                <small>{{ meter.text }}</small>
+            </div>
+        }
+    </div>
+
+    <!-- Acciones -->
+    <div class="actions">
+        <button class="act" data-a="feed" [disabled]="petState().asleep" (click)="feedBest()"><span class="ai"><app-icon name="rice" [size]="20" /></span>Comer</button>
+        <button class="act" data-a="play" [disabled]="petState().asleep" (click)="openGame()"><span class="ai"><app-icon name="gamepad" [size]="20" /></span>Jugar</button>
+        <button class="act" data-a="pet" (click)="onPet()"><span class="ai"><app-icon name="hand" [size]="20" /></span>Mimar</button>
+        <button class="act" data-a="sleep" (click)="toggleSleep()"><span class="ai"><app-icon name="moon" [size]="20" /></span>{{ petState().asleep ? 'Despertar' : 'Dormir' }}</button>
+    </div>
+
+    <!-- Despensa -->
+    <h2 class="section-title">Despensa <span class="grains"><app-icon name="rice" [size]="14" />{{ petState().grains }} granos</span></h2>
+    <div class="pantry">
+        @for (topping of toppings; track topping.id) {
+            <button class="topping" [class.locked]="!petSVC.canEat(topping)" (click)="feed(topping)">
+                <span class="dot" [style.background]="topping.color"></span>
+                <b class="jp">{{ topping.ja }}</b>
+                <small>{{ topping.es }}</small>
+                <span class="cost">{{ petSVC.canEat(topping) ? topping.cost + ' granos' : topping.need === 1 ? 'Domina 1 lección' : 'Domina ' + topping.need + ' lecciones' }}</span>
+            </button>
+        }
+    </div>
+    <p class="small muted hint">Ganas {{ perCorrect }} granos por cada acierto y {{ perFinish }} por terminar una práctica.</p>
+
+    <!-- Cómo crece -->
+    <h2 class="section-title">Cómo crece <small>con tu XP total</small></h2>
+    <div class="card">
+        <div class="growth">
+            @for (stageInfo of stages; track stageInfo.name; let stageIndex = $index) {
+                <div class="gstep" [class.done]="stageIndex < petSVC.stageIndex()" [class.now]="stageIndex === petSVC.stageIndex()" [class.next]="stageIndex > petSVC.stageIndex()">
+                    <span class="gm">
+                        <app-musubi [size]="stageIndex === petSVC.stageIndex() ? 64 : 50" [stage]="stageIndex" [wearing]="[]" [tappable]="false" />
+                        @if (stageIndex < petSVC.stageIndex()) {
+                            <i class="gb ok"><app-icon name="check" [size]="11" [stroke]="3.5" /></i>
+                        } @else if (stageIndex > petSVC.stageIndex()) {
+                            <i class="gb"><app-icon name="lock" [size]="11" [stroke]="2.5" /></i>
+                        }
+                    </span>
+                    <b>{{ stageInfo.name }}</b>
+                    <span class="jp">{{ stageInfo.ja }}</span>
+                    <small>{{ stageIndex > petSVC.stageIndex() ? stageInfo.xp + ' XP' : stageIndex === petSVC.stageIndex() ? 'Ahora' : 'Superada' }}</small>
+                </div>
+            }
+        </div>
+        @if (nextStage(); as next) {
+            <div class="gbar">
+                <span class="bar"><i [style.width.%]="next.pct"></i></span>
+                <span class="small muted">{{ next.xp }} / {{ next.goal }} XP</span>
+            </div>
+            <p class="gnext small">
+                <app-icon name="sparkles" [size]="14" />Siguiente: <b>{{ next.name }}</b>. {{ next.look }}. Te faltan {{ next.goal - next.xp }} XP.
+            </p>
+        } @else {
+            <p class="gnext small"><app-icon name="sparkles" [size]="14" />¡Etapa final! Musubi ya vive en su caja bentō.</p>
+        }
+    </div>
+
+    <!-- Ropa -->
+    <h2 class="section-title">Ropa <small>{{ countOwned(clothes) }} de {{ clothes.length }} · una por zona</small></h2>
+    <div class="ward">
+        @for (item of clothes; track item.id) {
+            @let got = petSVC.has(item.id);
+            <button class="item" [class.got]="got" [class.on]="isWearing(item.id)" [class.buy]="!got && !!item.cost" (click)="tapItem(item)">
+                @if (newIds.includes(item.id)) {
+                    <span class="nw">Nuevo</span>
+                }
+                <span class="thumb"><app-musubi [size]="54" [stage]="2" [wearing]="[item.id]" [tappable]="false" /></span>
+                <b>{{ item.name }}</b>
+                <small>
+                    @if (got) {
+                        {{ isWearing(item.id) ? 'Puesto' : 'Toca para ponértelo' }}
+                    } @else if (item.cost) {
+                        <app-icon name="rice" [size]="11" />Comprar · {{ item.cost }}
+                    } @else {
+                        <app-icon name="lock" [size]="11" />{{ petSVC.how(item) }}
+                    }
+                </small>
+            </button>
+        }
+    </div>
+
+    <!-- Casa -->
+    <h2 class="section-title">Casa <small>{{ countOwned(houseItems) }} de {{ houseItems.length }}</small></h2>
+    <div class="ward">
+        @for (item of houseItems; track item.id) {
+            @let got = petSVC.has(item.id);
+            <button class="item" [class.got]="got" [class.buy]="!got && !!item.cost" (click)="tapItem(item)">
+                @if (newIds.includes(item.id)) {
+                    <span class="nw">Nuevo</span>
+                }
+                <span class="thumb room-thumb">
+                    <svg [attr.viewBox]="item.vb" width="64" height="44" aria-hidden="true">
+                        <ng-container *ngTemplateOutlet="deco; context: { $implicit: item.id }" />
+                    </svg>
+                </span>
+                <b>{{ item.name }}</b>
+                <small>
+                    @if (got) {
+                        En tu casa
+                    } @else if (item.cost) {
+                        <app-icon name="rice" [size]="11" />Comprar · {{ item.cost }}
+                    } @else {
+                        <app-icon name="lock" [size]="11" />{{ petSVC.how(item) }}
+                    }
+                </small>
+            </button>
+        }
+    </div>
+</div>
+
+<!-- Celebración de crecimiento -->
+@if (evolution(); as evo) {
+    <div class="evo-back">
+        <div class="evo" role="dialog" aria-label="Musubi creció">
+            <div class="evo-pet" [class.charging]="!evo.done" [class.burst]="evo.done">
+                <app-musubi [size]="150" [stage]="evo.done ? evo.to : evo.from" [mood]="evo.done ? 'happy' : 'wow'" [tappable]="false" />
+            </div>
+            @if (evo.done) {
+                <h3>¡Musubi creció!</h3>
+                <p>
+                    Ahora es <b>{{ stages[evo.to].name }}</b> <span class="jp">{{ stages[evo.to].ja }}</span>.<br />{{ stages[evo.to].look }}. Todo gracias a tu práctica.
+                </p>
+                <button class="btn accent block" (click)="closeEvolve()">¡Qué bien!</button>
+            } @else {
+                <h3>¿Qué le pasa a Musubi…?</h3>
+                <p class="muted">Tu XP lo está haciendo crecer.</p>
+            }
+        </div>
+    </div>
+}
+
+<!-- Juego de 5 palabras -->
+@if (game(); as currentGame) {
+    <div class="sheet-backdrop" (click)="closeGame()">
+        <div class="sheet" (click)="$event.stopPropagation()">
+            <div class="grab"></div>
+            <h3>Juega con Musubi</h3>
+            <p class="small muted">
+                {{ currentGame.done ? currentGame.correct + ' de ' + currentGame.rounds.length + ' bien · +' + currentGame.grains + ' granos' : 'Musubi te dice una palabra que ya estudiaste. ¿Qué significa?' }}
+            </p>
+            <div class="gprog">
+                @for (round of currentGame.rounds; track $index) {
+                    <i [class.ok]="currentGame.results[$index] === true" [class.no]="currentGame.results[$index] === false"></i>
+                }
+            </div>
+            @if (!currentGame.done) {
+                @let round = currentGame.rounds[currentGame.index];
+                <button class="qword jp" (click)="say(round.japanese)">{{ round.japanese }}</button>
+                <p class="qsub">{{ round.romaji }}</p>
+                <div class="answers">
+                    @for (option of round.options; track option) {
+                        <button class="ans" [class.right]="pickedAnswer() && option === round.answer" [class.wrong]="pickedAnswer() === option && option !== round.answer" [disabled]="!!pickedAnswer()" (click)="pickAnswer(option)">{{ option }}</button>
+                    }
+                </div>
+            } @else {
+                <p class="qword jp">{{ currentGame.correct >= 4 ? 'たのしい！' : 'もう いっかい？' }}</p>
+                <p class="qsub">{{ currentGame.correct >= 4 ? '¡Qué divertido!' : '¿Otra vez?' }}</p>
+                <button class="btn accent block" (click)="closeGame()">Volver con Musubi</button>
+            }
+        </div>
+    </div>
+}

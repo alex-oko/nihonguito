@@ -1,0 +1,61 @@
+/* ---- Superficies: tarjetas, tiles y listas ---- */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+a.card,
+button.card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.12s, border-color 0.12s;
+}
+a.card:active,
+button.card:active {
+    transform: scale(0.985);
+}
+a.card:hover,
+button.card:hover {
+    border-color: var(--muted);
+}
+
+.card.tile {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    min-height: 108px;
+}
+.tile .glyph {
+    font-family: var(--font-jp);
+    font-size: 1.9rem;
+    line-height: 1;
+    font-weight: 500;
+}
+.tile .t {
+    font-weight: 600;
+}
+.tile .d {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+}
+.list-item + .list-item {
+    border-top: 1px solid var(--line);
+}
+.list {
+    padding: 0;
+    overflow: hidden;
+}

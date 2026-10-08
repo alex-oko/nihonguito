@@ -1,0 +1,33 @@
+<!-- Campo para responder -->
+@if (!result()) {
+    <input
+        #inputField
+        class="blank"
+        [class]="'blank ' + (slot().size ?? 'md')"
+        [class.jp]="slot().input !== 'es'"
+        [attr.inputmode]="'text'"
+        [attr.aria-label]="label()"
+        autocomplete="off"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        enterkeyhint="next"
+        (input)="sync()"
+        (blur)="flush()"
+        (keydown.enter)="next($event)"
+    />
+} @else {
+    <!-- Corrección -->
+    @let correction = result()!;
+    <span class="graded" [class.ok]="correction.score === 1" [class.half]="correction.score === 0.5" [class.bad]="correction.score === 0">
+        <span class="given" [class.jp]="slot().input !== 'es'">{{ value() || '　' }}</span>
+        @if (correction.score === 1) {
+            <span class="mark">✓</span>
+        } @else if (slot().expected) {
+            <span class="fix"><app-jp [text]="slot().expected" /></span>
+        }
+        @if (correction.note) {
+            <span class="note">{{ correction.note }}</span>
+        }
+    </span>
+}

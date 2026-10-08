@@ -1,0 +1,202 @@
+<div class="page">
+    <!-- Barrio de Musubi: una casa por lección; sus ventanas se encienden al aprender sus palabras -->
+    <section class="town">
+        <div class="town-info">
+            <button class="date" (click)="sayToday()" [attr.aria-label]="'Hoy es ' + today().es + '. Escuchar en japonés'">
+                <span class="dk jp">{{ today().kanji }}</span>
+                <span><b class="jp">{{ today().kana }}</b><small>{{ today().es }}</small></span>
+            </button>
+            <a class="lvl" routerLink="/perfil">
+                <small>Nivel</small><b class="lv">{{ progressSVC.level() }}</b>
+                <span class="bar"><i [style.width.%]="progressSVC.levelProgress() * 100"></i></span>
+            </a>
+        </div>
+        <svg viewBox="0 0 390 110" aria-hidden="true">
+            <path class="hill" d="M0 80 Q100 50 200 74 T390 66 V110 H0z" />
+            <path class="str" d="M0 40 Q100 62 200 42 T390 48" />
+            @for (bulb of bulbs; track $index) {
+                <circle class="bulb" [attr.cx]="bulb[0]" [attr.cy]="bulb[1]" r="3.5" />
+            }
+            @for (house of houses(); track house.id) {
+                <g [attr.transform]="'translate(' + house.x + ' 0)'" [class.faded]="!house.started">
+                    <path class="house" d="M0 78 L34 56 L68 78z" />
+                    <rect class="house" x="6" y="76" width="56" height="34" />
+                    @for (windowSpot of windows; track $index) {
+                        <rect class="win" [class.lit]="$index < house.lit" [attr.x]="windowSpot[0]" [attr.y]="windowSpot[1]" width="11" height="9" rx="2" />
+                    }
+                    <text class="hn" x="34" y="72" text-anchor="middle">{{ house.id }}</text>
+                </g>
+            }
+        </svg>
+    </section>
+
+    <!-- Bocadillo de Musubi (al tocarlo cambia de frase) -->
+    <app-musubi-say class="say" [mood]="musubiMood()" (poke)="nextLine()">
+        <span [innerHTML]="line()"></span>
+        <small class="hint">Toca a Musubi para otra frase</small>
+    </app-musubi-say>
+
+    <!-- Casa de Musubi: se cuida con los granos ganados al practicar -->
+    <a class="house-card" routerLink="/musubi" [class.alert]="petSVC.needsYou()">
+        @if (petSVC.fresh().length) {
+            <span class="new">¡Nuevo!</span>
+        }
+        <span class="thumb"><app-musubi [mood]="petSVC.baseMood()" [size]="60" /></span>
+        <span class="grow">
+            <span class="hc-t"><b>Casa de Musubi</b><span><app-icon name="rice" [size]="13" />{{ petSVC.state().grains }}</span></span>
+            <span class="hc-msg">{{ petSVC.status() }}</span>
+            <span class="minis">
+                <span data-m="food">Panza<span class="bar"><i [style.width.%]="petSVC.state().food"></i></span></span>
+                <span data-m="joy">Alegría<span class="bar"><i [style.width.%]="petSVC.state().joy"></i></span></span>
+                <span data-m="energy">Energía<span class="bar"><i [style.width.%]="petSVC.state().energy"></i></span></span>
+            </span>
+        </span>
+    </a>
+
+    <!-- Racha, XP de hoy y palabras por repasar -->
+    <div class="kpis">
+        <div class="kpi">
+            <span class="ki" data-c="signal"><app-icon name="flame" [size]="17" [fill]="progressSVC.currentStreak() > 0" /></span>
+            <b>{{ progressSVC.currentStreak() }}</b>
+            <span>{{ progressSVC.currentStreak() === 1 ? 'día seguido' : 'días seguidos' }}</span>
+        </div>
+        <div class="kpi">
+            <span class="ring" [style.--p]="goalPct()"></span>
+            <b>{{ progressSVC.todayXp() }}<small>/{{ goal() }}</small></b>
+            <span>XP de hoy</span>
+        </div>
+        <a class="kpi" routerLink="/repaso">
+            <span class="ki" data-c="gold"><app-icon name="refresh" [size]="17" /></span>
+            <b>{{ dueCount() }}</b>
+            <span>por repasar</span>
+        </a>
+    </div>
+    <p class="small goal-msg">{{ goalMessage() }}</p>
+
+    <!-- Aviso para elegir intereses (solo si no hay ninguno) -->
+    @if (!progressSVC.settings().interests.length) {
+        <a class="card interests-cta" routerLink="/perfil" fragment="intereses">
+            <span class="ki big" data-c="accent"><app-icon name="heart" [size]="20" /></span>
+            <div class="grow">
+                <div class="t">¿Qué te gusta?</div>
+                <div class="small muted">Elige tus intereses (viajes, comida, anime…) y practicarás con frases sobre ellos.</div>
+            </div>
+            <app-icon name="chevron" />
+        </a>
+    }
+
+    <!-- Siguiente paso y alternativas -->
+    @if (nextStep(); as step) {
+        <h2 class="section-title">Tu siguiente paso</h2>
+        <section class="mission">
+            <span class="tag"><app-icon [name]="step.icon" [size]="14" />{{ step.eyebrow }}</span>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.body }}</p>
+            @if (step.chips.length) {
+                <div class="why">
+                    @for (chip of step.chips; track chip) {
+                        <span class="jp">{{ chip }}</span>
+                    }
+                </div>
+            }
+            <a class="btn accent block go" [routerLink]="step.link"><app-icon name="play" [size]="17" />{{ step.cta }}</a>
+        </section>
+        <div class="alts">
+            @for (alt of altSteps(); track alt.kind) {
+                <a class="card alt" [routerLink]="alt.link">
+                    <span class="ki" [attr.data-c]="alt.color"><app-icon [name]="alt.icon" [size]="18" /></span>
+                    <b>{{ alt.title }}</b>
+                    <span class="small muted">{{ alt.sub }}</span>
+                </a>
+            }
+        </div>
+    }
+
+    <!-- Preparación para el próximo examen de nivel -->
+    @if (exam(); as examReadiness) {
+        <h2 class="section-title">¿Listo para el examen? <a class="sec-link" routerLink="/examenes">Ver exámenes</a></h2>
+        <section class="card">
+            <app-exam-readiness [readiness]="examReadiness" eyebrow="Tu próximo examen" (start)="readinessSVC.start($event)" />
+        </section>
+    }
+
+    <!-- Farolillos de los últimos 14 días -->
+    <h2 class="section-title">Tus últimos 14 días</h2>
+    <section class="card">
+        <div class="lanterns" role="img" [attr.aria-label]="'Meta cumplida ' + days().met + ' de 14 días'">
+            @for (day of days().list; track day.key) {
+                <span class="ln" [attr.data-s]="day.state" [class.today]="day.today" [attr.title]="day.title">
+                    <i></i><small>{{ day.label }}</small>
+                </span>
+            }
+        </div>
+        <div class="legend small">
+            <span><i data-s="on"></i>meta cumplida</span>
+            <span><i data-s="half"></i>a medias</span>
+            <span><i></i>sin práctica</span>
+            <b>{{ days().total }} XP</b>
+        </div>
+    </section>
+
+    <!-- Habilidades, de peor a mejor -->
+    <h2 class="section-title">Tus habilidades</h2>
+    <section class="card skills">
+        @if (skills().practiced) {
+            @for (skill of skills().rows; track skill.skill) {
+                <a class="skill" [attr.data-t]="skill.tone" [routerLink]="['/lecciones', lastLesson(), 'practica', skill.skill]">
+                    <span class="ki" [attr.data-c]="skill.color"><app-icon [name]="skill.icon" [size]="18" /></span>
+                    <span class="grow">
+                        <span class="nm">{{ skill.label }} <small>{{ skill.status }}</small></span>
+                        <span class="bar"><i [style.width.%]="skill.pct ?? 0"></i></span>
+                    </span>
+                    <b class="pct">{{ skill.pct === null ? '—' : skill.pct + '%' }}</b>
+                </a>
+            }
+        } @else {
+            <p class="small muted empty">Aquí verás qué tan bien te va en significado, escucha, escritura y pronunciación. Se llena al practicar en las lecciones.</p>
+        }
+    </section>
+
+    <!-- Palabras con más fallos -->
+    @if (hardWords().length) {
+        <h2 class="section-title">Palabras que se te escapan</h2>
+        <div class="words">
+            @for (hardWord of hardWords(); track hardWord.word.id) {
+                <button class="word" (click)="say(readingText(hardWord.word))">
+                    <span>
+                        <b class="jp"><app-jp [text]="mainText(hardWord.word)" /></b>
+                        <small>{{ hardWord.es }}</small>
+                    </span>
+                    <span class="miss">{{ hardWord.wrong }} {{ hardWord.wrong === 1 ? 'fallo' : 'fallos' }}</span>
+                </button>
+            }
+        </div>
+    }
+
+    <!-- Palabra del día -->
+    @if (wordOfTheDay(); as word) {
+        <h2 class="section-title">Palabra del día</h2>
+        <div class="card wotd">
+            <div class="grow">
+                <div class="jp w"><app-jp [text]="mainText(word)" /></div>
+                @if (mainText(word) !== readingText(word) && progressSVC.settings().script === 'kanji') {
+                    <div class="jp muted">{{ readingText(word) }}</div>
+                }
+                @if (showRomaji()) {
+                    <div class="small muted rom">{{ toRomaji(readingText(word)) }}</div>
+                }
+                <div class="es">{{ word.es }}</div>
+                <div class="small muted">Lección {{ word.lesson }}</div>
+            </div>
+            <app-speak [text]="readingText(word)" [big]="true" />
+        </div>
+    }
+
+    <!-- Versión (enlaza al perfil, donde se actualiza) -->
+    <a class="app-version" routerLink="/perfil">
+        v{{ updateSVC.version }}
+        @if (updateSVC.state() === 'ready') {
+            <b>· nueva versión disponible</b>
+        }
+    </a>
+</div>

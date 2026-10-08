@@ -1,0 +1,83 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <h1 class="hero-title">Crea tu examen</h1>
+        <p class="muted">Combina las lecciones y secciones que quieras repasar.</p>
+    </header>
+
+    <!-- Enlace al examen de nivel -->
+    <a class="card level" routerLink="/examen/nivel">
+        <span class="paper jp">期末</span>
+        <div class="grow">
+            <div class="t">Examen de nivel</div>
+            <div class="small muted">Formato de clase: hoja de 50 puntos, corrección en rojo.</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+
+    <!-- 1. Lecciones -->
+    <h2 class="section-title">1 · Lecciones</h2>
+    <app-lesson-picker [(selected)]="lessonsSel" />
+
+    <!-- 2. Secciones -->
+    <h2 class="section-title">2 · Secciones</h2>
+    <div class="sections">
+        @for (section of sections; track section.id) {
+            <button class="card sec" [class.on]="sectionsSel().includes(section.id)" (click)="toggle(section.id)">
+                <app-icon [name]="section.icon" [size]="18" />
+                <div class="grow">
+                    <div class="t">{{ section.label }}</div>
+                    <div class="small muted">{{ section.desc }}</div>
+                </div>
+                <span class="check">
+                    @if (sectionsSel().includes(section.id)) {
+                        <app-icon name="check" [size]="16" [stroke]="3" />
+                    }
+                </span>
+            </button>
+        }
+    </div>
+
+    <!-- 3. Número de preguntas -->
+    <h2 class="section-title">3 · Preguntas</h2>
+    <div class="chips">
+        @for (questionCount of counts; track questionCount) {
+            <button class="chip" [class.on]="count() === questionCount" (click)="count.set(questionCount)">{{ questionCount }}</button>
+        }
+    </div>
+
+    <!-- Modo examen real -->
+    <label class="card row strict">
+        <div class="grow">
+            <div class="t">Modo examen real</div>
+            <div class="small muted">Sin correcciones hasta el final ni segundas oportunidades.</div>
+        </div>
+        <input type="checkbox" class="switch" [checked]="strict()" (change)="strict.set(!strict())" />
+    </label>
+
+    <!-- Empezar -->
+    <button class="btn accent block go" [disabled]="!canStart() || building()" (click)="start()">
+        <app-icon name="trophy" [size]="18" />{{ building() ? 'Preparando…' : 'Empezar examen' }}
+    </button>
+    @if (!canStart()) {
+        <p class="small muted center">Elige al menos una lección y una sección.</p>
+    }
+
+    <!-- Historial -->
+    @if (history().length) {
+        <h2 class="section-title">Historial</h2>
+        <div class="card list">
+            @for (exam of history(); track $index) {
+                <div class="list-item">
+                    <div class="grow">
+                        <div class="t small">{{ exam.title }}</div>
+                        <div class="small muted">{{ exam.date }}</div>
+                    </div>
+                    <span class="badge" [class.ok]="exam.score / exam.total >= 0.7" [class.accent]="exam.score / exam.total < 0.5">
+                        {{ exam.score }}/{{ exam.total }}
+                    </span>
+                </div>
+            }
+        </div>
+    }
+</div>

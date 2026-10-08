@@ -1,0 +1,769 @@
+{
+ "id": 18,
+ "title": "Lo que sabemos hacer",
+ "titleJp": "趣味は ピアノを 弾く ことです",
+ "summary": "En el café Komorebi, Yui cuenta que su afición es tocar el piano y Anna dice que sabe conducir. Después, Lucía llama para reservar una clase de ceremonia del té.",
+ "vocab": [
+  {
+   "id": "L18-001",
+   "kana": "できます",
+   "es": "poder, saber hacer",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-002",
+   "kana": "あらいます",
+   "kanji": "洗います",
+   "es": "lavar",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-003",
+   "kana": "ひきます",
+   "kanji": "弾きます",
+   "es": "tocar (piano, guitarra)",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-004",
+   "kana": "うたいます",
+   "kanji": "歌います",
+   "es": "cantar",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-005",
+   "kana": "あつめます",
+   "kanji": "集めます",
+   "es": "coleccionar, juntar",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-006",
+   "kana": "すてます",
+   "kanji": "捨てます",
+   "es": "tirar (a la basura)",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-007",
+   "kana": "かえます",
+   "kanji": "換えます",
+   "es": "cambiar, canjear",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-008",
+   "kana": "うんてんします",
+   "kanji": "運転します",
+   "es": "conducir",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-009",
+   "kana": "よやくします",
+   "kanji": "予約します",
+   "es": "reservar",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-010",
+   "kana": "けんがくします",
+   "kanji": "見学します",
+   "es": "visitar para aprender",
+   "type": "verb",
+   "lesson": 18
+  },
+  {
+   "id": "L18-011",
+   "kana": "ピアノ",
+   "es": "piano",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-012",
+   "kana": "－メートル",
+   "es": "… metros",
+   "type": "counter",
+   "lesson": 18
+  },
+  {
+   "id": "L18-013",
+   "kana": "こくさい～",
+   "kanji": "国際～",
+   "es": "… internacional",
+   "type": "other",
+   "lesson": 18
+  },
+  {
+   "id": "L18-014",
+   "kana": "げんきん",
+   "kanji": "現金",
+   "es": "dinero en efectivo",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-015",
+   "kana": "しゅみ",
+   "kanji": "趣味",
+   "es": "afición, hobby",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-016",
+   "kana": "にっき",
+   "kanji": "日記",
+   "es": "diario personal",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-017",
+   "kana": "[お]いのり",
+   "kanji": "[お]祈り",
+   "es": "oración, rezo",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-018",
+   "kana": "かちょう",
+   "kanji": "課長",
+   "es": "jefe de sección",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-019",
+   "kana": "ぶちょう",
+   "kanji": "部長",
+   "es": "jefe de departamento",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-020",
+   "kana": "しゃちょう",
+   "kanji": "社長",
+   "es": "presidente de empresa",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-021",
+   "kana": "どうぶつ",
+   "kanji": "動物",
+   "es": "animal",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-022",
+   "kana": "うま",
+   "kanji": "馬",
+   "es": "caballo",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-023",
+   "kana": "へえ",
+   "es": "¡Anda! ¡Vaya!",
+   "type": "expr",
+   "lesson": 18
+  },
+  {
+   "id": "L18-024",
+   "kana": "それは おもしろいですね。",
+   "es": "¡Qué interesante!",
+   "type": "expr",
+   "lesson": 18
+  },
+  {
+   "id": "L18-025",
+   "kana": "なかなか",
+   "es": "no fácilmente (con negativo)",
+   "type": "adv",
+   "lesson": 18
+  },
+  {
+   "id": "L18-026",
+   "kana": "ぼくじょう",
+   "kanji": "牧場",
+   "es": "granja, rancho",
+   "type": "noun",
+   "lesson": 18
+  },
+  {
+   "id": "L18-027",
+   "kana": "ほんとうですか。",
+   "es": "¿De verdad?",
+   "type": "expr",
+   "lesson": 18
+  },
+  {
+   "id": "L18-028",
+   "kana": "ぜひ",
+   "es": "sin falta, de todas formas",
+   "type": "adv",
+   "lesson": 18
+  },
+  {
+   "id": "L18-029",
+   "kana": "ビートルズ",
+   "es": "los Beatles",
+   "type": "name",
+   "lesson": 18
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "なかむらさんは ピアノを 弾く ことが できます。",
+   "es": "Yui sabe tocar el piano."
+  },
+  {
+   "jp": "アンナさんは 車の 運転が できます。",
+   "es": "Anna sabe conducir."
+  },
+  {
+   "jp": "わたしの 趣味は 料理を 作る ことです。",
+   "es": "Mi afición es cocinar."
+  },
+  {
+   "jp": "食べる まえに、手を 洗います。",
+   "es": "Antes de comer, me lavo las manos."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "カルロスさんは 何語が できますか。",
+   "qes": "Carlos, ¿qué idiomas hablas?",
+   "ajp": "スペイン語と 英語が できます。",
+   "aes": "Hablo español e inglés."
+  },
+  {
+   "qjp": "この 店は カードで 払う ことが できますか。",
+   "qes": "¿En esta tienda se puede pagar con tarjeta?",
+   "ajp": "いいえ、現金だけです。",
+   "aes": "No, solo en efectivo."
+  },
+  {
+   "qjp": "ルシアさんの 趣味は 何ですか。",
+   "qes": "Lucía, ¿cuál es tu afición?",
+   "ajp": "メキシコ料理を 作る ことです。",
+   "aes": "Cocinar comida mexicana."
+  },
+  {
+   "qjp": "駅で ドルを 円に 換える ことが できますか。",
+   "qes": "¿Se pueden cambiar dólares a yenes en la estación?",
+   "ajp": "いいえ、銀行で 換えて ください。",
+   "aes": "No, cámbielos en el banco."
+  },
+  {
+   "qjp": "いつ 日記を 書きますか。",
+   "qes": "¿Cuándo escribes tu diario?",
+   "ajp": "寝る まえに、書きます。",
+   "aes": "Antes de dormir."
+  },
+  {
+   "qjp": "きのしたさんは いますか。",
+   "qes": "¿Está Kenta?",
+   "ajp": "いいえ、10分 まえに、大学へ 行きました。",
+   "aes": "No, se fue a la universidad hace diez minutos."
+  },
+  {
+   "qjp": "日本で 馬を 見る ことが できますか。",
+   "qes": "¿Se pueden ver caballos en Japón?",
+   "ajp": "北海道の 牧場で 見る ことが できますよ。",
+   "aes": "Sí, en las granjas de Hokkaido."
+  },
+  {
+   "qjp": "もりさんは 何か スポーツが できますか。",
+   "qes": "¿El Sr. Mori practica algún deporte?",
+   "ajp": "ええ、ゴルフが できますよ。",
+   "aes": "Sí, juega golf."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Forma de diccionario",
+   "explain": "Es la forma 'básica' del verbo, la que aparece en el diccionario, y se usa en frases informales y para construir otras estructuras. Grupo I: el sonido い antes de ます pasa a う (かきます → かく, のみます → のむ). Grupo II: quita ます y pon る (たべます → たべる). Grupo III: します → する, きます → くる.",
+   "examples": [
+    {
+     "jp": "あらいます → あらう、ひきます → ひく",
+     "es": "lavar, tocar (un instrumento)"
+    },
+    {
+     "jp": "すてます → すてる、うんてんします → うんてんする",
+     "es": "tirar, conducir"
+    }
+   ]
+  },
+  {
+   "title": "N / V-る ことが できます — saber / poder",
+   "explain": "できます significa 'poder' o 'saber hacer'. Lo que puedes hacer va delante con が (¡no con を!). Puede ser un sustantivo (にほんごが できます) o un verbo en forma de diccionario + こと, que convierte el verbo en algo como 'el hecho de…'. También sirve para decir que algo está permitido: 'se puede…'.",
+   "examples": [
+    {
+     "jp": "アンナさんは 車の 運転が できます。",
+     "es": "Anna sabe conducir."
+    },
+    {
+     "jp": "ここで カードを 使う ことが できます。",
+     "es": "Aquí se puede usar tarjeta."
+    }
+   ]
+  },
+  {
+   "title": "しゅみは N / V-る ことです — mi afición es…",
+   "explain": "Para contar tu hobby puedes decir solo el sustantivo (おんがくです), pero con V-る こと eres más concreto: no 'la música' sino 'escuchar música'. こと funciona como el infinitivo español.",
+   "examples": [
+    {
+     "jp": "わたしの 趣味は 料理を 作る ことです。",
+     "es": "Mi afición es cocinar."
+    },
+    {
+     "jp": "趣味は 古い カメラを 集める ことです。",
+     "es": "Mi hobby es coleccionar cámaras antiguas."
+    }
+   ]
+  },
+  {
+   "title": "V-る / Nの / tiempo まえに — antes de…",
+   "explain": "Para decir 'antes de hacer X, hago Y'. El primer verbo va SIEMPRE en forma de diccionario, aunque la frase sea en pasado (error típico: poner ました delante de まえに). Con sustantivos se pone の (しょくじの まえに). Con una cantidad de tiempo no va の y significa 'hace…' (１じかん まえに = hace una hora).",
+   "examples": [
+    {
+     "jp": "食べる まえに、手を 洗います。",
+     "es": "Antes de comer, me lavo las manos."
+    },
+    {
+     "jp": "1年 まえに、日本へ 来ました。",
+     "es": "Vine a Japón hace un año."
+    }
+   ]
+  },
+  {
+   "title": "なかなか + negativo — no es fácil…",
+   "explain": "なかなか con un verbo negativo quiere decir 'no hay manera de…' o 'cuesta mucho…'. Da la idea de que algo no pasa tan fácil como uno esperaba.",
+   "examples": [
+    {
+     "jp": "東京では なかなか ほしを 見る ことが できません。",
+     "es": "En Tokio casi no se pueden ver las estrellas."
+    }
+   ]
+  },
+  {
+   "title": "ぜひ — sin falta",
+   "explain": "ぜひ refuerza un deseo (～たいです) o una petición (～て ください). Es como decir 'sin falta' o 'de verdad que quiero…'. No se usa con frases negativas.",
+   "examples": [
+    {
+     "jp": "ぜひ お茶の 教室を 見学したいです。",
+     "es": "Tengo muchísimas ganas de conocer una clase de ceremonia del té."
+    },
+    {
+     "jp": "ぜひ メキシコへ 来て ください。",
+     "es": "Ven a México sin falta."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "趣味は 何ですか。",
+   "es": "¿Cuál es tu afición?"
+  },
+  {
+   "jp": "へえ、すてきですね。",
+   "es": "¡Anda, qué bonito!"
+  },
+  {
+   "jp": "ほんとうですか。",
+   "es": "¿De verdad?"
+  },
+  {
+   "jp": "ぜひ お願いします。",
+   "es": "Sí, por favor, me encantaría."
+  },
+  {
+   "jp": "見学する ことが できますか。",
+   "es": "¿Se puede ir a verlo?"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L18-c1",
+   "lesson": 18,
+   "title": "Piano y coche",
+   "tags": [
+    "musica"
+   ],
+   "situation": "En el café Komorebi, los amigos hablan de sus aficiones: Yui toca el piano y Anna sabe conducir.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "なかむらさんの 趣味は 何ですか。",
+     "es": "Yui, ¿cuál es tu afición?"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "ピアノを 弾く ことです。毎晩 寝る まえに、少し 弾きます。",
+     "es": "Tocar el piano. Toco un poco todas las noches antes de dormir."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "へえ、すてきですね。",
+     "es": "¡Anda, qué bonito!"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "アンナさんは 車を 運転する ことが できますか。",
+     "es": "Anna, ¿tú sabes conducir?"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "ええ、できます。週末は よく 車で 山へ 行きます。",
+     "es": "Sí. Los fines de semana voy mucho a la montaña en coche."
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "いいですね。わたしは 運転が 全然 できません。",
+     "es": "¡Qué bien! Yo no sé conducir nada."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "じゃ、今度 いっしょに 行きませんか。",
+     "es": "Entonces, ¿vamos juntos la próxima vez?"
+    },
+    {
+     "who": "B",
+     "name": "カルロス",
+     "jp": "ほんとうですか。ぜひ お願いします。",
+     "es": "¿De verdad? ¡Me encantaría!"
+    },
+    {
+     "who": "A",
+     "name": "なかむら",
+     "jp": "わたしも ぜひ 行きたいです。",
+     "es": "Yo también quiero ir, sin falta."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "じゃ、4人で 行きましょう。",
+     "es": "Pues vamos los cuatro."
+    }
+   ]
+  },
+  {
+   "id": "L18-c2",
+   "lesson": 18,
+   "title": "Reserva para la ceremonia del té",
+   "situation": "Lucía llama por teléfono a una escuela de ceremonia del té para reservar una visita.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "うけつけ",
+     "jp": "はい、お茶の 教室です。",
+     "es": "Escuela de ceremonia del té, dígame."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "すみません、教室を 見学する ことが できますか。",
+     "es": "Disculpe, ¿se puede ir a ver una clase?"
+    },
+    {
+     "who": "B",
+     "name": "うけつけ",
+     "jp": "はい。見学する まえに、予約を お願いします。",
+     "es": "Sí. Antes de venir, haga una reserva, por favor."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "じゃ、土曜日の 午後は どうですか。",
+     "es": "Entonces, ¿qué tal el sábado por la tarde?"
+    },
+    {
+     "who": "B",
+     "name": "うけつけ",
+     "jp": "土曜日は 2時から できます。お名前は？",
+     "es": "El sábado se puede a partir de las dos. ¿Su nombre?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ルシア・ガルシアです。あのう、日本語が あまり できませんが、大丈夫ですか。",
+     "es": "Lucía García. Eh… no hablo muy bien japonés, ¿hay problema?"
+    },
+    {
+     "who": "B",
+     "name": "うけつけ",
+     "jp": "ええ、大丈夫ですよ。先生は 英語も できますから。",
+     "es": "No, ninguno. La maestra también habla inglés."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "そうですか。カードで 払う ことが できますか。",
+     "es": "Ah, bien. ¿Se puede pagar con tarjeta?"
+    },
+    {
+     "who": "B",
+     "name": "うけつけ",
+     "jp": "すみません、現金で お願いします。それから、白い くつしたを 持って 来て ください。",
+     "es": "Lo siento, en efectivo, por favor. Y traiga calcetines blancos."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わかりました。ありがとう ございます。",
+     "es": "Entendido. Muchas gracias."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Acciones (movimientos)",
+   "items": [
+    {
+     "kana": "とぶ",
+     "kanji": "飛ぶ",
+     "es": "volar"
+    },
+    {
+     "kana": "とぶ",
+     "kanji": "跳ぶ",
+     "es": "saltar"
+    },
+    {
+     "kana": "のぼる",
+     "kanji": "登る",
+     "es": "subir, trepar"
+    },
+    {
+     "kana": "はしる",
+     "kanji": "走る",
+     "es": "correr"
+    },
+    {
+     "kana": "およぐ",
+     "kanji": "泳ぐ",
+     "es": "nadar"
+    },
+    {
+     "kana": "もぐる",
+     "kanji": "",
+     "es": "bucear"
+    },
+    {
+     "kana": "とびこむ",
+     "kanji": "飛び込む",
+     "es": "tirarse al agua"
+    },
+    {
+     "kana": "さかだちする",
+     "kanji": "逆立ちする",
+     "es": "hacer el pino"
+    },
+    {
+     "kana": "はう",
+     "kanji": "",
+     "es": "gatear, arrastrarse"
+    },
+    {
+     "kana": "ける",
+     "kanji": "",
+     "es": "dar una patada"
+    },
+    {
+     "kana": "ふる",
+     "kanji": "振る",
+     "es": "agitar (la mano)"
+    },
+    {
+     "kana": "もちあげる",
+     "kanji": "持ち上げる",
+     "es": "levantar"
+    },
+    {
+     "kana": "なげる",
+     "kanji": "投げる",
+     "es": "lanzar"
+    },
+    {
+     "kana": "たたく",
+     "kanji": "",
+     "es": "golpear"
+    },
+    {
+     "kana": "ひく",
+     "kanji": "引く",
+     "es": "tirar de"
+    },
+    {
+     "kana": "おす",
+     "kanji": "押す",
+     "es": "empujar"
+    },
+    {
+     "kana": "まげる",
+     "kanji": "曲げる",
+     "es": "doblar"
+    },
+    {
+     "kana": "のばす",
+     "kanji": "伸ばす",
+     "es": "estirar"
+    },
+    {
+     "kana": "ころぶ",
+     "kanji": "転ぶ",
+     "es": "caerse"
+    },
+    {
+     "kana": "ふりむく",
+     "kanji": "振り向く",
+     "es": "girarse, mirar atrás"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "En una clase de ceremonia del té (さどう) se entra descalzo en una sala de tatami, por eso suelen pedir calcetines blancos y limpios. Muchas escuelas ofrecen una clase de prueba para principiantes y extranjeros.",
+  "Aunque cada vez se usa más la tarjeta, en Japón muchas tiendas pequeñas, restaurantes y clases todavía aceptan solo efectivo (現金), así que conviene llevar siempre algo de dinero."
+ ],
+ "extras": [
+  {
+   "jp": "旅行の まえに、ホテルを 予約します。",
+   "es": "Antes de viajar, reservo el hotel.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "空港で お金を 換える ことが できます。",
+   "es": "En el aeropuerto se puede cambiar dinero.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "わたしは メキシコ料理を 作る ことが できます。",
+   "es": "Sé cocinar comida mexicana.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "わたしの 趣味は パンを 作る ことです。",
+   "es": "Mi afición es hacer pan.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "わたしは 日本語で メールを 書く ことが できます。",
+   "es": "Sé escribir correos en japonés.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "会議の まえに、資料を コピーします。",
+   "es": "Antes de la reunión, hago copias de los documentos.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "わたしは ひらがなと かたかなを 読む ことが できます。",
+   "es": "Sé leer hiragana y katakana.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "寝る まえに、日本語で 日記を 書きます。",
+   "es": "Antes de dormir, escribo mi diario en japonés.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "わたしの 趣味は アニメを 見る ことです。",
+   "es": "Mi afición es ver anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "わたしは アニメの 絵を かく ことが できます。",
+   "es": "Sé dibujar al estilo anime.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "わたしの 趣味は ゲームを する ことです。",
+   "es": "Mi afición es jugar videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "寝る まえに、1時間 ゲームを します。",
+   "es": "Antes de dormir juego una hora a los videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "わたしは 100メートル 泳ぐ ことが できます。",
+   "es": "Sé nadar cien metros.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "サッカーの まえに、少し はしります。",
+   "es": "Antes del fútbol, corro un poco.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "なかむらさんは ピアノを 弾く ことが できます。",
+   "es": "Yui sabe tocar el piano.",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "わたしの 趣味は カラオケで 歌を 歌う ことです。",
+   "es": "Mi afición es cantar en el karaoke.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,284 @@
+/* ---- Pista de Musubi y pestañas ---- */
+.say {
+    margin: 4px 0 12px;
+}
+.gc {
+    margin-left: 4px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: var(--accent);
+    color: var(--accent-ink, #fff);
+}
+
+/* ---- Selección rápida de filas ---- */
+.quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+.quick button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 11px;
+    border: 1px dashed var(--line);
+    border-radius: 999px;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.quick button:not(:disabled):active {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.quick button:disabled {
+    opacity: 0.45;
+}
+.helper {
+    margin: 10px 0 8px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---- Tabla ---- */
+.chart {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.krow {
+    display: grid;
+    grid-template-columns: 34px repeat(var(--cols), 1fr);
+    gap: 6px;
+    padding: 3px;
+    margin: -3px;
+    border-radius: var(--r-md);
+    transition: background 0.2s;
+}
+.krow.sel {
+    background: var(--accent-soft);
+}
+.rowsel {
+    border: 1px dashed var(--line);
+    background: transparent;
+    border-radius: var(--r-sm);
+    font-size: 0.7rem;
+    color: var(--muted);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+.rowsel.on {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--accent-ink, #fff);
+}
+.cell {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: var(--r-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+    padding: 0;
+}
+.cell:active {
+    transform: scale(0.93);
+}
+
+/* ---- Punto de color según la caja de Leitner (data-box) ---- */
+.cell::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+}
+.cell[data-box='0']::after,
+.cell[data-box='1']::after {
+    background: var(--accent);
+}
+.cell[data-box='2']::after,
+.cell[data-box='3']::after {
+    background: var(--gold);
+}
+.cell[data-box='4']::after,
+.cell[data-box='5']::after,
+.cell[data-box='6']::after {
+    background: var(--ok);
+}
+.empty-cell {
+    border: none;
+    background: transparent;
+}
+.ch {
+    font-size: 1.55rem;
+    line-height: 1.1;
+}
+.ro {
+    font-size: 0.68rem;
+    color: var(--muted);
+}
+
+/* ---- Leyenda ---- */
+.legend {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 12px;
+}
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.b0 {
+    background: var(--accent);
+}
+.b2 {
+    background: var(--gold);
+}
+.b4 {
+    background: var(--ok);
+}
+
+/* ---- Barra de práctica (pegada abajo, encima de la barra de pestañas) ---- */
+.dock {
+    position: sticky;
+    bottom: calc(var(--nav-h) + var(--safe-b));
+    z-index: 5;
+    margin: 18px -16px calc(-1 * (var(--nav-h) + 32px));
+    padding: 12px 16px 14px;
+    border-radius: 22px 22px 0 0;
+    background: var(--panel);
+    color: var(--panel-ink);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 -8px 24px rgb(0 0 0 / 0.12);
+}
+.dock-h {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dock-h b {
+    display: block;
+    font-size: 0.95rem;
+}
+.dock-h small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+.go {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--signal);
+    color: var(--signal-ink);
+    font: inherit;
+    font-weight: 800;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.go:disabled {
+    opacity: 0.5;
+}
+.dmodes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+}
+.dmodes button,
+.dmodes a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 7px 2px 6px;
+    border: 0;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--panel-ink) 10%, transparent);
+    color: inherit;
+    font: inherit;
+    font-size: 0.68rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.dmodes button:disabled,
+.dmodes .off {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ---- Ficha de un símbolo ---- */
+.det-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.det-char {
+    font-size: 5rem;
+    line-height: 1;
+    min-width: 96px;
+    text-align: center;
+}
+.det-rom {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.det-block {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: var(--r-md);
+    font-size: 0.93rem;
+}
+.tipbox {
+    display: flex;
+    gap: 10px;
+    background: var(--gold-soft);
+}
+.warn {
+    background: var(--surface-2);
+}
+.lk {
+    gap: 14px;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+.lk .me {
+    color: var(--accent);
+}
+.ex {
+    padding: 6px 0;
+}
+.exw {
+    font-size: 1.2rem;
+    min-width: 110px;
+}
+.close {
+    margin-top: 18px;
+}

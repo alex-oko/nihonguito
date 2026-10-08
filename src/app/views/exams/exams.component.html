@@ -1,0 +1,85 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <h1 class="hero-title">Exámenes</h1>
+        <p class="muted">Mide cuánto sabes.</p>
+    </header>
+
+    <!-- Preparación para el próximo examen de nivel -->
+    @if (next(); as readiness) {
+        <section class="card">
+            <app-exam-readiness [readiness]="readiness" (start)="readinessSVC.start($event)" />
+        </section>
+        <app-musubi-say class="say" [size]="48" [mood]="readiness.verdict === 'ready' ? 'happy' : 'idle'">
+            {{ musubiLine() }}
+        </app-musubi-say>
+    }
+
+    <!-- Exámenes de nivel (hasta el siguiente al actual) -->
+    <h2 class="section-title">Exámenes de nivel</h2>
+    <div class="card list">
+        @for (preset of levels(); track preset.id) {
+            <button class="list-item lv-row" [disabled]="readinessSVC.busy()" (click)="readinessSVC.start(preset)">
+                <span class="lv" [class.now]="preset.id === nextId()">{{ preset.level }}</span>
+                <span class="grow">
+                    <span class="t">{{ kindEs(preset) }} <span class="jp muted small">{{ kindJp(preset) }}</span></span>
+                    <span class="small muted">{{ lessonsOf(preset) }}</span>
+                </span>
+                @if (best()[preset.id] != null) {
+                    <span class="pill" [attr.data-t]="toneOf(best()[preset.id])">{{ best()[preset.id] }}%</span>
+                } @else if (preset.id === nextId()) {
+                    <span class="pill" data-t="next">Siguiente</span>
+                } @else {
+                    <span class="pill" data-t="none">Sin hacer</span>
+                }
+            </button>
+        }
+    </div>
+    <a class="more" routerLink="/examen/nivel">Ver todos los niveles y el examen personalizado <app-icon name="chevron" [size]="16" /></a>
+
+    <!-- Pruebas de lección -->
+    @if (lessonTests().length) {
+        <h2 class="section-title">Pruebas de lección</h2>
+        <div class="card list">
+            @for (test of lessonTests(); track test.id) {
+                <a class="list-item lv-row" [routerLink]="['/lecciones', test.id, 'practica', 'test']">
+                    <span class="grow">
+                        <span class="t">Lección {{ test.id }}</span>
+                        <span class="small muted">{{ test.title }}</span>
+                    </span>
+                    @if (test.best != null) {
+                        <span class="pill" [attr.data-t]="toneOf(test.best)">{{ test.best }}%</span>
+                    } @else {
+                        <span class="pill" data-t="none">Sin hacer</span>
+                    }
+                </a>
+            }
+        </div>
+    }
+
+    <!-- Enlace al creador de exámenes -->
+    <a class="card row create" routerLink="/examen">
+        <span class="ci"><app-icon name="sliders" [size]="20" /></span>
+        <div class="grow">
+            <div class="t">Crear examen</div>
+            <div class="small muted">Elige lecciones y secciones, combínalas y ponte a prueba</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+
+    <!-- Historial -->
+    @if (history().length) {
+        <h2 class="section-title">Historial</h2>
+        <div class="card list">
+            @for (exam of history(); track $index) {
+                <div class="list-item lv-row">
+                    <span class="grow">
+                        <span class="t small">{{ exam.title }}</span>
+                        <span class="small muted">{{ exam.date }}</span>
+                    </span>
+                    <span class="pill" [attr.data-t]="toneOf(exam.pct)">{{ exam.pct }}%</span>
+                </div>
+            }
+        </div>
+    }
+</div>

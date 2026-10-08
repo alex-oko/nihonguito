@@ -1,0 +1,684 @@
+{
+ "id": 20,
+ "title": "Planes de verano",
+ "titleJp": "夏休みは どう するの？",
+ "summary": "Kenta y Lucía charlan en estilo informal sobre las vacaciones de verano y deciden ir a Okinawa. Luego Lucía le pide los días libres al Sr. Mori, esta vez en estilo cortés.",
+ "vocab": [
+  {
+   "id": "L20-001",
+   "kana": "いります",
+   "kanji": "要ります",
+   "es": "necesitar [un visado]",
+   "type": "verb",
+   "lesson": 20
+  },
+  {
+   "id": "L20-002",
+   "kana": "しらべます",
+   "kanji": "調べます",
+   "es": "averiguar, investigar",
+   "type": "verb",
+   "lesson": 20
+  },
+  {
+   "id": "L20-003",
+   "kana": "なおします",
+   "kanji": "直します",
+   "es": "arreglar, corregir",
+   "type": "verb",
+   "lesson": 20
+  },
+  {
+   "id": "L20-004",
+   "kana": "しゅうりします",
+   "kanji": "修理します",
+   "es": "reparar (máquinas, coches)",
+   "type": "verb",
+   "lesson": 20
+  },
+  {
+   "id": "L20-005",
+   "kana": "でんわします",
+   "kanji": "電話します",
+   "es": "llamar por teléfono",
+   "type": "verb",
+   "lesson": 20
+  },
+  {
+   "id": "L20-006",
+   "kana": "ぼく",
+   "kanji": "僕",
+   "es": "yo (hombres, informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-007",
+   "kana": "きみ",
+   "kanji": "君",
+   "es": "tú (informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-008",
+   "kana": "～くん",
+   "kanji": "～君",
+   "es": "sufijo informal (chicos)",
+   "type": "other",
+   "lesson": 20
+  },
+  {
+   "id": "L20-009",
+   "kana": "うん",
+   "es": "sí (informal)",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-010",
+   "kana": "ううん",
+   "es": "no (informal)",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-011",
+   "kana": "サラリーマン",
+   "es": "oficinista, asalariado",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-012",
+   "kana": "ことば",
+   "es": "palabra, idioma",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-013",
+   "kana": "ぶっか",
+   "kanji": "物価",
+   "es": "precios, coste de vida",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-014",
+   "kana": "きもの",
+   "kanji": "着物",
+   "es": "kimono",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-015",
+   "kana": "ビザ",
+   "es": "visado",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-016",
+   "kana": "はじめ",
+   "kanji": "初め",
+   "es": "comienzo, principio",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-017",
+   "kana": "おわり",
+   "kanji": "終わり",
+   "es": "final",
+   "type": "noun",
+   "lesson": 20
+  },
+  {
+   "id": "L20-018",
+   "kana": "こっち",
+   "es": "aquí, esto (informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-019",
+   "kana": "そっち",
+   "es": "ahí, eso (informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-020",
+   "kana": "あっち",
+   "es": "allí, aquello (informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-021",
+   "kana": "どっち",
+   "es": "¿cuál?, ¿dónde? (informal)",
+   "type": "pron",
+   "lesson": 20
+  },
+  {
+   "id": "L20-022",
+   "kana": "このあいだ",
+   "kanji": "この間",
+   "es": "el otro día",
+   "type": "adv",
+   "lesson": 20
+  },
+  {
+   "id": "L20-023",
+   "kana": "みんなで",
+   "es": "todos juntos",
+   "type": "adv",
+   "lesson": 20
+  },
+  {
+   "id": "L20-024",
+   "kana": "～けど",
+   "es": "…pero (informal)",
+   "type": "other",
+   "lesson": 20
+  },
+  {
+   "id": "L20-025",
+   "kana": "くにへ かえるの？",
+   "kanji": "国へ 帰るの？",
+   "es": "¿Vuelves a tu país?",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-026",
+   "kana": "どう するの？",
+   "es": "¿Qué vas a hacer?",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-027",
+   "kana": "どう しようかな。",
+   "es": "¿Qué haré…?",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-028",
+   "kana": "よかったら",
+   "es": "si te apetece",
+   "type": "expr",
+   "lesson": 20
+  },
+  {
+   "id": "L20-029",
+   "kana": "いろいろ",
+   "es": "varias cosas",
+   "type": "adv",
+   "lesson": 20
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "あした ルシアさんに 電話する。",
+   "es": "Mañana llamo a Lucía."
+  },
+  {
+   "jp": "きのしたさんは きのう 大学へ 行かなかった。",
+   "es": "Kenta no fue ayer a la universidad."
+  },
+  {
+   "jp": "きのうの 試験は 難しかった。",
+   "es": "El examen de ayer estuvo difícil."
+  },
+  {
+   "jp": "沖縄の 海は きれいだ。",
+   "es": "El mar de Okinawa es precioso."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "この 本、もう 読んだ？",
+   "qes": "¿Ya leíste este libro?",
+   "ajp": "ううん、まだ 読んで ない。",
+   "aes": "No, todavía no."
+  },
+  {
+   "qjp": "夏休みは 国へ 帰るの？",
+   "qes": "¿Vas a volver a tu país en verano?",
+   "ajp": "ううん、帰らない。日本で 旅行する。",
+   "aes": "No, no vuelvo. Voy a viajar por Japón."
+  },
+  {
+   "qjp": "メキシコは ビザ 要る？",
+   "qes": "¿Hace falta visado para ir a México?",
+   "ajp": "ううん、要らない。",
+   "aes": "No, no hace falta."
+  },
+  {
+   "qjp": "あした 暇？",
+   "qes": "¿Estás libre mañana?",
+   "ajp": "うん、暇。どうして？",
+   "aes": "Sí. ¿Por qué?"
+  },
+  {
+   "qjp": "コーヒーと 紅茶と、どっちが いい？",
+   "qes": "¿Qué prefieres, café o té?",
+   "ajp": "コーヒーが いい。",
+   "aes": "Café."
+  },
+  {
+   "qjp": "日本の 生活は どう？",
+   "qes": "¿Qué tal la vida en Japón?",
+   "ajp": "ことばは 難しいけど、楽しいよ。",
+   "aes": "El idioma es difícil, pero es divertida."
+  },
+  {
+   "qjp": "よかったら、みんなで カラオケに 行かない？",
+   "qes": "Si quieres, ¿vamos todos al karaoke?",
+   "ajp": "うん、行く。",
+   "aes": "¡Sí, voy!"
+  },
+  {
+   "qjp": "自転車、もう 修理した？",
+   "qes": "¿Ya arreglaste la bici?",
+   "ajp": "ううん、まだ。あした 店へ 持って 行く。",
+   "aes": "No, todavía no. Mañana la llevo a la tienda."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Estilo cortés y estilo informal",
+   "explain": "En japonés hay dos maneras de hablar. El estilo cortés termina en です/ます (como hablar de 'usted'). El estilo informal usa la 'forma simple' (como hablar de 'tú'). Formas simples — verbos: いく / いかない / いった / いかなかった. Adjetivo い: たかい / たかくない / たかかった / たかくなかった. Adjetivo な y sustantivo: ひまだ / ひまじゃ ない / ひまだった / ひまじゃ なかった. Ojo: です se convierte en だ, pero con adjetivos い simplemente desaparece (たかいです → たかい, nunca 'たかいだ').",
+   "examples": [
+    {
+     "jp": "毎朝 コーヒーを 飲みます。 → 毎朝 コーヒーを 飲む。",
+     "es": "Todas las mañanas tomo café."
+    },
+    {
+     "jp": "きのうは 暇でした。 → きのうは 暇だった。",
+     "es": "Ayer estuve libre."
+    }
+   ]
+  },
+  {
+   "title": "¿Cuándo usar cada estilo?",
+   "explain": "El cortés sirve siempre y con cualquiera: úsalo con desconocidos, mayores, jefes o gente que acabas de conocer. El informal es para amigos, compañeros cercanos y familia. Si dudas, usa el cortés: equivocarse hacia lo informal puede sonar maleducado. Por escrito, los periódicos, informes y diarios suelen ir en estilo simple; las cartas, en cortés.",
+   "examples": [
+    {
+     "jp": "（もりさんに） 夏休みは どこへ 行きますか。",
+     "es": "(Al Sr. Mori) ¿A dónde va a ir en vacaciones?"
+    },
+    {
+     "jp": "（きのしたさんに） 夏休み、どこ 行く？",
+     "es": "(A Kenta) ¿A dónde vas en vacaciones?"
+    }
+   ]
+  },
+  {
+   "title": "Preguntas informales — sin か, tono subiendo",
+   "explain": "En estilo informal casi nunca se pone か al final de una pregunta: basta con subir la entonación, como en español. Con sustantivos y adjetivos な también se quita だ en la pregunta (ひま？). En la respuesta, だ al final suena fuerte y masculino; las mujeres suelen quitarlo o decir よ (ひまよ).",
+   "examples": [
+    {
+     "jp": "ゲーム する？ …うん、する。",
+     "es": "¿Jugamos? — Sí."
+    },
+    {
+     "jp": "あした 暇？ …ううん、暇じゃ ない。",
+     "es": "¿Estás libre mañana? — No."
+    }
+   ]
+  },
+  {
+   "title": "Partículas y い que se omiten al hablar",
+   "explain": "Hablando entre amigos se quitan muchas veces を, へ, は y が si se entiende igual (ごはん たべる？). Pero で, に, から, まで y と NO se quitan, porque cambian el sentido. También se suele comer la い de ～て います: もって いる → もってる.",
+   "examples": [
+    {
+     "jp": "かさ、持ってる？ …うん、持ってる。",
+     "es": "¿Traes paraguas? — Sí."
+    },
+    {
+     "jp": "週末 海 行かない？",
+     "es": "¿Vamos a la playa el fin de semana?"
+    }
+   ]
+  },
+  {
+   "title": "けど — pero (informal)",
+   "explain": "けど significa lo mismo que が ('pero'), y se usa mucho en conversación. También sirve para introducir un tema antes de proponer algo ('tengo entradas… ¿vienes?').",
+   "examples": [
+    {
+     "jp": "この ラーメン、高いけど、おいしい。",
+     "es": "Este ramen es caro, pero está rico."
+    },
+    {
+     "jp": "あした はなびを 見に 行くけど、いっしょに 行かない？",
+     "es": "Mañana voy a ver fuegos artificiales, ¿vienes?"
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "夏休みは どう するの？",
+   "es": "¿Qué vas a hacer en vacaciones de verano?"
+  },
+  {
+   "jp": "どう しようかな。",
+   "es": "No sé qué voy a hacer…"
+  },
+  {
+   "jp": "いっしょに 行かない？",
+   "es": "¿Vienes con nosotros?"
+  },
+  {
+   "jp": "ホテルは 僕が 調べる。",
+   "es": "Yo busco el hotel."
+  },
+  {
+   "jp": "休みを 取っても いいですか。",
+   "es": "¿Puedo tomarme unos días libres?"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L20-c1",
+   "lesson": 20,
+   "title": "¿Y tú qué harás en verano? (entre amigos)",
+   "tags": [
+    "viajes"
+   ],
+   "situation": "En la entrada del edificio, Kenta y Lucía hablan en estilo informal de sus planes para las vacaciones de verano.",
+   "lines": [
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "ルシアさん、夏休みは どう するの？",
+     "es": "Lucía, ¿qué vas a hacer en las vacaciones de verano?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "どう しようかな。国へ 帰りたいけど、飛行機が 高い。",
+     "es": "No sé… Quiero volver a mi país, pero el avión está carísimo."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "そうだね。僕は 友達と 沖縄へ 行くけど、いっしょに 行かない？",
+     "es": "Ya. Yo voy a Okinawa con unos amigos, ¿te vienes?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ほんとう？ 沖縄は まだ 行った こと ない。行きたい。",
+     "es": "¿En serio? Nunca he ido a Okinawa. ¡Quiero ir!"
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "8月の 初めに 行くよ。ホテルは 僕が 調べる。",
+     "es": "Vamos a principios de agosto. Yo busco el hotel."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ありがとう。でも、会社の 休みは まだ わからない。",
+     "es": "Gracias. Pero todavía no sé cuándo tengo vacaciones en el trabajo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あした もりさんに 聞くね。",
+     "es": "Mañana le pregunto al Sr. Mori."
+    },
+    {
+     "who": "B",
+     "name": "きのした",
+     "jp": "うん。じゃ、また あした。",
+     "es": "Va. Entonces, hasta mañana."
+    }
+   ]
+  },
+  {
+   "id": "L20-c2",
+   "lesson": 20,
+   "title": "Pedirle días libres al jefe (estilo cortés)",
+   "tags": [
+    "trabajo"
+   ],
+   "situation": "Al día siguiente, en la oficina, Lucía le pregunta al Sr. Mori si puede tomarse unos días de vacaciones.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "もりさん、すみません。今 ちょっと いいですか。",
+     "es": "Sr. Mori, disculpe. ¿Tiene un momento?"
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "ええ、どうぞ。",
+     "es": "Sí, adelante."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "8月の 初めに 1週間 休みを 取っても いいですか。",
+     "es": "¿Puedo tomarme una semana libre a principios de agosto?"
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "8月の 初めですか。どこか 行きますか。",
+     "es": "¿A principios de agosto? ¿Va a ir a algún lado?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、友達と 沖縄へ 行きたいです。",
+     "es": "Sí, quiero ir a Okinawa con unos amigos."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "いいですね。沖縄は 海が きれいですよ。",
+     "es": "Qué bien. En Okinawa el mar es precioso."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "でも、休む まえに、カタログの 資料を 出して ください。",
+     "es": "Pero antes de irse, entrégueme los documentos del catálogo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "はい、わかりました。7月の 終わりまでに 出します。",
+     "es": "Sí, entendido. Los entrego antes de que termine julio."
+    },
+    {
+     "who": "B",
+     "name": "もり",
+     "jp": "じゃ、大丈夫ですよ。",
+     "es": "Entonces no hay problema."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ありがとう ございます。",
+     "es": "Muchas gracias."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Cómo llamar a la gente",
+   "items": [
+    {
+     "kana": "おにいちゃん",
+     "kanji": "お兄ちゃん",
+     "es": "hermano mayor (en familia)"
+    },
+    {
+     "kana": "おねえちゃん",
+     "kanji": "お姉ちゃん",
+     "es": "hermana mayor (en familia)"
+    },
+    {
+     "kana": "おかあさん／ママ",
+     "kanji": "お母さん",
+     "es": "mamá (también entre esposos)"
+    },
+    {
+     "kana": "おとうさん／パパ",
+     "kanji": "お父さん",
+     "es": "papá (también entre esposos)"
+    },
+    {
+     "kana": "ぶちょう",
+     "kanji": "部長",
+     "es": "jefe de departamento (como tratamiento)"
+    },
+    {
+     "kana": "かちょう",
+     "kanji": "課長",
+     "es": "jefe de sección (como tratamiento)"
+    },
+    {
+     "kana": "おきゃくさま",
+     "kanji": "お客様",
+     "es": "cliente (tratamiento en tiendas)"
+    },
+    {
+     "kana": "せんせい",
+     "kanji": "先生",
+     "es": "doctor/profesor (tratamiento)"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "A mediados de agosto llega お盆, una temporada en la que mucha gente vuelve a su pueblo para visitar a la familia y recordar a sus antepasados. Trenes, aviones y hoteles se llenan y suben de precio, así que conviene reservar con tiempo.",
+  "Con amigos y compañeros de tu edad se habla en estilo informal, pero con el jefe o con gente mayor se mantiene el estilo cortés aunque haya confianza. En el trabajo, además, se suele llamar a la gente por su cargo (課長, 部長) en lugar de por su nombre."
+ ],
+ "extras": [
+  {
+   "jp": "夏休みは 北海道へ 行く。",
+   "es": "En las vacaciones de verano voy a Hokkaido.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "ホテルは もう 予約した。",
+   "es": "Ya reservé el hotel.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "この ラーメン、安いけど、おいしい。",
+   "es": "Este ramen es barato, pero está rico.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "きのうの すし、おいしかった。",
+   "es": "El sushi de ayer estaba buenísimo.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "きょうの 会議、長かったね。",
+   "es": "La reunión de hoy fue larguísima, ¿no?",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "あした 課長に 電話する。",
+   "es": "Mañana llamo al jefe de sección.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "日本語の 試験、難しかった。",
+   "es": "El examen de japonés estuvo difícil.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "漢字は 難しいけど、おもしろい。",
+   "es": "Los kanji son difíciles, pero interesantes.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "きのうの アニメ、見た？",
+   "es": "¿Viste el anime de ayer?",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "この アニメ、ことばは 難しいけど、おもしろい。",
+   "es": "En este anime las palabras son difíciles, pero es divertido.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "新しい ゲーム、もう 買った？",
+   "es": "¿Ya compraste el videojuego nuevo?",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "この ゲーム、まだ して ない。",
+   "es": "Este juego todavía no lo he jugado.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "あしたの サッカー、見る？",
+   "es": "¿Vas a ver el fútbol de mañana?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "テニス、いっしょに しない？",
+   "es": "¿Jugamos tenis juntos?",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "この 歌、好き？",
+   "es": "¿Te gusta esta canción?",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "コンサートの チケット、あるけど、行かない？",
+   "es": "Tengo entradas para un concierto, ¿vienes?",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}

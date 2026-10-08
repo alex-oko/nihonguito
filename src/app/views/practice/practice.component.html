@@ -1,0 +1,92 @@
+<div class="page">
+    <!-- Cabecera -->
+    <header class="head">
+        <h1 class="hero-title">Practicar</h1>
+        <p class="muted">Con todo lo que ya estudiaste.</p>
+    </header>
+
+    <!-- Repaso espaciado: cuántas palabras tocan hoy -->
+    <a class="card hero" routerLink="/repaso">
+        <span class="tag">{{ due() ? 'TOCA HOY' : 'CUANDO QUIERAS' }}</span>
+        <span class="ht">Repaso de palabras</span>
+        <span class="hd">
+            {{ due() ? due() + (due() === 1 ? ' palabra lista' : ' palabras listas') + ' para repasar · ~4 min' : 'La app recuerda qué te cuesta y te lo trae.' }}
+        </span>
+        <span class="btn accent block go"><app-icon name="play" [size]="18" />Repasar</span>
+    </a>
+
+    <!-- Puntos débiles: habilidades por debajo del 80% -->
+    @if (weak().length) {
+        <h2 class="section-title">Tus puntos débiles</h2>
+        <div class="card weak">
+            @for (spot of weak(); track spot.skill) {
+                <a class="spot" [routerLink]="['/lecciones', spot.worst, 'practica', spot.skill]" [attr.data-t]="toneOf(spot.pct)">
+                    <span class="ic"><app-icon [name]="spot.icon" [size]="18" /></span>
+                    <span class="grow">
+                        <span class="nm">{{ spot.label }} <small>{{ lessonsLabel(spot.lessons) }}</small></span>
+                        <span class="bar"><i [style.width.%]="spot.pct"></i></span>
+                    </span>
+                    <b class="pct">{{ spot.pct }}%</b>
+                </a>
+            }
+        </div>
+    }
+
+    <!-- Kana: práctica de los símbolos más débiles -->
+    <h2 class="section-title">Kana</h2>
+    <div class="grid-2">
+        <a class="card tile" routerLink="/kana/hiragana/practica/weak">
+            <span class="glyph hand">あ</span>
+            <span class="t">Hiragana difíciles</span>
+            <span class="d">Tus símbolos más débiles</span>
+        </a>
+        <a class="card tile" routerLink="/kana/katakana/practica/weak">
+            <span class="glyph hand">ア</span>
+            <span class="t">Katakana difíciles</span>
+            <span class="d">Tus símbolos más débiles</span>
+        </a>
+    </div>
+
+    <!-- Juegos -->
+    <h2 class="section-title">Juegos</h2>
+    <div class="grid-2">
+        @for (game of games; track game.id) {
+            <a class="card tile game" [routerLink]="['/juego', game.id]">
+                <span class="gi" [attr.data-c]="game.color"><app-icon [name]="game.icon" [size]="20" /></span>
+                <span class="t">{{ game.name }}</span>
+                <span class="d">{{ game.desc }}</span>
+            </a>
+        }
+    </div>
+
+    <!-- Hablar y conjugar -->
+    <h2 class="section-title">Hablar y conjugar</h2>
+    <div class="stack">
+        <a class="card row line" routerLink="/conversaciones">
+            <span class="gi" data-c="indigo"><app-icon name="mic" [size]="20" /></span>
+            <div class="grow">
+                <div class="t">Conversaciones habladas</div>
+                <div class="small muted">Escucha y responde en voz alta</div>
+            </div>
+            <app-icon name="chevron" />
+        </a>
+        <a class="card row line" routerLink="/verbos">
+            <span class="gi" data-c="gold"><app-icon name="verb" [size]="20" /></span>
+            <div class="grow">
+                <div class="t">Conjugación de verbos</div>
+                <div class="small muted">Formas ます, て, ない, た y diccionario</div>
+            </div>
+            <app-icon name="chevron" />
+        </a>
+    </div>
+
+    <!-- Aviso: los exámenes tienen su propia pestaña -->
+    <a class="card row line exams" routerLink="/examenes">
+        <span class="gi" data-c="accent"><app-icon name="clipboard" [size]="20" /></span>
+        <div class="grow">
+            <div class="t">¿Buscas los exámenes?</div>
+            <div class="small muted">Ahora tienen su propia pestaña</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+</div>

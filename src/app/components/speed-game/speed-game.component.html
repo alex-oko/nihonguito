@@ -1,0 +1,70 @@
+<div class="wrap">
+    <!-- Cabecera -->
+    <header class="head">
+        <button class="icon-btn" (click)="location.back()" aria-label="Salir"><app-icon name="x" /></button>
+        <h1 class="base-title">{{ title() }}</h1>
+    </header>
+
+    <!-- Reloj -->
+    <app-game-timer
+        class="timer"
+        mode="countdown"
+        [totalMs]="durationSeconds * 1000"
+        [anchor]="endsAt()"
+        [running]="gameState() === 'play'"
+        [frozenMs]="remainingMs()"
+    />
+
+    @switch (gameState()) {
+        @case ('ready') {
+            <!-- Inicio -->
+            <div class="center-box">
+                <div class="glyph jp">速</div>
+                <h1 class="hero-title">{{ title() }}</h1>
+                <p class="muted">Responde todas las que puedas en {{ durationSeconds }} segundos. Cada error resta 3 segundos.</p>
+                @if (bestScore()) {
+                    <p class="small">Tu récord: <b>{{ bestScore() }}</b></p>
+                }
+                <button class="btn accent block" (click)="start()"><app-icon name="play" [size]="18" />Empezar</button>
+            </div>
+        }
+        @case ('play') {
+            <!-- Partida -->
+            @if (current(); as question) {
+                <div class="score row">
+                    <span class="badge ok">✓ {{ score() }}</span>
+                    @if (streak() >= 3) {
+                        <span class="badge accent pop">🔥 {{ streak() }}</span>
+                    }
+                </div>
+                <div class="prompt" [class.flash-ok]="flashResult() === 'ok'" [class.flash-bad]="flashResult() === 'bad'">
+                    <div class="small muted">{{ question.label }}</div>
+                    <div class="p" [class.jp]="question.promptStyle !== 'es'" [class.big]="question.promptStyle === 'jp-big'"><app-jp [text]="question.prompt" /></div>
+                    @if (question.sub && question.promptStyle !== 'jp-big' && !question.subIsReading) {
+                        <div class="small muted">{{ question.sub }}</div>
+                    }
+                </div>
+                <div class="choices">
+                    @for (choice of question.choices; track $index) {
+                        <button class="c" [class.jp]="question.choiceStyle !== 'es'" [class.big]="question.choiceStyle === 'jp-big'" (click)="answer(choice)"><app-jp [text]="choice" /></button>
+                    }
+                </div>
+            }
+        }
+        @case ('over') {
+            <!-- Final -->
+            <div class="center-box">
+                <div class="glyph jp">{{ isNewRecord() ? '新記録' : '終了' }}</div>
+                <h1 class="hero-title">{{ isNewRecord() ? '¡Nuevo récord!' : '¡Tiempo!' }}</h1>
+                <div class="grid-3 stats">
+                    <div class="card st"><b>{{ score() }}</b><span class="small muted">aciertos</span></div>
+                    <div class="card st"><b>{{ misses() }}</b><span class="small muted">errores</span></div>
+                    <div class="card st"><b>{{ bestScore() }}</b><span class="small muted">récord</span></div>
+                </div>
+                <p class="muted">+{{ score() * 2 }} XP</p>
+                <button class="btn accent block" (click)="again.emit(); start()"><app-icon name="refresh" />Otra vez</button>
+                <button class="btn ghost block" (click)="location.back()">Terminar</button>
+            </div>
+        }
+    }
+</div>

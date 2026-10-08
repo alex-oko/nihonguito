@@ -1,0 +1,21 @@
+@if (state() === 'ready') {
+    <!-- Repaso: lo corre el motor de preguntas; al repetir se vuelve a armar -->
+    <app-question-runner [questions]="questions()" [title]="title()" (again)="build()" />
+} @else if (state() === 'empty') {
+    <!-- Sin palabras con progreso todavía -->
+    <div class="page full">
+        <header class="topbar">
+            <button class="icon-btn" (click)="location.back()" aria-label="Volver"><app-icon name="back" /></button>
+            <h1>Repaso</h1>
+        </header>
+        <div class="empty">
+            <div class="glyph">復習</div>
+            <p>Aún no hay palabras para repasar.</p>
+            <p class="small">Practica alguna lección y la app te irá recordando las palabras justo antes de que las olvides.</p>
+            <a class="btn accent" style="margin-top: 20px" routerLink="/lecciones">Ir a lecciones</a>
+        </div>
+    </div>
+} @else {
+    <!-- Cargando -->
+    <div class="empty">Preparando repaso…</div>
+}

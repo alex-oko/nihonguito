@@ -1,0 +1,578 @@
+/* ---- Cabecera de la lección ---- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 4px 0 18px;
+}
+.tjp {
+    color: var(--accent);
+    font-weight: 500;
+}
+.prog {
+    margin-top: 8px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+/* Pestañas pegadas arriba al hacer scroll */
+.sticky {
+    position: sticky;
+    top: calc(4px + var(--safe-t));
+    z-index: 5;
+    margin-bottom: 16px;
+    box-shadow: 0 0 0 6px var(--bg);
+}
+.t {
+    font-weight: 600;
+}
+.convo {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+/* ---- Pestaña «Palabras» ---- */
+.toolbar {
+    margin-bottom: 10px;
+}
+.toggles {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--ink-2);
+}
+.seg {
+    gap: 4px;
+}
+.seg .chip {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+.toggles label {
+    gap: 8px;
+    cursor: pointer;
+}
+.word {
+    cursor: pointer;
+    align-items: flex-start;
+}
+.word:active {
+    background: var(--surface-2);
+}
+.wm {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+.rom {
+    font-style: italic;
+}
+.es {
+    max-width: 45%;
+    text-align: right;
+    font-size: 0.92rem;
+    color: var(--ink-2);
+}
+/* Punto de dominio: color según la caja de Leitner (data-b) */
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 10px;
+    flex: none;
+    background: var(--line);
+}
+.dot[data-b='0'],
+.dot[data-b='1'] {
+    background: var(--accent);
+}
+.dot[data-b='2'],
+.dot[data-b='3'] {
+    background: var(--gold);
+}
+.dot[data-b='4'],
+.dot[data-b='5'],
+.dot[data-b='6'] {
+    background: var(--ok);
+}
+.hint {
+    margin-top: 12px;
+}
+
+/* ---- Pestaña «Gramática» ---- */
+.gram {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.gnum {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+.gt {
+    font-size: 1.08rem;
+    padding-right: 24px;
+    color: var(--accent);
+}
+.gx {
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+.ex {
+    padding: 10px 12px;
+    border-radius: var(--r-md);
+    background: var(--surface-2);
+    align-items: flex-start;
+}
+
+/* ---- Pestaña «Frases»: la traducción se oculta hasta tocar ---- */
+.phrase {
+    cursor: pointer;
+}
+.pj {
+    font-size: 1.08rem;
+}
+.tr {
+    margin-top: 4px;
+    color: var(--ink-2);
+    transition: filter 0.2s, opacity 0.2s;
+}
+.tr.hide {
+    filter: blur(5px);
+    opacity: 0.6;
+}
+.qa {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.qa .a {
+    margin-top: 8px;
+}
+
+/* ---- Pestaña «Extra»: temas en acordeón y notas de cultura ---- */
+.topic {
+    padding: 0 !important;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.topic-head {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 14px 16px;
+    text-align: left;
+    cursor: pointer;
+}
+.topic-items {
+    padding: 0 16px 12px;
+}
+.ti {
+    padding: 8px 0;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+}
+.culture {
+    display: flex;
+    gap: 10px;
+    font-size: 0.93rem;
+    background: var(--gold-soft) !important;
+    border-color: transparent !important;
+}
+
+/* ---- Pestaña «Ejercicios»: primero el camino guiado, luego los ejercicios sueltos ---- */
+.guided {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--ink) !important;
+    color: var(--bg);
+    border-color: var(--ink) !important;
+}
+.guided .gh {
+    gap: 12px;
+}
+.guided .t {
+    font-size: 1.1rem;
+}
+.guided .d {
+    color: color-mix(in srgb, var(--bg) 70%, transparent);
+}
+/* .steps, .group, .tiles y .tile no los usa la plantilla actual */
+.steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.steps li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: color-mix(in srgb, var(--bg) 85%, transparent);
+}
+.steps b {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    background: var(--accent);
+    color: #fff;
+}
+.group {
+    margin: 4px 0 8px;
+}
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
+}
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 72px;
+    padding: 10px 4px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    text-align: center;
+}
+.tile:active {
+    background: var(--surface-2);
+}
+.final {
+    margin-top: 6px;
+}
+.gram-go {
+    margin-top: 14px;
+}
+@media (max-width: 360px) {
+    .tiles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* .report, .rh, .ok-t, .sk-*, .bar.low/.mid y .hard-t tampoco los usa la plantilla actual */
+.report {
+    margin-bottom: 14px;
+    padding: 14px;
+}
+.rh h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+.ok-t {
+    color: var(--ok);
+}
+.sk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+.sk {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+}
+.sk.off {
+    opacity: 0.55;
+}
+.sk-l {
+    width: 84px;
+    flex: none;
+}
+.sk-p {
+    width: 40px;
+    flex: none;
+    text-align: right;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+.bar.low > i {
+    background: var(--bad);
+}
+.bar.mid > i {
+    background: var(--gold);
+}
+.hard-t {
+    margin: 14px 0 6px;
+}
+.hard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.go {
+    margin-top: 14px;
+}
+
+/* ---- Frases para ti ---- */
+.for-you-hint {
+    margin: -4px 0 10px;
+}
+.for-you-hint a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+.badge.tag {
+    margin-bottom: 4px;
+    font-size: 0.68rem;
+}
+
+/* ---- Pestañas con icono: caben las cinco ---- */
+.ltabs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 3px;
+    padding: 4px;
+    margin: 16px 0 12px;
+    border-radius: var(--r-md);
+    background: var(--surface-2);
+}
+.ltabs button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 0 5px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.68rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.ltabs button.on {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+}
+.tab-hint {
+    margin: -4px 2px 12px;
+}
+.section-title small {
+    margin-left: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--muted);
+}
+
+/* ---- Sesión guiada como piedras de un camino ---- */
+.stones {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 14px 0 4px;
+}
+.stones::before {
+    content: '';
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 21px;
+    border-top: 3px dotted var(--line);
+}
+.stone {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 64px;
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+.stone i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--surface);
+    border: 3px solid var(--line);
+}
+.stone.now {
+    color: var(--accent);
+}
+.stone.now i {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 0 5px var(--accent-soft);
+}
+.gram-line {
+    margin: 6px 0 0;
+}
+.guided .go {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* ---- Baldosas de ejercicio con tu acierto ---- */
+.modes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
+}
+.mode {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px 9px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    color: var(--ink);
+    text-align: center;
+}
+.mode:active {
+    background: var(--surface-2);
+}
+.mi {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.mode[data-c='ok'] .mi {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+.mode[data-c='gold'] .mi {
+    background: var(--gold-soft);
+    color: var(--gold);
+}
+.mode[data-c='bad'] .mi {
+    background: var(--bad-soft);
+    color: var(--bad);
+}
+.mode[data-c='indigo'] .mi {
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+.mode[data-c='signal'] .mi {
+    background: color-mix(in srgb, var(--signal) 16%, var(--surface));
+    color: var(--signal);
+}
+.ml {
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.mode em {
+    font-style: normal;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--muted);
+}
+.mode em[data-t='ok'] {
+    color: var(--ok);
+}
+.mode em[data-t='mid'] {
+    color: var(--gold);
+}
+.mode em[data-t='bad'] {
+    color: var(--bad);
+}
+.mode em[data-t='none'],
+.mode em[data-t='note'] {
+    font-weight: 500;
+}
+/* Ejercicio a reforzar (weakMode) */
+.mode.weak {
+    border: 2px solid var(--bad);
+}
+.mode.weak::after {
+    content: 'Refuerza';
+    position: absolute;
+    top: -9px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: var(--bad);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 800;
+}
+.hard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: -4px 0 14px;
+}
+/* ---- Conversaciones y prueba de la lección ---- */
+.ci {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--indigo-soft);
+    color: var(--indigo);
+}
+.ci[data-c='gold'] {
+    background: var(--gold-soft);
+    color: var(--gold);
+}
+.pill {
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    background: var(--surface-2);
+    color: var(--muted);
+}
+.pill[data-t='ok'] {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+.pill[data-t='mid'] {
+    background: var(--gold-soft);
+    color: var(--gold);
+}
+.pill[data-t='bad'] {
+    background: var(--bad-soft);
+    color: var(--bad);
+}
+.guided .stone {
+    color: color-mix(in srgb, var(--bg) 72%, transparent);
+}
+.guided .stone.now {
+    color: var(--signal);
+}

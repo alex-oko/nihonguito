@@ -1,0 +1,13 @@
+// En línea para que el texto japonés fluya dentro de la frase que lo contiene
+:host {
+    display: inline;
+}
+
+// Furigana: pequeña, en gris y sin seleccionarse al copiar el texto
+rt {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0;
+    user-select: none;
+}

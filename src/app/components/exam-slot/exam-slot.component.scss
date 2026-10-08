@@ -1,0 +1,72 @@
+:host {
+    display: inline;
+}
+.blank {
+    font: inherit;
+    font-size: 16px; /* menos de 16px hace que iOS haga zoom al enfocar */
+    color: var(--p-blue);
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--p-line);
+    border-radius: 0;
+    padding: 1px 3px 0;
+    margin: 0 2px;
+    text-align: center;
+    outline: none;
+    vertical-align: baseline;
+}
+.blank:focus {
+    border-bottom-color: var(--p-blue);
+    background: rgb(40 80 200 / 0.06);
+}
+.jp {
+    font-family: var(--font-hand);
+}
+.xs {
+    width: 2.4em;
+}
+.sm {
+    width: 4.4em;
+}
+.md {
+    width: 7.5em;
+}
+.lg {
+    width: min(13em, 100%);
+}
+.graded {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0 4px;
+    margin: 0 3px;
+}
+.given {
+    color: var(--p-blue);
+    font-family: var(--font-hand);
+    border-bottom: 1px solid var(--p-line);
+    padding: 0 3px;
+    min-width: 1.4em;
+    text-align: center;
+}
+.bad .given,
+.half .given {
+    text-decoration: line-through;
+    text-decoration-color: var(--p-red);
+}
+.mark,
+.fix,
+.note {
+    color: var(--p-red);
+    font-family: var(--font-hand);
+    font-weight: 600;
+}
+.mark {
+    font-size: 1.15em;
+    transform: rotate(-8deg);
+}
+.note {
+    font-size: 0.72em;
+    font-family: var(--font);
+    font-weight: 500;
+}

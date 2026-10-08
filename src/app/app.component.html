@@ -1,0 +1,19 @@
+<!-- Vista de la ruta actual -->
+<router-outlet />
+
+<!-- Barra de pestañas inferior (oculta en las rutas inmersivas) -->
+@if (!immersive()) {
+    <nav class="nav">
+        @for (tab of tabs; track tab.path) {
+            <a
+                [routerLink]="tab.path"
+                routerLinkActive="on"
+                [routerLinkActiveOptions]="{ exact: tab.path === '/' }"
+                class="tab"
+            >
+                <span class="g"><app-icon [name]="tab.icon" [size]="21" /></span>
+                <span class="l">{{ tab.label }}</span>
+            </a>
+        }
+    </nav>
+}

@@ -1,0 +1,789 @@
+{
+ "id": 15,
+ "title": "¿Puedo tomar fotos?",
+ "titleJp": "写真を 撮っても いいですか",
+ "summary": "En un museo de arte, Lucía pregunta si puede tomar fotos. Días después, en una fiesta, Anna le presenta a un amigo y hablan de dónde viven y a qué se dedican.",
+ "vocab": [
+  {
+   "id": "L15-001",
+   "kana": "たちます",
+   "kanji": "立ちます",
+   "es": "ponerse de pie",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-002",
+   "kana": "すわります",
+   "kanji": "座ります",
+   "es": "sentarse",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-003",
+   "kana": "つかいます",
+   "kanji": "使います",
+   "es": "usar",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-004",
+   "kana": "おきます",
+   "kanji": "置きます",
+   "es": "poner, dejar",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-005",
+   "kana": "つくります",
+   "kanji": "作ります、造ります",
+   "es": "hacer, fabricar",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-006",
+   "kana": "うります",
+   "kanji": "売ります",
+   "es": "vender",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-007",
+   "kana": "しります",
+   "kanji": "知ります",
+   "es": "enterarse, llegar a saber",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-008",
+   "kana": "すみます",
+   "kanji": "住みます",
+   "es": "vivir, residir",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-009",
+   "kana": "けんきゅうします",
+   "kanji": "研究します",
+   "es": "investigar",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-010",
+   "kana": "しって います",
+   "kanji": "知って います",
+   "es": "saber, conocer",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-011",
+   "kana": "すんで います",
+   "kanji": "住んで います",
+   "es": "vivir (en Osaka) [おおさかに～]",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-012",
+   "kana": "しりょう",
+   "kanji": "資料",
+   "es": "documentos, datos",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-013",
+   "kana": "カタログ",
+   "es": "catálogo, folleto",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-014",
+   "kana": "じこくひょう",
+   "kanji": "時刻表",
+   "es": "horario (de trenes)",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-015",
+   "kana": "ふく",
+   "kanji": "服",
+   "es": "ropa",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-016",
+   "kana": "せいひん",
+   "kanji": "製品",
+   "es": "productos",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-017",
+   "kana": "ソフト",
+   "es": "software",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-018",
+   "kana": "せんもん",
+   "kanji": "専門",
+   "es": "especialidad",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-019",
+   "kana": "はいしゃ",
+   "kanji": "歯医者",
+   "es": "dentista",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-020",
+   "kana": "とこや",
+   "kanji": "床屋",
+   "es": "barbería, peluquería",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-021",
+   "kana": "プレイガイド",
+   "es": "venta de entradas",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-022",
+   "kana": "どくしん",
+   "kanji": "独身",
+   "es": "soltero/a",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-023",
+   "kana": "とくに",
+   "kanji": "特に",
+   "es": "sobre todo, en especial",
+   "type": "adv",
+   "lesson": 15
+  },
+  {
+   "id": "L15-024",
+   "kana": "おもいだします",
+   "kanji": "思い出します",
+   "es": "recordar, acordarse",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-025",
+   "kana": "ごかぞく",
+   "kanji": "ご家族",
+   "es": "su familia (respetuoso)",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-026",
+   "kana": "いらっしゃいます",
+   "es": "estar (honorífico de います)",
+   "type": "verb",
+   "lesson": 15
+  },
+  {
+   "id": "L15-027",
+   "kana": "こうこう",
+   "kanji": "高校",
+   "es": "instituto (secundaria superior)",
+   "type": "noun",
+   "lesson": 15
+  },
+  {
+   "id": "L15-028",
+   "kana": "にっぽんばし",
+   "kanji": "日本橋",
+   "es": "Nipponbashi (zona comercial de Osaka)",
+   "type": "name",
+   "lesson": 15
+  }
+ ],
+ "patterns": [
+  {
+   "jp": "ここで 写真を 撮っても いいですか。",
+   "es": "¿Puedo tomar fotos aquí?"
+  },
+  {
+   "jp": "美術館の 中で 食べては いけません。",
+   "es": "No se puede comer dentro del museo."
+  },
+  {
+   "jp": "ルシアさんは 東京に 住んで います。",
+   "es": "Lucía vive en Tokio."
+  },
+  {
+   "jp": "カルロスさんは レストランで 働いて います。",
+   "es": "Carlos trabaja en un restaurante."
+  }
+ ],
+ "examples": [
+  {
+   "qjp": "すみません、この 会議室を 使っても いいですか。",
+   "qes": "Disculpe, ¿puedo usar esta sala de juntas?",
+   "ajp": "ええ、いいですよ。4時まで どうぞ。",
+   "aes": "Sí, claro. Puede usarla hasta las cuatro."
+  },
+  {
+   "qjp": "ここに 座っても いいですか。",
+   "qes": "¿Me puedo sentar aquí?",
+   "ajp": "すみません、ちょっと…。友達が 来ます。",
+   "aes": "Perdón, es que… va a venir un amigo."
+  },
+  {
+   "qjp": "美術館の 中で 写真を 撮っても いいですか。",
+   "qes": "¿Se pueden tomar fotos dentro del museo?",
+   "ajp": "いいえ、いけません。",
+   "aes": "No, no se puede."
+  },
+  {
+   "qjp": "どこに 住んで いますか。",
+   "qes": "¿Dónde vives?",
+   "ajp": "会社の 近くに 住んで います。",
+   "aes": "Vivo cerca de la oficina."
+  },
+  {
+   "qjp": "なかむらさんは 結婚して いますか。",
+   "qes": "¿Yui está casada?",
+   "ajp": "いいえ、独身です。",
+   "aes": "No, es soltera."
+  },
+  {
+   "qjp": "もりさんの 電話番号を 知って いますか。",
+   "qes": "¿Sabes el número de teléfono del Sr. Mori?",
+   "ajp": "いいえ、知りません。なかむらさんに 聞いて ください。",
+   "aes": "No, no lo sé. Pregúntale a Yui."
+  },
+  {
+   "qjp": "お仕事は 何ですか。",
+   "qes": "¿A qué se dedica?",
+   "ajp": "大学で 経済を 研究して います。",
+   "aes": "Investigo economía en una universidad."
+  },
+  {
+   "qjp": "専門は 何ですか。",
+   "qes": "¿Cuál es tu especialidad?",
+   "ajp": "美術です。今 デザイナーを して います。",
+   "aes": "Bellas artes. Ahora trabajo como diseñadora."
+  }
+ ],
+ "grammar": [
+  {
+   "title": "Vても いいです — se puede / puedes",
+   "explain": "Forma て + も いいです da permiso: 'puedes hacerlo'. Si lo conviertes en pregunta (～ても いいですか) pides permiso: '¿puedo…?'. Para decir que sí: ええ、いいですよ / どうぞ. Para decir que no, los japoneses suelen evitar el 'no' directo y dicen すみません、ちょっと…, dejando la frase sin terminar.",
+   "examples": [
+    {
+     "jp": "この パソコンを 使っても いいですか。…ええ、どうぞ。",
+     "es": "¿Puedo usar esta computadora? …Sí, adelante."
+    },
+    {
+     "jp": "窓を 開けても いいですか。…すみません、ちょっと…。",
+     "es": "¿Puedo abrir la ventana? …Perdón, es que…"
+    }
+   ]
+  },
+  {
+   "title": "Vては いけません — no se puede (prohibido)",
+   "explain": "Forma て + は いけません significa 'no debes / está prohibido'. Si alguien pregunta ～ても いいですか y quieres prohibirlo con fuerza, basta con いいえ、いけません. Ojo: suena duro y de 'autoridad', así que no se lo digas a un superior o a alguien mayor que tú.",
+   "examples": [
+    {
+     "jp": "美術館で 写真を 撮っては いけません。",
+     "es": "En el museo no se pueden tomar fotos."
+    },
+    {
+     "jp": "ここに 車を 止めても いいですか。…いいえ、いけません。",
+     "es": "¿Puedo estacionar el coche aquí? …No, no se puede."
+    }
+   ]
+  },
+  {
+   "title": "Vて います — un estado (resultado de algo)",
+   "explain": "En la lección 14 Vて います era 'estar haciendo'. Con ciertos verbos indica el estado que queda después de una acción. 結婚して います = 'estoy casado' (me casé y sigo así), no 'me estoy casando'. Igual: 住んで います (vivo en), 知って います (sé, conozco), 持って います (tengo; también 'lo llevo en la mano ahora'). Error típico de hispanohablantes: traducirlo siempre como gerundio.",
+   "examples": [
+    {
+     "jp": "アンナさんは いい カメラを 持って います。",
+     "es": "Anna tiene una buena cámara."
+    },
+    {
+     "jp": "ルシアさんは 会社の 近くに 住んで います。",
+     "es": "Lucía vive cerca de la oficina."
+    }
+   ]
+  },
+  {
+   "title": "Vて います — hábito, trabajo o actividad habitual",
+   "explain": "También se usa para algo que se hace de forma continuada durante mucho tiempo, como el presente habitual del español: 'trabajo en…', 'esta empresa fabrica…'. Es la manera típica de contestar a お仕事は 何ですか (¿a qué te dedicas?).",
+   "examples": [
+    {
+     "jp": "カルロスさんは レストランで 働いて います。",
+     "es": "Carlos trabaja en un restaurante."
+    },
+    {
+     "jp": "あおば商事は 日本の お茶を 外国に 売って います。",
+     "es": "Aoba Shōji vende té japonés al extranjero."
+    }
+   ]
+  },
+  {
+   "title": "知りません — el negativo de 知って います",
+   "explain": "'Lo sé' es 知って います, pero 'no lo sé' es 知りません, no 知って いません. Es una excepción que conviene memorizar tal cual.",
+   "examples": [
+    {
+     "jp": "あの 人の 名前を 知って いますか。…いいえ、知りません。",
+     "es": "¿Sabes cómo se llama esa persona? …No, no lo sé."
+    }
+   ]
+  }
+ ],
+ "phrases": [
+  {
+   "jp": "ここで 写真を 撮っても いいですか。",
+   "es": "¿Puedo tomar fotos aquí?"
+  },
+  {
+   "jp": "すみません、この 部屋は ちょっと…。",
+   "es": "Lo siento, en esta sala no…"
+  },
+  {
+   "jp": "どこに 住んで いますか。",
+   "es": "¿Dónde vives?"
+  },
+  {
+   "jp": "お仕事は 何ですか。",
+   "es": "¿A qué te dedicas?"
+  },
+  {
+   "jp": "ご家族は どちらに いらっしゃいますか。",
+   "es": "¿Dónde está tu familia?"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "L15-c1",
+   "lesson": 15,
+   "title": "¿Se pueden tomar fotos?",
+   "situation": "Lucía y Anna visitan un museo de arte. Lucía quiere tomar una foto de un cuadro y le pregunta al encargado.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "ルシアさん、この 絵、きれいですね。",
+     "es": "Lucía, qué bonito es este cuadro, ¿no?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ええ、すてきですね。",
+     "es": "Sí, precioso."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "すみません、ここで 写真を 撮っても いいですか。",
+     "es": "Disculpe, ¿puedo tomar fotos aquí?"
+    },
+    {
+     "who": "B",
+     "name": "かかりいん",
+     "jp": "すみません、この 部屋は ちょっと…。",
+     "es": "Lo siento, en esta sala no…"
+    },
+    {
+     "who": "B",
+     "name": "かかりいん",
+     "jp": "ロビーでは 撮っても いいですよ。",
+     "es": "En el vestíbulo sí puede tomarlas."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "わかりました。ありがとう ございます。",
+     "es": "Entendido. Muchas gracias."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "あ、ルシアさん。ここで ジュースを 飲んでは いけませんよ。",
+     "es": "Ay, Lucía. Aquí no se puede tomar jugo."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あ、すみません。のどが かわきましたから…。",
+     "es": "Ay, perdón. Es que tenía sed…"
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "じゃ、あとで 外の 喫茶店に 入りましょう。",
+     "es": "Entonces, al rato entramos a una cafetería de afuera."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "ええ、そう しましょう。",
+     "es": "Sí, hagamos eso."
+    }
+   ]
+  },
+  {
+   "id": "L15-c2",
+   "lesson": 15,
+   "title": "Nuevos amigos en la fiesta",
+   "situation": "En una fiesta, Anna le presenta a Lucía a un amigo de su trabajo y conversan sobre dónde viven, a qué se dedican y sus familias.",
+   "lines": [
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "ルシアさん、こちらは わたしの 会社の 友達です。",
+     "es": "Lucía, te presento a un amigo de mi trabajo."
+    },
+    {
+     "who": "B",
+     "name": "ともだち",
+     "jp": "初めまして。ルシアさんは どこに 住んで いますか。",
+     "es": "Mucho gusto. Lucía, ¿dónde vives?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "初めまして、ルシアです。アンナさんの うちの 近くに 住んで います。",
+     "es": "Mucho gusto, soy Lucía. Vivo cerca de la casa de Anna."
+    },
+    {
+     "who": "B",
+     "name": "ともだち",
+     "jp": "そうですか。お仕事は 何ですか。",
+     "es": "Ah, ¿sí? ¿Y a qué te dedicas?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "あおば商事で 働いて います。デザイナーです。",
+     "es": "Trabajo en Aoba Shōji. Soy diseñadora."
+    },
+    {
+     "who": "B",
+     "name": "ともだち",
+     "jp": "わたしは エンジニアです。電車の ソフトを 作って います。",
+     "es": "Yo soy ingeniero. Hago software para trenes."
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "すごいですね。ご家族は どちらに いらっしゃいますか。",
+     "es": "¡Qué impresionante! ¿Y dónde está tu familia?"
+    },
+    {
+     "who": "B",
+     "name": "ともだち",
+     "jp": "両親は 大阪に 住んで います。ルシアさんの ご家族は？",
+     "es": "Mis papás viven en Osaka. ¿Y tu familia, Lucía?"
+    },
+    {
+     "who": "A",
+     "name": "ルシア",
+     "jp": "みんな メキシコに います。時々 寂しいです。",
+     "es": "Todos están en México. A veces me siento sola."
+    },
+    {
+     "who": "A",
+     "name": "アンナ",
+     "jp": "でも、ルシアさんは 東京に 友達が たくさん いますよ。",
+     "es": "Pero en Tokio tienes muchos amigos, Lucía."
+    }
+   ]
+  }
+ ],
+ "extraVocab": [
+  {
+   "topic": "Profesiones (職業)",
+   "items": [
+    {
+     "kana": "かいしゃいん",
+     "kanji": "会社員",
+     "es": "empleado de empresa"
+    },
+    {
+     "kana": "こうむいん",
+     "kanji": "公務員",
+     "es": "funcionario"
+    },
+    {
+     "kana": "えきいん",
+     "kanji": "駅員",
+     "es": "empleado de estación"
+    },
+    {
+     "kana": "ぎんこういん",
+     "kanji": "銀行員",
+     "es": "empleado de banco"
+    },
+    {
+     "kana": "ゆうびんきょくいん",
+     "kanji": "郵便局員",
+     "es": "empleado de correos"
+    },
+    {
+     "kana": "てんいん",
+     "kanji": "店員",
+     "es": "dependiente"
+    },
+    {
+     "kana": "ちょうりし",
+     "kanji": "調理師",
+     "es": "cocinero"
+    },
+    {
+     "kana": "りようし",
+     "kanji": "理容師",
+     "es": "barbero"
+    },
+    {
+     "kana": "びようし",
+     "kanji": "美容師",
+     "es": "peluquero/a"
+    },
+    {
+     "kana": "きょうし",
+     "kanji": "教師",
+     "es": "profesor/a, maestro/a"
+    },
+    {
+     "kana": "べんごし",
+     "kanji": "弁護士",
+     "es": "abogado/a"
+    },
+    {
+     "kana": "けんきゅうしゃ",
+     "kanji": "研究者",
+     "es": "investigador/a"
+    },
+    {
+     "kana": "いしゃ",
+     "kanji": "医者",
+     "es": "médico/a"
+    },
+    {
+     "kana": "かんごふ",
+     "kanji": "看護婦",
+     "es": "enfermera"
+    },
+    {
+     "kana": "うんてんしゅ",
+     "kanji": "運転手",
+     "es": "conductor, chófer"
+    },
+    {
+     "kana": "けいさつかん",
+     "kanji": "警察官",
+     "es": "policía"
+    },
+    {
+     "kana": "がいこうかん",
+     "kanji": "外交官",
+     "es": "diplomático"
+    },
+    {
+     "kana": "せいじか",
+     "kanji": "政治家",
+     "es": "político"
+    },
+    {
+     "kana": "がか",
+     "kanji": "画家",
+     "es": "pintor/a"
+    },
+    {
+     "kana": "さっか",
+     "kanji": "作家",
+     "es": "escritor/a"
+    },
+    {
+     "kana": "おんがくか",
+     "kanji": "音楽家",
+     "es": "músico"
+    },
+    {
+     "kana": "けんちくか",
+     "kanji": "建築家",
+     "es": "arquitecto/a"
+    },
+    {
+     "kana": "エンジニア",
+     "kanji": "",
+     "es": "ingeniero/a"
+    },
+    {
+     "kana": "デザイナー",
+     "kanji": "",
+     "es": "diseñador/a"
+    },
+    {
+     "kana": "ジャーナリスト",
+     "kanji": "",
+     "es": "periodista"
+    },
+    {
+     "kana": "かしゅ",
+     "kanji": "歌手",
+     "es": "cantante"
+    },
+    {
+     "kana": "はいゆう",
+     "kanji": "俳優",
+     "es": "actor, actriz"
+    },
+    {
+     "kana": "スポーツせんしゅ",
+     "kanji": "スポーツ選手",
+     "es": "deportista"
+    }
+   ]
+  }
+ ],
+ "culture": [
+  "En muchos museos de Japón no se permiten fotos dentro de las salas. Fíjate en los letreros con una cámara tachada o pregunta antes: el personal te dirá con amabilidad dónde sí se puede.",
+  "Si alguien te pide algo y no es posible, en Japón se suele contestar すみません、ちょっと… y dejar la frase sin terminar. No hace falta decir \"no\": ese silencio ya se entiende."
+ ],
+ "extras": [
+  {
+   "jp": "ここで 写真を 撮っても いいですか。",
+   "es": "¿Puedo tomar fotos aquí?",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "姉は 今 外国に 住んで います。",
+   "es": "Mi hermana mayor vive ahora en el extranjero.",
+   "tags": [
+    "viajes"
+   ]
+  },
+  {
+   "jp": "ここで 食べても いいですか。",
+   "es": "¿Puedo comer aquí?",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "カルロスさんは レストランで 料理を 作って います。",
+   "es": "Carlos cocina en un restaurante.",
+   "tags": [
+    "comida"
+   ]
+  },
+  {
+   "jp": "この 会議室を 使っても いいですか。",
+   "es": "¿Puedo usar esta sala de juntas?",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "わたしは 会社で デザインの 仕事を して います。",
+   "es": "Trabajo en diseño en una empresa.",
+   "tags": [
+    "trabajo"
+   ]
+  },
+  {
+   "jp": "試験で 辞書を 使っては いけません。",
+   "es": "En el examen no se puede usar el diccionario.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "わたしは 大学で 経済を 勉強して います。",
+   "es": "Estudio economía en la universidad.",
+   "tags": [
+    "estudios"
+   ]
+  },
+  {
+   "jp": "わたしは マンガを たくさん 持って います。",
+   "es": "Tengo muchos mangas.",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "あの アニメの 歌を 知って いますか。",
+   "es": "¿Conoces la canción de ese anime?",
+   "tags": [
+    "anime"
+   ]
+  },
+  {
+   "jp": "ゲームを 1時間だけ しても いいですか。",
+   "es": "¿Puedo jugar videojuegos solo una hora?",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "ゲームの ソフトを たくさん 持って います。",
+   "es": "Tengo muchos videojuegos.",
+   "tags": [
+    "videojuegos"
+   ]
+  },
+  {
+   "jp": "ここで サッカーを しては いけません。",
+   "es": "Aquí no se puede jugar fútbol.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "カルロスさんは 週末 サッカーを して います。",
+   "es": "Carlos juega fútbol los fines de semana.",
+   "tags": [
+    "deporte"
+   ]
+  },
+  {
+   "jp": "夜、ピアノを ひいても いいですか。",
+   "es": "¿Puedo tocar el piano en la noche?",
+   "tags": [
+    "musica"
+   ]
+  },
+  {
+   "jp": "なかむらさんは 子どもに ピアノを 教えて います。",
+   "es": "Yui les da clases de piano a niños.",
+   "tags": [
+    "musica"
+   ]
+  }
+ ]
+}
