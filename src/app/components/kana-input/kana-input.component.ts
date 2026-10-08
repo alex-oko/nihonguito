@@ -1,5 +1,6 @@
 import {
     afterNextRender,
+    afterRenderEffect,
     ChangeDetectionStrategy,
     Component,
     ElementRef,
@@ -40,28 +41,44 @@ export class KanaInputComponent implements OnDestroy {
     private isBound = false;
 
     constructor() {
-        // wanakana necesita el elemento ya en el DOM, por eso se engancha tras el primer render
+        // wanakana necesita el elemento ya en el DOM, por eso se engancha tras el render.
+        // Se repite al cambiar el modo: el componente se reutiliza entre preguntas seguidas
+        // (una de hiragana y otra de katakana) y wanakana guarda el modo del primer bind.
+        afterRenderEffect(() => {
+            this.bindMode(this.mode());
+        });
         afterNextRender(() => {
             const field = this.inputRef().nativeElement;
-            const mode = this.mode();
-            if (mode === 'kana' || mode === 'katakana') {
-                bind(field, { IMEMode: mode === 'katakana' ? 'toKatakana' : 'toHiragana' });
-                this.isBound = true;
-            }
             field.value = this.value();
             field.focus({ preventScroll: true });
         });
     }
 
     ngOnDestroy(): void {
-        if (this.isBound) {
-            try {
-                unbind(this.inputRef().nativeElement);
-            } catch {
-                /* el elemento ya no existe */
-            }
+        this.unbindField();
+    }
+
+    // ------------------------------- Teclado japonés (wanakana) ------------------------------------------------------------- //
+    /** Suelta el enlace anterior y engancha wanakana en hiragana o katakana (romaji y es no se enganchan) */
+    private bindMode(mode: 'kana' | 'katakana' | 'romaji' | 'es'): void {
+        this.unbindField();
+        if (mode === 'kana' || mode === 'katakana') {
+            bind(this.inputRef().nativeElement, { IMEMode: mode === 'katakana' ? 'toKatakana' : 'toHiragana' });
+            this.isBound = true;
         }
     }
+
+    /** Suelta wanakana del campo si estaba enganchado */
+    private unbindField(): void {
+        if (!this.isBound) return;
+        this.isBound = false;
+        try {
+            unbind(this.inputRef().nativeElement);
+        } catch {
+            /* el elemento ya no existe */
+        }
+    }
+    // ------------------------------- Teclado japonés (wanakana) ------------------------------------------------------------- //
 
     // ------------------------------- Valor del campo ------------------------------------------------------------- //
     /** Copia el texto del campo al model `value` */

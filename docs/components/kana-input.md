@@ -58,11 +58,10 @@ Todo está en [kana-input.component.ts](../../src/app/components/kana-input/kana
 
 ### 1. Arranque
 
-**`constructor`** → `afterNextRender` (wanakana necesita el elemento ya en el DOM):
+**`constructor`** (wanakana necesita el elemento ya en el DOM):
 
-1. Lee el `<input>` con `inputRef` (`viewChild.required('field')`).
-2. Con `mode` `kana` o `katakana`: `bind(field, { IMEMode: 'toHiragana' | 'toKatakana' })` y `isBound = true`.
-3. Copia `value()` al campo y le da el foco con `preventScroll: true`.
+1. `afterRenderEffect` → `bindMode(mode())`: suelta el enlace anterior y, con `mode` `kana` o `katakana`, hace `bind(field, { IMEMode: 'toHiragana' | 'toKatakana' })` y `isBound = true`. Se repite **cada vez que cambia `mode`**, porque el componente se reutiliza entre preguntas seguidas de tipo «escribir» (una en hiragana y la siguiente en katakana) y wanakana se queda con el modo del primer `bind`.
+2. `afterNextRender`: copia `value()` al campo y le da el foco con `preventScroll: true`.
 
 ### 2. Mientras se escribe
 
@@ -82,7 +81,7 @@ Todo está en [kana-input.component.ts](../../src/app/components/kana-input/kana
 
 ### 5. Salida
 
-**`ngOnDestroy`**: si estaba enganchado, `unbind`. Va en `try/catch` porque el elemento puede haber desaparecido ya.
+**`ngOnDestroy`** → `unbindField()`: si estaba enganchado, `unbind`. Va en `try/catch` porque el elemento puede haber desaparecido ya.
 
 ### Estilos
 
