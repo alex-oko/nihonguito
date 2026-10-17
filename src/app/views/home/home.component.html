@@ -78,8 +78,16 @@
         <section class="card backup-cta">
             <div class="t">¿Ya usabas Nihonguito en otro teléfono?</div>
             <p class="small muted">Restaura tu copia y sigue donde ibas: XP, racha, palabras aprendidas, diario…</p>
-            <label class="btn accent block file">
-                <app-icon name="refresh" [size]="18" />Restaurar mi copia
+            @if (cloudSVC.isConfigured) {
+                <button class="btn accent block" [disabled]="cloudSVC.status() === 'connecting'" (click)="cloudSVC.signIn()">
+                    <app-icon name="user" [size]="18" />{{ cloudSVC.status() === 'connecting' ? 'Conectando…' : 'Entrar con Google y recuperar' }}
+                </button>
+                @if (cloudSVC.error()) {
+                    <p class="small err">{{ cloudSVC.error() }}</p>
+                }
+            }
+            <label class="btn block file" [class.accent]="!cloudSVC.isConfigured" [class.ghost]="cloudSVC.isConfigured">
+                <app-icon name="refresh" [size]="18" />{{ cloudSVC.isConfigured ? 'Restaurar desde un archivo' : 'Restaurar mi copia' }}
                 <input type="file" accept=".json,application/json" (change)="restoreFile($event)" />
             </label>
             @if (restoreError()) {
@@ -90,7 +98,7 @@
     }
 
     <!-- Recordatorio de guardar la copia en un archivo (cada 7 días) -->
-    @if (backupSVC.needsExport()) {
+    @if (backupSVC.needsExport() && !cloudSVC.user()) {
         <section class="card backup-cta">
             <div class="row">
                 <span class="ki big" data-c="indigo"><app-icon name="download" [size]="20" /></span>

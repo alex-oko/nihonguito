@@ -130,18 +130,16 @@ La aplicación ya está preparada como PWA. Para que el navegador permita instal
 
 El botón interno solo se muestra cuando el navegador emite `beforeinstallprompt`. En iOS se muestran instrucciones porque ese evento no está disponible.
 
-## Persistencia y futura cuenta de Google
+## Persistencia y copias de seguridad
 
-Actualmente todo el progreso se guarda con el prefijo `nihongo:` en `localStorage`. La aplicación no requiere cuenta y los datos permanecen en ese navegador.
+Todo el progreso se guarda con el prefijo `nihongo:` en `localStorage`. La aplicación no requiere cuenta. Para no perderlo:
 
-La evolución recomendada es mantener el modo invitado y añadir una cuenta opcional para:
+- **Copias automáticas en el dispositivo** (IndexedDB) al terminar cada práctica y al salir de la app.
+- **Copia en archivo** (`.json`) desde Perfil, para compartirla a Drive, WhatsApp o correo; Inicio la recuerda cada 7 días.
+- **Copia automática en la nube** (opcional): Firebase Authentication con Google y un documento de Firestore por usuario. Se entra una vez y la copia se sube y se recupera sola. Solo pide nombre y correo (sin permisos de Drive ni contactos).
+- Al abrir la app sin progreso (dispositivo nuevo), Inicio ofrece restaurar la copia.
 
-- Respaldar el progreso.
-- Sincronizar teléfono y computador.
-- Recuperar XP, racha, dominio, resultados y ajustes al cambiar de dispositivo.
-- Combinar el progreso local con la nube durante el primer inicio de sesión.
-
-Una implementación sencilla puede utilizar Firebase Authentication con Google y un documento de Firestore por usuario. No deben solicitarse permisos de Drive, contactos u otros servicios: nombre, correo y foto son suficientes.
+Para activar la nube hay que crear un proyecto de Firebase y pegar su configuración en `src/app/utils/cloud.utils.ts`: los pasos están en [docs/services/cloud-sync.service.md](docs/services/cloud-sync.service.md#configurar-firebase-una-vez). Sin configuración, la nube no aparece y todo lo demás funciona igual.
 
 ## Desarrollo local
 

@@ -24,6 +24,7 @@ import { ExamReadinessComponent } from '../../components/exam-readiness/exam-rea
 import { UpdateService } from '../../services/update.service';
 import { PlanService } from '../../services/plan.service';
 import { BackupService } from '../../services/backup.service';
+import { CloudSyncService } from '../../services/cloud-sync.service';
 import { DiaryService } from '../../services/diary.service';
 
 /** Inicial de cada día de la semana (getDay: 0 = domingo) para la tira de 14 días */
@@ -65,6 +66,7 @@ export class HomeComponent {
     protected updateSVC = inject(UpdateService);
     protected planSVC = inject(PlanService);
     protected backupSVC = inject(BackupService);
+    protected cloudSVC = inject(CloudSyncService);
     private diarySVC = inject(DiaryService);
     private lessonSVC = inject(LessonService);
     private speechSVC = inject(SpeechService);

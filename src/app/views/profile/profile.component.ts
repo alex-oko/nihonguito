@@ -4,6 +4,7 @@ import { Settings } from '../../interfaces/progress.interface';
 import { SpeechService } from '../../services/speech.service';
 import { UpdateService } from '../../services/update.service';
 import { BackupService } from '../../services/backup.service';
+import { CloudSyncService } from '../../services/cloud-sync.service';
 import { INTERESTS } from '../../utils/interests.utils';
 import { todayKey } from '../../utils/text.utils';
 import { IconComponent } from '../../components/icon/icon.component';
@@ -36,6 +37,7 @@ export class ProfileComponent {
     protected speechSVC = inject(SpeechService);
     protected updateSVC = inject(UpdateService);
     protected backupSVC = inject(BackupService);
+    protected cloudSVC = inject(CloudSyncService);
 
     // --- Estados UI con Signals ---
     // Ajustes del usuario (atajo al signal de ProgressService)
@@ -48,6 +50,11 @@ export class ProfileComponent {
     protected restoreError = signal('');
 
     // --- Valores derivados (computed) ---
+    /** Última sincronización con la nube, legible («17 oct, 12:30»), o vacío si nunca */
+    protected lastCloudSync = computed(() => {
+        const lastSync = this.cloudSVC.meta().lastSync;
+        return lastSync ? this.snapshotDate(lastSync) : '';
+    });
     /** Inicial del nombre, o 私 si no hay nombre */
     protected initial = computed(() => (this.settings().name.trim()[0] ?? '私').toUpperCase());
 

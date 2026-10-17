@@ -76,6 +76,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `levelBest` | `{ "presetId": mejor% }` (tope 100) | `loadRaw` / `save` | `LevelExamService` |
 | `levelCustom` | `LevelPreset` del examen personalizado, o `null` | `loadRaw` / `save` | `LevelExamService` |
 | `examConfig` | `ExamConfig`: `{ lessons, sections, count, strict }` | `loadRaw` / `save` | `ExamBuilderComponent` (recuerda la última configuración) |
+| `cloudMeta` | `CloudMeta`: `{ isLinked, lastSync }` | `persisted` (mezcla) | [`CloudSyncService`](../services/cloud-sync.service.md) |
 | `backupMeta` | `BackupMeta`: `{ lastExport, snoozedUntil, isRestoreOfferDismissed }` | `persisted` (mezcla) | [`BackupService`](../services/backup.service.md) |
 | `dailyPlan` | `PlanState`: `{ date, done, isRewarded }` (pasos del Plan de hoy) | `persisted` (`merge = false`) | [`PlanService`](../services/plan.service.md) |
 | `listenConfig` | `ListenConfig`: `{ lessons, content, mode, isSlow, repeat, pause, isShuffled, count, isLooping }` | `loadRaw` / `save` | `ListenComponent` (la escribe) y `ListenPlayerComponent` (la lee) |

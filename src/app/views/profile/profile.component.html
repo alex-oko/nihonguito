@@ -198,6 +198,38 @@
         <p class="small body">
             Tu progreso vive solo en este dispositivo. Guarda una copia en un archivo (Drive, WhatsApp, correo…) para no perderlo si cambias de teléfono o se borran los datos.
         </p>
+        <!-- Copia automática en la nube (solo si hay proyecto de Firebase configurado) -->
+        @if (cloudSVC.isConfigured) {
+            <div class="cloud">
+                @if (cloudSVC.user(); as user) {
+                    <div class="row line-item">
+                        <app-icon name="check" [size]="18" />
+                        <span class="small grow">
+                            Copia automática en la nube con <b>{{ user.email }}</b>
+                            @switch (cloudSVC.status()) {
+                                @case ('syncing') { · subiendo… }
+                                @case ('ok') { · al día{{ lastCloudSync() ? ' (' + lastCloudSync() + ')' : '' }} }
+                            }
+                        </span>
+                    </div>
+                    <div class="row cloud-actions">
+                        <button class="btn ghost sm" (click)="cloudSVC.uploadNow()">Subir ahora</button>
+                        <button class="btn ghost sm" (click)="cloudSVC.restoreFromCloud()">Recuperar</button>
+                        <button class="btn ghost sm" (click)="cloudSVC.signOut()">Desconectar</button>
+                    </div>
+                } @else {
+                    <p class="small body">
+                        <b>Copia automática en la nube:</b> entra una vez con tu cuenta de Google y tu progreso se guardará solo al terminar cada práctica. En otro teléfono, entras y lo recuperas.
+                    </p>
+                    <button class="btn accent block" [disabled]="cloudSVC.status() === 'connecting'" (click)="cloudSVC.signIn()">
+                        <app-icon name="user" [size]="18" />{{ cloudSVC.status() === 'connecting' ? 'Conectando…' : 'Activar con Google' }}
+                    </button>
+                }
+                @if (cloudSVC.error()) {
+                    <p class="small err">{{ cloudSVC.error() }}</p>
+                }
+            </div>
+        }
         <div class="row line-item">
             <app-icon name="download" [size]="18" />
             <span class="small grow">
@@ -218,7 +250,7 @@
             <app-icon name="lock" [size]="18" />
             <span class="small grow">Protección contra borrado: <b>{{ backupSVC.isPersisted() ? 'activada' : 'se activa al instalar la app' }}</b></span>
         </div>
-        <button class="btn accent block" (click)="backupSVC.exportFile()"><app-icon name="download" [size]="18" />Guardar copia ahora</button>
+        <button class="btn block" [class.accent]="!cloudSVC.isConfigured" [class.ghost]="cloudSVC.isConfigured" (click)="backupSVC.exportFile()"><app-icon name="download" [size]="18" />Guardar copia en archivo</button>
         <label class="btn ghost block file">
             <app-icon name="refresh" [size]="18" />Restaurar desde un archivo
             <input type="file" accept=".json,application/json" (change)="restoreFile($event)" />

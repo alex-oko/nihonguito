@@ -185,15 +185,15 @@ export class BackupService {
     }
 
     /** Sustituye el progreso por el de una copia: antes guarda una copia automática de lo actual, después recarga */
-    private async applyBackup(backup: BackupFile): Promise<void> {
+    async applyBackup(backup: BackupFile): Promise<void> {
         if (this.hasProgress()) await this.snapshotNow();
         writeAll(backup.data);
         // Los signals persistidos siguen en memoria con lo de antes y sus effects volverían a escribirlo
         location.reload();
     }
 
-    /** Arma el contenido de una copia con todo lo guardado ahora */
-    private buildFile(): BackupFile {
+    /** Arma el contenido de una copia con todo lo guardado ahora (también lo sube CloudSyncService) */
+    buildFile(): BackupFile {
         return { app: BACKUP_APP, version: BACKUP_VERSION, createdAt: new Date().toISOString(), data: readAll() };
     }
     // ------------------------------- Copia en archivo ------------------------------------------------------------- //

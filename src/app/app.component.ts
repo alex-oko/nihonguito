@@ -4,6 +4,7 @@ import { filter } from 'rxjs';
 import { ProgressService } from './services/progress.service';
 import { ReadingService } from './services/reading.service';
 import { BackupService } from './services/backup.service';
+import { CloudSyncService } from './services/cloud-sync.service';
 import { IconComponent } from './components/icon/icon.component';
 
 /** Color de fondo de cada tema: se copia a <meta name="theme-color"> para pintar la barra del sistema */
@@ -30,6 +31,8 @@ export class AppComponent {
     private readingSVC = inject(ReadingService);
     // Se inyecta para que empiece al abrir la app: copias automáticas y protección del almacenamiento
     private backupSVC = inject(BackupService);
+    // Igual con la copia en la nube: se reconecta sola y sube al terminar cada práctica
+    private cloudSVC = inject(CloudSyncService);
     private router = inject(Router);
     private route = inject(ActivatedRoute);
 

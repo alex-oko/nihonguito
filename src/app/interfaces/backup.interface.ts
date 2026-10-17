@@ -27,5 +27,31 @@ export interface BackupMeta {
     isRestoreOfferDismissed: boolean;
 }
 
+/** Cuenta de Google conectada a la copia en la nube */
+export interface CloudUser {
+    uid: string;
+    name: string;
+    email: string;
+}
+
+/** Documento de Firestore con la copia de un usuario */
+export interface CloudBackup {
+    /** BackupFile entero en JSON (como texto: Firestore limita los campos anidados) */
+    file: string;
+    updatedAt: string;
+    xp: number;
+}
+
+/** Lo que se guarda en nihongo:cloudMeta */
+export interface CloudMeta {
+    /** Este dispositivo inició sesión alguna vez: al abrir la app se reconecta solo */
+    isLinked: boolean;
+    /** Última subida o bajada correcta (ISO) */
+    lastSync: string | null;
+}
+
+/** Estado de la copia en la nube para la pantalla */
+export type CloudStatus = 'off' | 'connecting' | 'syncing' | 'ok' | 'error';
+
 /** Resultado de leer un archivo de copia */
 export type RestoreResult = { ok: true } | { ok: false; error: string };

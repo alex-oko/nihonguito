@@ -6,6 +6,8 @@ Copias de seguridad del progreso. Como la app no tiene servidor y todo vive en `
 2. **Copia en archivo** (`.json`): con un toque se comparte (Drive, WhatsApp, correo…) o se descarga. Es la que sobrevive a un teléfono nuevo. El navegador exige un toque del usuario para guardar o compartir un archivo, por eso Inicio lo **recuerda** cada 7 días.
 3. **Restaurar**: desde un archivo (Perfil, o la oferta de Inicio en un dispositivo sin progreso) o desde una copia automática (Perfil).
 
+La cuarta capa, la **copia automática en la nube** (Firebase con Google), vive en [CloudSyncService](cloud-sync.service.md): usa `buildFile` y `applyBackup` de este servicio.
+
 Además pide al navegador almacenamiento persistente (`navigator.storage.persist()`), para que no borre los datos por falta de espacio. En una app instalada suele concederse solo.
 
 ## Introducción

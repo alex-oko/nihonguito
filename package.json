@@ -14,7 +14,10 @@
     "icons": "node tools/make-icons.mjs",
     "preview": "node tools/serve-dist.mjs",
     "furigana": "node tools/build-furigana.mjs",
-    "audio": "node tools/build-audio.mjs"
+    "audio": "node tools/build-audio.mjs",
+    "version:fix": "npm version patch --no-git-tag-version && node tools/write-version.mjs",
+    "version:feature": "npm version minor --no-git-tag-version && node tools/write-version.mjs",
+    "version:major": "npm version major --no-git-tag-version && node tools/write-version.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -38,6 +41,7 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/service-worker": "^20.3.0",
+    "firebase": "^11.10.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "wanakana": "^5.3.1"
