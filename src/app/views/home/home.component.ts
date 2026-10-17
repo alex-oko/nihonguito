@@ -23,6 +23,7 @@ import { PetService } from '../../services/pet.service';
 import { ExamReadinessComponent } from '../../components/exam-readiness/exam-readiness.component';
 import { UpdateService } from '../../services/update.service';
 import { PlanService } from '../../services/plan.service';
+import { BackupService } from '../../services/backup.service';
 import { DiaryService } from '../../services/diary.service';
 
 /** Inicial de cada día de la semana (getDay: 0 = domingo) para la tira de 14 días */
@@ -63,6 +64,7 @@ export class HomeComponent {
     protected petSVC = inject(PetService);
     protected updateSVC = inject(UpdateService);
     protected planSVC = inject(PlanService);
+    protected backupSVC = inject(BackupService);
     private diarySVC = inject(DiaryService);
     private lessonSVC = inject(LessonService);
     private speechSVC = inject(SpeechService);
@@ -74,6 +76,8 @@ export class HomeComponent {
     private loadedLessons = signal<Map<number, Lesson>>(new Map());
     // Frase de Musubi que se está mostrando (crece en cada toque)
     private lineIndex = signal(0);
+    /** Mensaje de error al restaurar una copia desde Inicio */
+    protected restoreError = signal('');
 
     // --- Valores derivados (computed) ---
     protected name = computed(() => this.progressSVC.settings().name.trim());
@@ -404,6 +408,18 @@ export class HomeComponent {
         return position >= 0 && position < ids.length - 1 ? ids[position + 1] : null;
     }
     // ------------------------------- Carga de datos ------------------------------------------------------------- //
+
+    // ------------------------------- Copia de seguridad ------------------------------------------------------------- //
+    /** Restaura la copia elegida en «¿Ya usabas Nihonguito en otro teléfono?» */
+    protected async restoreFile(event: Event): Promise<void> {
+        const inputElement = event.target as HTMLInputElement;
+        const file = inputElement.files?.[0];
+        inputElement.value = '';
+        if (!file) return;
+        const result = await this.backupSVC.restoreFromFile(file);
+        this.restoreError.set(result.ok ? '' : result.error);
+    }
+    // ------------------------------- Copia de seguridad ------------------------------------------------------------- //
 
     // ------------------------------- Musubi y voz ------------------------------------------------------------- //
     /** Pasa a la siguiente frase de Musubi */

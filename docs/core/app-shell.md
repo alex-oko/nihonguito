@@ -107,6 +107,8 @@ Empieza en [main.ts](../../src/main.ts) y sigue en [app.config.ts](../../src/app
 2. **Precarga de lecturas**: `setTimeout` de **`READING_PRELOAD_DELAY_MS`** (1200 ms) y luego `readingSVC.ensure()`. `ensure` carga **todas** las lecciones para armar el diccionario kanji → kana que usan las prácticas al comparar respuestas escritas o dictadas. Se retrasa para no competir con la descarga de la primera vista; `ensure` guarda la promesa, así que si una práctica lo pide antes, no se carga dos veces.
 3. **`effect`** de apariencia: lee `progressSVC.settings()` y llama a **`applyAppearance(theme, script)`** cada vez que cambian ([paso 4](#4-tema-y-escritura)).
 
+Además inyecta **`BackupService`** solo para crearlo al arrancar: así las copias automáticas y la petición de almacenamiento persistente funcionan desde cualquier pantalla ([su doc](../services/backup.service.md)).
+
 No hay `ngOnInit` ni `ngOnDestroy`: el shell vive mientras vive la app.
 
 ### 3. Modo inmersivo y scroll

@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive, Ro
 import { filter } from 'rxjs';
 import { ProgressService } from './services/progress.service';
 import { ReadingService } from './services/reading.service';
+import { BackupService } from './services/backup.service';
 import { IconComponent } from './components/icon/icon.component';
 
 /** Color de fondo de cada tema: se copia a <meta name="theme-color"> para pintar la barra del sistema */
@@ -27,6 +28,8 @@ export class AppComponent {
     // --- Inyección de dependencias ---
     private progressSVC = inject(ProgressService);
     private readingSVC = inject(ReadingService);
+    // Se inyecta para que empiece al abrir la app: copias automáticas y protección del almacenamiento
+    private backupSVC = inject(BackupService);
     private router = inject(Router);
     private route = inject(ActivatedRoute);
 

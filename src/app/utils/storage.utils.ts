@@ -48,6 +48,31 @@ export function persisted<T>(key: string, fallback: T, merge = true): WritableSi
     return state;
 }
 
+/** Devuelve todas las claves nihongo:* (sin el prefijo) con su texto JSON tal cual: es el contenido de una copia de seguridad */
+export function readAll(): Record<string, string> {
+    const data: Record<string, string> = {};
+    try {
+        for (const storageKey of Object.keys(localStorage)) {
+            if (!storageKey.startsWith(PREFIX)) continue;
+            const raw = localStorage.getItem(storageKey);
+            if (raw !== null) data[storageKey.slice(PREFIX.length)] = raw;
+        }
+    } catch {
+        /* almacenamiento no disponible: copia vacía */
+    }
+    return data;
+}
+
+/** Sustituye todo el progreso por el de una copia (borra antes las claves nihongo:*); hay que recargar después */
+export function writeAll(data: Record<string, string>): void {
+    clearAll();
+    try {
+        for (const [key, raw] of Object.entries(data)) localStorage.setItem(PREFIX + key, raw);
+    } catch {
+        /* almacenamiento lleno o no disponible */
+    }
+}
+
 /** Borra todas las claves nihongo:* (no toca las de otras apps del mismo origen) */
 export function clearAll(): void {
     try {

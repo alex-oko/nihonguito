@@ -73,6 +73,42 @@
     </div>
     <p class="small goal-msg">{{ goalMessage() }}</p>
 
+    <!-- Dispositivo nuevo o datos borrados: ofrecer restaurar una copia -->
+    @if (backupSVC.shouldOfferRestore()) {
+        <section class="card backup-cta">
+            <div class="t">¿Ya usabas Nihonguito en otro teléfono?</div>
+            <p class="small muted">Restaura tu copia y sigue donde ibas: XP, racha, palabras aprendidas, diario…</p>
+            <label class="btn accent block file">
+                <app-icon name="refresh" [size]="18" />Restaurar mi copia
+                <input type="file" accept=".json,application/json" (change)="restoreFile($event)" />
+            </label>
+            @if (restoreError()) {
+                <p class="small err">{{ restoreError() }}</p>
+            }
+            <button class="btn ghost sm block" (click)="backupSVC.dismissRestoreOffer()">No, empiezo de cero</button>
+        </section>
+    }
+
+    <!-- Recordatorio de guardar la copia en un archivo (cada 7 días) -->
+    @if (backupSVC.needsExport()) {
+        <section class="card backup-cta">
+            <div class="row">
+                <span class="ki big" data-c="indigo"><app-icon name="download" [size]="20" /></span>
+                <div class="grow">
+                    <div class="t">Protege tu progreso</div>
+                    <div class="small muted">
+                        {{ backupSVC.daysSinceExport() === null ? 'Aún no guardas ninguna copia.' : 'Hace ' + backupSVC.daysSinceExport() + ' días de tu última copia.' }}
+                        Guárdala en Drive o envíatela para no perder nada si cambias de teléfono.
+                    </div>
+                </div>
+            </div>
+            <div class="row actions">
+                <button class="btn ghost sm" (click)="backupSVC.snoozeReminder()">Más tarde</button>
+                <button class="btn accent sm grow" (click)="backupSVC.exportFile()"><app-icon name="download" [size]="16" />Guardar copia</button>
+            </div>
+        </section>
+    }
+
     <!-- Aviso para elegir intereses (solo si no hay ninguno) -->
     @if (!progressSVC.settings().interests.length) {
         <a class="card interests-cta" routerLink="/perfil" fragment="intereses">

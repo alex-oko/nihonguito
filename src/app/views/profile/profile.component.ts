@@ -3,6 +3,7 @@ import { MASTERED_BOX, ProgressService, SCRIPT_OPTIONS } from '../../services/pr
 import { Settings } from '../../interfaces/progress.interface';
 import { SpeechService } from '../../services/speech.service';
 import { UpdateService } from '../../services/update.service';
+import { BackupService } from '../../services/backup.service';
 import { INTERESTS } from '../../utils/interests.utils';
 import { todayKey } from '../../utils/text.utils';
 import { IconComponent } from '../../components/icon/icon.component';
@@ -34,6 +35,7 @@ export class ProfileComponent {
     protected progressSVC = inject(ProgressService);
     protected speechSVC = inject(SpeechService);
     protected updateSVC = inject(UpdateService);
+    protected backupSVC = inject(BackupService);
 
     // --- Estados UI con Signals ---
     // Ajustes del usuario (atajo al signal de ProgressService)
@@ -42,6 +44,8 @@ export class ProfileComponent {
     protected installPrompt = signal<InstallEvent | null>(null);
     // Progreso de «Descargar todos los audios»; null mientras no se ha pulsado
     protected audioDownload = signal<{ done: number; total: number } | null>(null);
+    /** Mensaje de error al restaurar un archivo de copia */
+    protected restoreError = signal('');
 
     // --- Valores derivados (computed) ---
     /** Inicial del nombre, o 私 si no hay nombre */
@@ -135,13 +139,38 @@ export class ProfileComponent {
         void this.speechSVC.speak('こんにちは。いっしょに にほんごを べんきょうしましょう。');
     }
 
-    /** Pide confirmación y borra todo el progreso */
-    protected reset(): void {
-        if (confirm('¿Seguro? Se borrarán tu XP, racha y todo lo aprendido. No se puede deshacer.')) {
+    /** Pide confirmación, guarda una copia automática (por si fue un error) y borra todo el progreso */
+    protected async reset(): Promise<void> {
+        if (confirm('¿Seguro? Se borrarán tu XP, racha y todo lo aprendido. Quedará una copia automática en este dispositivo por si te arrepientes.')) {
+            await this.backupSVC.snapshotNow();
             this.progressSVC.resetAll();
         }
     }
     // ------------------------------- Ajustes ------------------------------------------------------------- //
+
+    // ------------------------------- Copias de seguridad ------------------------------------------------------------- //
+    /** Restaura el archivo elegido en el selector (pide confirmación si ya hay progreso) */
+    protected async restoreFile(event: Event): Promise<void> {
+        const inputElement = event.target as HTMLInputElement;
+        const file = inputElement.files?.[0];
+        // Se vacía para que elegir el mismo archivo otra vez vuelva a disparar change
+        inputElement.value = '';
+        if (!file) return;
+        if (this.backupSVC.hasProgress() && !confirm('Tu progreso actual se sustituirá por el de la copia. (Se guarda antes una copia automática de lo actual.) ¿Seguir?')) return;
+        const result = await this.backupSVC.restoreFromFile(file);
+        this.restoreError.set(result.ok ? '' : result.error);
+    }
+
+    /** Restaura una copia automática del dispositivo, con confirmación */
+    protected restoreSnapshot(id: string): void {
+        if (confirm('Tu progreso volverá a como estaba en esa copia. (Se guarda antes una copia de lo actual.) ¿Seguir?')) void this.backupSVC.restoreSnapshot(id);
+    }
+
+    /** Devuelve una fecha de copia legible: «17 oct, 12:30» */
+    protected snapshotDate(iso: string): string {
+        return new Date(iso).toLocaleString('es', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+    }
+    // ------------------------------- Copias de seguridad ------------------------------------------------------------- //
 
     // ------------------------------- Sin conexión e instalación ------------------------------------------------------------- //
     /** Descarga cada audio una vez para que el service worker lo guarde y funcione sin conexión */

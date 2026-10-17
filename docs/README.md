@@ -90,6 +90,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [FuriganaService](services/furigana.service.md) | Diccionario y segmentación de lecturas. |
 | [ReadingService](services/reading.service.md) | Normalización y comparación de voz. |
 | [SfxService](services/sfx.service.md) | Efectos sonoros sintetizados. |
+| [BackupService](services/backup.service.md) | Copias automáticas, copia en archivo y restaurar. |
 | [PlanService](services/plan.service.md) | Pasos hechos del Plan de hoy y premio. |
 | [DiaryService](services/diary.service.md) | Frases guardadas de Mi diario. |
 | [UpdateService](services/update.service.md) | Detección e instalación de versiones PWA. |

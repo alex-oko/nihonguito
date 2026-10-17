@@ -44,6 +44,11 @@ Dónde y cómo guarda la app el progreso del usuario. No hay backend: todo vive 
 - **Por qué un `effect`**: así nadie tiene que acordarse de guardar; cualquier `set` o `update` del signal acaba en `localStorage`. El `effect` corre de forma asíncrona, así que varias actualizaciones seguidas se guardan una sola vez.
 - **Quién la llama**: `ProgressService` (nueve signals), `PetService` (`pet`) y `TimeComponent` (`time-seen`).
 
+#### `readAll()` y `writeAll(data)`
+
+- **Qué hacen**: `readAll` devuelve todas las claves `nihongo:*` (sin prefijo) con su texto JSON tal cual; `writeAll` borra las actuales (`clearAll`) y escribe las de `data`.
+- **Quién las llama**: [`BackupService`](../services/backup.service.md) para hacer y restaurar copias. Después de `writeAll` hay que recargar, igual que con `clearAll`.
+
 #### `clearAll()`
 
 - **Qué hace**: borra todas las claves que empiezan por `nihongo:` y deja las demás del mismo origen.
@@ -71,6 +76,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `levelBest` | `{ "presetId": mejor% }` (tope 100) | `loadRaw` / `save` | `LevelExamService` |
 | `levelCustom` | `LevelPreset` del examen personalizado, o `null` | `loadRaw` / `save` | `LevelExamService` |
 | `examConfig` | `ExamConfig`: `{ lessons, sections, count, strict }` | `loadRaw` / `save` | `ExamBuilderComponent` (recuerda la última configuración) |
+| `backupMeta` | `BackupMeta`: `{ lastExport, snoozedUntil, isRestoreOfferDismissed }` | `persisted` (mezcla) | [`BackupService`](../services/backup.service.md) |
 | `dailyPlan` | `PlanState`: `{ date, done, isRewarded }` (pasos del Plan de hoy) | `persisted` (`merge = false`) | [`PlanService`](../services/plan.service.md) |
 | `listenConfig` | `ListenConfig`: `{ lessons, content, mode, isSlow, repeat, pause, isShuffled, count, isLooping }` | `loadRaw` / `save` | `ListenComponent` (la escribe) y `ListenPlayerComponent` (la lee) |
 | `diary` | `DiaryEntry[]`: `{ id, date, promptId, sentence }`, máximo 300 | `persisted` (`merge = false`) | [`DiaryService`](../services/diary.service.md) |
@@ -80,7 +86,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `best:<storageKey>` | `number` (mejor puntuación) | `loadRaw` / `save` | `SpeedGameComponent`. `GameHostComponent` pasa `speed-hiragana`, `speed-katakana` o `speed-vocab`; sin `storageKey` sería `best:speed` |
 | `kanaRows:<script>` | `string[]` (ids de filas elegidas), con `script` = `hiragana` o `katakana` | `loadRaw` / `save` | `KanaChartComponent` (lee y escribe; por defecto `['a', 'k']`) y `KanaComponent` (lee) |
 
-Fuera de `localStorage`, la app solo guarda en la caché del service worker (`ngsw-config.json`): datos de lecciones, `furigana.json`, el manifiesto de audio y los mp3.
+Fuera de `localStorage`, la app guarda las copias automáticas en IndexedDB (`nihonguito-backups`, ver [BackupService](../services/backup.service.md)) y en la caché del service worker (`ngsw-config.json`): datos de lecciones, `furigana.json`, el manifiesto de audio y los mp3.
 
 ## Migraciones de datos viejos
 

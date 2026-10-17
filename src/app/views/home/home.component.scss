@@ -329,6 +329,39 @@
     border-color: var(--accent) !important;
 }
 
+/* Avisos de copia de seguridad: restaurar en un dispositivo nuevo y recordar guardar la copia */
+.backup-cta {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    border-color: var(--indigo) !important;
+}
+.backup-cta p {
+    margin: 0;
+}
+.backup-cta .row {
+    gap: 12px;
+}
+.backup-cta .actions .grow {
+    flex: 1;
+}
+/* El <input type="file"> va oculto dentro del botón: tocar la etiqueta abre el selector */
+.file {
+    position: relative;
+    cursor: pointer;
+}
+.file input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.err {
+    margin: 0;
+    color: var(--bad);
+}
+
 /* ---- Plan de hoy (tarjeta oscura) ---- */
 .mission {
     position: relative;

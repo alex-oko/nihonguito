@@ -192,6 +192,54 @@
         }
     </div>
 
+    <!-- Copias de seguridad -->
+    <h2 class="section-title" id="copias">Copia de seguridad</h2>
+    <div class="card backup">
+        <p class="small body">
+            Tu progreso vive solo en este dispositivo. Guarda una copia en un archivo (Drive, WhatsApp, correo…) para no perderlo si cambias de teléfono o se borran los datos.
+        </p>
+        <div class="row line-item">
+            <app-icon name="download" [size]="18" />
+            <span class="small grow">
+                Última copia en archivo:
+                <b>{{ backupSVC.daysSinceExport() === null ? 'nunca' : backupSVC.daysSinceExport() === 0 ? 'hoy' : 'hace ' + backupSVC.daysSinceExport() + (backupSVC.daysSinceExport() === 1 ? ' día' : ' días') }}</b>
+            </span>
+        </div>
+        <div class="row line-item">
+            <app-icon name="refresh" [size]="18" />
+            <span class="small grow">
+                Copias automáticas en este dispositivo: <b>{{ backupSVC.snapshots().length }}</b>
+                @if (backupSVC.snapshots()[0]; as last) {
+                    (la última, {{ snapshotDate(last.createdAt) }})
+                }
+            </span>
+        </div>
+        <div class="row line-item">
+            <app-icon name="lock" [size]="18" />
+            <span class="small grow">Protección contra borrado: <b>{{ backupSVC.isPersisted() ? 'activada' : 'se activa al instalar la app' }}</b></span>
+        </div>
+        <button class="btn accent block" (click)="backupSVC.exportFile()"><app-icon name="download" [size]="18" />Guardar copia ahora</button>
+        <label class="btn ghost block file">
+            <app-icon name="refresh" [size]="18" />Restaurar desde un archivo
+            <input type="file" accept=".json,application/json" (change)="restoreFile($event)" />
+        </label>
+        @if (restoreError()) {
+            <p class="small err">{{ restoreError() }}</p>
+        }
+        @if (backupSVC.snapshots().length) {
+            <details class="snaps">
+                <summary class="small">Volver a una copia automática</summary>
+                @for (snapshot of backupSVC.snapshots(); track snapshot.id) {
+                    <div class="row snap">
+                        <span class="small grow">{{ snapshotDate(snapshot.createdAt) }} · {{ snapshot.xp }} XP</span>
+                        <button class="btn ghost sm" (click)="restoreSnapshot(snapshot.id)">Restaurar</button>
+                    </div>
+                }
+            </details>
+        }
+        <p class="small muted">Las copias automáticas se hacen solas al terminar cada práctica y al salir de la app (como mucho una cada 30 minutos; se guardan las últimas 7).</p>
+    </div>
+
     <!-- Borrar progreso y créditos -->
     <h2 class="section-title">Datos</h2>
     <button class="btn ghost block danger" (click)="reset()"><app-icon name="trash" [size]="18" />Borrar todo mi progreso</button>

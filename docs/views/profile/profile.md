@@ -32,7 +32,8 @@ Los ajustes se guardan en `nihongo:settings` a través de [`ProgressService`](..
 - **Audio sin conexión** (solo si la app trae audios grabados): descarga todos. Durante la descarga, barra y «Descargando N de M…»; al final, «¡Listo!…». Si no hay audios grabados y el dispositivo no tiene voz japonesa, sale en su lugar un aviso con los pasos para instalarla en Android e iPhone.
 - **Instalar app**: el botón solo aparece si el navegador ofreció la instalación (Chrome en Android, escritorio). Las instrucciones de Android e iPhone se ven siempre.
 - **Versión de la app**: versión, fecha de compilación y el botón de buscar / instalar actualización ([update.service.md](../../services/update.service.md)).
-- **Borrar todo mi progreso**: pide confirmación con `confirm` y, si se acepta, borra todo y recarga.
+- **Copia de seguridad** (`#copias`): cuándo se guardó la última copia en archivo, cuántas copias automáticas hay en el dispositivo (y la última), si el navegador protege los datos; **Guardar copia ahora** (compartir o descargar), **Restaurar desde un archivo** (con `confirm` si ya hay progreso; muestra el error si el archivo no sirve) y **Volver a una copia automática** (lista desplegable con fecha y XP, con `confirm`). Ver [BackupService](../../services/backup.service.md).
+- **Borrar todo mi progreso**: pide confirmación con `confirm`, guarda antes una copia automática (para poder deshacer) y borra todo y recarga.
 
 ### Reglas
 
@@ -95,7 +96,7 @@ La tarjeta lee `updateSVC.version`, `updateSVC.built` y `updateSVC.state()`, y e
 
 ### 7. Borrar progreso
 
-**`reset()`**: `confirm(…)`; si se acepta, `progressSVC.resetAll()` borra todas las claves `nihongo:` y recarga la página. La recarga es necesaria porque los signals persistidos siguen en memoria y volverían a escribir los datos viejos.
+**`reset()`**: `confirm(…)`; si se acepta, `backupSVC.snapshotNow()` y después `progressSVC.resetAll()` borra todas las claves `nihongo:` y recarga la página. La recarga es necesaria porque los signals persistidos siguen en memoria y volverían a escribir los datos viejos.
 
 ### 8. Salida
 
