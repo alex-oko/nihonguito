@@ -164,6 +164,18 @@ npm run audio       # reconstruye las grabaciones japonesas
 npm test            # pruebas de Angular
 ```
 
+### Versión
+
+La versión sigue el formato **MAYOR.MENOR.ARREGLO** y se ve en Perfil. Súbela al terminar cada entrega:
+
+```bash
+npm run version:fix       # arreglo o hotfix: 1.5.0 → 1.5.1
+npm run version:feature   # función nueva: 1.5.1 → 1.6.0
+npm run version:major     # cambio muy grande: 1.6.0 → 2.0.0
+```
+
+Cada comando actualiza `package.json` y `src/app/utils/version.utils.ts`; no crea commits ni etiquetas.
+
 Para una compilación rápida sin optimización:
 
 ```bash

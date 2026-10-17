@@ -93,6 +93,18 @@ export class PanoramaComponent implements AfterViewInit, OnDestroy {
 - `src/app/utils/version.utils.ts` lo genera `tools/write-version.mjs` antes de cada build.
 - Después de tocar textos de lecciones: ver los comandos de lecturas y audio en el README.
 
+## Versión (MAYOR.MENOR.ARREGLO)
+
+Al terminar un cambio que llega al usuario, sube la versión con uno de estos comandos (actualizan `package.json`, `package-lock.json` y `src/app/utils/version.utils.ts`). Una sola subida por entrega, aunque haya varios cambios: manda el más grande.
+
+| Cambio | Comando | Ejemplo |
+|---|---|---|
+| Arreglo (hotfix, corrección de texto o de un fallo) | `npm run version:fix` | 1.5.0 → 1.5.1 |
+| Función nueva o cambio visible | `npm run version:feature` | 1.5.1 → 1.6.0 |
+| Cambio muy grande (rediseño, cambia cómo se guarda el progreso…) | `npm run version:major` | 1.6.0 → 2.0.0 |
+
+Solo documentación, herramientas o refactor sin efecto visible: no se sube.
+
 ## Verificar
 
 ```bash
