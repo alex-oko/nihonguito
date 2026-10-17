@@ -74,7 +74,7 @@
     <p class="small goal-msg">{{ goalMessage() }}</p>
 
     <!-- Dispositivo nuevo o datos borrados: ofrecer restaurar una copia -->
-    @if (backupSVC.shouldOfferRestore()) {
+    @if (backupSVC.shouldOfferRestore() && !cloudSVC.user()) {
         <section class="card backup-cta">
             <div class="t">¿Ya usabas Nihonguito en otro teléfono?</div>
             <p class="small muted">Restaura tu copia y sigue donde ibas: XP, racha, palabras aprendidas, diario…</p>

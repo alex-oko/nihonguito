@@ -44,7 +44,7 @@ Lo crea `AppComponent` al arrancar. Firebase (`firebase/app`, `firebase/auth` y 
 ### Reglas
 
 - **Al abrir la app** con `isLinked`: recupera la sesión (`reconnect`). Si el dispositivo está sin progreso (datos borrados), recupera la copia de la nube sola.
-- **Subida automática**: al terminar cada práctica (`stats.sessions` sube; tras `UPLOAD_DELAY_MS`, **1,5 s**) y al pasar la app a segundo plano. Como mucho una cada `CLOUD_UPLOAD_MIN_MINUTES` (**2**) y solo si el contenido cambió (se compara sin `createdAt`).
+- **Subida automática**: al terminar cada práctica (`stats.sessions` sube; tras `UPLOAD_DELAY_MS`, **1,5 s**), al cambiar la configuración del usuario (tema, intereses, escritura, sonido, meta diaria, etc.) y al pasar la app a segundo plano. Los cambios seguidos de configuración se agrupan en una sola subida.
 - **Primera sincronización** al entrar (`firstSync`): sin copia en la nube → sube la local; sin progreso local → recupera la de la nube (dispositivo nuevo); con las dos → `confirm` para elegir cuál se queda.
 - **Recuperar** guarda antes una copia automática de lo actual (`backupSVC.applyBackup`) y recarga.
 - Entrar usa una ventana de Google (`signInWithPopup`); si el navegador la bloquea o no la soporta (algunas apps instaladas en iPhone), usa la redirección (`signInWithRedirect`) y `reconnect` termina al volver.

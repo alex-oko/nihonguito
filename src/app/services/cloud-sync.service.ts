@@ -10,6 +10,8 @@ import { ProgressService } from './progress.service';
 
 /** Espera tras terminar una práctica antes de subir, para que los signals ya hayan escrito en localStorage */
 const UPLOAD_DELAY_MS = 1500;
+/** Agrupa cambios seguidos de configuración (por ejemplo, al mover la velocidad de voz) en una sola subida */
+const SETTINGS_UPLOAD_DELAY_MS = 1200;
 /** Evita restaurar y recargar indefinidamente cuando la copia de la nube no contiene progreso */
 const CLOUD_RESTORE_RELOAD_KEY = 'nihonguito:cloudRestoreReloaded';
 
@@ -48,6 +50,7 @@ export class CloudSyncService {
     private kit: FirebaseKit | null = null;
     private lastUploadAt = 0;
     private lastUploadedFile = '';
+    private settingsUploadTimer: ReturnType<typeof setTimeout> | null = null;
 
     constructor() {
         if (!this.isConfigured) return;
@@ -64,7 +67,18 @@ export class CloudSyncService {
             });
         });
 
-        // 3. Subida al salir de la app o pasarla a segundo plano
+        // 3. Los ajustes también son datos del usuario: se suben poco después de cambiarlos.
+        // JSON permite comparar el objeto completo y evita contar como cambio la primera lectura al arrancar.
+        let previousSettings: string | null = null;
+        effect(() => {
+            const settings = JSON.stringify(this.progressSVC.settings());
+            untracked(() => {
+                if (previousSettings !== null && settings !== previousSettings) this.scheduleSettingsUpload();
+                previousSettings = settings;
+            });
+        });
+
+        // 4. Subida al salir de la app o pasarla a segundo plano
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'hidden') void this.uploadIfDue();
         });
@@ -202,11 +216,6 @@ export class CloudSyncService {
     async uploadNow(): Promise<boolean> {
         const user = this.user();
         if (!user) return false;
-        // Una copia vacía haría que un dispositivo nuevo intentara restaurarla sin obtener progreso.
-        if (!this.backupSVC.hasProgress()) {
-            this.status.set('ok');
-            return true;
-        }
         const file = JSON.stringify(this.backupSVC.buildFile());
         // Lo que cambia siempre es createdAt: se compara solo el contenido
         const content = file.replace(/"createdAt":"[^"]*",?/, '');
@@ -230,6 +239,16 @@ export class CloudSyncService {
             this.fail(error);
             return false;
         }
+    }
+
+    /** Programa una subida al terminar una ráfaga de cambios de configuración */
+    private scheduleSettingsUpload(): void {
+        if (!this.user()) return;
+        if (this.settingsUploadTimer) clearTimeout(this.settingsUploadTimer);
+        this.settingsUploadTimer = setTimeout(() => {
+            this.settingsUploadTimer = null;
+            void this.uploadNow();
+        }, SETTINGS_UPLOAD_DELAY_MS);
     }
 
     /** Recupera la copia de la nube y sustituye el progreso (pide confirmación si ya hay progreso y `ask`) */
