@@ -10,6 +10,8 @@ import { ProgressService } from './progress.service';
 
 /** Espera tras terminar una práctica antes de subir, para que los signals ya hayan escrito en localStorage */
 const UPLOAD_DELAY_MS = 1500;
+/** Evita restaurar y recargar indefinidamente cuando la copia de la nube no contiene progreso */
+const CLOUD_RESTORE_RELOAD_KEY = 'nihonguito:cloudRestoreReloaded';
 
 /** Módulos de Firebase cargados en diferido y sus instancias */
 interface FirebaseKit {
@@ -93,8 +95,15 @@ export class CloudSyncService {
             // Al volver de iniciar sesión por redirección toca la primera sincronización; si no, solo comprueba si
             // este dispositivo está vacío (datos borrados) para recuperar la copia solo
             if (redirect?.user) await this.firstSync();
-            else if (!this.backupSVC.hasProgress()) await this.restoreFromCloud(false);
-            else this.status.set('ok');
+            else if (!this.backupSVC.hasProgress()) {
+                // applyBackup recarga la página. Si la copia también está vacía, hasProgress sigue en false
+                // después de recargar; esta marca de la pestaña corta ese ciclo.
+                if (this.wasCloudRestoreReloaded()) this.status.set('ok');
+                else await this.restoreFromCloud(false);
+            } else {
+                this.clearCloudRestoreReloaded();
+                this.status.set('ok');
+            }
         } catch (error) {
             this.fail(error);
         }
@@ -193,6 +202,11 @@ export class CloudSyncService {
     async uploadNow(): Promise<boolean> {
         const user = this.user();
         if (!user) return false;
+        // Una copia vacía haría que un dispositivo nuevo intentara restaurarla sin obtener progreso.
+        if (!this.backupSVC.hasProgress()) {
+            this.status.set('ok');
+            return true;
+        }
         const file = JSON.stringify(this.backupSVC.buildFile());
         // Lo que cambia siempre es createdAt: se compara solo el contenido
         const content = file.replace(/"createdAt":"[^"]*",?/, '');
@@ -252,7 +266,35 @@ export class CloudSyncService {
     /** Aplica una copia de la nube (BackupService guarda antes lo actual y recarga la app) */
     private async applyCloud(cloud: CloudBackup): Promise<void> {
         this.markSynced();
+        this.markCloudRestoreReloaded();
         await this.backupSVC.applyBackup(JSON.parse(cloud.file) as BackupFile);
+    }
+
+    /** Marca en sessionStorage que esta pestaña ya recargó después de aplicar la nube */
+    private markCloudRestoreReloaded(): void {
+        try {
+            sessionStorage.setItem(CLOUD_RESTORE_RELOAD_KEY, '1');
+        } catch {
+            /* sessionStorage no disponible */
+        }
+    }
+
+    /** Indica si la restauración en la nube ya provocó una recarga en esta pestaña */
+    private wasCloudRestoreReloaded(): boolean {
+        try {
+            return sessionStorage.getItem(CLOUD_RESTORE_RELOAD_KEY) === '1';
+        } catch {
+            return false;
+        }
+    }
+
+    /** Una restauración con progreso terminó bien; una futura pérdida de datos podrá recuperarse otra vez */
+    private clearCloudRestoreReloaded(): void {
+        try {
+            sessionStorage.removeItem(CLOUD_RESTORE_RELOAD_KEY);
+        } catch {
+            /* sessionStorage no disponible */
+        }
     }
 
     /** Anota que la nube está al día */
