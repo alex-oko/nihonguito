@@ -1,0 +1,93 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/practicar" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Mi diario</h1>
+    </header>
+    <p class="muted intro">Cada día, una frase sobre tu vida. Lo que dices de ti mismo es lo que más se te queda.</p>
+
+    <!-- Tema del día -->
+    <div class="card prompt">
+        <div class="row">
+            <div class="grow">
+                <span class="tag small">TEMA</span>
+                <div class="q">{{ prompt().question }}</div>
+            </div>
+            <button class="btn ghost sm" (click)="nextPrompt()"><app-icon name="refresh" [size]="16" />Otro tema</button>
+        </div>
+        <div class="jp formula">{{ prompt().formula }}</div>
+        <p class="tip small"><app-icon name="bulb" [size]="16" />{{ prompt().tip }}</p>
+    </div>
+
+    <!-- Huecos para elegir -->
+    @for (slot of prompt().slots; track $index; let slotIndex = $index) {
+        <div class="slot" [attr.data-role]="slot.role">
+            <div class="slot-head">
+                <span class="role-dot"></span>
+                <b>{{ slot.label }}</b>
+                @if (slot.particle) {
+                    <span class="jp particle">＋{{ slot.particle }}</span>
+                }
+                @if (slot.isOptional) {
+                    <span class="small muted">(opcional)</span>
+                }
+            </div>
+            <div class="options">
+                @for (option of slotOptions()[slotIndex]; track option.jp) {
+                    <button class="opt" [class.on]="isChosen(slotIndex, option)" (click)="choose(slotIndex, option)">
+                        <span class="jp">{{ option.jp }}</span>
+                        <span class="small muted">{{ option.es }}</span>
+                    </button>
+                }
+                @if (customOf(slotIndex); as custom) {
+                    <button class="opt on" (click)="choose(slotIndex, custom)">
+                        <span class="jp">{{ custom.jp }}</span>
+                        <span class="small muted">tu palabra</span>
+                    </button>
+                }
+                <button class="opt other" (click)="editingSlot.set(editingSlot() === slotIndex ? null : slotIndex)">
+                    <app-icon name="pencil" [size]="14" /><span class="small">Otra…</span>
+                </button>
+            </div>
+            @if (editingSlot() === slotIndex) {
+                <div class="custom row">
+                    <app-kana-input #customInput class="grow" mode="kana" placeholder="escribe en romaji…" (enter)="useCustom()" />
+                    <button class="btn sm accent" (click)="useCustom()">Usar</button>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Frase armada -->
+    <h2 class="section-title">Tu frase</h2>
+    <div class="card result">
+        @if (sentence().blocks.length) {
+            <app-sentence-blocks [sentence]="sentence()" [showRoles]="true" [hideEs]="true" />
+            <div class="small muted meaning">Palabra por palabra: {{ sentence().es }}</div>
+        } @else {
+            <div class="small muted">Elige palabras arriba y tu frase aparece aquí.</div>
+        }
+    </div>
+    <button class="btn accent block go" [disabled]="!isComplete()" (click)="save()">
+        <app-icon name="check" [size]="18" />{{ showSaved() ? '¡Guardada en tu diario!' : 'Guardar en mi diario' }}
+    </button>
+
+    <!-- Frases guardadas -->
+    @if (diarySVC.entries().length) {
+        <h2 class="section-title">Mis frases ({{ diarySVC.entries().length }})</h2>
+        @if (canPractice()) {
+            <a class="btn block practice" routerLink="/diario/practica"><app-icon name="play" [size]="18" />Practicar mis frases</a>
+        }
+        <div class="card list">
+            @for (entry of diarySVC.entries(); track entry.id) {
+                <div class="list-item entry">
+                    <div class="grow">
+                        <div class="small muted">{{ entry.date }}</div>
+                        <app-sentence-blocks [sentence]="entry.sentence" />
+                    </div>
+                    <button class="icon-btn del" (click)="diarySVC.remove(entry.id)" aria-label="Borrar frase"><app-icon name="trash" [size]="16" /></button>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -32,5 +32,6 @@ Pinta una frase de «Gramática fácil» partida en trozos, cada uno con el colo
 ## Recorrido del código paso a paso
 
 1. **`text`**: `sentenceText(sentence)`, los trozos unidos con espacios y 。 al final. Es lo que lee el altavoz.
+   **`parts`**: el texto de cada trozo (`blockText`), que pasa a `app-speak`: si la frase entera no está grabada (frases de Mi diario), suenan los trozos grabados seguidos (`speechSVC.speakParts`).
 2. **`romajiText`**: `romaji(text)` solo si `settings.romaji` está activado; si no, vacío y no se pinta.
 3. La plantilla pone `data-role` en cada trozo; el color (`--role`) y su fondo (`--role-soft`, 14 % del color sobre `--surface`) salen de `_roles.scss`, así siguen al tema activo.

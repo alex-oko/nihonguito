@@ -21,12 +21,16 @@ export class SpeakButtonComponent {
     readonly text = input.required<string>();
     readonly big = input(false);
     readonly slow = input(false);
+    /** Trozos de la frase: si la frase entera no está grabada, suenan los trozos grabados seguidos */
+    readonly parts = input<string[]>([]);
 
     // ------------------------------- Audio ------------------------------------------------------------- //
     /** Pronuncia el texto sin que el clic llegue a la tarjeta o botón que contiene el altavoz */
     say(event: Event): void {
         event.stopPropagation();
-        void this.speechSVC.speak(this.text(), this.slow() ? { rate: SLOW_RATE } : {});
+        const options = this.slow() ? { rate: SLOW_RATE } : {};
+        if (this.parts().length) void this.speechSVC.speakParts(this.text(), this.parts(), options);
+        else void this.speechSVC.speak(this.text(), options);
     }
     // ------------------------------- Audio ------------------------------------------------------------- //
 }

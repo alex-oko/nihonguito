@@ -1,0 +1,98 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/practicar" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Escuchar</h1>
+    </header>
+    <p class="muted intro">Repasa de oído sin tocar el teléfono: en el transporte, caminando o cocinando. Elige qué escuchar y dale a reproducir.</p>
+
+    <!-- 1. Lecciones -->
+    <h2 class="section-title">1 · Lecciones</h2>
+    <app-lesson-picker [selected]="config().lessons" (selectedChange)="setLessons($event)" />
+
+    <!-- 2. Qué escuchar -->
+    <h2 class="section-title">2 · Qué escuchar</h2>
+    <div class="chips">
+        @for (content of contents; track content.id) {
+            <button class="chip" [class.on]="config().content.includes(content.id)" (click)="toggleContent(content.id)">{{ content.label }}</button>
+        }
+    </div>
+
+    <!-- 3. Cómo -->
+    <h2 class="section-title">3 · Cómo</h2>
+    <div class="modes">
+        @for (mode of modes; track mode.id) {
+            <button class="card mode" [class.on]="config().mode === mode.id" (click)="update({ mode: mode.id })">
+                <app-icon [name]="mode.icon!" [size]="18" />
+                <div class="grow">
+                    <div class="t">{{ mode.label }}</div>
+                    <div class="small muted">{{ mode.desc }}</div>
+                </div>
+                <span class="radio"></span>
+            </button>
+        }
+    </div>
+    @if (config().mode !== 'jp' && !speechSVC.hasSpanishVoice()) {
+        <p class="small warn">Tu teléfono no tiene voz en español: solo sonará el japonés. Puedes instalarla en Configuración → Idioma → Texto a voz.</p>
+    }
+
+    <!-- 4. Ajustes de la sesión -->
+    <h2 class="section-title">4 · Ajustes</h2>
+    <div class="card settings">
+        <div class="set">
+            <span class="small">Velocidad</span>
+            <div class="chips">
+                <button class="chip" [class.on]="!config().isSlow" (click)="update({ isSlow: false })">Normal</button>
+                <button class="chip" [class.on]="config().isSlow" (click)="update({ isSlow: true })">Lenta</button>
+            </div>
+        </div>
+        <div class="set">
+            <span class="small">Japonés</span>
+            <div class="chips">
+                <button class="chip" [class.on]="config().repeat === 1" (click)="update({ repeat: 1 })">1 vez</button>
+                <button class="chip" [class.on]="config().repeat === 2" (click)="update({ repeat: 2 })">2 veces</button>
+            </div>
+        </div>
+        @if (config().mode !== 'jp') {
+            <div class="set">
+                <span class="small">Pausa para pensar</span>
+                <div class="chips">
+                    @for (pause of pauses; track pause.id) {
+                        <button class="chip" [class.on]="config().pause === pause.id" (click)="update({ pause: pause.id })">{{ pause.label }}</button>
+                    }
+                </div>
+            </div>
+        }
+        <div class="set">
+            <span class="small">Orden</span>
+            <div class="chips">
+                <button class="chip" [class.on]="config().isShuffled" (click)="update({ isShuffled: true })">Mezclado</button>
+                <button class="chip" [class.on]="!config().isShuffled" (click)="update({ isShuffled: false })">En orden</button>
+            </div>
+        </div>
+        <div class="set">
+            <span class="small">Cuántos</span>
+            <div class="chips">
+                @for (itemCount of counts; track itemCount) {
+                    <button class="chip" [class.on]="config().count === itemCount" (click)="update({ count: itemCount })">{{ itemCount || 'Todos' }}</button>
+                }
+            </div>
+        </div>
+        <label class="set row">
+            <span class="small grow">Repetir al terminar</span>
+            <input type="checkbox" class="switch" [checked]="config().isLooping" (change)="update({ isLooping: !config().isLooping })" />
+        </label>
+    </div>
+
+    <!-- Resumen y empezar -->
+    <p class="small muted center summary">
+        @if (isLoading()) {
+            Cargando…
+        } @else if (total()) {
+            {{ total() }} audios · unos {{ minutes() }} min. La pantalla se queda encendida mientras escuchas.
+        } @else {
+            Elige al menos una lección y qué escuchar.
+        }
+    </p>
+    <button class="btn accent block go" [disabled]="!canStart()" (click)="start()"><app-icon name="headphones" [size]="18" />Empezar a escuchar</button>
+</div>

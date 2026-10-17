@@ -49,7 +49,7 @@ export const routes: Routes = [
         loadComponent: () => import('./views/conversations/views/conversation-player/conversation-player.component').then((module) => module.ConversationPlayerComponent),
     },
 
-    // --- Práctica, juegos, Musubi, exámenes, repaso, verbos, gramática y vocabulario fácil y conversaciones ---
+    // --- Práctica, juegos, Musubi, exámenes, repaso, verbos, gramática y vocabulario fácil, escuchar, diario y conversaciones ---
     { path: 'practicar', loadComponent: () => import('./views/practice/practice.component').then((module) => module.PracticeComponent) },
     {
         path: 'juego/:game',
@@ -92,6 +92,18 @@ export const routes: Routes = [
         path: 'vocabulario/practica',
         data: IMMERSIVE,
         loadComponent: () => import('./views/vocab/views/vocab-practice/vocab-practice.component').then((module) => module.VocabPracticeComponent),
+    },
+    { path: 'escuchar', loadComponent: () => import('./views/listen/listen.component').then((module) => module.ListenComponent) },
+    {
+        path: 'escuchar/reproducir',
+        data: IMMERSIVE,
+        loadComponent: () => import('./views/listen/views/listen-player/listen-player.component').then((module) => module.ListenPlayerComponent),
+    },
+    { path: 'diario', loadComponent: () => import('./views/diary/diary.component').then((module) => module.DiaryComponent) },
+    {
+        path: 'diario/practica',
+        data: IMMERSIVE,
+        loadComponent: () => import('./views/diary/views/diary-practice/diary-practice.component').then((module) => module.DiaryPracticeComponent),
     },
     {
         path: 'conversaciones',

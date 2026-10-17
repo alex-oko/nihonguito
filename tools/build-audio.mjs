@@ -46,6 +46,8 @@ await esbuild.build({
     contents: `
       export * from './src/app/utils/kana.utils';
       export { cleanForm } from './src/app/utils/questions.utils';
+      export { allGuideSentences, sentenceText } from './src/app/utils/grammar-guide.utils';
+      export { diaryBlockTexts } from './src/app/utils/diary.utils';
       export * from './src/app/utils/audio-key.utils';`,
     resolveDir: root,
     loader: 'ts',
@@ -57,7 +59,7 @@ await esbuild.build({
   logLevel: 'error',
 });
 const app = await import(pathToFileURL(bundle).href);
-const { KANA_ROWS, LOANWORDS, KATAKANA_RULES, cleanForm, cleanSpeech, audioKey } = app;
+const { KANA_ROWS, LOANWORDS, KATAKANA_RULES, cleanForm, cleanSpeech, audioKey, allGuideSentences, sentenceText, diaryBlockTexts } = app;
 
 /* ---------- Collect every text the app speaks ---------- */
 const jobs = new Map(); // key → { text, voice }
@@ -94,7 +96,13 @@ for (const { id } of index) {
   l.phrases.forEach((p) => add(p.jp));
   l.grammar.forEach((g) => (g.examples ?? []).forEach((e) => add(e.jp)));
   l.extraVocab.forEach((x) => x.items.forEach((it) => add(it.kana || it.kanji)));
+  // Frases de los intereses del alumno («Frases para ti», Escuchar y la práctica de la lección)
+  (l.extras ?? []).forEach((e) => add(e.jp));
 }
+// Frases de «Gramática fácil» (fichas, moldes, ejemplos resueltos y frases por interés)
+allGuideSentences().forEach((s) => add(sentenceText(s)));
+// Trozos de las frases de «Mi diario» (la app los reproduce seguidos, ver SpeechService.speakParts)
+diaryBlockTexts().forEach((t) => add(t));
 const appendix = JSON.parse(fs.readFileSync(path.join(dataDir, 'appendix.json'), 'utf8'));
 appendix.verbs.forEach((v) => ['masu', 'dict', 'te', 'nai', 'ta'].forEach((f) => add(v[f])));
 appendix.tables.forEach((t) => t.items.forEach((it) => add(it.kana || it.kanji)));

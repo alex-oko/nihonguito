@@ -33,12 +33,13 @@ No compara lo que dijo el usuario con la respuesta (eso es [`ReadingService.best
 | `canListen` (constante) | El navegador tiene `SpeechRecognition` o `webkitSpeechRecognition` | — | `QuestionRunnerComponent` y `ConversationPlayerComponent` (micrófono) |
 | `speaking` | Está sonando algo | `playRecording`, `speakTts`, `stopSpeaking` | `ConversationPlayerComponent` |
 | `listening` | El micrófono está abierto | `listen` | `QuestionRunnerComponent`, `ConversationPlayerComponent` |
-| `hasJapaneseVoice` | El dispositivo tiene alguna voz `ja` | el constructor (`refreshVoices`) | `ProfileComponent` (aviso de instalar voz) |
+| `hasJapaneseVoice` | El dispositivo tiene alguna voz `ja` | el constructor (`refreshVoices`) | `ProfileComponent` (aviso de instalar voz), `ListenPlayerComponent` |
+| `hasSpanishVoice` | El dispositivo tiene alguna voz `es` (true mientras la lista de voces está vacía) | el constructor (`refreshVoices`) | `ListenComponent` (aviso de instalar voz en español) |
 | `hasRecordings` | `manifest.json` trae al menos una clave | `loadManifest` | `ProfileComponent` |
 | `recordingKeys` | Las claves del manifiesto | `loadManifest` | `ProfileComponent` (tamaño aproximado y descarga para usar sin conexión) |
 | `credits` | Créditos de las voces (`VOICEVOX:No.7`…) | `loadManifest` | `ProfileComponent` |
 
-Privados: `voices` (voces japonesas del sistema), `recorded` (`Set` de claves con mp3), `audio` (un único `HTMLAudioElement` reutilizado) y `finishAudio` (cierra la grabación en curso).
+Privados: `voices` (voces japonesas del sistema), `spanishVoice` (la primera voz `es` que no sea de España; si no hay, cualquier `es`), `recorded` (`Set` de claves con mp3), `audio` (un único `HTMLAudioElement` reutilizado) y `finishAudio` (cierra la grabación en curso).
 
 No guarda nada en `localStorage`.
 
@@ -110,6 +111,23 @@ Quien llama (`QuestionRunnerComponent.listen`, `ConversationPlayerComponent.spea
 - **Cómo**: ver el [paso 2](#2-hablar). `options` = `{ rate?, voice?: 0 | 1, pitch? }`.
 - **Devuelve**: `Promise<void>` que se resuelve al terminar o cortar.
 - **Quién lo llama**: `SpeakButtonComponent` (`rate: 0.6` en modo lento), `QuestionRunnerComponent` (en las preguntas de escuchar `rate × 0.92`), `ConversationPlayerComponent` (`voice` 0 o 1 según el hablante), `FlashcardsComponent`, `MatchGameComponent`, `HomeComponent`, `PetHouseComponent`, `ProfileComponent` (prueba de voz), `LessonDetailComponent` y las vistas de kana (`KanaChartComponent`, `KanaTraceComponent`, `KatakanaLabComponent`).
+
+#### `speakParts(text, parts, options)`
+
+- **Qué hace**: pronuncia una frase armada por trozos (las de Mi diario no se pueden grabar enteras: hay miles de combinaciones).
+- **Cómo**: si la frase entera tiene grabación, o falta algún trozo y el dispositivo sí tiene voz japonesa, llama a `speak(text)`. Si no, reproduce los trozos seguidos con `speakOne`. Cada secuencia tiene un `sequenceId`: `speak` y `stopSpeaking` lo incrementan y la secuencia vieja se detiene sola. `speakOne` usa `stopSound` (corta el sonido sin cancelar la secuencia).
+- **Quién lo llama**: `SpeakButtonComponent` cuando recibe `parts` (lo hace `app-sentence-blocks`).
+
+#### `speakSpanish(text, rate = 1)`
+
+- **Qué hace**: lee un texto en español con la voz del dispositivo (no hay grabaciones en español).
+- **Cómo**: `stopSpeaking()`, y un `SpeechSynthesisUtterance` con `spanishVoice` (o `lang = 'es-MX'` si no hay ninguna). Sin síntesis de voz, resuelve enseguida.
+- **Quién lo llama**: `ListenPlayerComponent` (las traducciones del [modo escuchar](../views/listen/listen-player.md)).
+
+#### `hasRecording(text)`
+
+- **Qué hace**: indica si `text` tiene mp3 grabado con cualquiera de las dos voces. Sin grabación, `speak` depende de la voz japonesa del dispositivo.
+- **Quién lo llama**: `ListenPlayerComponent` (aviso de «esta frase no suena»).
 
 #### `stopSpeaking()`
 

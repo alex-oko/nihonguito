@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { ProgressService } from '../../services/progress.service';
 import { GuideSentence } from '../../interfaces/grammar-guide.interface';
-import { ROLE_INFO, sentenceText } from '../../utils/grammar-guide.utils';
+import { blockText, ROLE_INFO, sentenceText } from '../../utils/grammar-guide.utils';
 import { romaji } from '../../utils/text.utils';
 import { SpeakButtonComponent } from '../speak-button/speak-button.component';
 
@@ -30,6 +30,8 @@ export class SentenceBlocksComponent {
 
     // --- Valores derivados (computed) ---
     protected text = computed(() => sentenceText(this.sentence()));
+    /** Texto de cada trozo: si la frase entera no tiene grabación (frases de Mi diario), suenan los trozos seguidos */
+    protected parts = computed(() => this.sentence().blocks.map(blockText));
     protected romajiText = computed(() => (this.progressSVC.settings().romaji ? romaji(this.text()) : ''));
 
     // Nombres de los papeles para la plantilla

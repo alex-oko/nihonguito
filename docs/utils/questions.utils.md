@@ -191,6 +191,11 @@ Los ids de pregunta salen de un contador de módulo (`nextQuestionId`: `q1`, `q2
   - **`grammarRoleQuestion`**: marca un trozo entre 【】 y ofrece su papel y 3 más de `ASKABLE_ROLES` (sin `extra`, que mezcla demasiados usos). En una frase doble no pregunta por el final de la primera, que es «acción» pero no va al final. `OVERLAPPING_ROLES` quita los distractores que también podrían valer: «Cuándo» o «Dónde» para un tema (きょうは), y «Cómo / cuánto» para la acción final (じょうずです), y al revés.
   - **`grammarBuildQuestion`**: ordenar los trozos (frases de 3 o más), con 。 pegado al último. `alternatives` lleva los otros órdenes válidos de `alternativeOrders`; `explain` enseña cada trozo con su papel en orden.
 
+#### `diaryQuestions(sentences, count)`
+
+- **Qué hace**: hasta `count` ejercicios con frases de [Mi diario](../views/diary/diary.md), elegidas al azar.
+- **Cómo**: en los índices pares (con 2 trozos o más) **Arma la frase** con `grammarBuildQuestion`; en el resto, **pronunciar** con `speakSentenceQuestion`.
+
 #### `alternativeOrders(sentence, tokens)`
 
 - **Qué hace**: los órdenes que también son correctos, porque en japonés el medio de la frase se puede mover.

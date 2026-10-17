@@ -28,11 +28,15 @@ export class SpeechService {
 
     // Voces japonesas del sistema y claves de los mp3 que trae la app
     private voices: SpeechSynthesisVoice[] = [];
+    // Voz en español para las traducciones del modo escuchar (la latinoamericana si existe)
+    private spanishVoice: SpeechSynthesisVoice | null = null;
     private recorded = new Set<string>();
     // Un solo <audio> reutilizado para todas las grabaciones (null fuera del navegador)
     private audio: HTMLAudioElement | null = typeof Audio !== 'undefined' ? new Audio() : null;
     // Cierra la reproducción en curso; lo usa stopSpeaking para resolver su promesa
     private finishAudio: (() => void) | null = null;
+    // Id de la frase por trozos en curso (speakParts): al hablar o cortar se incrementa y la secuencia vieja se detiene
+    private sequenceId = 0;
 
     // --- Capacidades del dispositivo ---
     private readonly hasTts = typeof window !== 'undefined' && 'speechSynthesis' in window;
@@ -45,6 +49,8 @@ export class SpeechService {
     readonly speaking = signal(false);
     readonly listening = signal(false);
     readonly hasJapaneseVoice = signal(true);
+    /** False si el dispositivo no tiene voz en español: el modo escuchar no puede leer las traducciones */
+    readonly hasSpanishVoice = signal(true);
     /** True cuando la app trae audio pregrabado (no hace falta voz del sistema) */
     readonly hasRecordings = signal(false);
     readonly recordingKeys = signal<string[]>([]);
@@ -54,9 +60,14 @@ export class SpeechService {
         void this.loadManifest();
         if (!this.hasTts) return;
         const refreshVoices = () => {
-            this.voices = speechSynthesis.getVoices().filter((voice) => voice.lang?.toLowerCase().startsWith('ja'));
+            const allVoices = speechSynthesis.getVoices();
+            this.voices = allVoices.filter((voice) => voice.lang?.toLowerCase().startsWith('ja'));
+            // Para el español: primero una voz latinoamericana (es-MX, es-US, es-419…), si no cualquiera en español
+            const spanishVoices = allVoices.filter((voice) => voice.lang?.toLowerCase().startsWith('es'));
+            this.spanishVoice = spanishVoices.find((voice) => !/^es[-_]es$/i.test(voice.lang)) ?? spanishVoices[0] ?? null;
             // Con la lista aún vacía (algunos navegadores la cargan tarde) no se avisa de que falta voz
-            this.hasJapaneseVoice.set(this.voices.length > 0 || speechSynthesis.getVoices().length === 0);
+            this.hasJapaneseVoice.set(this.voices.length > 0 || allVoices.length === 0);
+            this.hasSpanishVoice.set(spanishVoices.length > 0 || allVoices.length === 0);
         };
         refreshVoices();
         speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
@@ -111,10 +122,37 @@ export class SpeechService {
     // ------------------------------- Audio pregrabado ------------------------------------------------------------- //
 
     // ------------------------------- Hablar ------------------------------------------------------------- //
+    /** Indica si un texto tiene grabación (si no, depende de la voz japonesa del dispositivo) */
+    hasRecording(text: string): boolean {
+        return this.recordingFor(text, undefined) !== null;
+    }
+
     /** Pronuncia un texto: usa la grabación si existe y si no la voz del dispositivo */
     speak(text: string, options: { rate?: number; voice?: 0 | 1; pitch?: number } = {}): Promise<void> {
+        // Cualquier audio nuevo corta también una frase por trozos que estuviera sonando
+        this.sequenceId++;
+        return this.speakOne(text, options);
+    }
+
+    /**
+     * Pronuncia una frase armada por trozos (Mi diario): si la frase entera no está grabada pero sus trozos
+     * sí, los reproduce seguidos; así suena aunque el dispositivo no tenga voz japonesa. Sin voz japonesa
+     * también se usan los trozos aunque falte alguno (mejor casi entera que muda).
+     */
+    async speakParts(text: string, parts: string[], options: { rate?: number } = {}): Promise<void> {
+        const canUseParts = parts.length > 1 && !this.hasRecording(text) && (parts.every((part) => this.hasRecording(part)) || !this.hasJapaneseVoice());
+        if (!canUseParts) return this.speak(text, options);
+        const sequenceId = ++this.sequenceId;
+        for (const part of parts) {
+            if (sequenceId !== this.sequenceId) return;
+            await this.speakOne(part, options);
+        }
+    }
+
+    /** Pronuncia un solo texto (grabación o voz del dispositivo) sin tocar la frase por trozos en curso */
+    private speakOne(text: string, options: { rate?: number; voice?: 0 | 1; pitch?: number }): Promise<void> {
         if (!text) return Promise.resolve();
-        this.stopSpeaking();
+        this.stopSound();
         const key = this.audio ? this.recordingFor(text, options.voice) : null;
         if (key) return this.playRecording(key, options.rate ?? this.progressSVC.settings().rate, () => this.speakTts(text, options));
         return this.speakTts(text, options);
@@ -148,8 +186,34 @@ export class SpeechService {
         });
     }
 
-    /** Corta lo que esté sonando (voz del sistema o grabación) y resuelve su promesa */
+    /** Lee un texto en español con la voz del dispositivo (traducciones del modo escuchar); sin voz, no hace nada */
+    speakSpanish(text: string, rate = 1): Promise<void> {
+        if (!text || !this.hasTts) return Promise.resolve();
+        this.stopSpeaking();
+        return new Promise((resolve) => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = this.spanishVoice?.lang ?? 'es-MX';
+            if (this.spanishVoice) utterance.voice = this.spanishVoice;
+            utterance.rate = rate;
+            const finish = () => {
+                this.speaking.set(false);
+                resolve();
+            };
+            utterance.onend = finish;
+            utterance.onerror = finish;
+            this.speaking.set(true);
+            speechSynthesis.speak(utterance);
+        });
+    }
+
+    /** Corta lo que esté sonando (voz del sistema, grabación o frase por trozos) y resuelve su promesa */
     stopSpeaking(): void {
+        this.sequenceId++;
+        this.stopSound();
+    }
+
+    /** Corta el sonido actual sin cancelar la frase por trozos (la usa speakOne entre trozo y trozo) */
+    private stopSound(): void {
         if (this.hasTts) speechSynthesis.cancel();
         if (this.audio && !this.audio.paused) this.audio.pause();
         this.finishAudio?.();

@@ -70,6 +70,10 @@ Los colores de cada tema y las variables CSS están en [styles-and-themes.md](st
 | `gramatica/practica` | `GrammarPracticeComponent` ([doc](../views/grammar/grammar-practice.md)) | sí |
 | `vocabulario` | `VocabComponent` ([doc](../views/vocab/vocab.md)) | no |
 | `vocabulario/practica` | `VocabPracticeComponent` ([doc](../views/vocab/vocab-practice.md)) | sí |
+| `escuchar` | `ListenComponent` ([doc](../views/listen/listen.md)) | no |
+| `escuchar/reproducir` | `ListenPlayerComponent` ([doc](../views/listen/listen-player.md)) | sí |
+| `diario` | `DiaryComponent` ([doc](../views/diary/diary.md)) | no |
+| `diario/practica` | `DiaryPracticeComponent` ([doc](../views/diary/diary-practice.md)) | sí |
 | `conversaciones` | `ConversationsComponent` | no |
 | `perfil` | `ProfileComponent` ([doc](../views/profile/profile.md)) | no |
 | `**` | redirige a `''` | — |

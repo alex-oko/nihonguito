@@ -1433,6 +1433,19 @@ export const INTEREST_SENTENCES: GuideSentence[] = [
     },
 ];
 
+/** Devuelve todas las frases de la sección (las graba tools/build-audio.mjs para que suenen con voz grabada) */
+export function allGuideSentences(): GuideSentence[] {
+    return [
+        ...GRAMMAR_CONCEPTS.flatMap((concept) => concept.examples),
+        ...PARTICLE_GUIDES.flatMap((guide) => [...guide.examples, ...(guide.extraUses ?? []).flatMap((use) => use.examples)]),
+        ...PARTICLE_PAIRS.flatMap((pair) => pair.sides.map((side) => side.sentence)),
+        ...SENTENCE_MOLDS.flatMap((mold) => mold.examples),
+        ...WORKED_EXAMPLES.map((example) => example.result),
+        MAIN_TEMPLATE,
+        ...INTEREST_SENTENCES,
+    ];
+}
+
 /** Devuelve las frases de los intereses del usuario (todas si no eligió ninguno) */
 export function interestSentences(interests: string[]): GuideSentence[] {
     return interests.length ? INTEREST_SENTENCES.filter((sentence) => !!sentence.tag && interests.includes(sentence.tag)) : INTEREST_SENTENCES;

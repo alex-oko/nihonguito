@@ -1,0 +1,69 @@
+/* ---- Comunes ---- */
+.intro {
+    margin: -4px 0 6px;
+    line-height: 1.5;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+}
+
+/* ---- Cómo: una opción a la vez ---- */
+.modes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mode {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px !important;
+}
+.mode.on {
+    border-color: var(--ink) !important;
+}
+.radio {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    border-radius: 50%;
+    border: 1.5px solid var(--line);
+}
+.mode.on .radio {
+    border: 6px solid var(--ink);
+}
+.warn {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    background: var(--gold-soft);
+    color: var(--ink);
+}
+
+/* ---- Ajustes ---- */
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.set {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.set.row {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ---- Resumen ---- */
+.summary {
+    margin-top: 16px;
+}
+.go {
+    margin-top: 8px;
+}

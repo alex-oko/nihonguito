@@ -1,0 +1,113 @@
+/* ---- Comunes ---- */
+.intro {
+    margin: -4px 0 12px;
+    line-height: 1.5;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---- Tema del día ---- */
+.prompt .row {
+    gap: 10px;
+    align-items: flex-start;
+}
+.tag {
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+.q {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+.formula {
+    margin-top: 8px;
+    color: var(--ink-2);
+}
+.tip {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    background: var(--gold-soft);
+    color: var(--ink);
+    line-height: 1.5;
+}
+.tip app-icon {
+    flex: none;
+    color: var(--gold);
+}
+
+/* ---- Huecos (el color sale de data-role, ver styles/_roles.scss) ---- */
+.slot {
+    margin-top: 18px;
+}
+.slot-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.slot-head b {
+    color: var(--role);
+}
+.particle {
+    font-weight: 700;
+    color: var(--role);
+}
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.opt {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 6px 10px;
+    border-radius: var(--r-sm);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+}
+.opt.on {
+    border-color: var(--role);
+    background: var(--role-soft);
+}
+.opt.other {
+    flex-direction: row;
+    gap: 4px;
+    color: var(--muted);
+    border-style: dashed;
+}
+.custom {
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* ---- Frase armada y guardadas ---- */
+.result {
+    min-height: 64px;
+}
+.meaning {
+    margin-top: 8px;
+}
+.go {
+    margin-top: 12px;
+}
+.practice {
+    margin-bottom: 10px;
+}
+.entry {
+    align-items: flex-start;
+}
+.del {
+    color: var(--muted);
+}

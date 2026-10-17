@@ -1,0 +1,96 @@
+/* ---- Pantalla completa: arriba el progreso, en medio lo que suena, abajo los controles ---- */
+.player {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+.top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 8px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.count {
+    font-variant-numeric: tabular-nums;
+}
+.back {
+    margin-top: 16px;
+}
+
+/* ---- Lo que está sonando ---- */
+.now {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px 8px;
+}
+.note {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+/* keep-all: el japonés salta de línea en los espacios entre palabras, no a mitad de palabra */
+.main {
+    font-size: 2.1rem;
+    line-height: 1.4;
+    font-weight: 600;
+    word-break: keep-all;
+}
+.main.hidden {
+    color: var(--muted);
+}
+.reading {
+    font-size: 1.1rem;
+}
+.es {
+    font-size: 1.25rem;
+    color: var(--ink-2);
+}
+.es.hidden {
+    color: var(--muted);
+}
+.silent {
+    max-width: 320px;
+    padding: 8px 12px;
+    border-radius: var(--r-sm);
+    background: var(--gold-soft);
+    color: var(--ink);
+}
+.phase {
+    min-height: 1.4em;
+    margin-top: 8px;
+}
+
+/* ---- Controles ---- */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 12px 0;
+}
+.ctl:disabled {
+    opacity: 0.35;
+}
+.play {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: grid;
+    place-items: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+.tip {
+    padding-bottom: calc(16px + var(--safe-b));
+}

@@ -28,6 +28,7 @@ El selector es `app-speak` (no `app-speak-button`), aunque el archivo se llame `
 | `text` | `string` (obligatorio) | | Lo que se pronuncia. También va en el `aria-label` («Escuchar …») |
 | `big` | `boolean` | `false` | Botón de 56 px con icono de 26 px (si no, 36 px con icono de 18) |
 | `slow` | `boolean` | `false` | Pronuncia a `rate` **0.6** (`SLOW_RATE`). Sin `slow`, la velocidad es la de los ajustes (`settings().rate`). En el audio grabado el servicio la convierte en `playbackRate` (`rate / BASE_RATE`, entre 0.5 y 1.5) |
+| `parts` | `string[]` | `[]` | Trozos de la frase. Con trozos llama a `speechSVC.speakParts(text, parts)`: si la frase entera no está grabada, suenan los trozos grabados seguidos (lo usa `app-sentence-blocks`) |
 
 ### Reglas
 
@@ -41,7 +42,7 @@ El selector es `app-speak` (no `app-speak-button`), aunque el archivo se llame `
 En [speak-button.component.ts](../../src/app/components/speak-button/speak-button.component.ts):
 
 1. **Plantilla**: `@if (speechSVC.canSpeak)` → `<button type="button" class="speak">` con `[class.big]` y `<app-icon name="volume">`.
-2. **`say(event)`** (clic): corta la propagación y llama a `speechSVC.speak(text(), slow() ? { rate: 0.6 } : {})` sin esperar la promesa. La voz (A o B) y el resto de opciones las decide el servicio.
+2. **`say(event)`** (clic): corta la propagación y llama a `speechSVC.speak(text(), slow() ? { rate: 0.6 } : {})` (o a `speakParts` si hay `parts`) sin esperar la promesa. La voz (A o B) y el resto de opciones las decide el servicio.
 
 No guarda estado ni limpia nada al salir: cortar el audio en curso es cosa de quien lo necesite (`speechSVC.stopSpeaking()`, p. ej. el runner al cerrar).
 

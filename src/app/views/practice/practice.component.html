@@ -15,6 +15,16 @@
         <span class="btn accent block go"><app-icon name="play" [size]="18" />Repasar</span>
     </a>
 
+    <!-- Escuchar: repaso de oído sin tocar el teléfono -->
+    <a class="card row line listen" routerLink="/escuchar">
+        <span class="gi" data-c="gold"><app-icon name="headphones" [size]="20" /></span>
+        <div class="grow">
+            <div class="t">Escuchar</div>
+            <div class="small muted">Repasa de oído sin tocar el teléfono: palabras, frases y diálogos</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+
     <!-- Puntos débiles: habilidades por debajo del 80% -->
     @if (weak().length) {
         <h2 class="section-title">Tus puntos débiles</h2>
@@ -48,6 +58,16 @@
         <div class="grow">
             <div class="t">Vocabulario fácil</div>
             <div class="small muted">Elige lecciones y tipo de palabras, y practica solo esas</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
+
+    <!-- Mi diario: una frase propia cada día -->
+    <a class="card row line vocab" routerLink="/diario">
+        <span class="gi" data-c="bad"><app-icon name="pencil" [size]="20" /></span>
+        <div class="grow">
+            <div class="t">Mi diario</div>
+            <div class="small muted">Arma cada día una frase sobre tu vida y repásala</div>
         </div>
         <app-icon name="chevron" />
     </a>

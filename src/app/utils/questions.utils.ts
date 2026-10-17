@@ -692,6 +692,15 @@ function grammarRoleQuestion(sentence: GuideSentence): ChoiceQuestion | null {
     };
 }
 
+/** Genera hasta `count` ejercicios con las frases del diario del usuario: se turnan armarla y decirla en voz alta */
+export function diaryQuestions(sentences: GuideSentence[], count: number): Question[] {
+    return sample(sentences, count).map((sentence, index) =>
+        sentence.blocks.length >= 2 && index % 2 === 0
+            ? grammarBuildQuestion(sentence)
+            : speakSentenceQuestion({ jp: sentenceText(sentence), es: sentence.es }),
+    );
+}
+
 /** Pide ordenar los trozos de una frase guiada; al fallar enseña el papel de cada trozo en orden */
 function grammarBuildQuestion(sentence: GuideSentence): OrderQuestion {
     const answer = sentence.blocks.map(blockText);

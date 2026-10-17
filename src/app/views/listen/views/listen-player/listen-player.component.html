@@ -1,0 +1,57 @@
+<div class="page full player">
+    <!-- Barra superior: salir y progreso -->
+    <header class="top">
+        <button class="icon-btn" (click)="exit()" aria-label="Salir"><app-icon name="x" /></button>
+        <div class="bar grow"><i [style.width.%]="progressPercent()"></i></div>
+        <span class="small muted count">{{ items().length ? index() + 1 : 0 }}/{{ items().length }}</span>
+    </header>
+
+    @if (isLoading()) {
+        <div class="empty">Preparando…</div>
+    } @else if (!items().length) {
+        <div class="empty">
+            No hay nada que escuchar con esa selección.
+            <button class="btn accent block back" (click)="exit()">Cambiar la selección</button>
+        </div>
+    } @else if (current(); as item) {
+        <!-- Lo que está sonando -->
+        <section class="now">
+            @if (item.note) {
+                <div class="small muted note">{{ item.note }}</div>
+            }
+            <div class="jp main" [class.hidden]="!showJp()">
+                @if (showJp()) {
+                    <app-jp [text]="item.show" />
+                } @else {
+                    ？
+                }
+            </div>
+            @if (showJp() && item.say !== item.show) {
+                <div class="jp reading muted">{{ item.say }}</div>
+            }
+            <div class="es" [class.hidden]="!showEs()">{{ showEs() ? item.es : '…' }}</div>
+            @if (isSilent()) {
+                <div class="small silent">Esta frase aún no tiene audio grabado y tu dispositivo no tiene voz japonesa, así que el japonés no suena.</div>
+            }
+            <div class="small muted phase">
+                @if (isDone()) {
+                    ¡Terminaste! Toca reproducir para empezar otra vez.
+                } @else if (!isPlaying()) {
+                    En pausa
+                } @else if (phase() === 'think') {
+                    {{ config.mode === 'es-jp' ? '¿Cómo se dice en japonés?' : '¿Qué significa?' }}
+                }
+            </div>
+        </section>
+
+        <!-- Controles grandes -->
+        <div class="controls">
+            <button class="icon-btn ctl" (click)="jump(-1)" [disabled]="index() === 0" aria-label="Anterior"><app-icon name="back" [size]="26" /></button>
+            <button class="ctl play" (click)="toggle()" [attr.aria-label]="isPlaying() ? 'Pausar' : 'Reproducir'">
+                <app-icon [name]="isPlaying() ? 'stop' : 'play'" [size]="34" />
+            </button>
+            <button class="icon-btn ctl" (click)="jump(1)" [disabled]="index() >= items().length - 1" aria-label="Siguiente"><app-icon name="chevron" [size]="26" /></button>
+        </div>
+        <p class="small muted center tip">La pantalla se queda encendida. También puedes pausar y saltar con los botones de tus audífonos.</p>
+    }
+</div>

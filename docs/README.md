@@ -41,6 +41,10 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Práctica de gramática](views/grammar/grammar-practice.md) | Partículas, papeles y armar frases. |
 | [Vocabulario fácil](views/vocab/vocab.md) | Creador: lecciones, tipos de palabra, forma y cantidad. |
 | [Práctica de vocabulario](views/vocab/vocab-practice.md) | Tarjetas, parejas o preguntas de la selección. |
+| [Escuchar](views/listen/listen.md) | Qué escuchar, cómo y ajustes. |
+| [Reproductor de Escuchar](views/listen/listen-player.md) | Secuencia sin tocar el teléfono, pantalla encendida y audífonos. |
+| [Mi diario](views/diary/diary.md) | Tema del día, huecos y frases guardadas. |
+| [Practicar mis frases](views/diary/diary-practice.md) | Armar y decir las frases del diario. |
 | [Anfitrión de juegos](views/game-host/game-host.md) | Selección y ejecución de juegos. |
 | [Exámenes](views/exams/exams.md) | Hub de simulacros y nivel. |
 | [Creador de examen](views/exams/exam-builder.md) | Lecciones, secciones, cantidad y modo. |
@@ -82,6 +86,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [FuriganaService](services/furigana.service.md) | Diccionario y segmentación de lecturas. |
 | [ReadingService](services/reading.service.md) | Normalización y comparación de voz. |
 | [SfxService](services/sfx.service.md) | Efectos sonoros sintetizados. |
+| [DiaryService](services/diary.service.md) | Frases guardadas de Mi diario. |
 | [UpdateService](services/update.service.md) | Detección e instalación de versiones PWA. |
 | [ReadinessService](services/readiness.service.md) | Carga y preparación de exámenes de nivel. |
 
@@ -98,4 +103,6 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Intereses](utils/interests.utils.md) | Etiquetas, filtro y ponderación. |
 | [Gramática fácil](utils/grammar-guide.utils.md) | Conceptos, partículas, moldes y frases por interés. |
 | [Vocabulario](utils/vocab-builder.utils.md) | Filtros por tipo, formas de practicar y cantidades. |
+| [Escuchar](utils/listen.utils.md) | Opciones, lista de audios y español hablado. |
+| [Diario](utils/diary.utils.md) | Temas, palabras y armado de la frase. |
 | [Tablero](utils/dashboard.utils.md) | Tonos, puntos débiles y preparación. |
