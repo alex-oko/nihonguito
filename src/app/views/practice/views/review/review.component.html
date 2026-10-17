@@ -1,6 +1,6 @@
 @if (state() === 'ready') {
     <!-- Repaso: lo corre el motor de preguntas; al repetir se vuelve a armar -->
-    <app-question-runner [questions]="questions()" [title]="title()" (again)="build()" />
+    <app-question-runner [questions]="questions()" [title]="title()" (again)="build()" (finished)="planSVC.markDone('review')" />
 } @else if (state() === 'empty') {
     <!-- Sin palabras con progreso todavía -->
     <div class="page full">

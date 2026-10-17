@@ -17,7 +17,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 
 | Documento | Contenido |
 |---|---|
-| [Inicio](views/home/home.md) | Barrio, siguiente paso y habilidades. |
+| [Inicio](views/home/home.md) | Barrio, plan de hoy y habilidades. |
 | [Perfil](views/profile/profile.md) | Ajustes, estadísticas, instalación y datos. |
 | [Kana](views/kana/kana.md) | Hub de kana. |
 | [Tabla de kana](views/kana/kana-chart.md) | Tabla y filtros. |
@@ -90,6 +90,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [FuriganaService](services/furigana.service.md) | Diccionario y segmentación de lecturas. |
 | [ReadingService](services/reading.service.md) | Normalización y comparación de voz. |
 | [SfxService](services/sfx.service.md) | Efectos sonoros sintetizados. |
+| [PlanService](services/plan.service.md) | Pasos hechos del Plan de hoy y premio. |
 | [DiaryService](services/diary.service.md) | Frases guardadas de Mi diario. |
 | [UpdateService](services/update.service.md) | Detección e instalación de versiones PWA. |
 | [ReadinessService](services/readiness.service.md) | Carga y preparación de exámenes de nivel. |
@@ -109,5 +110,6 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Gramática fácil](utils/grammar-guide.utils.md) | Conceptos, partículas, moldes y frases por interés. |
 | [Vocabulario](utils/vocab-builder.utils.md) | Filtros por tipo, formas de practicar y cantidades. |
 | [Escuchar](utils/listen.utils.md) | Opciones, lista de audios y español hablado. |
+| [Plan de hoy](utils/plan.utils.md) | Constantes del plan y escucha corta. |
 | [Diario](utils/diary.utils.md) | Temas, palabras y armado de la frase. |
 | [Tablero](utils/dashboard.utils.md) | Tonos, puntos débiles y preparación. |

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal, untracked } from '@angular/core';
 import { LessonService } from '../../../../services/lesson.service';
 import { ProgressService } from '../../../../services/progress.service';
+import { PlanService } from '../../../../services/plan.service';
 import { Question } from '../../../../interfaces/question.interface';
 import { KanjiDrill } from '../../../../interfaces/kanji.interface';
 import { KANJI_DRILLS, kanjiInScope, kanjiWithLessons, prioritizeKanji } from '../../../../utils/kanji.utils';
@@ -22,6 +23,7 @@ export class KanjiPracticeComponent {
     // --- Inyección de dependencias ---
     private lessonSVC = inject(LessonService);
     private progressSVC = inject(ProgressService);
+    protected planSVC = inject(PlanService);
 
     // --- Inputs y outputs ---
     // Llegan de la query de /kanji/practica (?mode=meaning&scope=upto&count=10)

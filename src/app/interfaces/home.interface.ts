@@ -18,17 +18,6 @@ export interface NextStep {
     cta: string;
 }
 
-/** Tarjeta pequeña con una alternativa al siguiente paso */
-export interface AltStep {
-    kind: HomeStepKind | 'convo';
-    icon: string;
-    /** Color del icono (data-c): gold, ok, indigo… */
-    color: string;
-    title: string;
-    sub: string;
-    link: (string | number)[];
-}
-
 /** Casa del barrio de Musubi: una por lección */
 export interface House {
     id: number;

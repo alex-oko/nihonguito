@@ -1,2 +1,2 @@
 <!-- Ronda de kanji (el runner pinta todo) -->
-<app-question-runner [questions]="questions()" [title]="title()" (again)="build()" />
+<app-question-runner [questions]="questions()" [title]="title()" (again)="build()" (finished)="planSVC.markDone('kanji')" />

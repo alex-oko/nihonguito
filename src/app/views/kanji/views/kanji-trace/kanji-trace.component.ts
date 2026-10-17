@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal, untracked, viewChild } from '@angular/core';
 import { LessonService } from '../../../../services/lesson.service';
 import { ProgressService } from '../../../../services/progress.service';
+import { PlanService } from '../../../../services/plan.service';
 import { SfxService } from '../../../../services/sfx.service';
 import { KanjiInfo } from '../../../../interfaces/kanji.interface';
 import { kanjiInScope, kanjiWithLessons, prioritizeKanji } from '../../../../utils/kanji.utils';
@@ -27,6 +28,7 @@ export class KanjiTraceComponent {
     private lessonSVC = inject(LessonService);
     private progressSVC = inject(ProgressService);
     private sfxSVC = inject(SfxService);
+    private planSVC = inject(PlanService);
 
     // --- Inputs y outputs ---
     // Llegan de la query de /kanji/trazar: ?chars=日月 (unos kanji concretos) o ?scope=upto&count=10
@@ -109,6 +111,7 @@ export class KanjiTraceComponent {
         if (this.index() + 1 >= this.list().length) {
             this.sfxSVC.play('done');
             this.progressSVC.finishSession();
+            this.planSVC.markDone('kanji');
             this.location.back();
             return;
         }

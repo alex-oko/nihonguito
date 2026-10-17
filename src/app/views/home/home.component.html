@@ -85,32 +85,41 @@
         </a>
     }
 
-    <!-- Siguiente paso y alternativas -->
-    @if (nextStep(); as step) {
-        <h2 class="section-title">Tu siguiente paso</h2>
-        <section class="mission">
-            <span class="tag"><app-icon [name]="step.icon" [size]="14" />{{ step.eyebrow }}</span>
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.body }}</p>
-            @if (step.chips.length) {
-                <div class="why">
-                    @for (chip of step.chips; track chip) {
-                        <span class="jp">{{ chip }}</span>
+    <!-- Plan de hoy: cinco pasos cortos que se marcan solos al terminarlos -->
+    <h2 class="section-title">Tu plan de hoy</h2>
+    <section class="mission plan">
+        <div class="plan-head">
+            <span class="tag"><app-icon name="calendar" [size]="14" />{{ planDone() }} DE {{ plan().length }}{{ planMinutesLeft() ? ' · ~' + planMinutesLeft() + ' MIN' : '' }}</span>
+            <div class="plan-bar"><i [style.width.%]="(planDone() / plan().length) * 100"></i></div>
+        </div>
+        <div class="plan-steps">
+            @for (step of plan(); track step.id) {
+                <a class="plan-step" [class.done]="step.isDone" [class.next]="planNext() === step.id" [routerLink]="step.link" [queryParams]="step.queryParams">
+                    <span class="pi">
+                        @if (step.isDone) {
+                            <app-icon name="check" [size]="16" [stroke]="3" />
+                        } @else {
+                            <app-icon [name]="step.icon" [size]="16" />
+                        }
+                    </span>
+                    <span class="grow">
+                        <b>{{ step.title }}</b>
+                        <span class="ps">{{ step.sub }}</span>
+                    </span>
+                    @if (!step.isDone) {
+                        <span class="pm">{{ step.minutes }} min</span>
                     }
-                </div>
-            }
-            <a class="btn accent block go" [routerLink]="step.link"><app-icon name="play" [size]="17" />{{ step.cta }}</a>
-        </section>
-        <div class="alts">
-            @for (alt of altSteps(); track alt.kind) {
-                <a class="card alt" [routerLink]="alt.link">
-                    <span class="ki" [attr.data-c]="alt.color"><app-icon [name]="alt.icon" [size]="18" /></span>
-                    <b>{{ alt.title }}</b>
-                    <span class="small muted">{{ alt.sub }}</span>
                 </a>
             }
         </div>
-    }
+        @if (planDone() === plan().length) {
+            @if (planSVC.isRewardedToday()) {
+                <p class="plan-end">¡Plan de hoy completo! おつかれさま。Mañana te espera otro.</p>
+            } @else {
+                <button class="btn accent block go" (click)="planSVC.claimReward()"><app-icon name="star" [size]="17" />Recoger premio: +{{ planBonusXp }} XP</button>
+            }
+        }
+    </section>
 
     <!-- Preparación para el próximo examen de nivel -->
     @if (exam(); as examReadiness) {

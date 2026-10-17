@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal, viewChild
 import { RouterLink } from '@angular/router';
 import { DiaryService } from '../../services/diary.service';
 import { ProgressService } from '../../services/progress.service';
+import { PlanService } from '../../services/plan.service';
 import { DiaryOption } from '../../interfaces/diary.interface';
 import { buildDiarySentence, DIARY_PROMPTS, isDiaryComplete, promptOfDay, sortByInterest } from '../../utils/diary.utils';
 import { ROLE_INFO } from '../../utils/grammar-guide.utils';
@@ -27,6 +28,7 @@ export class DiaryComponent {
     // --- Inyección de dependencias ---
     protected diarySVC = inject(DiaryService);
     private progressSVC = inject(ProgressService);
+    private planSVC = inject(PlanService);
 
     // --- Estados UI con Signals ---
     /** Tema que se está contestando (empieza en el del día) */
@@ -102,6 +104,7 @@ export class DiaryComponent {
     protected save(): void {
         if (!this.isComplete()) return;
         this.diarySVC.add(this.prompt().id, this.sentence());
+        this.planSVC.markDone('diary');
         this.chosen.set([]);
         this.showSaved.set(true);
         if (this.savedTimer) clearTimeout(this.savedTimer);

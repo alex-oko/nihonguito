@@ -1,6 +1,6 @@
 # Inicio (`/`)
 
-La pantalla de entrada: el barrio de Musubi (una casa por lección cuyas ventanas se encienden al aprender sus palabras), lo que dice Musubi, su casa, la racha y la meta del día, **el siguiente paso recomendado**, la preparación para el próximo examen, los últimos 14 días, las habilidades, las palabras que más se fallan y la palabra del día.
+La pantalla de entrada: el barrio de Musubi (una casa por lección cuyas ventanas se encienden al aprender sus palabras), lo que dice Musubi, su casa, la racha y la meta del día, **el plan de hoy** (cinco pasos cortos que se marcan solos), la preparación para el próximo examen, los últimos 14 días, las habilidades, las palabras que más se fallan y la palabra del día.
 
 Casi todo son `computed` sobre [`ProgressService`](../../services/progress.service.md); los cálculos de habilidades y examen vienen de [dashboard.utils.ts](../../../src/app/utils/dashboard.utils.ts).
 
@@ -11,9 +11,9 @@ Casi todo son `computed` sobre [`ProgressService`](../../services/progress.servi
 | Archivo | Qué hace |
 |---|---|
 | [home.component.ts](../../../src/app/views/home/home.component.ts) | Carga de lecciones, todos los `computed` de la pantalla, voz |
-| [home.component.html](../../../src/app/views/home/home.component.html) | Barrio en SVG, bocadillo, tarjeta de la casa, cifras, siguiente paso, examen, farolillos, habilidades, palabras |
+| [home.component.html](../../../src/app/views/home/home.component.html) | Barrio en SVG, bocadillo, tarjeta de la casa, cifras, plan de hoy, examen, farolillos, habilidades, palabras |
 | [home.component.scss](../../../src/app/views/home/home.component.scss) | Estilos por bloque, en el orden de la pantalla |
-| [home.interface.ts](../../../src/app/interfaces/home.interface.ts) | `NextStep`, `AltStep`, `House`, `HomeDay`, `HardWord` |
+| [home.interface.ts](../../../src/app/interfaces/home.interface.ts) | `NextStep`, `House`, `HomeDay`, `HardWord` |
 | [dashboard.utils.ts](../../../src/app/utils/dashboard.utils.ts) | `knownWords`, `skillRows`, `weakestSkill`, `tone`, `upcomingExams` |
 | [readiness.service.ts](../../../src/app/services/readiness.service.ts) | `ensure`, `for`, `start`: preparación para el examen de nivel |
 | [pet.service.ts](../../../src/app/services/pet.service.ts) | `state`, `status`, `baseMood`, `needsYou`, `fresh` para la tarjeta de la casa |
@@ -30,7 +30,7 @@ Componentes que usa: `app-musubi-say`, `app-musubi`, `app-icon`, `app-exam-readi
 - **Tarjeta «Casa de Musubi»**: va a `/musubi`. Con hambre (`food` < 40) o algo nuevo desbloqueado lleva la clase `alert`; con algo nuevo, además la etiqueta «¡Nuevo!».
 - **Cifras**: racha, XP de hoy sobre la meta (anillo) y palabras por repasar. La última va a `/repaso`.
 - **«¿Qué te gusta?»**: solo si no hay intereses elegidos; va a `/perfil#intereses`.
-- **Tu siguiente paso**: una tarjeta grande con botón y hasta 2 alternativas pequeñas ([paso 4](#4-siguiente-paso)).
+- **Tu plan de hoy**: tarjeta oscura con 5 pasos (repaso, aprende, kanji, frase del diario y escucha), cuántos van hechos, los minutos que faltan y una barra. Cada paso lleva a su práctica; el primero sin hacer sale resaltado. Con los 5 hechos aparece **Recoger premio** (+`PLAN_BONUS_XP` = **20** XP, una vez al día) y después «¡Plan de hoy completo!» ([paso 4](#4-plan-de-hoy)).
 - **¿Listo para el examen?**: la tarjeta de `app-exam-readiness`; su botón empieza el examen de nivel (`readinessSVC.start`). «Ver exámenes» va a `/examenes`.
 - **Tus habilidades**: cada fila va a la práctica de esa habilidad en la lección actual.
 - **Palabras que se te escapan**: cada palabra se lee en voz alta al tocarla.
@@ -39,7 +39,7 @@ Componentes que usa: `app-musubi-say`, `app-musubi`, `app-icon`, `app-exam-readi
 
 ### Reglas
 
-**Siguiente paso** (el primero que se cumpla, sobre la lección actual `lastLesson`):
+**Siguiente paso** (`nextStep`, el primero que se cumpla, sobre la lección actual `lastLesson`). Es el paso «Aprende» del plan; si sale el repaso, «Aprende» pasa a ser la sesión guiada para no repetirlo:
 
 | Prioridad | Condición | Tipo | Lleva a |
 |---|---|---|---|
@@ -50,7 +50,15 @@ Componentes que usa: `app-musubi-say`, `app-musubi`, `app-icon`, `app-exam-readi
 
 - Una palabra **se conoce** desde la caja de Leitner `KNOWN_BOX` (**2**).
 - Una palabra está **por repasar** (`dueCount`) si su clave empieza por `w:` y su `due` es hoy o antes.
-- **Alternativas** (`altSteps`): de «Repaso de palabras», «Sesión guiada» y «Conversación», las que no sean del mismo tipo que el paso principal; el repaso solo si hay alguna pendiente. Máximo 2.
+**Plan de hoy** (`plan`, minutos en `PLAN_MINUTES`):
+
+| Paso | Lleva a | Se marca hecho |
+|---|---|---|
+| Repasa N palabras (4 min) | `/repaso` | Al terminar el repaso, o si no hay palabras pendientes |
+| Aprende (5 min) | `nextStep` (o la sesión guiada) | Al terminar cualquier práctica de lección |
+| 5 kanji (2 min) | `/kanji/practica?mode=mixed&scope=upto&count=5` | Al terminar una práctica o un trazo de kanji |
+| Tu frase del día (2 min) | `/diario` (subtítulo: el tema del día) | Al guardar una frase, o si ya hay una con fecha de hoy |
+| Escucha unos minutos (3 min) | `/escuchar/reproducir?preset=plan` (15 audios) | Al terminar una sesión de escucha |
 
 **Barrio** (`houses`): **`VISIBLE_HOUSES`** (4) casas desde la lección anterior a la actual (sin pasarse del final del índice). Cada casa tiene **`WINDOWS_PER_HOUSE`** (6) ventanas: se encienden `round(conocidas / total × 6)`. Una casa sale atenuada (`faded`) si su lección es posterior a la actual y no tiene ninguna palabra conocida.
 
@@ -95,11 +103,11 @@ Cada paso empieza en [home.component.ts](../../../src/app/views/home/home.compon
 - **`musubiMood`**: `happy` si el XP de hoy llega a la meta; si no, `idle`.
 - **`goalPct`** (tope 100) alimenta la variable CSS `--p` del anillo; **`goalMessage`** cambia según no haya XP, falte o se haya cumplido la meta.
 
-### 4. Siguiente paso
+### 4. Plan de hoy
 
 **`nextStep`** sigue la tabla de [reglas](#reglas) con pasos numerados en el código. Las `chips` son hasta 3 palabras difíciles de la lección actual (`hardWords` filtradas por `lesson`); el paso de repaso no lleva. **`nextLessonId`** busca en `lessonIndex` la lección que sigue a la actual (null si es la última).
 
-**`altSteps`** se calcula después de `nextStep` para no repetir su `kind`.
+**`plan`** arma los 5 pasos con `planSVC.doneToday()` (lo que marcaron las prácticas, ver [PlanService](../../services/plan.service.md)), `dueCount`, `nextStep` y las frases del diario de hoy. **`planDone`**, **`planMinutesLeft`** y **`planNext`** (el primer paso sin hacer) alimentan la cabecera y el resaltado. El botón de premio llama a `planSVC.claimReward()`.
 
 ### 5. Examen, días, habilidades y palabras
 
@@ -119,4 +127,4 @@ No hay nada que limpiar: no hay timers ni suscripciones. Si se sale antes de que
 
 ### Estilos
 
-[home.component.scss](../../../src/app/views/home/home.component.scss) va por bloques en el orden de la pantalla, cada uno con su banner `/* ---- … ---- */`: comunes, iconos en pastilla (`.ki` con `data-c`), barrio, bocadillo, tarjeta de la casa, cifras (el anillo usa `--p`), siguiente paso, farolillos (`data-s`), habilidades (`data-t`), palabras, palabra del día y versión. Los colores salen de las variables del tema ([styles-and-themes.md](../../core/styles-and-themes.md)).
+[home.component.scss](../../../src/app/views/home/home.component.scss) va por bloques en el orden de la pantalla, cada uno con su banner `/* ---- … ---- */`: comunes, iconos en pastilla (`.ki` con `data-c`), barrio, bocadillo, tarjeta de la casa, cifras (el anillo usa `--p`), plan de hoy (`.mission`, `.plan-step` con `.done` y `.next`), farolillos (`data-s`), habilidades (`data-t`), palabras, palabra del día y versión. Los colores salen de las variables del tema ([styles-and-themes.md](../../core/styles-and-themes.md)).

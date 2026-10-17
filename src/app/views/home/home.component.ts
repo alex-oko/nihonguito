@@ -9,7 +9,10 @@ import { wordMain, wordReading } from '../../utils/questions.utils';
 import { romaji, shortEs, todayKey } from '../../utils/text.utils';
 import { knownWords, skillRows, tone, upcomingExams, weakestSkill } from '../../utils/dashboard.utils';
 import { Tone } from '../../interfaces/dashboard.interface';
-import { AltStep, HardWord, HomeDay, House, NextStep } from '../../interfaces/home.interface';
+import { HardWord, HomeDay, House, NextStep } from '../../interfaces/home.interface';
+import { PlanStep } from '../../interfaces/plan.interface';
+import { PLAN_BONUS_XP, PLAN_KANJI_COUNT, PLAN_MINUTES } from '../../utils/plan.utils';
+import { DIARY_PROMPTS, promptOfDay } from '../../utils/diary.utils';
 import { skillIcon } from '../../utils/skills.utils';
 import { IconComponent } from '../../components/icon/icon.component';
 import { SpeakButtonComponent } from '../../components/speak-button/speak-button.component';
@@ -19,6 +22,8 @@ import { MusubiSayComponent } from '../../components/musubi-say/musubi-say.compo
 import { PetService } from '../../services/pet.service';
 import { ExamReadinessComponent } from '../../components/exam-readiness/exam-readiness.component';
 import { UpdateService } from '../../services/update.service';
+import { PlanService } from '../../services/plan.service';
+import { DiaryService } from '../../services/diary.service';
 
 /** Inicial de cada día de la semana (getDay: 0 = domingo) para la tira de 14 días */
 const DAY_INITIALS = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
@@ -57,6 +62,8 @@ export class HomeComponent {
     protected readinessSVC = inject(ReadinessService);
     protected petSVC = inject(PetService);
     protected updateSVC = inject(UpdateService);
+    protected planSVC = inject(PlanService);
+    private diarySVC = inject(DiaryService);
     private lessonSVC = inject(LessonService);
     private speechSVC = inject(SpeechService);
 
@@ -215,18 +222,73 @@ export class HomeComponent {
         };
     });
 
-    /** Dos alternativas al siguiente paso: nunca del mismo tipo, y el repaso solo si hay algo pendiente */
-    protected altSteps = computed<AltStep[]>(() => {
-        const step = this.nextStep();
-        const lessonId = this.lastLesson();
+    /**
+     * Plan de hoy: repaso, lo que toca aprender (el siguiente paso, o la sesión guiada si ese ya es el repaso),
+     * kanji, la frase del diario y una escucha corta. Cada paso se marca al terminarlo (PlanService) o por los datos
+     * (sin palabras pendientes, o ya hay frase de hoy en el diario)
+     */
+    protected plan = computed<PlanStep[]>(() => {
+        const done = this.planSVC.doneToday();
         const due = this.dueCount();
-        const allSteps: AltStep[] = [
-            { kind: 'review', icon: 'refresh', color: 'gold', title: 'Repaso de palabras', sub: `${due} ${due === 1 ? 'lista' : 'listas'} · ~4 min`, link: ['/repaso'] },
-            { kind: 'guided', icon: 'book', color: 'ok', title: 'Sesión guiada', sub: `Lección ${lessonId} · ~6 min`, link: ['/lecciones', lessonId, 'practica', 'guided'] },
-            { kind: 'convo', icon: 'mic', color: 'indigo', title: 'Conversación', sub: 'Escucha y responde', link: ['/conversaciones'] },
+        const step = this.nextStep();
+        const lessonId = Math.max(1, this.lastLesson());
+        const isLearnGuided = step.kind === 'review';
+        const hasDiaryToday = this.diarySVC.entries().some((entry) => entry.date === todayKey());
+        const steps: PlanStep[] = [
+            {
+                id: 'review',
+                icon: 'refresh',
+                title: due ? `Repasa ${due} ${due === 1 ? 'palabra' : 'palabras'}` : 'Repaso de palabras',
+                sub: due ? 'Las que estás por olvidar' : 'Nada pendiente por hoy',
+                minutes: PLAN_MINUTES.review,
+                link: ['/repaso'],
+                isDone: done.includes('review') || due === 0,
+            },
+            {
+                id: 'learn',
+                icon: isLearnGuided ? 'book' : step.icon,
+                title: isLearnGuided ? `Lección ${lessonId} · Sesión guiada` : step.title,
+                sub: 'Aprende algo nuevo o refuerza lo flojo',
+                minutes: PLAN_MINUTES.learn,
+                link: isLearnGuided ? ['/lecciones', lessonId, 'practica', 'guided'] : step.link,
+                isDone: done.includes('learn'),
+            },
+            {
+                id: 'kanji',
+                icon: 'brush',
+                title: `${PLAN_KANJI_COUNT} kanji`,
+                sub: 'Significado y palabras de tus lecciones',
+                minutes: PLAN_MINUTES.kanji,
+                link: ['/kanji/practica'],
+                queryParams: { mode: 'mixed', scope: 'upto', count: PLAN_KANJI_COUNT },
+                isDone: done.includes('kanji'),
+            },
+            {
+                id: 'diary',
+                icon: 'pencil',
+                title: 'Tu frase del día',
+                sub: DIARY_PROMPTS[promptOfDay()].question,
+                minutes: PLAN_MINUTES.diary,
+                link: ['/diario'],
+                isDone: done.includes('diary') || hasDiaryToday,
+            },
+            {
+                id: 'listen',
+                icon: 'headphones',
+                title: 'Escucha unos minutos',
+                sub: 'Palabras y frases, sin tocar el teléfono',
+                minutes: PLAN_MINUTES.listen,
+                link: ['/escuchar/reproducir'],
+                queryParams: { preset: 'plan' },
+                isDone: done.includes('listen'),
+            },
         ];
-        return allSteps.filter((alt) => alt.kind !== step.kind && (alt.kind !== 'review' || due > 0)).slice(0, 2);
+        return steps;
     });
+    protected planDone = computed(() => this.plan().filter((step) => step.isDone).length);
+    protected planMinutesLeft = computed(() => this.plan().reduce((minutes, step) => minutes + (step.isDone ? 0 : step.minutes), 0));
+    /** Primer paso sin hacer: se resalta como «el siguiente» */
+    protected planNext = computed(() => this.plan().find((step) => !step.isDone)?.id ?? null);
 
     /** Preparación para el próximo examen de nivel (null hasta que cargan sus lecciones) */
     protected exam = computed(() => this.readinessSVC.for(upcomingExams(this.lastLesson())[0]));
@@ -280,6 +342,9 @@ export class HomeComponent {
             })
             .slice(0, 4);
     });
+
+    // XP de premio del plan de hoy (para el botón)
+    protected planBonusXp = PLAN_BONUS_XP;
 
     // Bombillas de la guirnalda del barrio: [x, y] dentro del viewBox 390×110
     protected bulbs = [

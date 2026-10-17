@@ -14,6 +14,8 @@ Reproduce solo, uno tras otro, los audios elegidos en [Escuchar](listen.md): el 
 
 ### Qué hace el usuario
 
+- Con `?preset=plan` (el paso de escucha del [Plan de hoy](../home/home.md)) usa `planListenConfig` (15 audios de las lecciones hasta la actual) sin tocar `listenConfig`, y **X** vuelve a Inicio.
+- Al terminar la lista (o una vuelta en bucle) marca el paso `listen` del plan.
 - Al entrar empieza a sonar solo (se llega tocando «Empezar», así que el navegador ya permite el audio).
 - **Reproducir / pausar** (botón grande), **anterior** y **siguiente**. Al reanudar, el elemento actual vuelve a empezar.
 - **X** para y vuelve a `/escuchar`.
@@ -42,7 +44,7 @@ Solo lee `nihongo:listenConfig`.
 
 ### 1. Arranque
 
-`config` sale de `listenConfig`. El constructor escucha `visibilitychange`, conecta la Media Session (`setupMediaSession`) y llama a **`load()`**: carga las lecciones, arma `items` con `buildListenItems` y llama a `play(0)`.
+`config` sale de `listenConfig`. El constructor escucha `visibilitychange` y conecta la Media Session (`setupMediaSession`). `ngOnInit` (no el constructor: el input `preset` aún no está puesto al construir) cambia `config` por `planListenConfig` si `preset` es `plan` y llama a **`load()`**: carga las lecciones, arma `items` con `buildListenItems` y llama a `play(0)`.
 
 ### 2. Secuencia
 

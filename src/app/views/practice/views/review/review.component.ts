@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { LessonService } from '../../../../services/lesson.service';
 import { Question } from '../../../../interfaces/question.interface';
 import { ProgressService } from '../../../../services/progress.service';
+import { PlanService } from '../../../../services/plan.service';
 import { vocabQuestions } from '../../../../utils/questions.utils';
 import { shuffle, todayKey } from '../../../../utils/text.utils';
 import { IconComponent } from '../../../../components/icon/icon.component';
@@ -31,6 +32,7 @@ export class ReviewComponent {
     protected location = inject(Location);
     private lessonSVC = inject(LessonService);
     private progressSVC = inject(ProgressService);
+    protected planSVC = inject(PlanService);
 
     // --- Estados UI con Signals ---
     protected state = signal<'loading' | 'ready' | 'empty'>('loading');

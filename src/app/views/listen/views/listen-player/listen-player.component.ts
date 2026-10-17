@@ -1,8 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, inject, OnDestroy, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input, OnDestroy, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { LessonService } from '../../../../services/lesson.service';
 import { ProgressService } from '../../../../services/progress.service';
 import { SpeechService } from '../../../../services/speech.service';
+import { PlanService } from '../../../../services/plan.service';
+import { planListenConfig } from '../../../../utils/plan.utils';
 import { ListenConfig, ListenItem, ListenPhase } from '../../../../interfaces/listen.interface';
 import { buildListenItems, DEFAULT_LISTEN_CONFIG, GAP_MS, PAUSE_MS, SLOW_RATE, spokenEs } from '../../../../utils/listen.utils';
 import { loadRaw } from '../../../../utils/storage.utils';
@@ -22,12 +24,17 @@ const SLOW_SPANISH_RATE = 0.85;
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListenPlayerComponent implements OnDestroy {
+export class ListenPlayerComponent implements OnInit, OnDestroy {
     // --- Inyección de dependencias ---
     private lessonSVC = inject(LessonService);
     private progressSVC = inject(ProgressService);
     private speechSVC = inject(SpeechService);
+    private planSVC = inject(PlanService);
     private router = inject(Router);
+
+    // --- Inputs y outputs ---
+    /** ?preset=plan: escucha corta del «Plan de hoy» (no usa ni cambia la configuración guardada) */
+    readonly preset = input<string>('');
 
     // --- Estados UI con Signals ---
     protected items = signal<ListenItem[]>([]);
@@ -65,6 +72,11 @@ export class ListenPlayerComponent implements OnDestroy {
     constructor() {
         document.addEventListener('visibilitychange', this.onVisibility);
         this.setupMediaSession();
+    }
+
+    ngOnInit(): void {
+        // En ngOnInit y no en el constructor: el input preset (de la query) aún no está puesto al construir
+        if (this.preset() === 'plan') this.config = planListenConfig(this.progressSVC.lastLesson().id);
         void this.load();
     }
 
@@ -102,12 +114,15 @@ export class ListenPlayerComponent implements OnDestroy {
         if (runId !== this.runId) return;
         // Al terminar: en bucle se rearma la lista (otro orden si está mezclada); si no, fin
         if (this.config.isLooping) {
+            // Una vuelta completa ya cuenta para el plan de hoy
+            this.planSVC.markDone('listen');
             this.items.set(buildListenItems(this.lessons, this.config, this.progressSVC.settings().interests ?? []));
             void this.play(0);
             return;
         }
         this.isPlaying.set(false);
         this.isDone.set(true);
+        this.planSVC.markDone('listen');
         void this.releaseScreen();
     }
 
@@ -177,10 +192,10 @@ export class ListenPlayerComponent implements OnDestroy {
         if (wasPlaying) void this.play(target);
     }
 
-    /** Sale al formulario de /escuchar */
+    /** Sale al formulario de /escuchar (o a Inicio si se vino desde el plan de hoy) */
     protected exit(): void {
         this.pause();
-        void this.router.navigate(['/escuchar']);
+        void this.router.navigate([this.preset() === 'plan' ? '/' : '/escuchar']);
     }
     // ------------------------------- Reproducción ------------------------------------------------------------- //
 

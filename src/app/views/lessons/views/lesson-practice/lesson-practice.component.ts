@@ -6,6 +6,7 @@ import { lessonSentences, prioritize, studyWords } from '../../../../utils/lesso
 import { Lesson, Word } from '../../../../interfaces/lesson.interface';
 import { Question } from '../../../../interfaces/question.interface';
 import { ProgressService } from '../../../../services/progress.service';
+import { PlanService } from '../../../../services/plan.service';
 import { knownStems, sentenceQuestions, vocabQuestions, wordMain, wordReading } from '../../../../utils/questions.utils';
 import { VocabMode } from '../../../../interfaces/question.interface';
 import { shortEs, shuffle } from '../../../../utils/text.utils';
@@ -45,6 +46,7 @@ export class LessonPracticeComponent {
     // --- Inyección de dependencias ---
     private lessonSVC = inject(LessonService);
     private progressSVC = inject(ProgressService);
+    private planSVC = inject(PlanService);
 
     // --- Inputs y outputs ---
     // Llegan de la ruta lecciones/:id/practica/:mode (withComponentInputBinding)
@@ -88,8 +90,9 @@ export class LessonPracticeComponent {
     // ------------------------------- Carga de datos ------------------------------------------------------------- //
 
     // ------------------------------- Armado de la práctica ------------------------------------------------------------- //
-    /** Al terminar una sesión guiada avanza a los siguientes puntos de gramática */
+    /** Al terminar una sesión marca «Aprende» en el plan de hoy; si era guiada, avanza a los siguientes puntos de gramática */
     protected done(): void {
+        this.planSVC.markDone('learn');
         const lesson = this.lesson();
         if (lesson && this.mode() === 'guided') advanceGrammar(lesson);
     }

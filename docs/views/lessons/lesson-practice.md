@@ -92,7 +92,7 @@ Todo empieza en [lesson-practice.component.ts](../../../src/app/views/lessons/vi
 
 ### 4. Al terminar
 
-**`done()`** recibe el evento `finished` de `app-question-runner`. Solo hace algo en `guided`: **`advanceGrammar(lesson)`** suma `GRAMMAR_PER_SESSION` al cursor de esa lección en `nihongo:guided`. El resto de la puntuación la guarda el propio runner.
+**`done()`** recibe el evento `finished` de `app-question-runner`. Siempre marca el paso «Aprende» del [Plan de hoy](../../services/plan.service.md) (`planSVC.markDone('learn')`); además, en `guided`: **`advanceGrammar(lesson)`** suma `GRAMMAR_PER_SESSION` al cursor de esa lección en `nihongo:guided`. El resto de la puntuación la guarda el propio runner.
 
 ### 5. Salida
 
