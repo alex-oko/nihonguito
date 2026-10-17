@@ -1,0 +1,13 @@
+<!-- Guía detrás, cruz de referencia y lienzo encima -->
+<div class="pad">
+    <div class="guide hand" [class.hidden]="guide() === 'hide'" [class.reveal]="guide() === 'reveal'">{{ char() }}</div>
+    <div class="cross"></div>
+    <canvas
+        #canvas
+        (pointerdown)="startStroke($event)"
+        (pointermove)="continueStroke($event)"
+        (pointerup)="endStroke()"
+        (pointercancel)="endStroke()"
+        (pointerleave)="endStroke()"
+    ></canvas>
+</div>

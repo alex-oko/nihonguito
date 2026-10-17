@@ -1,0 +1,118 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/kana" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Kanji</h1>
+    </header>
+    <p class="muted intro">Los 100 kanji básicos (nivel N5), en el orden en que salen en tus lecciones.</p>
+
+    <!-- Cómo se leen -->
+    <div class="card how">
+        <div class="t">¿Cómo se lee un kanji?</div>
+        <p class="small body">
+            Cada kanji es una <b>idea</b> (日 = sol, día) y puede tener varias lecturas:
+        </p>
+        <ul class="small body">
+            <li><b>Lectura japonesa (kun)</b>: cuando el kanji va solo o con hiragana pegado. 日 = <span class="jp">ひ</span>, 食べる = <span class="jp">たべる</span>.</li>
+            <li><b>Lectura china (on)</b>: casi siempre cuando se junta con otro kanji. 日本 = <span class="jp">にほん</span>, 毎日 = <span class="jp">まいにち</span>.</li>
+        </ul>
+        <p class="small muted">No las memorices sueltas: apréndelas con las palabras. Por eso cada ficha trae palabras de tus lecciones.</p>
+    </div>
+
+    <!-- Progreso -->
+    <div class="card progress">
+        <div class="row">
+            <span class="grow t">Dominas {{ knownCount() }} de {{ kanji().length || 100 }}</span>
+        </div>
+        <div class="bar ok"><i [style.width.%]="kanji().length ? (knownCount() / kanji().length) * 100 : 0"></i></div>
+    </div>
+
+    <!-- Práctica -->
+    <h2 class="section-title">Practicar</h2>
+    <div class="card practice">
+        <div class="chips">
+            <button class="chip" [class.on]="scope() === 'upto'" (click)="scope.set('upto')">Hasta la lección {{ lastLesson() || 1 }}</button>
+            <button class="chip" [class.on]="scope() === 'all'" (click)="scope.set('all')">Los 100</button>
+        </div>
+        <div class="modes">
+            @for (option of drills; track option.id) {
+                <button class="mode" [class.on]="drill() === option.id" (click)="drill.set(option.id)">
+                    <app-icon [name]="option.icon" [size]="18" />
+                    <span class="grow">
+                        <span class="t">{{ option.label }}</span>
+                        <span class="small muted d">{{ option.desc }}</span>
+                    </span>
+                    <span class="radio"></span>
+                </button>
+            }
+        </div>
+        <div class="row foot">
+            <div class="chips">
+                @for (kanjiCount of counts; track kanjiCount) {
+                    <button class="chip" [class.on]="count() === kanjiCount" (click)="count.set(kanjiCount)">{{ kanjiCount }}</button>
+                }
+            </div>
+            <span class="small muted grow right">{{ practicePool().length }} kanji disponibles</span>
+        </div>
+        <button class="btn accent block go" [disabled]="!practicePool().length" (click)="practice()"><app-icon name="play" [size]="18" />Empezar</button>
+    </div>
+
+    <!-- Kanji por lección -->
+    @for (group of groups(); track group.lesson) {
+        <h2 class="section-title">{{ group.lesson === null ? 'Aún no salen en tus lecciones' : 'Lección ' + group.lesson }}</h2>
+        <div class="grid">
+            @for (info of group.kanji; track info.char) {
+                <button class="tile" [attr.data-b]="boxes().get(info.char)" (click)="open.set(info)">
+                    <span class="glyph jp">{{ info.char }}</span>
+                    <span class="m small">{{ info.meaning.split('; ')[0] }}</span>
+                </button>
+            }
+        </div>
+    } @empty {
+        <div class="empty">Cargando kanji…</div>
+    }
+</div>
+
+<!-- Ficha de un kanji -->
+@if (open(); as info) {
+    <div class="sheet-backdrop" (click)="open.set(null)">
+        <div class="sheet detail" (click)="$event.stopPropagation()">
+            <div class="grab"></div>
+            <div class="row head">
+                <span class="big hand">{{ info.char }}</span>
+                <div class="grow">
+                    <div class="meaning">{{ info.meaning }}</div>
+                    <div class="small muted">{{ info.strokes }} {{ info.strokes === 1 ? 'trazo' : 'trazos' }}{{ info.lesson !== null ? ' · lección ' + info.lesson : '' }}</div>
+                </div>
+                <button class="icon-btn" (click)="open.set(null)" aria-label="Cerrar"><app-icon name="x" /></button>
+            </div>
+
+            <div class="readings">
+                @if (info.kun.length) {
+                    <div class="reading"><span class="small muted">Japonesa (kun)</span><span class="jp">{{ info.kun.join('、') }}</span></div>
+                }
+                @if (info.on.length) {
+                    <div class="reading"><span class="small muted">China (on)</span><span class="jp">{{ info.on.join('、') }}</span></div>
+                }
+            </div>
+            <p class="tip small"><app-icon name="bulb" [size]="16" />{{ info.tip }}</p>
+
+            @if (info.words.length) {
+                <div class="small muted label">En tus lecciones</div>
+                <div class="words">
+                    @for (word of info.words; track word.id) {
+                        <div class="word row">
+                            <div class="grow">
+                                <span class="jp wk"><app-jp [text]="word.kanji" as="kanji" /></span>
+                                <span class="jp small muted">{{ readingOf(word.kana) }}</span>
+                                <div class="small">{{ word.es }}</div>
+                            </div>
+                            <app-speak [text]="readingOf(word.kana)" />
+                        </div>
+                    }
+                </div>
+            }
+            <button class="btn block trace" (click)="traceOne(info.char)"><app-icon name="brush" [size]="18" />Practicar el trazo</button>
+        </div>
+    </div>
+}

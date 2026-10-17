@@ -4,6 +4,7 @@ import { ChoiceQuestion } from '../../interfaces/question.interface';
 import { ProgressService } from '../../services/progress.service';
 import { SfxService } from '../../services/sfx.service';
 import { loadRaw, save } from '../../utils/storage.utils';
+import { trackKey } from '../../utils/questions.utils';
 import { IconComponent } from '../icon/icon.component';
 import { JpComponent } from '../jp/jp.component';
 import { GameTimerComponent } from '../game-timer/game-timer.component';
@@ -133,7 +134,7 @@ export class SpeedGameComponent implements OnDestroy {
         this.isLocked = true;
 
         // 1. Dominio de la palabra o kana
-        if (question.track) this.progressSVC.recordAnswer(`${question.track.kind === 'kana' ? 'k' : 'w'}:${question.track.id}`, isCorrect);
+        if (question.track) this.progressSVC.recordAnswer(trackKey(question.track), isCorrect);
 
         // 2. Marcador, racha y penalización
         if (isCorrect) {

@@ -68,6 +68,9 @@ Los colores de cada tema y las variables CSS están en [styles-and-themes.md](st
 | `verbos/practica` | `VerbPracticeComponent` | sí |
 | `gramatica` | `GrammarComponent` ([doc](../views/grammar/grammar.md)) | no |
 | `gramatica/practica` | `GrammarPracticeComponent` ([doc](../views/grammar/grammar-practice.md)) | sí |
+| `kanji` | `KanjiComponent` ([doc](../views/kanji/kanji.md)) | no |
+| `kanji/practica` | `KanjiPracticeComponent` ([doc](../views/kanji/kanji-practice.md)) | sí |
+| `kanji/trazar` | `KanjiTraceComponent` ([doc](../views/kanji/kanji-trace.md)) | sí |
 | `vocabulario` | `VocabComponent` ([doc](../views/vocab/vocab.md)) | no |
 | `vocabulario/practica` | `VocabPracticeComponent` ([doc](../views/vocab/vocab-practice.md)) | sí |
 | `escuchar` | `ListenComponent` ([doc](../views/listen/listen.md)) | no |

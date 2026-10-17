@@ -37,7 +37,15 @@
         }
     </div>
 
-    <!-- Enlaces al laboratorio y a números y tiempo -->
+    <!-- Enlaces a kanji, al laboratorio y a números y tiempo -->
+    <a class="card link" routerLink="/kanji">
+        <span class="ic kanji" data-c="accent"><span class="jp">字</span></span>
+        <div class="grow">
+            <div class="lt">Kanji</div>
+            <div class="small muted">Los 100 básicos (N5): significado, lecturas, trucos, palabras de tus lecciones y trazo.</div>
+        </div>
+        <app-icon name="chevron" />
+    </a>
     <a class="card link" routerLink="/kana/lab">
         <span class="ic" data-c="indigo"><app-icon name="flask" [size]="20" /></span>
         <div class="grow">

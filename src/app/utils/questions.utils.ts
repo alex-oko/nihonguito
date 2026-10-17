@@ -13,6 +13,7 @@ import { Sentence, Word } from '../interfaces/lesson.interface';
 import { choicesWith, pick, sample, shortEs, shuffle, tokens } from './text.utils';
 import { KanaMode, VocabMode, SentenceMode, VerbForm } from '../interfaces/question.interface';
 import { BlockRole, GrammarDrill, GuideSentence } from '../interfaces/grammar-guide.interface';
+import { KanjiDrill, KanjiInfo } from '../interfaces/kanji.interface';
 import {
     blankIndex,
     blockText,
@@ -32,6 +33,14 @@ const PARTICLES = ['から', 'まで', 'は', 'を', 'へ', 'が', 'に', 'で',
 
 /** Palabras que siempre cuentan como conocidas al buscar partículas, aunque no estén en el vocabulario */
 const BASE_KNOWN_STEMS = ['わたし', 'あなた', 'これ', 'それ', 'あれ', 'ここ', 'そこ', 'あそこ', 'だれ', 'なん', 'なに', 'どこ', 'きょう', 'あした', 'きのう', 'うち', 'えき'];
+
+/** Prefijo de la clave de dominio de cada tipo de elemento (k:あ, w:L01-003, j:日) */
+const TRACK_PREFIX: Record<NonNullable<Question['track']>['kind'], string> = { kana: 'k', word: 'w', kanji: 'j' };
+
+/** Devuelve la clave de dominio (nihongo:mastery) del elemento que sigue una pregunta */
+export function trackKey(track: NonNullable<Question['track']>): string {
+    return `${TRACK_PREFIX[track.kind]}:${track.id}`;
+}
 
 /** Etiqueta de cada forma verbal, para los enunciados */
 export const VERB_FORM_LABEL: Record<VerbForm, string> = {
@@ -770,6 +779,78 @@ function permutations<T>(items: T[]): T[][] {
     return items.flatMap((item, index) => permutations([...items.slice(0, index), ...items.slice(index + 1)]).map((rest) => [item, ...rest]));
 }
 // ------------------------------- Gramática fácil ------------------------------------------------------------- //
+
+// ------------------------------- Kanji ------------------------------------------------------------- //
+/** Tipos de pregunta que usa la práctica de kanji «Todo mezclado» */
+const KANJI_MIXED: KanjiDrill[] = ['meaning', 'reverse', 'words'];
+
+/**
+ * Genera `count` preguntas de kanji del tipo pedido. `pool` son todos los kanji (para las opciones falsas);
+ * las de «Lee la palabra» solo salen de kanji que tienen palabras en las lecciones.
+ */
+export function kanjiQuestions(list: KanjiInfo[], drill: KanjiDrill, count: number, pool: KanjiInfo[]): Question[] {
+    const kinds = drill === 'mixed' ? KANJI_MIXED : [drill];
+    const allWords = pool.flatMap((info) => info.words);
+    const questions: Question[] = [];
+    const picked = sample(list, Math.min(count, list.length));
+    picked.forEach((info, index) => {
+        let kind = kinds[index % kinds.length];
+        if (kind === 'words' && !info.words.length) kind = 'meaning';
+        // Opciones falsas: otros kanji que no compartan ninguna parte del significado (先 y 前 se parecen)
+        const meaningParts = new Set(info.meaning.split('; '));
+        const others = pool.filter((other) => other.char !== info.char && !other.meaning.split('; ').some((part) => meaningParts.has(part)));
+        if (kind === 'meaning') {
+            questions.push({
+                id: nextQuestionId(),
+                kind: 'choice',
+                label: '¿Qué significa este kanji?',
+                prompt: info.char,
+                promptStyle: 'jp-big',
+                choices: shuffle([info.meaning, ...sample(others, 3).map((other) => other.meaning)]),
+                answer: info.meaning,
+                choiceStyle: 'es',
+                track: { kind: 'kanji', id: info.char },
+                explain: info.tip,
+                forceKanji: true,
+            });
+        } else if (kind === 'reverse') {
+            questions.push({
+                id: nextQuestionId(),
+                kind: 'choice',
+                label: '¿Qué kanji es?',
+                prompt: info.meaning,
+                promptStyle: 'es',
+                choices: shuffle([info.char, ...sample(others, 3).map((other) => other.char)]),
+                answer: info.char,
+                choiceStyle: 'jp-big',
+                track: { kind: 'kanji', id: info.char },
+                explain: info.tip,
+                forceKanji: true,
+            });
+        } else if (kind === 'words') {
+            const word = pick(info.words);
+            const reading = cleanForm(word.kana).main;
+            const readings = [...new Set(allWords.filter((other) => other.kanji !== word.kanji).map((other) => cleanForm(other.kana).main))];
+            questions.push({
+                id: nextQuestionId(),
+                kind: 'choice',
+                label: '¿Cómo se lee?',
+                prompt: word.kanji,
+                sub: word.es,
+                promptStyle: 'jp',
+                choices: choicesWith(reading, readings.filter((other) => other !== reading)),
+                answer: reading,
+                choiceStyle: 'jp',
+                audio: reading,
+                track: { kind: 'word', id: word.id },
+                explain: `${word.kanji} = ${reading}`,
+                forceKanji: true,
+            });
+        }
+    });
+    return questions;
+}
+// ------------------------------- Kanji ------------------------------------------------------------- //
 
 // ------------------------------- Otros ------------------------------------------------------------- //
 /** Pasa un texto a katakana (envoltorio de `toKatakana` de wanakana) */

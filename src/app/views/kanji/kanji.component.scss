@@ -1,0 +1,187 @@
+/* ---- Comunes ---- */
+.intro {
+    margin: -4px 0 12px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    display: block;
+    font-weight: 600;
+}
+.body {
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+.how ul {
+    margin: 6px 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.progress {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ---- Práctica ---- */
+.practice {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.mode {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+}
+.mode.on {
+    border-color: var(--ink);
+}
+.d {
+    display: block;
+}
+.radio {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    border-radius: 50%;
+    border: 1.5px solid var(--line);
+}
+.mode.on .radio {
+    border: 6px solid var(--ink);
+}
+.foot {
+    gap: 10px;
+}
+.right {
+    text-align: right;
+}
+
+/* ---- Cuadrícula de kanji: el borde se colorea según la caja de Leitner (data-b) ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 8px;
+}
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 4px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+}
+.tile[data-b='1'] {
+    border-color: var(--gold);
+}
+.tile[data-b='2'],
+.tile[data-b='3'] {
+    border-color: var(--ok);
+}
+.tile[data-b='4'],
+.tile[data-b='5'] {
+    border-color: var(--ok);
+    background: var(--ok-soft);
+}
+.glyph {
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+.m {
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* ---- Ficha (hoja inferior) ---- */
+.detail {
+    max-height: 85dvh;
+    overflow-y: auto;
+}
+.head {
+    gap: 14px;
+    align-items: center;
+}
+.big {
+    font-size: 4.2rem;
+    line-height: 1;
+}
+.meaning {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.readings {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 12px;
+}
+.reading {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.reading .small {
+    min-width: 110px;
+}
+.tip {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 12px 0 0;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    background: var(--gold-soft);
+    color: var(--ink);
+    line-height: 1.5;
+}
+.tip app-icon {
+    flex: none;
+    color: var(--gold);
+}
+.label {
+    margin-top: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+}
+.words {
+    display: flex;
+    flex-direction: column;
+}
+.word {
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+}
+.wk {
+    font-size: 1.15rem;
+    margin-right: 6px;
+}
+.trace {
+    margin-top: 14px;
+}

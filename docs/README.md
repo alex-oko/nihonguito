@@ -24,6 +24,9 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Práctica de kana](views/kana/kana-practice.md) | Rondas de reconocimiento. |
 | [Memorama de kana](views/kana/kana-match.md) | Juego de parejas. |
 | [Trazo de kana](views/kana/kana-trace.md) | Copia y autoevaluación. |
+| [Kanji](views/kanji/kanji.md) | Los 100 básicos por lección, fichas y práctica. |
+| [Práctica de kanji](views/kanji/kanji-practice.md) | Significado, al kanji y leer palabras. |
+| [Trazo de kanji](views/kanji/kanji-trace.md) | Copiar, de memoria y comparar. |
 | [Laboratorio de katakana](views/kana/katakana-lab.md) | Plan de estudio y nombres. |
 | [Números y tiempo](views/time/time.md) | Tablas, marcas de aprendizaje y práctica. |
 | [Lecciones](views/lessons/lessons.md) | Lista, estados y exámenes. |
@@ -73,6 +76,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Memorama](components/match-game.md) | Parejas, rondas y recompensa. |
 | [Juego de velocidad](components/speed-game.md) | Tiempo, penalizaciones y puntuación. |
 | [Reloj de juego](components/game-timer.md) | Pulso y salida por tiempo. |
+| [Lienzo de trazo](components/trace-pad.md) | Trazar un carácter sobre una guía. |
 | [Frase por trozos](components/sentence-blocks.md) | Trozos de colores por papel y partícula resaltada. |
 | [Casilla de examen](components/exam-slot.md) | Escritura, navegación y corrección. |
 | [Preparación para examen](components/exam-readiness.md) | Regla de 50 puntos y prioridades. |
@@ -96,6 +100,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 |---|---|
 | [Texto](utils/text.utils.md) | Normalización, similitud, barajado y tokens. |
 | [Clave de audio](utils/audio-key.utils.md) | Nombre estable de cada MP3. |
+| [Kanji](utils/kanji.utils.md) | Los 100 kanji N5 y su cruce con las lecciones. |
 | [Kana](utils/kana.utils.md) | Tablas, consultas y nombre en katakana. |
 | [Preguntas](utils/questions.utils.md) | Generadores por modalidad. |
 | [Sesión guiada](utils/guided-session.utils.md) | Rotación de gramática y armado de pasos. |

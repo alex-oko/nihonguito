@@ -62,6 +62,7 @@ No genera preguntas: eso lo hacen los utils de [questions.utils.ts](../../src/ap
 | `type` con `input: 'romaji'` | En minúsculas y sin espacios, con cada una de `answers` |
 | `type` con `input: 'es'` | `normEs` (sin tildes, mayúsculas ni puntuación) |
 | `type` con kana | `normJp` (sin puntuación; hiragana y katakana cuentan igual) |
+| (cualquiera) | Con `forceKanji`, el enunciado, las opciones y la respuesta se pintan con kanji (`app-jp as="kanji"`) aunque el usuario lea en kana: lo usan las preguntas de kanji |
 | `order` | `normJp` de las fichas unidas contra `answer.join('')` y cada una de `alternatives` (si las hay); la respuesta que se enseña es la que coincidió |
 | `speak` | `readingSVC.bestMatch` de lo oído contra `target` y `prompt` |
 

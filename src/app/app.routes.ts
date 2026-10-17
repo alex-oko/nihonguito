@@ -32,6 +32,19 @@ export const routes: Routes = [
         loadComponent: () => import('./views/kana/views/kana-trace/kana-trace.component').then((module) => module.KanaTraceComponent),
     },
 
+    // --- Kanji ---
+    { path: 'kanji', loadComponent: () => import('./views/kanji/kanji.component').then((module) => module.KanjiComponent) },
+    {
+        path: 'kanji/practica',
+        data: IMMERSIVE,
+        loadComponent: () => import('./views/kanji/views/kanji-practice/kanji-practice.component').then((module) => module.KanjiPracticeComponent),
+    },
+    {
+        path: 'kanji/trazar',
+        data: IMMERSIVE,
+        loadComponent: () => import('./views/kanji/views/kanji-trace/kanji-trace.component').then((module) => module.KanjiTraceComponent),
+    },
+
     // --- Lecciones ---
     { path: 'lecciones', loadComponent: () => import('./views/lessons/lessons.component').then((module) => module.LessonsComponent) },
     {

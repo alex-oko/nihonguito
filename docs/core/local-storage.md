@@ -59,7 +59,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `stats` | `Stats`: `{ xp, streak, bestStreak, lastDay, answered, correct, sessions }` | `persisted` (mezcla) | `ProgressService` |
 | `activity` | `{ "YYYY-MM-DD": xp }` | `persisted` | `ProgressService` |
 | `answerLog` | `{ "YYYY-MM-DD": [respondidas, correctas] }` | `persisted` | `ProgressService` |
-| `mastery` | `{ "k:あ" \| "w:L01-003": { box, due, seen, wrong } }` | `persisted` | `ProgressService` (Leitner) |
+| `mastery` | `{ "k:あ" \| "w:L01-003" \| "j:日": { box, due, seen, wrong } }` (k = kana, w = palabra, j = kanji; los prefijos salen de `trackKey` en questions.utils) | `persisted` | `ProgressService` (Leitner) |
 | `lessonBest` | `{ "idLección": mejor% }` | `persisted` | `ProgressService` |
 | `lessonSkills` | `{ "idLección": { habilidad: { correct, total, last, date } } }` | `persisted` | `ProgressService` |
 | `exams` | `[{ date, title, score, total }]`, máximo 30 | `persisted` (`merge = false`) | `ProgressService` |

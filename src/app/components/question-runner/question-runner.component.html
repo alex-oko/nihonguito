@@ -73,7 +73,7 @@
                             [class.jp]="question.promptStyle === 'jp' || question.promptStyle === 'jp-big'"
                             [class.long]="question.prompt.length > 16"
                         >
-                            <app-jp [text]="question.prompt" />
+                            <app-jp [text]="question.prompt" [as]="question.forceKanji ? 'kanji' : null" />
                         </div>
                         @if (question.sub && (!question.subIsReading || script() === 'kanji')) {
                             <div class="prompt-sub">{{ question.sub }}</div>
@@ -106,7 +106,7 @@
                                     (click)="choose(choice)"
                                 >
                                     <span class="k">{{ choiceIndex + 1 }}</span>
-                                    <span class="c"><app-jp [text]="choice" /></span>
+                                    <span class="c"><app-jp [text]="choice" [as]="question.forceKanji ? 'kanji' : null" /></span>
                                 </button>
                             }
                         </div>
@@ -186,7 +186,7 @@
                             {{ currentFeedback.correct ? currentFeedback.praise : currentFeedback.close ? '¡Casi! La respuesta es:' : 'Respuesta correcta:' }}
                         </div>
                         @if (!currentFeedback.correct || question.kind === 'type' || question.kind === 'order' || question.kind === 'speak') {
-                            <div class="fb-answer jp"><app-jp [text]="currentFeedback.answer" /></div>
+                            <div class="fb-answer jp"><app-jp [text]="currentFeedback.answer" [as]="question.forceKanji ? 'kanji' : null" /></div>
                         }
                         @if (currentFeedback.note) {
                             <div class="small fb-note">{{ currentFeedback.note }}@if (question.kind === 'speak' && currentFeedback.given && currentFeedback.given.length > 1) { · Escuché «{{ currentFeedback.given }}»}</div>

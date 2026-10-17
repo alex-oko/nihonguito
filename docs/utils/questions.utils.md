@@ -206,6 +206,18 @@ Los ids de pregunta salen de un contador de módulo (`nextQuestionId`: `q1`, `q2
   4. Devuelve las permutaciones de las movibles en sus mismos huecos, menos la original y menos las que cambian el orden de las palabras de tiempo entre sí (あした 7じに vale; 7じに あした suena raro).
 - **Ejemplo**: `もりさんに メールを おくります。` acepta también `メールを もりさんに おくります。`.
 
+### Kanji
+
+#### `kanjiQuestions(list, drill, count, pool)`
+
+- **Qué hace**: preguntas de kanji (`forceKanji`): **¿Qué significa este kanji?** (kanji → significado), **¿Qué kanji es?** (significado → kanji) y **¿Cómo se lee?** (palabra de las lecciones con kanji → lectura en kana, con audio). `mixed` las turna; si un kanji no tiene palabras, «Lee la palabra» cae en significado.
+- **Opciones falsas**: kanji de `pool` que no compartan ninguna acepción con la respuesta.
+- **Dominio**: `track: { kind: 'kanji', id: char }` (clave `j:<kanji>`); en «Lee la palabra», la palabra (`w:<id>`).
+
+#### `trackKey(track)`
+
+- **Qué hace**: la clave de dominio de un `track`: `k:` kana, `w:` palabra, `j:` kanji (`TRACK_PREFIX`). La usan el runner y el juego de velocidad.
+
 ### Otros
 
 #### `toKata(text)`

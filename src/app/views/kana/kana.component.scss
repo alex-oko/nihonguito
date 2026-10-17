@@ -97,6 +97,15 @@
     background: var(--gold-soft);
     color: var(--gold);
 }
+.ic[data-c='accent'] {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+/* El icono de Kanji es el propio carácter 字 */
+.ic.kanji {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
 
 /* ---- Consejos ---- */
 .tips {

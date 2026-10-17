@@ -22,10 +22,12 @@ export interface QuestionBase {
     audioOnly?: boolean;
     /** Estilo de letra del enunciado */
     promptStyle?: 'jp-big' | 'jp' | 'es';
-    /** Id del elemento que se sigue (carácter kana o id de palabra) para el dominio y el repaso espaciado */
-    track?: { kind: 'kana' | 'word'; id: string };
+    /** Id del elemento que se sigue (carácter kana o kanji, o id de palabra) para el dominio y el repaso espaciado */
+    track?: { kind: 'kana' | 'word' | 'kanji'; id: string };
     /** Se enseña después de responder */
     explain?: string;
+    /** Enseña el japonés con kanji aunque el usuario lea solo en kana (preguntas de kanji) */
+    forceKanji?: boolean;
 }
 
 /** Elegir la respuesta entre varias opciones */

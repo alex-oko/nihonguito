@@ -28,6 +28,7 @@ Todas las rutas están en [app.routes.ts](../../../src/app/app.routes.ts) y carg
 | `/kana/:script/memorama?rows=…` | Memorama kana ↔ romaji | [kana-match.md](kana-match.md) |
 | `/kana/:script/trazar?rows=…` | Trazar con el dedo | [kana-trace.md](kana-trace.md) |
 | `/tiempo` | Números, fechas y tiempo (vista aparte, enlazada desde aquí) | [time.md](../time/time.md) |
+| `/kanji` | Los 100 kanji básicos (vista aparte, enlazada desde aquí con la tarjeta 字) | [kanji.md](../kanji/kanji.md) |
 
 - `/kana/lab` va **antes** que `/kana/:script` en las rutas: si no, `lab` se tomaría como un `script`.
 - Práctica, memorama y trazar llevan `data: immersive`: la barra de pestañas se oculta.

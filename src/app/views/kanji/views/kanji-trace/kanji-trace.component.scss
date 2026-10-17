@@ -1,0 +1,49 @@
+/* ---- Cabecera e instrucción (mismo esquema que el trazo de kana) ---- */
+.wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: calc(8px + var(--safe-t)) 16px calc(24px + var(--safe-b));
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 52px;
+}
+.grow {
+    flex: 1;
+}
+.info {
+    margin: 10px 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.meaning {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.step {
+    margin-top: 4px;
+    color: var(--ink-2);
+}
+
+/* ---- Truco y acciones ---- */
+.tip {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-top: 12px;
+    color: var(--ink-2);
+}
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+.actions > .btn:last-child {
+    flex: 1;
+}
+.full {
+    flex: 1;
+}

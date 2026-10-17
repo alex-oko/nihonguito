@@ -19,6 +19,7 @@ import { SfxService } from '../../services/sfx.service';
 import { SpeechService } from '../../services/speech.service';
 import { ReadingService } from '../../services/reading.service';
 import { skillBreakdown } from '../../utils/skills.utils';
+import { trackKey } from '../../utils/questions.utils';
 import { PetService } from '../../services/pet.service';
 import { normEs, normJp, pick, romaji } from '../../utils/text.utils';
 import { IconComponent } from '../icon/icon.component';
@@ -414,8 +415,7 @@ export class QuestionRunnerComponent implements OnDestroy {
         const isFirstTry = !this.retriedIds.has(question.id);
         this.records.update((records) => [...records, { question, correct: isCorrect, given }]);
         if (isFirstTry) {
-            const trackKey = question.track ? `${question.track.kind === 'kana' ? 'k' : 'w'}:${question.track.id}` : undefined;
-            this.progressSVC.recordAnswer(trackKey, isCorrect);
+            this.progressSVC.recordAnswer(question.track ? trackKey(question.track) : undefined, isCorrect);
         }
 
         // 2. Racha, XP y sonido

@@ -1,0 +1,46 @@
+<div class="wrap">
+    <!-- Cabecera con progreso -->
+    <header class="head">
+        <button class="icon-btn" (click)="location.back()" aria-label="Salir"><app-icon name="x" /></button>
+        <div class="bar grow"><i [style.width.%]="list().length ? ((index() + 1) / list().length) * 100 : 0"></i></div>
+        <span class="small muted">{{ list().length ? index() + 1 : 0 }}/{{ list().length }}</span>
+    </header>
+
+    @if (current(); as info) {
+        <!-- Significado, lecturas e instrucción del paso -->
+        <div class="info">
+            <div class="meaning">{{ info.meaning }}</div>
+            <div class="small muted jp">{{ readings() }}</div>
+            <div class="small step">
+                {{ step() === 'copy' ? 'Copia sobre la guía (' + info.strokes + ' trazos)' : step() === 'memory' ? 'Ahora de memoria' : '¿Se parece?' }}
+            </div>
+        </div>
+
+        <!-- Lienzo -->
+        <app-trace-pad [char]="info.char" [guide]="guide()" />
+
+        <!-- Truco de memoria -->
+        <p class="tip small"><app-icon name="bulb" [size]="16" /> {{ info.tip }}</p>
+
+        <!-- Acciones de cada paso -->
+        <div class="actions">
+            <button class="btn ghost" (click)="clear()"><app-icon name="trash" [size]="18" />Borrar</button>
+            @switch (step()) {
+                @case ('copy') {
+                    <button class="btn" (click)="toMemory()">Siguiente paso</button>
+                }
+                @case ('memory') {
+                    <button class="btn" (click)="step.set('check')">Comprobar</button>
+                }
+                @case ('check') {
+                    <div class="grid-2 full">
+                        <button class="btn soft" (click)="rate(false)">Repetir</button>
+                        <button class="btn ok" (click)="rate(true)">¡Bien!</button>
+                    </div>
+                }
+            }
+        </div>
+    } @else {
+        <div class="empty">Cargando…</div>
+    }
+</div>
