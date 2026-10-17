@@ -84,7 +84,7 @@
   {
    "id": "L00-012",
    "kana": "しゅくだい",
-   "es": "tarea, deberes",
+   "es": "tarea",
    "type": "noun",
    "lesson": 0
   },
@@ -247,7 +247,7 @@
    "examples": [
     {
      "jp": "きって",
-     "es": "sello (kit-te)"
+     "es": "estampilla (kit-te)"
     },
     {
      "jp": "ざっし",
@@ -853,7 +853,7 @@
     {
      "kana": "きって",
      "kanji": "",
-     "es": "sello de correos"
+     "es": "estampilla"
     },
     {
      "kana": "いっぱい",

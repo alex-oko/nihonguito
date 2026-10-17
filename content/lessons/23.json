@@ -142,7 +142,7 @@
    "id": "L23-018",
    "kana": "こしょう",
    "kanji": "故障",
-   "es": "avería (～します: estropearse)",
+   "es": "avería (～します: descomponerse)",
    "type": "noun",
    "lesson": 23
   },
@@ -190,7 +190,7 @@
    "id": "L23-024",
    "kana": "ちゅうしゃじょう",
    "kanji": "駐車場",
-   "es": "aparcamiento",
+   "es": "estacionamiento",
    "type": "noun",
    "lesson": 23
   },
@@ -431,7 +431,7 @@
   },
   {
    "jp": "道を 渡る とき、車に 気を つけてね。",
-   "es": "Cuando cruces la calle, ten cuidado con los coches."
+   "es": "Cuando cruces la calle, ten cuidado con los autos."
   },
   {
    "jp": "この ボタンを 押すと、コピーが 出るよ。",
@@ -498,7 +498,7 @@
      "who": "A",
      "name": "アンナ",
      "jp": "あ、交差点を 渡る とき、車に 気を つけてね。信号が ないから。",
-     "es": "Ah, cuando cruces, ten cuidado con los coches. No hay semáforo."
+     "es": "Ah, cuando cruces, ten cuidado con los autos. No hay semáforo."
     },
     {
      "who": "A",
@@ -615,7 +615,7 @@
     {
      "kana": "おうだんほどう",
      "kanji": "横断歩道",
-     "es": "paso de peatones"
+     "es": "cruce peatonal"
     },
     {
      "kana": "ほどうきょう",
@@ -665,12 +665,12 @@
     {
      "kana": "いっぽうつうこう",
      "kanji": "一方通行",
-     "es": "sentido único"
+     "es": "un solo sentido"
     },
     {
      "kana": "ちゅうしゃきんし",
      "kanji": "駐車禁止",
-     "es": "prohibido aparcar"
+     "es": "prohibido estacionarse"
     },
     {
      "kana": "うせつきんし",

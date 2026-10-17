@@ -2,7 +2,7 @@
  "id": 21,
  "title": "¿Qué opinas de Japón?",
  "titleJp": "日本の 生活に ついて どう 思いますか",
- "summary": "Yui le pregunta a Lucía qué opina de la vida en Tokio. Por la tarde, Carlos y Kenta quedan para ver juntos el partido Japón-España en la tele del café.",
+ "summary": "Yui le pregunta a Lucía qué opina de la vida en Tokio. Por la tarde, Carlos y Kenta se ponen de acuerdo para ver juntos el partido Japón-España en la tele del café.",
  "vocab": [
   {
    "id": "L21-001",
@@ -138,7 +138,7 @@
   {
    "id": "L21-018",
    "kana": "アルバイト",
-   "es": "trabajo por horas",
+   "es": "trabajo de medio tiempo",
    "type": "noun",
    "lesson": 21
   },
@@ -190,7 +190,7 @@
   {
    "id": "L21-025",
    "kana": "ラッシュ",
-   "es": "hora punta",
+   "es": "hora pico",
    "type": "noun",
    "lesson": 21
   },
@@ -411,7 +411,7 @@
   },
   {
    "title": "Forma simple + でしょう？ — ¿verdad?",
-   "explain": "Con entonación subiendo, でしょう？ busca que el otro confirme algo que tú crees que ya sabe. Es como '¿a que sí?' o '¿verdad?'. Con adjetivos な y sustantivos se quita だ (ひまでしょう？).",
+   "explain": "Con entonación subiendo, でしょう？ busca que el otro confirme algo que tú crees que ya sabe. Es como '¿no es cierto?' o '¿verdad?'. Con adjetivos な y sustantivos se quita だ (ひまでしょう？).",
    "examples": [
     {
      "jp": "あしたの パーティーに 行くでしょう？",

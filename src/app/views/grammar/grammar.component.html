@@ -1,0 +1,273 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/practicar" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Gramática fácil</h1>
+    </header>
+    <p class="muted intro">Partículas y orden de la frase, explicados sin palabras raras.</p>
+
+    <!-- Pestañas -->
+    <div class="tabs">
+        <button [class.on]="tab() === 'basics'" (click)="setTab('basics')">Básico</button>
+        <button [class.on]="tab() === 'particles'" (click)="setTab('particles')">Partículas</button>
+        <button [class.on]="tab() === 'build'" (click)="setTab('build')">Frases</button>
+        <button [class.on]="tab() === 'practice'" (click)="setTab('practice')">Practicar</button>
+    </div>
+
+    @switch (tab()) {
+        @case ('basics') {
+            <!-- Leyenda de colores -->
+            <div class="card top legend">
+                <div class="t">Cada color es un papel</div>
+                <p class="small body">En esta sección cada trozo de frase lleva un color según el papel que cumple. Fíjate en el color y en la partícula del final.</p>
+                <div class="legend-list">
+                    @for (role of roleOrder; track role) {
+                        <div class="legend-row" [attr.data-role]="role">
+                            <span class="role-dot"></span>
+                            <b>{{ roleInfo[role].label }}</b>
+                            <span class="small muted">{{ roleInfo[role].question }}</span>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Conceptos, uno desplegable por tarjeta -->
+            <h2 class="section-title">Las piezas de una frase</h2>
+            <div class="stack">
+                @for (concept of concepts; track concept.id) {
+                    <div class="card fold" [class.open]="openId() === concept.id">
+                        <button class="fold-head" (click)="toggle(concept.id)" [attr.aria-expanded]="openId() === concept.id">
+                            <span class="grow">
+                                <span class="t">{{ concept.name }} @if (concept.jpName) {<small class="jp muted">{{ concept.jpName }}</small>}</span>
+                                <span class="small muted d">{{ concept.short }}</span>
+                            </span>
+                            <app-icon class="chev" name="chevron" [size]="18" />
+                        </button>
+                        @if (openId() === concept.id) {
+                            <div class="fold-body">
+                                <p class="body">{{ concept.body }}</p>
+                                @for (example of concept.examples; track $index) {
+                                    <app-sentence-blocks class="ex" [sentence]="example" [showRoles]="true" />
+                                }
+                                @if (concept.tip) {
+                                    <p class="tip small"><app-icon name="bulb" [size]="16" />{{ concept.tip }}</p>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+            <button class="btn accent block go" (click)="setTab('particles')">Siguiente: las partículas<app-icon name="chevron" [size]="18" /></button>
+        }
+
+        @case ('particles') {
+            <!-- Resumen rápido -->
+            <div class="card top">
+                <div class="t">Resumen rápido</div>
+                <p class="small body">Pregúntate qué papel cumple la palabra y busca la partícula.</p>
+                @for (group of cheatSheet; track group.title) {
+                    <div class="cheat-title">{{ group.title }}</div>
+                    <div class="cheat">
+                        @for (row of group.rows; track $index) {
+                            <div class="cheat-row" [attr.data-role]="row.role">
+                                <span class="role-dot"></span>
+                                <span class="small grow">{{ row.question }}</span>
+                                <b class="jp cheat-p">{{ row.particle }}</b>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+
+            <!-- Fichas de partículas -->
+            <h2 class="section-title">Una por una</h2>
+            <div class="stack">
+                @for (guide of particles; track guide.id) {
+                    <div class="card fold" [class.open]="openId() === guide.id">
+                        <button class="fold-head" (click)="toggle(guide.id)" [attr.aria-expanded]="openId() === guide.id">
+                            <span class="glyph jp">{{ guide.particle }}</span>
+                            <span class="grow">
+                                <span class="t">{{ guide.nickname }} <small class="muted">{{ guide.romaji }}</small></span>
+                                <span class="small muted d">{{ guide.short }}</span>
+                            </span>
+                            <app-icon class="chev" name="chevron" [size]="18" />
+                        </button>
+                        @if (openId() === guide.id) {
+                            <div class="fold-body">
+                                <p class="ask small"><b>Responde a:</b> {{ guide.question }}</p>
+                                <p class="body">{{ guide.body }}</p>
+                                @for (example of guide.examples; track $index) {
+                                    <app-sentence-blocks class="ex" [sentence]="example" />
+                                }
+                                @if (guide.trap) {
+                                    <p class="trap small"><b>Ojo:</b> {{ guide.trap }}</p>
+                                }
+                                <!-- Otros usos de la misma partícula -->
+                                @for (use of guide.extraUses ?? []; track use.title) {
+                                    <div class="use">
+                                        <div class="use-title">Otro uso: {{ use.title }}</div>
+                                        <p class="body small">{{ use.body }}</p>
+                                        @for (example of use.examples; track $index) {
+                                            <app-sentence-blocks class="ex" [sentence]="example" />
+                                        }
+                                    </div>
+                                }
+                                @if (particleForYou().get(guide.id)?.length) {
+                                    <div class="mine small">Con tus temas</div>
+                                    @for (example of particleForYou().get(guide.id); track $index) {
+                                        <app-sentence-blocks class="ex" [sentence]="example" />
+                                    }
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+
+            <!-- Confusiones frecuentes -->
+            <h2 class="section-title">Las que más se confunden</h2>
+            <div class="stack">
+                @for (pair of pairs; track pair.title) {
+                    <div class="card">
+                        <div class="t">{{ pair.title }}</div>
+                        <p class="small body">{{ pair.body }}</p>
+                        <div class="sides">
+                            @for (side of pair.sides; track side.label) {
+                                <div class="side">
+                                    <span class="badge">{{ side.label }}</span>
+                                    <app-sentence-blocks [sentence]="side.sentence" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+            <button class="btn accent block go" (click)="practice('particles')"><app-icon name="play" [size]="18" />Practicar partículas</button>
+        }
+
+        @case ('build') {
+            <!-- Reglas de oro -->
+            <div class="card top">
+                <div class="t">Las 5 reglas de oro</div>
+                <ol class="rules">
+                    @for (rule of rules; track rule.title) {
+                        <li>
+                            <b>{{ rule.title }}.</b>
+                            <span class="small body"> {{ rule.body }}</span>
+                        </li>
+                    }
+                </ol>
+            </div>
+
+            <!-- Molde general -->
+            <h2 class="section-title">El molde general</h2>
+            <div class="card">
+                <p class="small body">Casi todas las frases siguen este orden. No necesitas todos los trozos: usa solo los que tu frase tenga.</p>
+                <app-sentence-blocks [sentence]="template" [showRoles]="true" />
+            </div>
+
+            <!-- Método paso a paso -->
+            <h2 class="section-title">Paso a paso: del español al japonés</h2>
+            <div class="card">
+                <p class="small body">Cuando sepas las palabras pero no cómo unirlas, hazte estas preguntas. Empieza por el verbo y construye hacia atrás.</p>
+                <div class="chips">
+                    @for (example of workedExamples; track $index) {
+                        <button class="chip" [class.on]="workedIndex() === $index" (click)="workedIndex.set($index)">Ejemplo {{ $index + 1 }}</button>
+                    }
+                </div>
+                <p class="target">«{{ worked().es }}»</p>
+                <ol class="steps">
+                    @for (step of worked().steps; track $index) {
+                        <li>
+                            <div class="small"><b>{{ step.ask }}</b> {{ step.found }}</div>
+                            @if (step.block; as stepBlock) {
+                                <span class="step-block jp" [attr.data-role]="stepBlock.role">{{ blockText(stepBlock) }}</span>
+                            }
+                        </li>
+                    }
+                </ol>
+                <div class="result">
+                    <div class="small muted">Ahora ordénalo con el molde:</div>
+                    <app-sentence-blocks [sentence]="worked().result" [showRoles]="true" [hideEs]="true" />
+                </div>
+            </div>
+
+            <!-- Cómo resolver «completa la frase» -->
+            <h2 class="section-title">Cómo resolver «completa la frase»</h2>
+            <div class="card">
+                <ol class="fill">
+                    @for (step of fillSteps; track $index) {
+                        <li class="small body">{{ step }}</li>
+                    }
+                </ol>
+                <button class="btn ghost sm block" (click)="setTab('particles')">Ver el resumen de partículas</button>
+            </div>
+
+            <!-- Moldes de frases -->
+            <h2 class="section-title">Moldes para tus frases</h2>
+            <div class="stack">
+                @for (mold of molds; track mold.id) {
+                    <div class="card fold" [class.open]="openId() === mold.id">
+                        <button class="fold-head" (click)="toggle(mold.id)" [attr.aria-expanded]="openId() === mold.id">
+                            <span class="grow">
+                                <span class="t">{{ mold.name }}</span>
+                                <span class="jp formula">{{ mold.formula }}</span>
+                            </span>
+                            <app-icon class="chev" name="chevron" [size]="18" />
+                        </button>
+                        @if (openId() === mold.id) {
+                            <div class="fold-body">
+                                <p class="body">{{ mold.short }}</p>
+                                @for (example of mold.examples; track $index) {
+                                    <app-sentence-blocks class="ex" [sentence]="example" [showRoles]="true" />
+                                }
+                                @if (mold.tip) {
+                                    <p class="tip small"><app-icon name="bulb" [size]="16" />{{ mold.tip }}</p>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+
+            <!-- Frases sobre los intereses del usuario -->
+            <h2 class="section-title">Frases para ti</h2>
+            <div class="card">
+                @if (interests().length) {
+                    <p class="small body">Sobre lo que te gusta: {{ interestNames() }}.</p>
+                } @else {
+                    <p class="small body">Elige tus temas en <a routerLink="/perfil">Perfil</a> y aquí verás frases sobre lo que te gusta (anime, viajes, comida…).</p>
+                }
+                <div class="stack-sm">
+                    @for (sentence of forYou(); track $index) {
+                        <app-sentence-blocks class="ex" [sentence]="sentence" [showRoles]="true" />
+                    }
+                </div>
+            </div>
+            <button class="btn accent block go" (click)="practice('build')"><app-icon name="play" [size]="18" />Practicar armar frases</button>
+        }
+
+        @case ('practice') {
+            <!-- Tipos de ejercicio -->
+            <div class="stack top">
+                @for (drill of drills; track drill.id) {
+                    <button class="card row line" (click)="practice(drill.id)">
+                        <span class="gi"><app-icon [name]="drill.icon" [size]="20" /></span>
+                        <span class="grow">
+                            <span class="t">{{ drill.label }}</span>
+                            <span class="small muted d">{{ drill.desc }}</span>
+                        </span>
+                        <app-icon name="chevron" />
+                    </button>
+                }
+            </div>
+            <p class="small muted center hint">
+                @if (interests().length) {
+                    Las frases salen más sobre tus temas: {{ interestNames() }}.
+                } @else {
+                    Elige tus temas en <a routerLink="/perfil">Perfil</a> para que las frases hablen de lo que te gusta.
+                }
+            </p>
+        }
+    }
+</div>

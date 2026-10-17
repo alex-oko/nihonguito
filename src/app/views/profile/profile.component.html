@@ -52,7 +52,7 @@
     </div>
 
     <!-- Ajustes: plantilla visual, romaji, escritura, voz, sonido, vibración y meta -->
-    <h2 class="section-title">Ajustes</h2>
+    <h2 class="section-title">Configuración</h2>
     <div class="theme-grid" aria-label="Plantilla visual">
         @for (theme of themes; track theme.id) {
             <button
@@ -140,7 +140,7 @@
         <div class="card warn small">
             <app-icon name="volume" [size]="18" />
             <span>
-                Tu dispositivo no tiene voz japonesa. En Android: Ajustes → Idioma → Texto a voz → instala «Japonés». En iPhone: Ajustes →
+                Tu dispositivo no tiene voz japonesa. En Android: Configuración → Idioma → Texto a voz → instala «Japonés». En iPhone: Configuración →
                 Accesibilidad → Contenido leído → Voces → Japonés.
             </span>
         </div>
@@ -152,8 +152,8 @@
         @if (installPrompt()) {
             <button class="btn accent block" (click)="install()">Instalar app</button>
         }
-        <p><b>Android (Chrome):</b> menú ⋮ → «Instalar aplicación» o «Añadir a pantalla de inicio».</p>
-        <p><b>iPhone (Safari):</b> botón Compartir → «Añadir a pantalla de inicio».</p>
+        <p><b>Android (Chrome):</b> menú ⋮ → «Instalar aplicación» o «Agregar a la pantalla principal».</p>
+        <p><b>iPhone (Safari):</b> botón Compartir → «Agregar a inicio».</p>
         <p class="muted">Después funciona sin internet.</p>
     </div>
 
@@ -186,7 +186,7 @@
         </button>
         @switch (updateSVC.state()) {
             @case ('latest') { <p class="muted">Ya tienes la última versión.</p> }
-            @case ('ready') { <p class="muted">Hay una versión nueva descargada. Pulsa el botón para reiniciar la app con ella.</p> }
+            @case ('ready') { <p class="muted">Hay una versión nueva descargada. Toca el botón para reiniciar la app con ella.</p> }
             @case ('error') { <p class="muted">No se pudo comprobar. Revisa tu conexión a internet.</p> }
             @case ('unavailable') { <p class="muted">Modo desarrollo: el botón solo recarga la página.</p> }
         }

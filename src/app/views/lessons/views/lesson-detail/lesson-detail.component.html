@@ -171,6 +171,12 @@
                 <p class="small muted center hint">Toca una palabra para escucharla.</p>
             }
             @case ('grammar') {
+                <!-- Atajo a Gramática fácil para quien se pierde con las partículas o el orden -->
+                <a class="card row easy" routerLink="/gramatica">
+                    <app-icon name="puzzle" [size]="20" />
+                    <span class="grow small"><b>¿Te pierdes al armar frases?</b> Partículas y orden de la frase explicados fácil.</span>
+                    <app-icon name="chevron" [size]="16" />
+                </a>
                 <!-- Gramática: un punto por tarjeta -->
                 <div class="stack">
                     @for (grammarPoint of currentLesson.grammar; track $index; let grammarIndex = $index) {

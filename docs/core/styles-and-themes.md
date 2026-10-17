@@ -23,14 +23,15 @@ El tema y la escritura se aplican desde `AppComponent` ([app-shell.md](app-shell
 | 9 | [_progress.scss](../../src/styles/_progress.scss) | `.bar > i` (barra de progreso) y `.bar.ok` |
 | 10 | [_forms.scss](../../src/styles/_forms.scss) | `.switch` (checkbox como interruptor) e `input[type='range']` |
 | 11 | [_animations.scss](../../src/styles/_animations.scss) | `@keyframes fade-up`, `pop`, `shake`, `slide-up` y las clases `.pop`, `.shake` |
-| 12 | [_overlays.scss](../../src/styles/_overlays.scss) | Estado vacío (`.empty`, `.empty .glyph`) y hojas inferiores (`.sheet-backdrop`, `.sheet`, `.sheet .grab`) |
-| 13 | [_motion.scss](../../src/styles/_motion.scss) | `prefers-reduced-motion`: animaciones y transiciones a 0.01 ms |
+| 12 | [_roles.scss](../../src/styles/_roles.scss) | Colores de los papeles de la frase de Gramática fácil: `[data-role='…']` pone `--role` (un color del tema) y `--role-soft`; `.role-dot` |
+| 13 | [_overlays.scss](../../src/styles/_overlays.scss) | Estado vacío (`.empty`, `.empty .glyph`) y hojas inferiores (`.sheet-backdrop`, `.sheet`, `.sheet .grab`) |
+| 14 | [_motion.scss](../../src/styles/_motion.scss) | `prefers-reduced-motion`: animaciones y transiciones a 0.01 ms |
 
 Los parciales no exportan variables ni mixins de Sass: solo emiten CSS. Los colores se comparten con variables CSS (`var(--accent)`), no con variables Sass, para que el tema se pueda cambiar en vivo.
 
 ### Qué ve el usuario
 
-- En **Perfil → Ajustes** elige una de las 4 plantillas visuales. Toda la app cambia al momento, incluida la barra del sistema del móvil (`theme-color`).
+- En **Perfil → Configuración** elige una de las 4 plantillas visuales. Toda la app cambia al momento, incluida la barra del sistema del celular (`theme-color`).
 - En **Perfil → Escritura japonesa** elige solo kana, kanji con furigana o kanji. Con furigana las líneas japonesas se separan más para que quepan las lecturas.
 - Si el sistema pide **menos movimiento**, las animaciones y transiciones casi desaparecen.
 

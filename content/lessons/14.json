@@ -39,7 +39,7 @@
    "id": "L14-005",
    "kana": "いそぎます",
    "kanji": "急ぎます",
-   "es": "darse prisa",
+   "es": "apurarse, darse prisa",
    "type": "verb",
    "lesson": 14
   },
@@ -55,7 +55,7 @@
    "id": "L14-007",
    "kana": "とめます",
    "kanji": "止めます",
-   "es": "parar, aparcar",
+   "es": "parar, estacionar",
    "type": "verb",
    "lesson": 14
   },
@@ -79,7 +79,7 @@
    "id": "L14-010",
    "kana": "とります",
    "kanji": "取ります",
-   "es": "tomar, coger, pasar (algo)",
+   "es": "tomar, agarrar, pasar (algo)",
    "type": "verb",
    "lesson": 14
   },
@@ -269,7 +269,7 @@
   {
    "id": "L14-035",
    "kana": "さあ",
-   "es": "¡venga! (para animar)",
+   "es": "¡vamos! (para animar)",
    "type": "expr",
    "lesson": 14
   },
@@ -291,7 +291,7 @@
   {
    "id": "L14-038",
    "kana": "まっすぐ",
-   "es": "todo recto",
+   "es": "todo derecho",
    "type": "adv",
    "lesson": 14
   },
@@ -307,7 +307,7 @@
    "id": "L14-040",
    "kana": "おつり",
    "kanji": "お釣り",
-   "es": "cambio, vuelta",
+   "es": "cambio, vuelto",
    "type": "noun",
    "lesson": 14
   },
@@ -405,7 +405,7 @@
    "examples": [
     {
      "jp": "取ります → 取って、急ぎます → 急いで、行きます → 行って",
-     "es": "tomar, darse prisa, ir (excepción)"
+     "es": "tomar, apurarse, ir (excepción)"
     }
    ]
   },
@@ -483,7 +483,7 @@
   },
   {
    "jp": "少し 急いで ください。",
-   "es": "Dese un poco de prisa, por favor."
+   "es": "Apúrese un poco, por favor."
   },
   {
    "jp": "あの 信号を 左へ 曲がって ください。",
@@ -582,7 +582,7 @@
      "who": "A",
      "name": "なかむら",
      "jp": "東京駅の 近くまで お願いします。少し 急いで ください。",
-     "es": "Cerca de la estación de Tokio, por favor. Dese un poco de prisa."
+     "es": "Cerca de la estación de Tokio, por favor. Apúrese un poco."
     },
     {
      "who": "A",
@@ -642,12 +642,12 @@
     {
      "kana": "きっぷうりば",
      "kanji": "切符売り場",
-     "es": "taquilla de billetes"
+     "es": "taquilla de boletos"
     },
     {
      "kana": "じどうけんばいき",
      "kanji": "自動券売機",
-     "es": "máquina de billetes"
+     "es": "máquina de boletos"
     },
     {
      "kana": "せいさんき",
@@ -657,7 +657,7 @@
     {
      "kana": "かいさつぐち",
      "kanji": "改札口",
-     "es": "torniquetes, control de billetes"
+     "es": "torniquetes, control de boletos"
     },
     {
      "kana": "でぐち",
@@ -707,7 +707,7 @@
     {
      "kana": "コインロッカー",
      "kanji": "",
-     "es": "consigna automática"
+     "es": "casilleros (lockers)"
     },
     {
      "kana": "タクシーのりば",
@@ -772,12 +772,12 @@
     {
      "kana": "ていきけん",
      "kanji": "定期券",
-     "es": "abono de transporte"
+     "es": "pase de transporte"
     },
     {
      "kana": "かいすうけん",
      "kanji": "回数券",
-     "es": "bono de varios viajes"
+     "es": "boletos de varios viajes"
     },
     {
      "kana": "かたみち",

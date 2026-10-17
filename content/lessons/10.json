@@ -2,7 +2,7 @@
  "id": 10,
  "title": "¿No tienen salsa de soya?",
  "titleJp": "しょうゆは ありませんか",
- "summary": "En el supermercado, Lucía busca salsa de soya y salsa de chile con ayuda de un dependiente. Mientras tanto, Anna se pierde en la enorme estación de Tokio buscando el café donde la espera Carlos.",
+ "summary": "En el supermercado, Lucía busca salsa de soya y salsa de chile con ayuda de un empleado. Mientras tanto, Anna se pierde en la enorme estación de Tokio buscando el café donde la espera Carlos.",
  "vocab": [
   {
    "id": "L10-001",
@@ -92,7 +92,7 @@
   {
    "id": "L10-012",
    "kana": "フィルム",
-   "es": "carrete de fotos",
+   "es": "rollo de fotos",
    "type": "noun",
    "lesson": 10
   },
@@ -123,7 +123,7 @@
    "id": "L10-016",
    "kana": "れいぞうこ",
    "kanji": "冷蔵庫",
-   "es": "nevera, frigorífico",
+   "es": "refrigerador",
    "type": "noun",
    "lesson": 10
   },
@@ -571,7 +571,7 @@
    "tags": [
     "comida"
    ],
-   "situation": "Lucía no encuentra la salsa de soya en el supermercado y le pregunta a un dependiente.",
+   "situation": "Lucía no encuentra la salsa de soya en el supermercado y le pregunta a un empleado.",
    "lines": [
     {
      "who": "A",
@@ -642,7 +642,7 @@
    "tags": [
     "viajes"
    ],
-   "situation": "Anna llega a la estación de Tokio y llama a Carlos porque no encuentra la cafetería donde quedaron.",
+   "situation": "Anna llega a la estación de Tokio y llama a Carlos porque no encuentra la cafetería donde quedaron de verse.",
    "lines": [
     {
      "who": "A",
@@ -714,22 +714,22 @@
     {
      "kana": "げんかん",
      "kanji": "玄関",
-     "es": "entrada, recibidor"
+     "es": "entrada (de la casa)"
     },
     {
      "kana": "トイレ",
      "kanji": "",
-     "es": "aseo, váter"
+     "es": "baño, inodoro"
     },
     {
      "kana": "ふろば",
      "kanji": "風呂場",
-     "es": "cuarto de baño (bañera)"
+     "es": "cuarto de baño (tina)"
     },
     {
      "kana": "せんめんじょ",
      "kanji": "洗面所",
-     "es": "lavabo"
+     "es": "lavamanos"
     },
     {
      "kana": "だいどころ",
@@ -749,7 +749,7 @@
     {
      "kana": "しんしつ",
      "kanji": "寝室",
-     "es": "dormitorio"
+     "es": "recámara, cuarto"
     },
     {
      "kana": "ろうか",

@@ -1,6 +1,6 @@
 /**
  * Generadores de preguntas del motor compartido: kana, katakana de préstamo, vocabulario, frases
- * (ordenar, partícula, significado, pronunciar) y verbos. Todos devuelven `Question[]` listas para
+ * (ordenar, partícula, significado, pronunciar), verbos y gramática fácil. Todos devuelven `Question[]` listas para
  * `app-question-runner`. También reúne las ayudas para limpiar las formas de una palabra
  * (`cleanForm`, `wordMain`, `wordReading`), que usan muchas vistas y `tools/build-audio.mjs`.
  */
@@ -12,6 +12,20 @@ import { ChoiceQuestion, OrderQuestion, Question, SpeakQuestion, TypeQuestion } 
 import { Sentence, Word } from '../interfaces/lesson.interface';
 import { choicesWith, pick, sample, shortEs, shuffle, tokens } from './text.utils';
 import { KanaMode, VocabMode, SentenceMode, VerbForm } from '../interfaces/question.interface';
+import { BlockRole, GrammarDrill, GuideSentence } from '../interfaces/grammar-guide.interface';
+import {
+    blankIndex,
+    blockText,
+    GRAMMAR_CONCEPTS,
+    interestSentences,
+    MAIN_TEMPLATE,
+    PARTICLE_GUIDES,
+    PARTICLE_PAIRS,
+    ROLE_INFO,
+    SENTENCE_MOLDS,
+    sentenceText,
+    WORKED_EXAMPLES,
+} from './grammar-guide.utils';
 
 /** Partículas que `splitParticle` y `particleQuestion` buscan al final de un trozo (las largas primero) */
 const PARTICLES = ['から', 'まで', 'は', 'を', 'へ', 'が', 'に', 'で', 'と', 'も', 'の'];
@@ -555,6 +569,198 @@ export function verbQuestions(verbs: VerbEntry[], forms: VerbForm[], count: numb
     });
 }
 // ------------------------------- Verbos ------------------------------------------------------------- //
+
+// ------------------------------- Gramática fácil ------------------------------------------------------------- //
+/** Veces que se repiten las frases de los intereses del usuario en los ejercicios de gramática */
+const GRAMMAR_INTEREST_WEIGHT = 2;
+
+/** Partículas que dejan mover su trozo dentro de la frase en «Arma la frase» */
+const MOVABLE_PARTICLES = ['が', 'を', 'に', 'で', 'へ', 'と'];
+
+/** Papeles que se preguntan en «¿Qué papel cumple?» ('extra' mezcla demasiados usos para preguntarlo) */
+const ASKABLE_ROLES: BlockRole[] = ['topic', 'subject', 'object', 'place', 'time', 'describe', 'verb'];
+
+/**
+ * Papeles que no se ofrecen como distractor de otro porque podrían ser respuesta válida:
+ * きょうは es tema y también «cuándo»; じょうずです al final es la acción y también «cómo es»
+ */
+const OVERLAPPING_ROLES: Partial<Record<BlockRole, BlockRole[]>> = {
+    topic: ['time', 'place'],
+    time: ['topic'],
+    place: ['topic'],
+    verb: ['describe'],
+    describe: ['verb'],
+};
+
+/** Genera `count` ejercicios de gramática fácil; las frases de los intereses del usuario salen más */
+export function grammarQuestions(drill: GrammarDrill, interests: string[], count: number): Question[] {
+    // 1. Reunir las frases: las de las fichas y las de los intereses (repetidas para que salgan más)
+    const ownSentences = interestSentences(interests);
+    const weighted = interests.length ? Array.from({ length: GRAMMAR_INTEREST_WEIGHT }, () => ownSentences).flat() : ownSentences;
+    const guideExamples = PARTICLE_GUIDES.flatMap((guide) =>
+        [...guide.examples, ...(guide.extraUses ?? []).flatMap((use) => use.examples)].map((sentence) => ({ sentence, forms: guide.forms })),
+    );
+    const particlePool: { sentence: GuideSentence; forms: string[] }[] = [...guideExamples, ...weighted.map((sentence) => ({ sentence, forms: [] }))].filter(
+        ({ sentence, forms }) => !!sentence.distractors?.length && blankIndex(sentence, forms) >= 0,
+    );
+    const generalPool = [
+        ...GRAMMAR_CONCEPTS.flatMap((concept) => concept.examples),
+        ...guideExamples.map(({ sentence }) => sentence),
+        ...PARTICLE_PAIRS.flatMap((pair) => pair.sides.map((side) => side.sentence)),
+        ...SENTENCE_MOLDS.flatMap((mold) => mold.examples),
+        ...WORKED_EXAMPLES.map((example) => example.result),
+        MAIN_TEMPLATE,
+        ...weighted,
+    ];
+    const buildPool = generalPool.filter((sentence) => sentence.blocks.length >= 3);
+
+    // 2. Repartir los tipos: en 'mixed' se van turnando
+    const kinds: GrammarDrill[] = drill === 'mixed' ? ['particles', 'roles', 'build'] : [drill];
+    const questions: Question[] = [];
+    const used = new Set<string>();
+    for (let attempt = 0; questions.length < count && attempt < count * 6; attempt++) {
+        const kind = kinds[questions.length % kinds.length];
+        let question: Question | null;
+        if (kind === 'particles') {
+            const { sentence, forms } = pick(particlePool);
+            question = grammarParticleQuestion(sentence, forms);
+        } else if (kind === 'roles') {
+            question = grammarRoleQuestion(pick(generalPool));
+        } else {
+            question = grammarBuildQuestion(pick(buildPool));
+        }
+        // 3. No repetir la misma frase con el mismo ejercicio en una ronda
+        const key = question ? `${kind}:${question.prompt}` : '';
+        if (!question || used.has(key)) continue;
+        used.add(key);
+        questions.push(question);
+    }
+    return questions;
+}
+
+/** Tapa la partícula de una frase guiada y la ofrece junto a sus distractores; al corregir explica por qué va */
+function grammarParticleQuestion(sentence: GuideSentence, forms: string[]): ChoiceQuestion | null {
+    const index = blankIndex(sentence, forms);
+    const answer = sentence.blocks[index]?.particle;
+    if (!answer || !sentence.distractors?.length) return null;
+    const shown = sentence.blocks
+        .map((sentenceBlock, blockIndex) => (blockIndex === index ? sentenceBlock.word + '＿＿' + (sentenceBlock.comma ? '、' : '') : blockText(sentenceBlock)))
+        .join(' ');
+    return {
+        id: nextQuestionId(),
+        kind: 'choice',
+        // La etiqueta dice «partícula» para que skillOf la cuente como habilidad de partículas
+        label: '¿Qué partícula va?',
+        prompt: shown + '。',
+        sub: sentence.es,
+        promptStyle: 'jp',
+        choices: shuffle([answer, ...sentence.distractors.filter((particle) => particle !== answer).slice(0, 3)]),
+        answer,
+        choiceStyle: 'jp',
+        audio: sentenceText(sentence),
+        explain: sentence.why,
+    };
+}
+
+/** Marca un trozo de la frase entre 【】 y pregunta qué papel cumple */
+function grammarRoleQuestion(sentence: GuideSentence): ChoiceQuestion | null {
+    // El final de la primera de dos frases (むずかしいですが、) es «acción», pero no está «al final»: no se pregunta
+    const lastIndex = sentence.blocks.length - 1;
+    const candidates = sentence.blocks
+        .map((sentenceBlock, index) => ({ sentenceBlock, index }))
+        .filter(({ sentenceBlock, index }) => ASKABLE_ROLES.includes(sentenceBlock.role) && (sentenceBlock.role !== 'verb' || index === lastIndex));
+    if (sentence.blocks.length < 2 || !candidates.length) return null;
+    const { sentenceBlock, index } = pick(candidates);
+    const answer = ROLE_INFO[sentenceBlock.role].label;
+    const blocked = OVERLAPPING_ROLES[sentenceBlock.role] ?? [];
+    const others = ASKABLE_ROLES.filter((role) => role !== sentenceBlock.role && !blocked.includes(role)).map((role) => ROLE_INFO[role].label);
+    const shown = sentence.blocks
+        .map((otherBlock, blockIndex) => (blockIndex === index ? `【${blockText(otherBlock)}】` : blockText(otherBlock)))
+        .join(' ');
+    return {
+        id: nextQuestionId(),
+        kind: 'choice',
+        label: '¿Qué papel cumple lo marcado?',
+        prompt: shown + '。',
+        sub: sentence.es,
+        promptStyle: 'jp',
+        choices: shuffle([answer, ...sample(others, 3)]),
+        answer,
+        choiceStyle: 'es',
+        audio: sentenceText(sentence),
+        explain: ROLE_INFO[sentenceBlock.role].hint,
+    };
+}
+
+/** Pide ordenar los trozos de una frase guiada; al fallar enseña el papel de cada trozo en orden */
+function grammarBuildQuestion(sentence: GuideSentence): OrderQuestion {
+    const answer = sentence.blocks.map(blockText);
+    // El 。 va pegado al último trozo, como en las frases de las lecciones
+    answer[answer.length - 1] += '。';
+    return {
+        id: nextQuestionId(),
+        kind: 'order',
+        label: 'Arma la frase',
+        prompt: sentence.es,
+        promptStyle: 'es',
+        tokens: shuffleDifferent(answer),
+        answer,
+        alternatives: alternativeOrders(sentence, answer),
+        audio: sentenceText(sentence),
+        explain: sentence.blocks.map((sentenceBlock) => `${blockText(sentenceBlock)} (${ROLE_INFO[sentenceBlock.role].label.toLowerCase()})`).join(' → '),
+    };
+}
+
+/**
+ * Devuelve los otros órdenes válidos de una frase guiada: los trozos con partícula de papel propio
+ * (が, を, に, で, へ, と) y las palabras de tiempo pueden cambiar de sitio entre ellos. El tema del
+ * principio y el verbo del final no se mueven, y lo que describe a otra palabra (この, わたしの, おおきい…)
+ * viaja pegado a ella.
+ */
+function alternativeOrders(sentence: GuideSentence, tokens: string[]): string[][] {
+    // 0. Con dos frases unidas (…が、… / …から、…) los trozos no pueden saltar de una a otra: solo vale el orden original
+    if (sentence.blocks.some((sentenceBlock, index) => sentenceBlock.role === 'verb' && index < sentence.blocks.length - 1)) return [];
+
+    // 1. Agrupar en unidades: un modificador se une al trozo que le sigue
+    const units: { tokens: string[]; isMovable: boolean; isTime: boolean }[] = [];
+    let pending: string[] = [];
+    sentence.blocks.forEach((sentenceBlock, index) => {
+        pending.push(tokens[index]);
+        const isLast = index === sentence.blocks.length - 1;
+        // の, や y か (A o B) unen con la palabra siguiente, igual que と cuando es una lista (パンと たまごを)
+        const isModifier =
+            ['の', 'や', 'か'].includes(sentenceBlock.particle ?? '') ||
+            (!sentenceBlock.particle && sentenceBlock.role !== 'time') ||
+            (sentenceBlock.particle === 'と' && sentenceBlock.role === 'object');
+        if (isModifier && !isLast) return;
+        const isTopicFirst = !units.length && sentenceBlock.role === 'topic';
+        const isMovable =
+            !isLast && !isTopicFirst && (MOVABLE_PARTICLES.includes(sentenceBlock.particle ?? '') || (!sentenceBlock.particle && sentenceBlock.role === 'time'));
+        units.push({ tokens: pending, isMovable, isTime: sentenceBlock.role === 'time' });
+        pending = [];
+    });
+
+    // 2. Permutar las unidades movibles en sus mismos huecos (sin repetir el orden original). Las de tiempo
+    //    guardan su orden entre ellas: «あした 7じに» vale, «7じに あした» suena raro
+    const movable = units.filter((unit) => unit.isMovable);
+    if (movable.length < 2) return [];
+    const original = tokens.join(' ');
+    const timeOrder = movable.filter((unit) => unit.isTime);
+    return permutations(movable)
+        .filter((order) => order.filter((unit) => unit.isTime).every((unit, index) => unit === timeOrder[index]))
+        .map((order) => {
+            let next = 0;
+            return units.flatMap((unit) => (unit.isMovable ? order[next++].tokens : unit.tokens));
+        })
+        .filter((alternative) => alternative.join(' ') !== original);
+}
+
+/** Devuelve todas las permutaciones de una lista corta */
+function permutations<T>(items: T[]): T[][] {
+    if (items.length <= 1) return [items];
+    return items.flatMap((item, index) => permutations([...items.slice(0, index), ...items.slice(index + 1)]).map((rest) => [item, ...rest]));
+}
+// ------------------------------- Gramática fácil ------------------------------------------------------------- //
 
 // ------------------------------- Otros ------------------------------------------------------------- //
 /** Pasa un texto a katakana (envoltorio de `toKatakana` de wanakana) */

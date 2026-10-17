@@ -29,7 +29,7 @@
   {
    "id": "L22-004",
    "kana": "かけます",
-   "es": "ponerse [gafas]",
+   "es": "ponerse [lentes]",
    "type": "verb",
    "lesson": 22
   },
@@ -58,7 +58,7 @@
   {
    "id": "L22-008",
    "kana": "セーター",
-   "es": "jersey, suéter",
+   "es": "suéter",
    "type": "noun",
    "lesson": 22
   },
@@ -74,7 +74,7 @@
    "id": "L22-010",
    "kana": "めがね",
    "kanji": "眼鏡",
-   "es": "gafas",
+   "es": "lentes",
    "type": "noun",
    "lesson": 22
   },
@@ -133,7 +133,7 @@
    "id": "L22-018",
    "kana": "おしいれ",
    "kanji": "押し入れ",
-   "es": "armario empotrado japonés",
+   "es": "clóset japonés",
    "type": "noun",
    "lesson": 22
   },
@@ -148,7 +148,7 @@
   {
    "id": "L22-020",
    "kana": "アパート",
-   "es": "piso, apartamento",
+   "es": "departamento, apartamento",
    "type": "noun",
    "lesson": 22
   },
@@ -521,7 +521,7 @@
     {
      "kana": "うわぎ",
      "kanji": "上着",
-     "es": "chaqueta"
+     "es": "saco"
     },
     {
      "kana": "ズボン",
@@ -536,7 +536,7 @@
     {
      "kana": "ジーンズ",
      "kanji": "",
-     "es": "vaqueros"
+     "es": "jeans"
     },
     {
      "kana": "スカート",
@@ -556,7 +556,7 @@
     {
      "kana": "セーター",
      "kanji": "",
-     "es": "jersey, suéter"
+     "es": "suéter"
     },
     {
      "kana": "マフラー",
@@ -626,7 +626,7 @@
     {
      "kana": "うんどうぐつ",
      "kanji": "運動靴",
-     "es": "zapatillas de deporte"
+     "es": "tenis"
     },
     {
      "kana": "ぞうり",

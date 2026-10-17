@@ -141,7 +141,7 @@ export class PetHouseComponent implements OnInit, OnDestroy {
         return [
             { id: 'food', icon: 'rice', label: 'Panza', value: petState.food, text: describe(petState.food, ['Con mucha hambre', 'Tiene hambre', 'Le vendría bien comer', 'Lleno y feliz']) },
             { id: 'joy', icon: 'heart', label: 'Alegría', value: petState.joy, text: describe(petState.joy, ['Te extraña', 'Un poco triste', 'Contento', '¡Feliz!']) },
-            { id: 'energy', icon: 'moon', label: 'Energía', value: petState.energy, text: describe(petState.energy, ['Muy cansado', 'Se va cansando', 'Con energía', '¡A tope!']) },
+            { id: 'energy', icon: 'moon', label: 'Energía', value: petState.energy, text: describe(petState.energy, ['Muy cansado', 'Se va cansando', 'Con energía', '¡Al máximo!']) },
         ];
     });
 

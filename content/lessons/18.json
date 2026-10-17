@@ -2,7 +2,7 @@
  "id": 18,
  "title": "Lo que sabemos hacer",
  "titleJp": "趣味は ピアノを 弾く ことです",
- "summary": "En el café Komorebi, Yui cuenta que su afición es tocar el piano y Anna dice que sabe conducir. Después, Lucía llama para reservar una clase de ceremonia del té.",
+ "summary": "En el café Komorebi, Yui cuenta que su afición es tocar el piano y Anna dice que sabe manejar. Después, Lucía llama para reservar una clase de ceremonia del té.",
  "vocab": [
   {
    "id": "L18-001",
@@ -63,7 +63,7 @@
    "id": "L18-008",
    "kana": "うんてんします",
    "kanji": "運転します",
-   "es": "conducir",
+   "es": "manejar",
    "type": "verb",
    "lesson": 18
   },
@@ -180,7 +180,7 @@
   {
    "id": "L18-023",
    "kana": "へえ",
-   "es": "¡Anda! ¡Vaya!",
+   "es": "¡Oh! ¡Vaya!",
    "type": "expr",
    "lesson": 18
   },
@@ -235,7 +235,7 @@
   },
   {
    "jp": "アンナさんは 車の 運転が できます。",
-   "es": "Anna sabe conducir."
+   "es": "Anna sabe manejar."
   },
   {
    "jp": "わたしの 趣味は 料理を 作る ことです。",
@@ -307,7 +307,7 @@
     },
     {
      "jp": "すてます → すてる、うんてんします → うんてんする",
-     "es": "tirar, conducir"
+     "es": "tirar, manejar"
     }
    ]
   },
@@ -317,7 +317,7 @@
    "examples": [
     {
      "jp": "アンナさんは 車の 運転が できます。",
-     "es": "Anna sabe conducir."
+     "es": "Anna sabe manejar."
     },
     {
      "jp": "ここで カードを 使う ことが できます。",
@@ -385,7 +385,7 @@
   },
   {
    "jp": "へえ、すてきですね。",
-   "es": "¡Anda, qué bonito!"
+   "es": "¡Oh, qué bonito!"
   },
   {
    "jp": "ほんとうですか。",
@@ -404,11 +404,11 @@
   {
    "id": "L18-c1",
    "lesson": 18,
-   "title": "Piano y coche",
+   "title": "Piano y auto",
    "tags": [
     "musica"
    ],
-   "situation": "En el café Komorebi, los amigos hablan de sus aficiones: Yui toca el piano y Anna sabe conducir.",
+   "situation": "En el café Komorebi, los amigos hablan de sus aficiones: Yui toca el piano y Anna sabe manejar.",
    "lines": [
     {
      "who": "A",
@@ -426,25 +426,25 @@
      "who": "B",
      "name": "カルロス",
      "jp": "へえ、すてきですね。",
-     "es": "¡Anda, qué bonito!"
+     "es": "¡Oh, qué bonito!"
     },
     {
      "who": "A",
      "name": "ルシア",
      "jp": "アンナさんは 車を 運転する ことが できますか。",
-     "es": "Anna, ¿tú sabes conducir?"
+     "es": "Anna, ¿tú sabes manejar?"
     },
     {
      "who": "A",
      "name": "アンナ",
      "jp": "ええ、できます。週末は よく 車で 山へ 行きます。",
-     "es": "Sí. Los fines de semana voy mucho a la montaña en coche."
+     "es": "Sí. Los fines de semana voy mucho a la montaña en auto."
     },
     {
      "who": "B",
      "name": "カルロス",
      "jp": "いいですね。わたしは 運転が 全然 できません。",
-     "es": "¡Qué bien! Yo no sé conducir nada."
+     "es": "¡Qué bien! Yo no sé manejar nada."
     },
     {
      "who": "A",
@@ -482,7 +482,7 @@
      "who": "B",
      "name": "うけつけ",
      "jp": "はい、お茶の 教室です。",
-     "es": "Escuela de ceremonia del té, dígame."
+     "es": "Escuela de ceremonia del té, buenas tardes."
     },
     {
      "who": "A",
@@ -583,7 +583,7 @@
     {
      "kana": "さかだちする",
      "kanji": "逆立ちする",
-     "es": "hacer el pino"
+     "es": "pararse de manos"
     },
     {
      "kana": "はう",

@@ -1,0 +1,22 @@
+<!-- Trozos de la frase con el color de su papel -->
+<div class="sb">
+    <div class="blocks">
+        @for (sentenceBlock of sentence().blocks; track $index) {
+            <span class="block" [attr.data-role]="sentenceBlock.role">
+                <span class="jp chunk">{{ sentenceBlock.word }}@if (sentenceBlock.particle) {<b class="particle">{{ sentenceBlock.particle }}</b>}@if (sentenceBlock.comma) {、}</span>
+                @if (showRoles()) {
+                    <span class="role">{{ roleInfo[sentenceBlock.role].label }}</span>
+                }
+            </span>
+        }
+        <app-speak class="say" [text]="text()" />
+    </div>
+
+    <!-- Romaji (si está activado en Perfil) y traducción -->
+    @if (romajiText()) {
+        <div class="small muted rom">{{ romajiText() }}</div>
+    }
+    @if (!hideEs()) {
+        <div class="small es">{{ sentence().es }}</div>
+    }
+</div>

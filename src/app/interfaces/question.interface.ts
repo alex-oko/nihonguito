@@ -51,6 +51,8 @@ export interface OrderQuestion extends QuestionBase {
     kind: 'order';
     tokens: string[];
     answer: string[];
+    /** Otros órdenes que también son correctos (en japonés el medio de la frase se puede mover) */
+    alternatives?: string[][];
 }
 
 /** Decir en voz alta el texto `target` */

@@ -1,0 +1,42 @@
+/* ---- Trozos de colores (el color sale de data-role, ver styles/_roles.scss) ---- */
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+}
+.block {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 9px;
+    border-radius: var(--r-sm);
+    background: var(--role-soft);
+    border-bottom: 3px solid var(--role);
+}
+.chunk {
+    font-size: 1.05rem;
+    color: var(--ink);
+}
+.particle {
+    color: var(--role);
+    font-weight: 800;
+}
+.role {
+    font-size: 0.68rem;
+    color: var(--role);
+    font-weight: 600;
+    white-space: nowrap;
+}
+.say {
+    margin-left: auto;
+}
+/* ---- Romaji y traducción ---- */
+.rom {
+    margin-top: 6px;
+}
+.es {
+    margin-top: 4px;
+    color: var(--ink-2);
+}

@@ -205,7 +205,7 @@
   {
    "id": "L02-028",
    "kana": "コンピューター",
-   "es": "ordenador, computadora",
+   "es": "computadora",
    "type": "noun",
    "lesson": 2
   },
@@ -479,7 +479,7 @@
   },
   {
    "title": "N1 の N2 — de qué trata / de quién es",
-   "explain": "Con の, la primera palabra describe a la segunda. Puede decir el tema ('libro de coches') o el dueño ('mi libro', 'el paraguas de Yui'). El orden es al revés que en español: primero el dueño o el tema, luego la cosa. Si ya se sabe de qué cosa hablamos, puedes quitar N2 (わたしの = 'el mío'), pero nunca lo quites si N2 es una persona.",
+   "explain": "Con の, la primera palabra describe a la segunda. Puede decir el tema ('libro de autos') o el dueño ('mi libro', 'el paraguas de Yui'). El orden es al revés que en español: primero el dueño o el tema, luego la cosa. Si ya se sabe de qué cosa hablamos, puedes quitar N2 (わたしの = 'el mío'), pero nunca lo quites si N2 es una persona.",
    "examples": [
     {
      "jp": "これは カメラの 本です。",
@@ -493,7 +493,7 @@
   },
   {
    "title": "そうですか — 'ah, ya veo'",
-   "explain": "Se dice al recibir una información nueva, para mostrar que la has entendido. Se pronuncia bajando el tono al final; no es una pregunta real, es como decir '¡ah, vale!' o 'ya veo'.",
+   "explain": "Se dice al recibir una información nueva, para mostrar que la has entendido. Se pronuncia bajando el tono al final; no es una pregunta real, es como decir '¡ah, ok!' o 'ya veo'.",
    "examples": [
     {
      "jp": "この ノートは きのしたさんのですか。…いいえ、カルロスさんのです。…そうですか。",

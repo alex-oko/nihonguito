@@ -117,7 +117,7 @@
    "id": "L05-015",
    "kana": "あるいて",
    "kanji": "歩いて",
-   "es": "a pie, andando",
+   "es": "a pie, caminando",
    "type": "adv",
    "lesson": 5
   },
@@ -574,7 +574,7 @@
     },
     {
      "jp": "アンナさんは 駅から 歩いて 帰ります。",
-     "es": "Anna vuelve andando desde la estación."
+     "es": "Anna vuelve caminando desde la estación."
     }
    ]
   },
@@ -604,7 +604,7 @@
   },
   {
    "title": "〜よ — te lo digo yo",
-   "explain": "よ al final de la frase sirve para darle al otro una información que no sabe o para insistir en tu opinión. Es como '¡eh!, que…' o 'te aviso de que…'. No lo uses demasiado con superiores: puede sonar insistente.",
+   "explain": "よ al final de la frase sirve para darle al otro una información que no sabe o para insistir en tu opinión. Es como 'oye, que…' o 'te aviso que…'. No lo uses demasiado con superiores: puede sonar insistente.",
    "examples": [
     {
      "jp": "この 電車は 横浜へ 行きませんよ。",
@@ -926,7 +926,7 @@
   },
   {
    "jp": "日本語の 学校へ 歩いて 行きます。",
-   "es": "Voy andando a la escuela de japonés.",
+   "es": "Voy caminando a la escuela de japonés.",
    "tags": [
     "estudios"
    ]
@@ -982,7 +982,7 @@
   },
   {
    "jp": "ピアノの 先生の うちへ 歩いて 行きます。",
-   "es": "Voy andando a casa de mi profesora de piano.",
+   "es": "Voy caminando a casa de mi profesora de piano.",
    "tags": [
     "musica"
    ]

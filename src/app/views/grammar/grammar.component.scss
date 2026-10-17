@@ -1,0 +1,260 @@
+/* ---- Comunes ---- */
+.intro {
+    margin: -4px 0 14px;
+}
+.top {
+    margin-top: 16px;
+}
+.t {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.t small {
+    font-weight: 400;
+    margin-left: 4px;
+}
+.body {
+    line-height: 1.65;
+    color: var(--ink-2);
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.d {
+    display: block;
+    line-height: 1.4;
+}
+.go {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+.ex {
+    display: block;
+    padding: 10px 0;
+}
+.ex + .ex {
+    border-top: 1px dashed var(--line);
+}
+.stack-sm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---- Tarjetas desplegables ---- */
+.fold {
+    padding: 0;
+}
+.fold-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+}
+.chev {
+    transition: transform 0.15s;
+    color: var(--muted);
+}
+.fold.open .chev {
+    transform: rotate(90deg);
+}
+.fold-body {
+    padding: 0 16px 14px;
+}
+.tip {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    background: var(--gold-soft);
+    color: var(--ink);
+    line-height: 1.5;
+}
+.tip app-icon {
+    flex: none;
+    color: var(--gold);
+    margin-top: 1px;
+}
+
+/* ---- Lo básico: leyenda de colores ---- */
+.legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+.legend-row {
+    display: grid;
+    grid-template-columns: 10px auto;
+    column-gap: 10px;
+    align-items: center;
+}
+.legend-row .small {
+    grid-column: 2;
+}
+.legend-row b {
+    color: var(--role);
+}
+
+/* ---- Partículas ---- */
+/* Ancho mínimo cuadrado; crece en las fichas dobles como から・まで */
+.glyph {
+    min-width: 48px;
+    height: 48px;
+    padding: 0 6px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ask {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: var(--r-sm);
+    background: var(--surface-2);
+    margin: 0 0 8px;
+}
+.trap {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    background: var(--bad-soft);
+    color: var(--ink);
+    line-height: 1.5;
+}
+.mine {
+    margin-top: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+}
+.cheat {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+.cheat-title {
+    margin-top: 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+/* Otro uso de la misma partícula, separado de los ejemplos principales */
+.use {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+.use-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+.cheat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+.cheat-row + .cheat-row {
+    border-top: 1px solid var(--line);
+}
+.cheat-p {
+    color: var(--role);
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+.sides {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+.side .badge {
+    margin-bottom: 6px;
+}
+
+/* ---- Armar frases ---- */
+.rules,
+.fill,
+.steps {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.fill {
+    margin-bottom: 12px;
+}
+.chips {
+    margin: 10px 0;
+}
+.target {
+    font-weight: 600;
+    margin: 6px 0 4px;
+}
+.steps li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.step-block {
+    padding: 3px 9px;
+    border-radius: var(--r-sm);
+    background: var(--role-soft);
+    border-bottom: 3px solid var(--role);
+}
+.result {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.formula {
+    display: block;
+    color: var(--accent);
+    font-size: 0.92rem;
+}
+
+/* ---- Practicar ---- */
+.line {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+}
+.gi {
+    width: 38px;
+    height: 38px;
+    flex: none;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.hint {
+    margin-top: 14px;
+}

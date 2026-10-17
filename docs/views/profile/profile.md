@@ -69,7 +69,7 @@ Cada paso empieza en [profile.component.ts](../../../src/app/views/profile/profi
 
 Todas son `computed` sobre `ProgressService` y se recalculan solas: `accuracy`, `wordsLearned`, `kanaMastered`, `week` y `audioMb` ([reglas](#reglas)). La cabecera usa además `progressSVC.level()` y `stats().xp`; las cifras, `currentStreak()`.
 
-### 3. Ajustes
+### 3. Configuración
 
 - **`updateSetting(key, value)`**: `progressSVC.settings.update` con el campo nuevo. `nihongo:settings` se escribe solo (signal persistido) y el `effect` de `AppComponent` aplica tema y escritura.
 - **`toggleInterest(id)`**: añade o quita el id de `interests`.

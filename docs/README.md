@@ -37,6 +37,8 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Repaso](views/practice/review.md) | Cola Leitner y refuerzo. |
 | [Verbos](views/verbs/verbs.md) | Reglas, lista y configuración. |
 | [Práctica de verbos](views/verbs/verb-practice.md) | Ronda de conjugación. |
+| [Gramática fácil](views/grammar/grammar.md) | Partículas, orden de la frase y moldes, en palabras sencillas. |
+| [Práctica de gramática](views/grammar/grammar-practice.md) | Partículas, papeles y armar frases. |
 | [Anfitrión de juegos](views/game-host/game-host.md) | Selección y ejecución de juegos. |
 | [Exámenes](views/exams/exams.md) | Hub de simulacros y nivel. |
 | [Creador de examen](views/exams/exam-builder.md) | Lecciones, secciones, cantidad y modo. |
@@ -65,6 +67,7 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Memorama](components/match-game.md) | Parejas, rondas y recompensa. |
 | [Juego de velocidad](components/speed-game.md) | Tiempo, penalizaciones y puntuación. |
 | [Reloj de juego](components/game-timer.md) | Pulso y salida por tiempo. |
+| [Frase por trozos](components/sentence-blocks.md) | Trozos de colores por papel y partícula resaltada. |
 | [Casilla de examen](components/exam-slot.md) | Escritura, navegación y corrección. |
 | [Preparación para examen](components/exam-readiness.md) | Regla de 50 puntos y prioridades. |
 
@@ -91,4 +94,5 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Sesión guiada](utils/guided-session.utils.md) | Rotación de gramática y armado de pasos. |
 | [Habilidades](utils/skills.utils.md) | Clasificación y estadísticas. |
 | [Intereses](utils/interests.utils.md) | Etiquetas, filtro y ponderación. |
+| [Gramática fácil](utils/grammar-guide.utils.md) | Conceptos, partículas, moldes y frases por interés. |
 | [Tablero](utils/dashboard.utils.md) | Tonos, puntos débiles y preparación. |

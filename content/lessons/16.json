@@ -79,7 +79,7 @@
    "id": "L16-010",
    "kana": "おします",
    "kanji": "押します",
-   "es": "pulsar, empujar",
+   "es": "presionar, empujar",
    "type": "verb",
    "lesson": 16
   },
@@ -228,7 +228,7 @@
   {
    "id": "L16-029",
    "kana": "ジョギング",
-   "es": "footing (～を します: correr)",
+   "es": "jogging, trote (～を します: trotar)",
    "type": "noun",
    "lesson": 16
   },
@@ -342,7 +342,7 @@
    "id": "L16-044",
    "kana": "きんがく",
    "kanji": "金額",
-   "es": "importe, cantidad",
+   "es": "monto, cantidad",
    "type": "noun",
    "lesson": 16
   },
@@ -749,7 +749,7 @@
     {
      "kana": "おあずけいれ",
      "kanji": "お預け入れ",
-     "es": "ingreso"
+     "es": "depósito"
     },
     {
      "kana": "おふりこみ",
@@ -764,7 +764,7 @@
     {
      "kana": "おひきだし",
      "kanji": "お引き出し",
-     "es": "retirada de dinero"
+     "es": "retiro de dinero"
     },
     {
      "kana": "つうちょうきにゅう",
@@ -784,7 +784,7 @@
     {
      "kana": "えん",
      "kanji": "円",
-     "es": "yen (botón del importe)"
+     "es": "yen (botón del monto)"
     },
     {
      "kana": "かくにん",
@@ -795,7 +795,7 @@
   }
  ],
  "culture": [
-  "En los cajeros japoneses la cantidad se marca con cifras y botones como 万 (diez mil) y 円: para sacar 20,000 yenes se pulsa 2, 万 y 円. Fuera del horario del banco o en fin de semana suelen cobrar una pequeña comisión.",
+  "En los cajeros japoneses la cantidad se marca con cifras y botones como 万 (diez mil) y 円: para sacar 20,000 yenes se presiona 2, 万 y 円. Fuera del horario del banco o en fin de semana suelen cobrar una pequeña comisión.",
   "Kamakura está a una hora de Tokio en tren. Fue capital de Japón hace unos 800 años y hoy es famosa por su gran Buda de bronce, sus templos entre árboles y su playa."
  ],
  "extras": [

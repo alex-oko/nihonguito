@@ -66,6 +66,8 @@ Los colores de cada tema y las variables CSS están en [styles-and-themes.md](st
 | `repaso` | `ReviewComponent` | sí |
 | `verbos` | `VerbsComponent` | no |
 | `verbos/practica` | `VerbPracticeComponent` | sí |
+| `gramatica` | `GrammarComponent` ([doc](../views/grammar/grammar.md)) | no |
+| `gramatica/practica` | `GrammarPracticeComponent` ([doc](../views/grammar/grammar-practice.md)) | sí |
 | `conversaciones` | `ConversationsComponent` | no |
 | `perfil` | `ProfileComponent` ([doc](../views/profile/profile.md)) | no |
 | `**` | redirige a `''` | — |

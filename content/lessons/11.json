@@ -2,7 +2,7 @@
  "id": 11,
  "title": "Un paquete para México",
  "titleJp": "航空便で お願いします",
- "summary": "Lucía sale de casa con un paquete para su familia y en correos lo manda por avión a México. Después, en la oficina, Yui y ella hablan de cuántos hermanos tienen.",
+ "summary": "Lucía sale de casa con un paquete para su familia y en la oficina de correos lo manda por avión a México. Después, en la oficina, Yui y ella hablan de cuántos hermanos tienen.",
  "vocab": [
   {
    "id": "L11-001",
@@ -209,7 +209,7 @@
    "id": "L11-027",
    "kana": "きって",
    "kanji": "切手",
-   "es": "sello postal",
+   "es": "estampilla",
    "type": "noun",
    "lesson": 11
   },
@@ -576,7 +576,7 @@
   },
   {
    "title": "Dónde va la cantidad en la frase",
-   "explain": "La cantidad (número + contador) va normalmente justo delante del verbo, y sin partícula: りんごを よっつ かいました. No se dice よっつの りんごを como en español 'cuatro manzanas'. La duración de tiempo (２かげつ, ３ねん) es más libre y puede ir en otro sitio de la frase.",
+   "explain": "La cantidad (número + contador) va normalmente justo delante del verbo, y sin partícula: りんごを よっつ かいました. No se dice よっつの りんごを como en español 'cuatro manzanas'. La duración de tiempo (２かげつ, ３ねん) es más libre y puede ir en otro lugar de la frase.",
    "examples": [
     {
      "jp": "姉が 1人 います。",
@@ -590,7 +590,7 @@
   },
   {
    "title": "どのくらい — '¿cuánto tiempo?'",
-   "explain": "どのくらい pregunta por la duración de algo. Con かかります ('tardar') sirve para preguntar cuánto se tarda en ir de un sitio a otro: A から B まで どのくらい かかりますか. La respuesta usa las unidades de tiempo: ２じかん, ３しゅうかん, １ねん…",
+   "explain": "どのくらい pregunta por la duración de algo. Con かかります ('tardar') sirve para preguntar cuánto se tarda en ir de un lugar a otro: A から B まで どのくらい かかりますか. La respuesta usa las unidades de tiempo: ２じかん, ３しゅうかん, １ねん…",
    "examples": [
     {
      "jp": "東京から 京都まで どのくらい かかりますか。…新幹線で 2時間ぐらい かかります。",
@@ -648,7 +648,7 @@
   },
   {
    "jp": "ちょっと 郵便局まで。",
-   "es": "Voy un momento a correos."
+   "es": "Voy un momento a la oficina de correos."
   },
   {
    "jp": "行って いらっしゃい。",
@@ -680,7 +680,7 @@
      "who": "A",
      "name": "ルシア",
      "jp": "ええ、ちょっと 郵便局まで。",
-     "es": "Sí, voy un momento a correos."
+     "es": "Sí, voy un momento a la oficina de correos."
     },
     {
      "who": "B",
@@ -818,17 +818,17 @@
     {
      "kana": "てんどん",
      "kanji": "天どん",
-     "es": "bol de arroz con tempura"
+     "es": "tazón de arroz con tempura"
     },
     {
      "kana": "おやこどん",
      "kanji": "親子どん",
-     "es": "bol de arroz con pollo y huevo"
+     "es": "tazón de arroz con pollo y huevo"
     },
     {
      "kana": "ぎゅうどん",
      "kanji": "牛どん",
-     "es": "bol de arroz con ternera"
+     "es": "tazón de arroz con carne de res"
     },
     {
      "kana": "やきにく",
@@ -888,7 +888,7 @@
     {
      "kana": "おこのみやき",
      "kanji": "お好み焼き",
-     "es": "tortita japonesa salada"
+     "es": "panqueque japonés salado"
     },
     {
      "kana": "カレーライス",
@@ -898,7 +898,7 @@
     {
      "kana": "ハンバーグ",
      "kanji": "",
-     "es": "filete de carne picada"
+     "es": "filete de carne molida"
     },
     {
      "kana": "コロッケ",
@@ -908,7 +908,7 @@
     {
      "kana": "えびフライ",
      "kanji": "",
-     "es": "langostinos rebozados"
+     "es": "camarones empanizados"
     },
     {
      "kana": "フライドチキン",
@@ -928,7 +928,7 @@
     {
      "kana": "スパゲティー",
      "kanji": "",
-     "es": "espaguetis"
+     "es": "espagueti"
     },
     {
      "kana": "ピザ",
@@ -948,7 +948,7 @@
     {
      "kana": "トースト",
      "kanji": "",
-     "es": "tostada"
+     "es": "pan tostado"
     },
     {
      "kana": "コーヒー",
@@ -968,7 +968,7 @@
     {
      "kana": "ジュース",
      "kanji": "",
-     "es": "zumo"
+     "es": "jugo"
     },
     {
      "kana": "コーラ",

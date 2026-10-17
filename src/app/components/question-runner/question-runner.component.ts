@@ -326,13 +326,13 @@ export class QuestionRunnerComponent implements OnDestroy {
         this.picked.update((picked) => picked.filter((_, pickedPosition) => pickedPosition !== position));
     }
 
-    /** Comprueba el orden de las fichas comparando sin espacios */
+    /** Comprueba el orden de las fichas comparando sin espacios (también contra los órdenes alternativos) */
     protected submitOrder(): void {
         const question = this.orderQuestion();
         if (!question || this.phase() !== 'asking') return;
         const given = this.pickedTokens().join(' ');
-        const isCorrect = normJp(given) === normJp(question.answer.join(''));
-        this.resolve(isCorrect, question.answer.join(' '), given);
+        const matched = [question.answer, ...(question.alternatives ?? [])].find((accepted) => normJp(given) === normJp(accepted.join('')));
+        this.resolve(!!matched, (matched ?? question.answer).join(' '), given);
     }
 
     /** Escucha al usuario por el micrófono y puntúa su pronunciación */

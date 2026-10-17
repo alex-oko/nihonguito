@@ -33,7 +33,7 @@ Los datos llegan por [`LessonService`](lesson.service.md). Los ejercicios abren 
   - Chips de tipo (`typeFilters`): solo salen los tipos que la lección tiene.
   - Escritura (Solo kana / Kanji + furigana / Kanji) y casilla de romaji: cambian los **ajustes globales** del usuario, no solo esta pantalla.
   - Tocar una palabra la lee. El punto de la izquierda dice cuánto la dominas.
-- **Gramática**: tarjetas con explicación y ejemplos con botón de audio; abajo, «Practicar esta gramática» (`practica/grammar`).
+- **Gramática**: arriba, un atajo a [Gramática fácil](../grammar/grammar.md) («¿Te pierdes al armar frases?»); después, tarjetas con explicación y ejemplos con botón de audio; abajo, «Practicar esta gramática» (`practica/grammar`).
 - **Frases**: tocar una frase enseña u oculta su traducción (está desenfocada). Secciones: Frases para ti, Frases modelo, Preguntas y respuestas, Frases útiles del diálogo y enlaces a las conversaciones.
 - **Extra**: temas de vocabulario en acordeón (el primero abierto; tocar un elemento lo lee) y notas «Japón en la vida real».
 - Si la lección no existe: «No se pudo cargar la lección.».

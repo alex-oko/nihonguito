@@ -16,7 +16,7 @@
   },
   {
    "title": "Repaso: も",
-   "explain": "Significa 'también' (L1) o, con números, 'nada menos que' (なんかいも = muchas veces). Con interrogativo + verbo negativo significa 'nada / nadie / ningún sitio' (どこも, 何も, だれも).",
+   "explain": "Significa 'también' (L1) o, con números, 'nada menos que' (なんかいも = muchas veces). Con interrogativo + verbo negativo significa 'nada / nadie / ningún lado' (どこも, 何も, だれも).",
    "examples": [
     {
      "jp": "アンナさんも ドイツ人です。",
@@ -24,7 +24,7 @@
     },
     {
      "jp": "きのうは どこも 行きませんでした。",
-     "es": "Ayer no fui a ningún sitio."
+     "es": "Ayer no fui a ningún lado."
     }
    ]
   },
@@ -34,7 +34,7 @@
    "examples": [
     {
      "jp": "これは コンピューターの 本です。",
-     "es": "Este es un libro de informática."
+     "es": "Este es un libro de computación."
     },
     {
      "jp": "もっと 大きいのは ありませんか。",
@@ -48,11 +48,11 @@
    "examples": [
     {
      "jp": "ジュースを のみます。",
-     "es": "Bebo zumo."
+     "es": "Bebo jugo."
     },
     {
      "jp": "この 道を まっすぐ 行くと、駅が あります。",
-     "es": "Siguiendo recto esta calle, está la estación."
+     "es": "Siguiendo derecho por esta calle, está la estación."
     }
    ]
   },
@@ -519,7 +519,7 @@
     {
      "kana": "まっすぐ",
      "kanji": "",
-     "es": "recto"
+     "es": "derecho (recto)"
     }
    ]
   },
@@ -2274,7 +2274,7 @@
    ]
   },
   {
-   "topic": "Pisos/plantas de un edificio（－階）",
+   "topic": "Pisos de un edificio（－階）",
    "items": [
     {
      "kana": "いっかい",
@@ -2474,7 +2474,7 @@
   {
    "masu": "あいます",
    "kanji": "会います",
-   "es": "ver a, quedar con (amigos)",
+   "es": "ver a, verse con (amigos)",
    "dict": "あう",
    "te": "あって",
    "nai": "あわない",
@@ -2573,7 +2573,7 @@
   {
    "masu": "いそぎます",
    "kanji": "急ぎます",
-   "es": "darse prisa",
+   "es": "apurarse, darse prisa",
    "dict": "いそぐ",
    "te": "いそいで",
    "nai": "いそがない",
@@ -2661,7 +2661,7 @@
   {
    "masu": "おします",
    "kanji": "押します",
-   "es": "pulsar, empujar",
+   "es": "presionar, empujar",
    "dict": "おす",
    "te": "おして",
    "nai": "おさない",
@@ -2881,7 +2881,7 @@
   {
    "masu": "すみます",
    "kanji": "住みます",
-   "es": "vivir (en un sitio)",
+   "es": "vivir (en un lugar)",
    "dict": "すむ",
    "te": "すんで",
    "nai": "すまない",
@@ -3013,7 +3013,7 @@
   {
    "masu": "とります",
    "kanji": "取ります",
-   "es": "coger; pasar (algo)",
+   "es": "tomar, agarrar; pasar (algo)",
    "dict": "とる",
    "te": "とって",
    "nai": "とらない",
@@ -3035,7 +3035,7 @@
   {
    "masu": "とります",
    "kanji": "取ります",
-   "es": "hacerse mayor",
+   "es": "envejecer, cumplir años",
    "dict": "とる",
    "te": "とって",
    "nai": "とらない",
@@ -3167,7 +3167,7 @@
   {
    "masu": "はいります",
    "kanji": "入ります",
-   "es": "bañarse (en la bañera)",
+   "es": "bañarse (en la tina)",
    "dict": "はいる",
    "te": "はいって",
    "nai": "はいらない",
@@ -3596,7 +3596,7 @@
   {
    "masu": "かけます",
    "kanji": "かけます",
-   "es": "ponerse (gafas)",
+   "es": "ponerse (lentes)",
    "dict": "かける",
    "te": "かけて",
    "nai": "かけない",
@@ -3629,7 +3629,7 @@
   {
    "masu": "きを つけます",
    "kanji": "気を つけます",
-   "es": "tener cuidado (con los coches)",
+   "es": "tener cuidado (con los autos)",
    "dict": "きを つける",
    "te": "きを つけて",
    "nai": "きを つけない",
@@ -3794,7 +3794,7 @@
   {
    "masu": "とめます",
    "kanji": "止めます",
-   "es": "parar, aparcar",
+   "es": "parar, estacionar",
    "dict": "とめる",
    "te": "とめて",
    "nai": "とめない",
@@ -3915,7 +3915,7 @@
   {
    "masu": "うんてんします",
    "kanji": "運転します",
-   "es": "conducir",
+   "es": "manejar",
    "dict": "うんてんする",
    "te": "うんてんして",
    "nai": "うんてんしない",

@@ -23,6 +23,8 @@
 @use 'styles/forms';
 // Keyframes fade-up, pop, shake, slide-up y clases .pop/.shake
 @use 'styles/animations';
+// Colores de los papeles de la frase ([data-role], .role-dot) de Gramática fácil
+@use 'styles/roles';
 // Estado vacío (.empty) y hojas inferiores (.sheet-backdrop, .sheet)
 @use 'styles/overlays';
 // prefers-reduced-motion

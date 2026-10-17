@@ -266,6 +266,17 @@
 .gram-go {
     margin-top: 14px;
 }
+/* Atajo a Gramática fácil encima de los puntos de gramática */
+.easy {
+    gap: 10px;
+    margin-bottom: 12px;
+    background: var(--indigo-soft);
+    border-color: transparent;
+    color: var(--ink);
+}
+.easy > app-icon:first-child {
+    color: var(--indigo);
+}
 @media (max-width: 360px) {
     .tiles {
         grid-template-columns: repeat(3, minmax(0, 1fr));

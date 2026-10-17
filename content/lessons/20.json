@@ -8,7 +8,7 @@
    "id": "L20-001",
    "kana": "いります",
    "kanji": "要ります",
-   "es": "necesitar [un visado]",
+   "es": "necesitar [una visa]",
    "type": "verb",
    "lesson": 20
   },
@@ -32,7 +32,7 @@
    "id": "L20-004",
    "kana": "しゅうりします",
    "kanji": "修理します",
-   "es": "reparar (máquinas, coches)",
+   "es": "reparar (máquinas, autos)",
    "type": "verb",
    "lesson": 20
   },
@@ -100,7 +100,7 @@
    "id": "L20-013",
    "kana": "ぶっか",
    "kanji": "物価",
-   "es": "precios, coste de vida",
+   "es": "precios, costo de vida",
    "type": "noun",
    "lesson": 20
   },
@@ -115,7 +115,7 @@
   {
    "id": "L20-015",
    "kana": "ビザ",
-   "es": "visado",
+   "es": "visa",
    "type": "noun",
    "lesson": 20
   },
@@ -210,7 +210,7 @@
   {
    "id": "L20-028",
    "kana": "よかったら",
-   "es": "si te apetece",
+   "es": "si quieres",
    "type": "expr",
    "lesson": 20
   },
@@ -255,7 +255,7 @@
   },
   {
    "qjp": "メキシコは ビザ 要る？",
-   "qes": "¿Hace falta visado para ir a México?",
+   "qes": "¿Se necesita visa para ir a México?",
    "ajp": "ううん、要らない。",
    "aes": "No, no hace falta."
   },
@@ -410,7 +410,7 @@
      "who": "B",
      "name": "きのした",
      "jp": "そうだね。僕は 友達と 沖縄へ 行くけど、いっしょに 行かない？",
-     "es": "Ya. Yo voy a Okinawa con unos amigos, ¿te vienes?"
+     "es": "Sí, ¿verdad? Yo voy a Okinawa con unos amigos, ¿vienes?"
     },
     {
      "who": "A",

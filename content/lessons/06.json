@@ -204,7 +204,7 @@
   {
    "id": "L06-026",
    "kana": "ジュース",
-   "es": "zumo, jugo",
+   "es": "jugo",
    "type": "noun",
    "lesson": 6
   },
@@ -226,7 +226,7 @@
   {
    "id": "L06-029",
    "kana": "ビデオ",
-   "es": "vídeo",
+   "es": "video",
    "type": "noun",
    "lesson": 6
   },
@@ -295,7 +295,7 @@
    "id": "L06-038",
    "kana": "しゅくだい",
    "kanji": "宿題",
-   "es": "deberes (~を します)",
+   "es": "tarea (~を します)",
    "type": "noun",
    "lesson": 6
   },
@@ -558,7 +558,7 @@
   },
   {
    "title": "V ませんか — ¿por qué no…?",
-   "explain": "Es una invitación amable, como '¿te apetece…?' o '¿por qué no…?'. Aunque tiene forma negativa, no es negativa: es una manera educada de invitar dejando libertad a la otra persona.",
+   "explain": "Es una invitación amable, como '¿quieres…?' o '¿por qué no…?'. Aunque tiene forma negativa, no es negativa: es una manera educada de invitar dejando libertad a la otra persona.",
    "examples": [
     {
      "jp": "土曜日 いっしょに 映画を 見ませんか。…ええ、いいですね。",
@@ -776,7 +776,7 @@
     {
      "kana": "まめ",
      "kanji": "",
-     "es": "judías, frijoles"
+     "es": "frijoles"
     },
     {
      "kana": "キャベツ",
@@ -786,7 +786,7 @@
     {
      "kana": "ねぎ",
      "kanji": "",
-     "es": "cebolleta"
+     "es": "cebollín"
     },
     {
      "kana": "はくさい",
@@ -806,7 +806,7 @@
     {
      "kana": "じゃがいも",
      "kanji": "",
-     "es": "patata"
+     "es": "papa"
     },
     {
      "kana": "だいこん",
@@ -836,7 +836,7 @@
     {
      "kana": "もも",
      "kanji": "",
-     "es": "melocotón"
+     "es": "durazno"
     },
     {
      "kana": "すいか",
@@ -881,7 +881,7 @@
     {
      "kana": "ぎゅうにく",
      "kanji": "",
-     "es": "carne de ternera"
+     "es": "carne de res"
     },
     {
      "kana": "とりにく",
@@ -951,7 +951,7 @@
     {
      "kana": "たい",
      "kanji": "",
-     "es": "besugo"
+     "es": "pargo"
     },
     {
      "kana": "たら",
@@ -961,7 +961,7 @@
     {
      "kana": "えび",
      "kanji": "",
-     "es": "gamba, langostino"
+     "es": "camarón, langostino"
     },
     {
      "kana": "かに",

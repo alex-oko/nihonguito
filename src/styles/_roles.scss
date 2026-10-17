@@ -1,0 +1,38 @@
+/* ---- Colores de los papeles de la frase (Gramática fácil): data-role pone --role y su fondo suave ---- */
+[data-role] {
+    --role-soft: color-mix(in srgb, var(--role) 14%, var(--surface));
+}
+[data-role='topic'] {
+    --role: var(--indigo);
+}
+[data-role='subject'] {
+    --role: var(--signal);
+}
+[data-role='object'] {
+    --role: var(--accent);
+}
+[data-role='place'] {
+    --role: var(--ok);
+}
+[data-role='time'] {
+    --role: var(--gold);
+}
+[data-role='extra'] {
+    --role: var(--muted);
+}
+[data-role='describe'] {
+    --role: var(--ink-2);
+}
+[data-role='verb'] {
+    --role: var(--ink);
+}
+
+/* Punto de color para leyendas y resúmenes */
+.role-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--role);
+    flex: none;
+}

@@ -136,7 +136,7 @@
    "id": "L13-017",
    "kana": "しやくしょ",
    "kanji": "市役所",
-   "es": "ayuntamiento",
+   "es": "municipalidad",
    "type": "noun",
    "lesson": 13
   },
@@ -287,7 +287,7 @@
    "id": "L13-037",
    "kana": "ぎゅうどん",
    "kanji": "牛どん",
-   "es": "bol de arroz con ternera",
+   "es": "tazón de arroz con carne de res",
    "type": "noun",
    "lesson": 13
   },
@@ -402,7 +402,7 @@
  "grammar": [
   {
    "title": "Nが 欲しいです — querer tener algo",
-   "explain": "欲しい significa 'quiero (tener) esto'. Lo que quieres se marca con が, no con を (車を 欲しい ✗ → 車が 欲しい ✓). 欲しい es un adjetivo-い, así que se conjuga como tal: 欲しくないです (no quiero), 欲しかったです (quería). Solo se usa para lo que quiero yo o para preguntar al otro; para una tercera persona no vale.",
+   "explain": "欲しい significa 'quiero (tener) esto'. Lo que quieres se marca con が, no con を (車を 欲しい ✗ → 車が 欲しい ✓). 欲しい es un adjetivo-い, así que se conjuga como tal: 欲しくないです (no quiero), 欲しかったです (quería). Solo se usa para lo que quiero yo o para preguntar al otro; para una tercera persona no se usa.",
    "examples": [
     {
      "jp": "わたしの 部屋は 狭いですから、広い 部屋が 欲しいです。",
@@ -410,7 +410,7 @@
     },
     {
      "jp": "車が 欲しいですか。…いいえ、欲しくないです。自転車が あります。",
-     "es": "¿Quieres un coche? …No, no quiero. Tengo bicicleta."
+     "es": "¿Quieres un auto? …No, no quiero. Tengo bicicleta."
     }
    ]
   },
@@ -424,7 +424,7 @@
     },
     {
      "jp": "疲れましたから、早く うちへ 帰りたいです。",
-     "es": "Estoy cansada, así que quiero volver pronto a casa."
+     "es": "Estoy cansada, así que quiero volver temprano a casa."
     }
    ]
   },
@@ -434,7 +434,7 @@
    "examples": [
     {
      "jp": "コーヒーは いかがですか。",
-     "es": "¿Le apetece un café?"
+     "es": "¿Le gustaría un café?"
     },
     {
      "jp": "いっしょに 昼ごはんを 食べませんか。",
@@ -444,11 +444,11 @@
   },
   {
    "title": "Lugarへ V(ます)/N に 行きます — ir a hacer algo",
-   "explain": "Es como el español 'ir a + infinitivo' con propósito ('voy a Kobe a comer'). El propósito va delante de に: puede ser un verbo sin ます (食べに, 見に) o un sustantivo de acción (買い物に, 食事に, 勉強に). Funciona con 行きます, 来ます y 帰ります. También vale con eventos: お祭りに 行きます (ir a ver el festival).",
+   "explain": "Es como el español 'ir a + infinitivo' con propósito ('voy a Kobe a comer'). El propósito va delante de に: puede ser un verbo sin ます (食べに, 見に) o un sustantivo de acción (買い物に, 食事に, 勉強に). Funciona con 行きます, 来ます y 帰ります. También funciona con eventos: お祭りに 行きます (ir a ver el festival).",
    "examples": [
     {
      "jp": "あした 市役所へ 登録に 行きます。",
-     "es": "Mañana voy al ayuntamiento a registrarme."
+     "es": "Mañana voy a la municipalidad a registrarme."
     },
     {
      "jp": "スーパーへ 野菜を 買いに 行きます。",
@@ -471,8 +471,8 @@
    ]
   },
   {
-   "title": "どこか / 何か — algún sitio / algo",
-   "explain": "どこか = 'algún lugar' y 何か = 'algo'. Detrás de ellos se pueden quitar へ y を: どこか[へ] 行きます, 何か[を] 飲みます. No los confundas con どこも / 何も + negativo, que significan 'ningún sitio' y 'nada'.",
+   "title": "どこか / 何か — algún lugar / algo",
+   "explain": "どこか = 'algún lugar' y 何か = 'algo'. Detrás de ellos se pueden quitar へ y を: どこか[へ] 行きます, 何か[を] 飲みます. No los confundas con どこも / 何も + negativo, que significan 'ningún lugar' y 'nada'.",
    "examples": [
     {
      "jp": "週末 どこか 行きましたか。…いいえ、どこも 行きませんでした。",
@@ -486,7 +486,7 @@
   },
   {
    "title": "ご注文 — el prefijo ご de cortesía",
-   "explain": "Algunas palabras llevan delante ご (como お) para sonar respetuoso con el otro. En un restaurante el camarero dice ご注文は？ para preguntar qué vas a pedir. Tú no lo usas para tus propias cosas.",
+   "explain": "Algunas palabras llevan delante ご (como お) para sonar respetuoso con el otro. En un restaurante el mesero dice ご注文は？ para preguntar qué vas a pedir. Tú no lo usas para tus propias cosas.",
    "examples": [
     {
      "jp": "ご注文は？…定食を 2つ お願いします。",
@@ -723,7 +723,7 @@
     {
      "kana": "たいいくかん",
      "kanji": "体育館",
-     "es": "gimnasio, polideportivo"
+     "es": "gimnasio, centro deportivo"
     },
     {
      "kana": "プール",
@@ -748,12 +748,12 @@
     {
      "kana": "しやくしょ",
      "kanji": "市役所",
-     "es": "ayuntamiento"
+     "es": "municipalidad"
     },
     {
      "kana": "けいさつしょ",
      "kanji": "警察署",
-     "es": "comisaría"
+     "es": "estación de policía"
     },
     {
      "kana": "こうばん",
@@ -768,7 +768,7 @@
     {
      "kana": "ちゅうしゃじょう",
      "kanji": "駐車場",
-     "es": "aparcamiento"
+     "es": "estacionamiento"
     },
     {
      "kana": "だいがく",
@@ -778,12 +778,12 @@
     {
      "kana": "こうこう",
      "kanji": "高校",
-     "es": "instituto (secundaria superior)"
+     "es": "preparatoria (bachillerato)"
     },
     {
      "kana": "ちゅうがっこう",
      "kanji": "中学校",
-     "es": "secundaria inferior"
+     "es": "secundaria"
     },
     {
      "kana": "しょうがっこう",
@@ -793,7 +793,7 @@
     {
      "kana": "ようちえん",
      "kanji": "幼稚園",
-     "es": "jardín de infancia"
+     "es": "jardín de niños, kínder"
     },
     {
      "kana": "にくや",
@@ -838,7 +838,7 @@
     {
      "kana": "デパート",
      "kanji": "",
-     "es": "grandes almacenes"
+     "es": "tienda departamental"
     }
    ]
   }

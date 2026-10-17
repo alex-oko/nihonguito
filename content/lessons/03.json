@@ -2,7 +2,7 @@
  "id": 3,
  "title": "¿Dónde está el comedor?",
  "titleJp": "食堂は どこですか",
- "summary": "Yui le enseña a Lucía el edificio de Aoba Shōji: el comedor, el baño y la sala de reuniones. Después, Lucía se compra un bolso en unos grandes almacenes.",
+ "summary": "Yui le muestra a Lucía el edificio de Aoba Shōji: el comedor, el baño y la sala de reuniones. Después, Lucía se compra un bolso en una tienda departamental.",
  "vocab": [
   {
    "id": "L03-001",
@@ -119,7 +119,7 @@
    "id": "L03-016",
    "kana": "トイレ（おてあらい）",
    "kanji": "（お手洗い）",
-   "es": "baño, aseo",
+   "es": "baño, sanitario",
    "type": "noun",
    "lesson": 3
   },
@@ -294,7 +294,7 @@
    "id": "L03-039",
    "kana": "［～を］みせて ください。",
    "kanji": "［～を］見せて ください。",
-   "es": "Enséñeme [~], por favor.",
+   "es": "Muéstreme [~], por favor.",
    "type": "expr",
    "lesson": 3
   },
@@ -473,7 +473,7 @@
    "examples": [
     {
      "jp": "その かばんを 見せて ください。",
-     "es": "Enséñeme ese bolso, por favor."
+     "es": "Muéstreme ese bolso, por favor."
     },
     {
      "jp": "どの かばんですか。…あの かばんです。",
@@ -511,7 +511,7 @@
   },
   {
    "jp": "その かばんを 見せて ください。",
-   "es": "¿Me enseña ese bolso, por favor?"
+   "es": "¿Me muestra ese bolso, por favor?"
   },
   {
    "jp": "じゃ、あれを ください。",
@@ -526,7 +526,7 @@
    "tags": [
     "trabajo"
    ],
-   "situation": "En su primera semana, Yui le enseña a Lucía dónde están el comedor, el baño y la sala de reuniones.",
+   "situation": "En su primera semana, Yui le muestra a Lucía dónde están el comedor, el baño y la sala de reuniones.",
    "lines": [
     {
      "who": "A",
@@ -594,7 +594,7 @@
    "id": "L03-c2",
    "lesson": 3,
    "title": "Un bolso nuevo",
-   "situation": "El sábado, Lucía va a unos grandes almacenes a comprarse un bolso para el trabajo.",
+   "situation": "El sábado, Lucía va a una tienda departamental a comprarse un bolso para el trabajo.",
    "lines": [
     {
      "who": "A",
@@ -612,7 +612,7 @@
      "who": "A",
      "name": "ルシア",
      "jp": "すみません、その かばんを 見せて ください。",
-     "es": "Disculpe, ¿me enseña ese bolso?"
+     "es": "Disculpe, ¿me muestra ese bolso?"
     },
     {
      "who": "B",
@@ -661,7 +661,7 @@
  ],
  "extraVocab": [
   {
-   "topic": "Grandes almacenes (デパート)",
+   "topic": "Tienda departamental (デパート)",
    "items": [
     {
      "kana": "おくじょう",
@@ -691,7 +691,7 @@
     {
      "kana": "めがね",
      "kanji": "眼鏡",
-     "es": "gafas"
+     "es": "lentes"
     },
     {
      "kana": "カメラ",
@@ -781,13 +781,13 @@
     {
      "kana": "ちゅうしゃじょう",
      "kanji": "駐車場",
-     "es": "aparcamiento"
+     "es": "estacionamiento"
     }
    ]
   }
  ],
  "culture": [
-  "El sótano de los grandes almacenes (la famosa デパ地下) es casi un mercado gourmet: dulces, bentos, frutas de regalo y a veces degustaciones gratis.",
+  "El sótano de las tiendas departamentales (la famosa デパ地下) es casi un mercado gourmet: dulces, bentos, frutas de regalo y a veces degustaciones gratis.",
   "Muchas empresas grandes tienen un comedor para empleados con menús completos a precio bajo; es buen lugar para conocer a los compañeros."
  ],
  "extras": [

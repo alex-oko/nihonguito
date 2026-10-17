@@ -342,7 +342,7 @@
   {
    "id": "L09-045",
    "kana": "もしもし",
-   "es": "¿Diga? / ¿Aló? (teléfono)",
+   "es": "¿Aló? / ¿Bueno? (teléfono)",
    "type": "expr",
    "lesson": 9
   },
@@ -840,7 +840,7 @@
     {
      "kana": "バスケットボール",
      "kanji": "",
-     "es": "baloncesto"
+     "es": "básquetbol"
     },
     {
      "kana": "テニス",
@@ -850,7 +850,7 @@
     {
      "kana": "ボーリング",
      "kanji": "",
-     "es": "bolos"
+     "es": "boliche, bolos"
     },
     {
      "kana": "スキー",

@@ -62,7 +62,7 @@ No genera preguntas: eso lo hacen los utils de [questions.utils.ts](../../src/ap
 | `type` con `input: 'romaji'` | En minúsculas y sin espacios, con cada una de `answers` |
 | `type` con `input: 'es'` | `normEs` (sin tildes, mayúsculas ni puntuación) |
 | `type` con kana | `normJp` (sin puntuación; hiragana y katakana cuentan igual) |
-| `order` | `normJp` de las fichas unidas contra `answer.join('')` |
+| `order` | `normJp` de las fichas unidas contra `answer.join('')` y cada una de `alternatives` (si las hay); la respuesta que se enseña es la que coincidió |
 | `speak` | `readingSVC.bestMatch` de lo oído contra `target` y `prompt` |
 
 **Pronunciación** (`listen`): aprobada con precisión ≥ `SPEAK_PASS_SCORE` (**0,75**). Por debajo, se pide otro intento («¡Casi!» si llega a `SPEAK_CLOSE_SCORE`, **0,5**) hasta `SPEAK_MAX_ATTEMPTS` (**3**) intentos; en examen, el primer intento fallido ya cuenta como fallo.

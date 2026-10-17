@@ -177,6 +177,30 @@ Los ids de pregunta salen de un contador de módulo (`nextQuestionId`: `q1`, `q2
 - **Cómo**: forma al azar entre `forms`. 1 de cada 3 (índices 1, 4, 7…) es de elegir, con las otras formas del mismo verbo como distractores preferidos; el resto es de escribir en kana y explica `たべます → たべて`.
 - **Ejemplo**: `{ masu: 'たべます', te: 'たべて', group: 2 }`, forma `te` → «Escribe la forma て», debajo «comer · grupo II», respuesta `たべて`.
 
+### Gramática fácil
+
+#### `grammarQuestions(drill, interests, count)`
+
+- **Qué hace**: `count` ejercicios para [/gramatica/practica](../views/grammar/grammar-practice.md) con las frases de [grammar-guide.utils](grammar-guide.utils.md).
+- **Cómo**:
+  1. Reúne los ejemplos de las fichas, también los de sus `extraUses`. Las frases de los intereses del usuario (`interestSentences`) se repiten `GRAMMAR_INTEREST_WEIGHT` (**2**) veces; las de otros temas no entran.
+  2. `drill` `'mixed'` turna partícula → papel → ordenar; los demás usan solo su tipo.
+  3. Hasta `count × 6` intentos, sin repetir la misma frase con el mismo ejercicio.
+- **Tipos**:
+  - **`grammarParticleQuestion`**: tapa el trozo de `blankIndex` con `＿＿`, ofrece la partícula buena y hasta 3 `distractors`, y explica con `why`. La etiqueta «¿Qué partícula va?» hace que `skillOf` la cuente como partículas.
+  - **`grammarRoleQuestion`**: marca un trozo entre 【】 y ofrece su papel y 3 más de `ASKABLE_ROLES` (sin `extra`, que mezcla demasiados usos). En una frase doble no pregunta por el final de la primera, que es «acción» pero no va al final. `OVERLAPPING_ROLES` quita los distractores que también podrían valer: «Cuándo» o «Dónde» para un tema (きょうは), y «Cómo / cuánto» para la acción final (じょうずです), y al revés.
+  - **`grammarBuildQuestion`**: ordenar los trozos (frases de 3 o más), con 。 pegado al último. `alternatives` lleva los otros órdenes válidos de `alternativeOrders`; `explain` enseña cada trozo con su papel en orden.
+
+#### `alternativeOrders(sentence, tokens)`
+
+- **Qué hace**: los órdenes que también son correctos, porque en japonés el medio de la frase se puede mover.
+- **Cómo**:
+  1. En una frase doble (…が、… / …から、…) devuelve `[]`: los trozos no pueden saltar de una frase a otra.
+  2. Agrupa los trozos en unidades: un modificador viaja pegado al trozo siguiente (この, わたしの, おおきい, パンや, コーヒーか, o パンと cuando es una lista).
+  3. Son movibles las unidades con partícula de `MOVABLE_PARTICLES` (が, を, に, で, へ, と) y las palabras de tiempo sin partícula. El tema del principio y el verbo del final no se mueven.
+  4. Devuelve las permutaciones de las movibles en sus mismos huecos, menos la original y menos las que cambian el orden de las palabras de tiempo entre sí (あした 7じに vale; 7じに あした suena raro).
+- **Ejemplo**: `もりさんに メールを おくります。` acepta también `メールを もりさんに おくります。`.
+
 ### Otros
 
 #### `toKata(text)`

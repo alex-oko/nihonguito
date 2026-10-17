@@ -71,6 +71,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `levelBest` | `{ "presetId": mejor% }` (tope 100) | `loadRaw` / `save` | `LevelExamService` |
 | `levelCustom` | `LevelPreset` del examen personalizado, o `null` | `loadRaw` / `save` | `LevelExamService` |
 | `examConfig` | `ExamConfig`: `{ lessons, sections, count, strict }` | `loadRaw` / `save` | `ExamBuilderComponent` (recuerda la última configuración) |
+| `grammarTab` | `'basics' \| 'particles' \| 'build' \| 'practice'` | `persisted` (`merge = false`) | `GrammarComponent` (última pestaña de Gramática fácil) |
 | `gameLessons` | `number[]` (lecciones elegidas) | `loadRaw` / `save` | `GameHostComponent` |
 | `best:<storageKey>` | `number` (mejor puntuación) | `loadRaw` / `save` | `SpeedGameComponent`. `GameHostComponent` pasa `speed-hiragana`, `speed-katakana` o `speed-vocab`; sin `storageKey` sería `best:speed` |
 | `kanaRows:<script>` | `string[]` (ids de filas elegidas), con `script` = `hiragana` o `katakana` | `loadRaw` / `save` | `KanaChartComponent` (lee y escribe; por defecto `['a', 'k']`) y `KanaComponent` (lee) |

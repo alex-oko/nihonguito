@@ -32,7 +32,7 @@
    "id": "L04-004",
    "kana": "やすみます",
    "kanji": "休みます",
-   "es": "descansar, librar",
+   "es": "descansar, tomar el día libre",
    "type": "verb",
    "lesson": 4
   },
@@ -55,7 +55,7 @@
   {
    "id": "L04-007",
    "kana": "デパート",
-   "es": "grandes almacenes",
+   "es": "tienda departamental",
    "type": "noun",
    "lesson": 4
   },
@@ -381,7 +381,7 @@
    "id": "L04-049",
    "kana": "たいへんですね。",
    "kanji": "大変ですね。",
-   "es": "¡Qué duro!, ¡vaya!",
+   "es": "¡Qué duro!, ¡qué pesado!",
    "type": "expr",
    "lesson": 4
   },
@@ -475,7 +475,7 @@
   {
    "id": "L04-062",
    "kana": "まるやまデパート",
-   "es": "grandes almacenes (ficticios)",
+   "es": "tienda departamental (ficticia)",
    "type": "name",
    "lesson": 4
   },
@@ -696,7 +696,7 @@
      "who": "A",
      "name": "うけつけ",
      "jp": "はい、ことのは日本語学校です。",
-     "es": "Escuela de japonés Kotonoha, dígame."
+     "es": "Escuela de japonés Kotonoha, buenas tardes."
     },
     {
      "who": "A",
@@ -833,7 +833,7 @@
     {
      "kana": "けいさつしょ",
      "kanji": "警察署",
-     "es": "comisaría (110)"
+     "es": "policía (110)"
     },
     {
      "kana": "しょうぼうしょ",
@@ -848,7 +848,7 @@
     {
      "kana": "てんきよほう",
      "kanji": "天気予報",
-     "es": "previsión del tiempo (177)"
+     "es": "pronóstico del tiempo (177)"
     },
     {
      "kana": "でんわばんごうあんない",

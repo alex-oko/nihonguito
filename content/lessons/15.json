@@ -212,7 +212,7 @@
    "id": "L15-027",
    "kana": "こうこう",
    "kanji": "高校",
-   "es": "instituto (secundaria superior)",
+   "es": "preparatoria (bachillerato)",
    "type": "noun",
    "lesson": 15
   },
@@ -318,7 +318,7 @@
     },
     {
      "jp": "ここに 車を 止めても いいですか。…いいえ、いけません。",
-     "es": "¿Puedo estacionar el coche aquí? …No, no se puede."
+     "es": "¿Puedo estacionar el auto aquí? …No, no se puede."
     }
    ]
   },
@@ -553,7 +553,7 @@
     {
      "kana": "てんいん",
      "kanji": "店員",
-     "es": "dependiente"
+     "es": "vendedor/a"
     },
     {
      "kana": "ちょうりし",
@@ -598,7 +598,7 @@
     {
      "kana": "うんてんしゅ",
      "kanji": "運転手",
-     "es": "conductor, chófer"
+     "es": "conductor, chofer"
     },
     {
      "kana": "けいさつかん",

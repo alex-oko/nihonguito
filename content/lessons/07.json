@@ -134,7 +134,7 @@
   {
    "id": "L07-018",
    "kana": "パソコン",
-   "es": "ordenador personal",
+   "es": "computadora personal",
    "type": "noun",
    "lesson": 7
   },
@@ -148,14 +148,14 @@
   {
    "id": "L07-020",
    "kana": "ホッチキス",
-   "es": "grapadora",
+   "es": "engrapadora",
    "type": "noun",
    "lesson": 7
   },
   {
    "id": "L07-021",
    "kana": "セロテープ",
-   "es": "celo, cinta adhesiva",
+   "es": "cinta adhesiva",
    "type": "noun",
    "lesson": 7
   },
@@ -217,7 +217,7 @@
    "id": "L07-029",
    "kana": "きっぷ",
    "kanji": "切符",
-   "es": "billete (de tren, etc.)",
+   "es": "boleto (de tren, etc.)",
    "type": "noun",
    "lesson": 7
   },
@@ -321,7 +321,7 @@
   {
    "id": "L07-043",
    "kana": "［～は］いかがですか。",
-   "es": "¿Le apetece [~]?",
+   "es": "¿Quiere [~]?",
    "type": "expr",
    "lesson": 7
   },
