@@ -1,0 +1,27 @@
+<!-- Práctica de la forma elegida (no pinta nada hasta que carga) -->
+@if (isReady()) {
+    @if (isEmpty()) {
+        <!-- Sin palabras con esa combinación -->
+        <div class="page">
+            <div class="empty">
+                No hay palabras con esas lecciones y tipos.
+                <a class="btn accent block back" routerLink="/vocabulario">Cambiar la selección</a>
+            </div>
+        </div>
+    } @else {
+        @switch (drill()) {
+            @case ('cards') {
+                <!-- Tarjetas -->
+                <app-flashcards [words]="cards()" [title]="title()" (again)="build()" />
+            }
+            @case ('match') {
+                <!-- Parejas -->
+                <app-match-game [pairs]="pairs()" [title]="title()" (again)="build()" />
+            }
+            @default {
+                <!-- Preguntas -->
+                <app-question-runner [questions]="questions()" [title]="title()" (again)="build()" />
+            }
+        }
+    }
+}

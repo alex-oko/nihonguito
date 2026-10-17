@@ -39,6 +39,8 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Práctica de verbos](views/verbs/verb-practice.md) | Ronda de conjugación. |
 | [Gramática fácil](views/grammar/grammar.md) | Partículas, orden de la frase y moldes, en palabras sencillas. |
 | [Práctica de gramática](views/grammar/grammar-practice.md) | Partículas, papeles y armar frases. |
+| [Vocabulario fácil](views/vocab/vocab.md) | Creador: lecciones, tipos de palabra, forma y cantidad. |
+| [Práctica de vocabulario](views/vocab/vocab-practice.md) | Tarjetas, parejas o preguntas de la selección. |
 | [Anfitrión de juegos](views/game-host/game-host.md) | Selección y ejecución de juegos. |
 | [Exámenes](views/exams/exams.md) | Hub de simulacros y nivel. |
 | [Creador de examen](views/exams/exam-builder.md) | Lecciones, secciones, cantidad y modo. |
@@ -95,4 +97,5 @@ Para mantener el mismo formato, consulta [Cómo escribir un doc](writing-guide.m
 | [Habilidades](utils/skills.utils.md) | Clasificación y estadísticas. |
 | [Intereses](utils/interests.utils.md) | Etiquetas, filtro y ponderación. |
 | [Gramática fácil](utils/grammar-guide.utils.md) | Conceptos, partículas, moldes y frases por interés. |
+| [Vocabulario](utils/vocab-builder.utils.md) | Filtros por tipo, formas de practicar y cantidades. |
 | [Tablero](utils/dashboard.utils.md) | Tonos, puntos débiles y preparación. |

@@ -49,7 +49,7 @@ export const routes: Routes = [
         loadComponent: () => import('./views/conversations/views/conversation-player/conversation-player.component').then((module) => module.ConversationPlayerComponent),
     },
 
-    // --- Práctica, juegos, Musubi, exámenes, repaso, verbos, gramática fácil y conversaciones ---
+    // --- Práctica, juegos, Musubi, exámenes, repaso, verbos, gramática y vocabulario fácil y conversaciones ---
     { path: 'practicar', loadComponent: () => import('./views/practice/practice.component').then((module) => module.PracticeComponent) },
     {
         path: 'juego/:game',
@@ -86,6 +86,12 @@ export const routes: Routes = [
         path: 'gramatica/practica',
         data: IMMERSIVE,
         loadComponent: () => import('./views/grammar/views/grammar-practice/grammar-practice.component').then((module) => module.GrammarPracticeComponent),
+    },
+    { path: 'vocabulario', loadComponent: () => import('./views/vocab/vocab.component').then((module) => module.VocabComponent) },
+    {
+        path: 'vocabulario/practica',
+        data: IMMERSIVE,
+        loadComponent: () => import('./views/vocab/views/vocab-practice/vocab-practice.component').then((module) => module.VocabPracticeComponent),
     },
     {
         path: 'conversaciones',

@@ -68,6 +68,8 @@ Los colores de cada tema y las variables CSS están en [styles-and-themes.md](st
 | `verbos/practica` | `VerbPracticeComponent` | sí |
 | `gramatica` | `GrammarComponent` ([doc](../views/grammar/grammar.md)) | no |
 | `gramatica/practica` | `GrammarPracticeComponent` ([doc](../views/grammar/grammar-practice.md)) | sí |
+| `vocabulario` | `VocabComponent` ([doc](../views/vocab/vocab.md)) | no |
+| `vocabulario/practica` | `VocabPracticeComponent` ([doc](../views/vocab/vocab-practice.md)) | sí |
 | `conversaciones` | `ConversationsComponent` | no |
 | `perfil` | `ProfileComponent` ([doc](../views/profile/profile.md)) | no |
 | `**` | redirige a `''` | — |

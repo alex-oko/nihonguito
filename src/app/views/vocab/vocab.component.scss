@@ -1,0 +1,61 @@
+/* ---- Comunes ---- */
+.intro {
+    margin: -4px 0 6px;
+}
+.grow {
+    flex: 1;
+    min-width: 0;
+}
+.t {
+    font-weight: 600;
+}
+.chip small {
+    opacity: 0.6;
+    margin-left: 2px;
+}
+
+/* ---- Cómo practicar: una opción a la vez ---- */
+.modes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mode {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px !important;
+}
+.mode.on {
+    border-color: var(--ink) !important;
+}
+.radio {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    border-radius: 50%;
+    border: 1.5px solid var(--line);
+}
+.mode.on .radio {
+    border: 6px solid var(--ink);
+}
+
+/* ---- Resumen y lista ---- */
+.summary {
+    margin-top: 20px;
+}
+.summary .row {
+    gap: 12px;
+}
+.words {
+    margin-top: 10px;
+}
+.wm {
+    font-size: 1.1rem;
+}
+.more {
+    margin-top: 8px;
+}
+.go {
+    margin-top: 16px;
+}

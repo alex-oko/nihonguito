@@ -25,7 +25,7 @@ Dónde y cómo guarda la app el progreso del usuario. No hay backend: todo vive 
 
 - **Qué hace**: lee el valor **tal cual**, sin mezclar. Para arrays, números, `null` o mapas `id → valor` donde mezclar no tiene sentido.
 - **Devuelve**: `fallback` si no hay nada guardado o si falla.
-- **Quién la llama**: `LevelExamService` (`levelDraft`, `levelBest`, `levelCustom`), `guided-session.utils` (`guided`), `SpeedGameComponent` (`best:*`), `KanaComponent` y `KanaChartComponent` (`kanaRows:*`), `GameHostComponent` (`gameLessons`), `ExamBuilderComponent` (`examConfig`) y `persisted`.
+- **Quién la llama**: `LevelExamService` (`levelDraft`, `levelBest`, `levelCustom`), `guided-session.utils` (`guided`), `SpeedGameComponent` (`best:*`), `KanaComponent` y `KanaChartComponent` (`kanaRows:*`), `GameHostComponent` (`gameLessons`), `ExamBuilderComponent` (`examConfig`), `VocabComponent` (`vocabConfig`) y `persisted`.
 
 ### Escribir
 
@@ -71,6 +71,7 @@ Buscadas con `grep` en `src/app` (llamadas a `persisted`, `load`, `loadRaw` y `s
 | `levelBest` | `{ "presetId": mejor% }` (tope 100) | `loadRaw` / `save` | `LevelExamService` |
 | `levelCustom` | `LevelPreset` del examen personalizado, o `null` | `loadRaw` / `save` | `LevelExamService` |
 | `examConfig` | `ExamConfig`: `{ lessons, sections, count, strict }` | `loadRaw` / `save` | `ExamBuilderComponent` (recuerda la última configuración) |
+| `vocabConfig` | `VocabConfig`: `{ lessons, types, mode, count }` | `loadRaw` / `save` | `VocabComponent` (recuerda la última selección de Vocabulario fácil) |
 | `grammarTab` | `'basics' \| 'particles' \| 'build' \| 'practice'` | `persisted` (`merge = false`) | `GrammarComponent` (última pestaña de Gramática fácil) |
 | `gameLessons` | `number[]` (lecciones elegidas) | `loadRaw` / `save` | `GameHostComponent` |
 | `best:<storageKey>` | `number` (mejor puntuación) | `loadRaw` / `save` | `SpeedGameComponent`. `GameHostComponent` pasa `speed-hiragana`, `speed-katakana` o `speed-vocab`; sin `storageKey` sería `best:speed` |

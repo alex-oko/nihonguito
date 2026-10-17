@@ -109,7 +109,7 @@ La tarjeta de la prueba usa **`toneOf(best)`** para colorear la nota.
 
 ### 5. Pestaña Palabras
 
-1. **`typeFilters`**: `TYPE_FILTERS` menos los tipos sin palabras en la lección. «Todas» siempre está.
+1. **`typeFilters`**: `WORD_TYPE_FILTERS` ([vocab-builder.utils](../../utils/vocab-builder.utils.md)) menos los tipos sin palabras en la lección. «Todas» siempre está.
 2. **`words`**: el vocabulario filtrado por `typeFilter`.
 3. Por palabra: **`mainForm(word)`** (con kanji si los tiene), **`readingOf(word)`** (en kana) y **`toRomaji`** si `showRomaji()`. La lectura en kana se enseña aparte solo si la escritura es `kanji` y difiere de la forma principal (con furigana ya va encima).
 4. **`setScript`** y **`toggleRomaji`** actualizan `progressSVC.settings`. Como `script` y `showRomaji` son `computed` de esos ajustes, la lista se repinta sola, y el cambio se nota en toda la app.

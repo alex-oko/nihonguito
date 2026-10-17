@@ -1,0 +1,90 @@
+<div class="page">
+    <!-- Barra superior -->
+    <header class="topbar">
+        <a class="icon-btn" routerLink="/practicar" aria-label="Volver"><app-icon name="back" /></a>
+        <h1>Vocabulario fácil</h1>
+    </header>
+    <p class="muted intro">Elige qué lecciones y qué tipo de palabras quieres practicar. Solo saldrán esas.</p>
+
+    <!-- 1. Lecciones -->
+    <h2 class="section-title">1 · Lecciones</h2>
+    <app-lesson-picker [(selected)]="lessonsSel" />
+
+    <!-- 2. Tipo de palabras -->
+    <h2 class="section-title">2 · Tipo de palabras</h2>
+    <div class="chips">
+        @for (filter of typeFilters; track filter.id) {
+            <button class="chip" [class.on]="typesSel().includes(filter.id)" (click)="toggleType(filter.id)">
+                {{ filter.label }} <small>{{ typeCounts().get(filter.id) }}</small>
+            </button>
+        }
+    </div>
+
+    <!-- 3. Cómo practicar -->
+    <h2 class="section-title">3 · Cómo practicar</h2>
+    <div class="modes">
+        @for (drill of drills; track drill.id) {
+            <button class="card mode" [class.on]="mode() === drill.id" (click)="mode.set(drill.id)">
+                <app-icon [name]="drill.icon" [size]="18" />
+                <div class="grow">
+                    <div class="t">{{ drill.label }}</div>
+                    <div class="small muted">{{ drill.desc }}</div>
+                </div>
+                <span class="radio"></span>
+            </button>
+        }
+    </div>
+
+    <!-- 4. Cantidad -->
+    <h2 class="section-title">4 · Cuántas palabras</h2>
+    <div class="chips">
+        @for (wordCount of counts; track wordCount) {
+            <button class="chip" [class.on]="count() === wordCount" (click)="count.set(wordCount)">{{ wordCount }}</button>
+        }
+    </div>
+
+    <!-- Resumen, lista y empezar -->
+    <div class="card summary">
+        <div class="row">
+            <div class="grow">
+                <div class="t">
+                    @if (isLoading()) {
+                        Cargando palabras…
+                    } @else {
+                        {{ chosen().length }} {{ chosen().length === 1 ? 'palabra elegida' : 'palabras elegidas' }}
+                    }
+                </div>
+                <div class="small muted">Salen primero las nuevas, las que te cuestan y las que toca repasar.</div>
+            </div>
+            @if (chosen().length) {
+                <button class="btn ghost sm" (click)="showList.set(!showList())">{{ showList() ? 'Ocultar' : 'Ver las palabras' }}</button>
+            }
+        </div>
+    </div>
+
+    @if (showList() && chosen().length) {
+        <div class="card list words">
+            @for (word of visibleWords(); track word.id) {
+                <div class="list-item">
+                    <div class="grow">
+                        <div class="jp wm"><app-jp [text]="mainForm(word)" /></div>
+                        @if (mainForm(word) !== readingOf(word)) {
+                            <div class="jp small muted">{{ readingOf(word) }}</div>
+                        }
+                        <div class="small">{{ word.es }}</div>
+                    </div>
+                    <span class="badge">L{{ word.lesson }}</span>
+                    <app-speak [text]="readingOf(word)" />
+                </div>
+            }
+        </div>
+        @if (chosen().length > visibleWords().length) {
+            <button class="btn ghost sm block more" (click)="showMore()">Ver más ({{ chosen().length - visibleWords().length }})</button>
+        }
+    }
+
+    <button class="btn accent block go" [disabled]="!canStart()" (click)="start()"><app-icon name="play" [size]="18" />Empezar</button>
+    @if (!isLoading() && !chosen().length) {
+        <p class="small muted center">Elige al menos una lección y un tipo de palabra.</p>
+    }
+</div>

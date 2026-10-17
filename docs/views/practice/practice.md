@@ -31,6 +31,7 @@ La ruta `practicar` no tiene guard ni `data`: se ve con la barra de pestañas (i
   - Sin pendientes: «CUANDO QUIERAS» y un texto que explica el repaso. El enlace funciona igual: el repaso se completa con las palabras más débiles.
 - **Tus puntos débiles** (solo si hay alguno): una fila por habilidad con su icono, las lecciones donde se practicó («· L3» o «· L1, L2 y L4»), una barra y el %. Tocarla abre la práctica de esa habilidad en la lección donde está **peor**: `/lecciones/<worst>/practica/<skill>`.
 - **Gramática fácil** → `/gramatica` ([doc](../grammar/grammar.md)): partículas, orden de la frase y cómo armar frases.
+- **Vocabulario fácil** → `/vocabulario` ([doc](../vocab/vocab.md)): eliges lecciones y tipo de palabras, y practicas solo esas.
 - **Kana**: «Hiragana difíciles» y «Katakana difíciles» → `/kana/hiragana/practica/weak` y `/kana/katakana/practica/weak`.
 - **Juegos**: Parejas, Contrarreloj, Ordena la frase y Oído fino → `/juego/<id>` (`parejas`, `contrarreloj`, `ordenar`, `escucha`).
 - **Hablar y conjugar**: «Conversaciones habladas» → `/conversaciones`; «Conjugación de verbos» → `/verbos`.

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal, untracked } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LessonService } from '../../../../services/lesson.service';
-import { LessonTab, Word, WordType, WordTypeFilter, Lesson } from '../../../../interfaces/lesson.interface';
+import { LessonTab, Word, WordType, Lesson } from '../../../../interfaces/lesson.interface';
 import { MASTERED_BOX, ProgressService, SCRIPT_OPTIONS } from '../../../../services/progress.service';
 import { Settings } from '../../../../interfaces/progress.interface';
 import { SpeechService } from '../../../../services/speech.service';
@@ -12,19 +12,11 @@ import { romaji, shortEs } from '../../../../utils/text.utils';
 import { Skill } from '../../../../interfaces/skill.interface';
 import { SKILLS } from '../../../../utils/skills.utils';
 import { KNOWN_BOX, tone } from '../../../../utils/dashboard.utils';
+import { WORD_TYPE_FILTERS } from '../../../../utils/vocab-builder.utils';
 import { IconComponent } from '../../../../components/icon/icon.component';
 import { SpeakButtonComponent } from '../../../../components/speak-button/speak-button.component';
 import { JpComponent } from '../../../../components/jp/jp.component';
 
-/** Filtros de la pestaña «Palabras»; solo se enseñan los que tienen alguna palabra en la lección */
-const TYPE_FILTERS: WordTypeFilter[] = [
-    { id: 'all', label: 'Todas', types: [] },
-    { id: 'noun', label: 'Sustantivos', types: ['noun', 'pron'] },
-    { id: 'verb', label: 'Verbos', types: ['verb'] },
-    { id: 'adj', label: 'Adjetivos', types: ['i-adj', 'na-adj'] },
-    { id: 'expr', label: 'Expresiones', types: ['expr', 'adv', 'other', 'counter'] },
-    { id: 'name', label: 'Nombres', types: ['name'] },
-];
 /** Acierto por debajo del cual el ejercicio de la habilidad más floja se marca para reforzar */
 const WEAK_MODE_PCT = 60;
 /** Acierto por debajo del cual el informe considera floja a una habilidad */
@@ -65,12 +57,12 @@ export class LessonDetailComponent {
     // --- Valores derivados (computed) ---
     protected lessonId = computed(() => Number(this.id()));
     protected typeFilters = computed(() =>
-        TYPE_FILTERS.filter((filter) => filter.id === 'all' || this.lesson()?.vocab.some((word) => filter.types.includes(word.type as WordType))),
+        WORD_TYPE_FILTERS.filter((filter) => filter.id === 'all' || this.lesson()?.vocab.some((word) => filter.types.includes(word.type as WordType))),
     );
     protected words = computed(() => {
         const lesson = this.lesson();
         if (!lesson) return [];
-        const activeFilter = TYPE_FILTERS.find((filter) => filter.id === this.typeFilter());
+        const activeFilter = WORD_TYPE_FILTERS.find((filter) => filter.id === this.typeFilter());
         return !activeFilter || activeFilter.id === 'all' ? lesson.vocab : lesson.vocab.filter((word) => activeFilter.types.includes(word.type as WordType));
     });
     /** Palabras de la lección en la caja `KNOWN_BOX` o más (la barra de la cabecera) */
